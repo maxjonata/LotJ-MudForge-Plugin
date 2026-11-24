@@ -1,0 +1,172 @@
+-- lotj-comms-hub.lua
+-- Tabbed chat panel with CombatStats and AutoPilot slots
+
+local commsHub = nil
+
+function initCommsHub()
+  commsHub = createWidget({
+    type  = "html",
+    name  = "lotj-comms-hub",
+    title = "LOTJ Comms Hub",
+    position = { x = 0, y = 0 },
+    size = { width = 360, height = 420 },
+    zIndex = 15,
+    visible = false,
+  })
+
+  -- Set initial HTML content with tabbed layout
+  setWidgetProperty(commsHub, "content", [[
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><style>
+  :root {
+    --lotj-bg: #0B0F14; --lotj-card: #1E293B; --lotj-border: #334155;
+    --lotj-text: #F1F5F9; --lotj-muted: #94A3B8; --lotj-accent: #22D3EE;
+    --lotj-active-tab: #1F5E66; --lotj-warn: #F59E0B;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 11px;
+         background: var(--lotj-bg); color: var(--lotj-text); padding: 2px 6px;
+         height: 100%; display: flex; flex-direction: column; }
+  .tabs { display: flex; gap: 2px; border-bottom: 2px solid var(--lotj-border); padding-bottom: 2px; flex-wrap: wrap; }
+  .tab { padding: 3px 6px; border-radius: 3px 3px 0 0; cursor: pointer;
+         font-size: 0.75em; background: var(--lotj-card); color: var(--lotj-muted);
+         border: 1px solid transparent; border-bottom: none; min-height: 24px;
+         display: flex; align-items: center; gap: 3px; user-select: none; }
+  .tab:hover { color: var(--lotj-text); }
+  .tab.active { background: var(--lotj-active-tab); color: var(--lotj-text); border-color: var(--lotj-border); border-bottom-color: var(--lotj-active-tab); }
+  .unread-badge { background: var(--lotj-warn); color: #000; font-size: 0.7em;
+                  padding: 0 3px; border-radius: 8px; font-weight: bold; min-width: 14px; text-align: center; }
+  .tab-content { flex: 1; overflow-y: auto; display: none; }
+  .tab-content.active { display: block; }
+  .msg { padding: 1px 3px; border-bottom: 1px solid rgba(51,65,85,0.3); font-size: 0.85em; line-height: 1.4; }
+  .msg .ch { font-weight: bold; margin-right: 3px; }
+  .msg .sender { color: var(--lotj-accent); margin-right: 3px; }
+  .stats-row { display: flex; justify-content: space-between; padding: 1px 3px; font-size: 0.8em; border-bottom: 1px solid rgba(51,65,85,0.2); }
+  .stats-row .label { color: var(--lotj-muted); }
+  .stats-row .value { color: var(--lotj-text); font-weight: bold; }
+  .route { padding: 3px; background: var(--lotj-card); border-radius: 3px; margin-bottom: 3px; }
+  .route-name { color: var(--lotj-accent); font-weight: bold; }
+  .route-detail { color: var(--lotj-muted); font-size: 0.9em; }
+  .mods-slot { margin-top: 3px; padding-top: 3px; border-top: 1px solid var(--lotj-border); }
+  @media (prefers-reduced-motion: reduce) { .tab-content { transition: none; } }
+  @media (pointer: coarse) { .tab { min-height: 44px; min-width: 44px; } }
+</style></head><body>
+<div class="tabs" id="tabs">
+  <div class="tab active" data-tab="all">All</div>
+  <div class="tab" data-tab="local">Local</div>
+  <div class="tab" data-tab="commnet">CommNet <span class="unread-badge" id="commnet-badge" style="display:none">0</span></div>
+  <div class="tab" data-tab="clan">Clan</div>
+  <div class="tab" data-tab="broadcast">Broadcast</div>
+  <div class="tab" data-tab="ooc">OOC</div>
+  <div class="tab" data-tab="tell">Tell</div>
+  <div class="tab" data-tab="imm">Imm</div>
+  <div class="tab" data-tab="stats">Stats</div>
+  <div class="tab" data-tab="autopilot">AutoPilot</div>
+</div>
+<div class="tab-content active" id="tab-all"></div>
+<div class="tab-content" id="tab-local"></div>
+<div class="tab-content" id="tab-commnet"></div>
+<div class="tab-content" id="tab-clan"></div>
+<div class="tab-content" id="tab-broadcast"></div>
+<div class="tab-content" id="tab-ooc"></div>
+<div class="tab-content" id="tab-tell"></div>
+<div class="tab-content" id="tab-imm"></div>
+<div class="tab-content" id="tab-stats">
+  <div class="stats-row"><span class="label">Damage Dealt</span><span class="value" id="stat-damage-dealt">0</span></div>
+  <div class="stats-row"><span class="label">Hits Given</span><span class="value" id="stat-hits-given">0</span></div>
+  <div class="stats-row"><span class="label">Misses</span><span class="value" id="stat-misses">0</span></div>
+  <div class="stats-row"><span class="label">Dodges</span><span class="value" id="stat-dodges">0</span></div>
+  <div class="stats-row"><span class="label">Damage Taken</span><span class="value" id="stat-damage-taken">0</span></div>
+  <div class="stats-row"><span class="label">Bacta Change</span><span class="value" id="stat-bacta-change">0</span></div>
+</div>
+<div class="tab-content" id="tab-autopilot">
+  <div id="autopilot-content"><p style="color:var(--lotj-muted);font-size:0.85em">No active route.</p></div>
+</div>
+<div class="mods-slot" id="mods-slot"></div>
+<script>
+  mudforge.send("ready", { widget: "lotj-comms-hub" });
+  document.getElementById("tabs").addEventListener("click", function(e) {
+    var tab = e.target.closest(".tab");
+    if (!tab) return;
+    var tabName = tab.getAttribute("data-tab");
+    document.querySelectorAll(".tab").forEach(function(t) { t.classList.remove("active"); });
+    document.querySelectorAll(".tab-content").forEach(function(c) { c.classList.remove("active"); });
+    tab.classList.add("active");
+    var content = document.getElementById("tab-" + tabName);
+    if (content) content.classList.add("active");
+    if (tabName === "commnet") { var badge = document.getElementById("commnet-badge"); if (badge) badge.style.display = "none"; }
+  });
+  mudforge.onMessage(function(data) {
+    if (data.event === "chatMessage" && data.msg) appendChat(data.msg);
+    if (data.event === "combatStats" && data.stats) updateStats(data.stats);
+    if (data.event === "autopilotRoute" && data.route) updateAutopilot(data.route);
+    if (data.event === "unreadBadge" && data.channel) updateBadge(data.channel, data.count);
+  });
+  function appendChat(msg) {
+    var channel = msg.channel || "all";
+    var tabMap = { all: "tab-all", local: "tab-local", commnet: "tab-commnet", clan: "tab-clan", broadcast: "tab-broadcast", ooc: "tab-ooc", tell: "tab-tell", imm: "tab-imm" };
+    var tab = document.getElementById(tabMap[channel] || "tab-all");
+    if (!tab) return;
+    var div = document.createElement("div");
+    div.className = "msg";
+    div.innerHTML = '<span class="ch">' + mudforge.escapeHTML(msg.channel || "") + '</span><span class="sender">' + mudforge.escapeHTML(msg.sender || "") + '</span><span>' + mudforge.escapeHTML(msg.text || "") + '</span>';
+    tab.appendChild(div);
+    tab.scrollTop = tab.scrollHeight;
+  }
+  function updateStats(stats) {
+    if (stats.damageDealt !== undefined) document.getElementById("stat-damage-dealt").textContent = stats.damageDealt;
+    if (stats.hitsGiven !== undefined) document.getElementById("stat-hits-given").textContent = stats.hitsGiven;
+    if (stats.misses !== undefined) document.getElementById("stat-misses").textContent = stats.misses;
+    if (stats.dodges !== undefined) document.getElementById("stat-dodges").textContent = stats.dodges;
+    if (stats.damageTaken !== undefined) document.getElementById("stat-damage-taken").textContent = stats.damageTaken;
+    if (stats.bactaChange !== undefined) document.getElementById("stat-bacta-change").textContent = stats.bactaChange;
+  }
+  function updateAutopilot(route) {
+    var el = document.getElementById("autopilot-content");
+    if (!el) return;
+    if (route && route.name) { el.innerHTML = '<div class="route"><div class="route-name">' + mudforge.escapeHTML(route.name) + '</div><div class="route-detail">' + mudforge.escapeHTML(route.detail || "") + '</div></div>'; }
+    else { el.innerHTML = '<p style="color:var(--lotj-muted);font-size:0.85em">No active route.</p>'; }
+  }
+  function updateBadge(channel, count) {
+    var badge = document.getElementById("lotj-" + channel + "-badge");
+    if (badge) { badge.textContent = count; badge.style.display = count > 0 ? "inline" : "none"; }
+  }
+</script>
+</body></html>]])
+
+  -- Register luamsg handler
+  registerWidgetEvent(commsHub, "luamsg", function(m)
+    if m.event == "ready" then
+      -- Widget JS is ready, push initial state
+    end
+  end)
+end
+
+-- Chat channel trigger handlers (placeholders — wired via addTrigger in main plugin)
+function handleChatMessage(msg)
+  if not commsHub then return end
+  sendWidgetMessage(commsHub, { event = "chatMessage", msg = msg })
+end
+
+function handleCombatStats(stats)
+  if not commsHub then return end
+  sendWidgetMessage(commsHub, { event = "combatStats", stats = stats })
+end
+
+function handleAutopilotRoute(route)
+  if not commsHub then return end
+  sendWidgetMessage(commsHub, { event = "autopilotRoute", route = route })
+end
+
+function handleUnreadBadge(channel, count)
+  if not commsHub then return end
+  sendWidgetMessage(commsHub, { event = "unreadBadge", channel = channel, count = count })
+end
+
+return {
+  init = initCommsHub,
+  handleChatMessage = handleChatMessage,
+  handleCombatStats = handleCombatStats,
+  handleAutopilotRoute = handleAutopilotRoute,
+  handleUnreadBadge = handleUnreadBadge,
+}
