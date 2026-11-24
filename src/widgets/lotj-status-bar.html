@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  :root {
+    --lotj-bg: #0B0F14;
+    --lotj-card: #1E293B;
+    --lotj-border: #334155;
+    --lotj-text: #F1F5F9;
+    --lotj-muted: #94A3B8;
+    --lotj-accent: #22D3EE;
+    --lotj-active-tab: #1F5E66;
+    --lotj-warn: #F59E0B;
+    --lotj-danger: #EF4444;
+    --lotj-success: #10B981;
+    --lotj-force: #56B4E9;
+    --lotj-hp: #009E73;
+    --lotj-mv: #E69F00;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: clamp(11px, 0.8rem, 14px);
+    background: var(--lotj-bg);
+    color: var(--lotj-text);
+    padding: 4px 8px;
+    height: 100%;
+    overflow: hidden;
+  }
+  .lotj-status-bar { display: flex; flex-direction: column; gap: 2px; height: 100%; }
+
+  /* Ship row (hidden until Ship.Info populated) */
+  .lotj-ship-row {
+    display: none;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+    padding: 2px 0;
+    border-bottom: 1px solid var(--lotj-border);
+  }
+  .lotj-ship-row.visible { display: flex; }
+  .lotj-ship-row .label { color: var(--lotj-muted); font-size: 0.75em; }
+  .lotj-ship-row .value { color: var(--lotj-text); }
+
+  /* Vitals row */
+  .lotj-vitals-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    align-items: center;
+    flex: 1;
+  }
+  .lotj-gauge {
+    flex: 1 1 45%;
+    min-width: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+  .lotj-gauge .gauge-label {
+    font-size: 0.7em;
+    color: var(--lotj-muted);
+    display: flex;
+    justify-content: space-between;
+  }
+  .lotj-gauge .gauge-bar {
+    height: 8px;
+    background: #1E293B;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+  }
+  .lotj-gauge .gauge-fill {
+    height: 100%;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+  }
+  .lotj-gauge .gauge-fill.hp { background: var(--lotj-hp); }
+  .lotj-gauge .gauge-fill.mv { background: var(--lotj-mv); }
+  .lotj-gauge .gauge-fill.force { background: var(--lotj-force); }
+  .lotj-gauge .gauge-fill.mana { background: #A78BFA; }
+
+  /* Wimpy tick overlay */
+  .lotj-wimpy {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    pointer-events: none;
+    border-left: 2px solid var(--lotj-warn);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .lotj-wimpy.active { opacity: 1; }
+
+  /* Opponent bar */
+  .lotj-opponent {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 0;
+    border-top: 1px solid var(--lotj-border);
+    font-size: 0.75em;
+  }
+  .lotj-opponent .target-name { color: var(--lotj-muted); min-width: 60px; }
+  .lotj-opponent .target-bar { flex: 1; height: 6px; background: #1E293B; border-radius: 2px; overflow: hidden; }
+  .lotj-opponent .target-fill { height: 100%; background: var(--lotj-danger); border-radius: 2px; transition: width 0.3s; }
+
+  /* Comlink indicator */
+  .lotj-comlink {
+    font-size: 0.7em;
+    color: var(--lotj-muted);
+    padding: 1px 4px;
+    border-radius: 2px;
+    background: var(--lotj-card);
+  }
+  .lotj-comlink.active { color: var(--lotj-accent); }
+  .lotj-comlink.muted { color: var(--lotj-danger); }
+
+  /* Status icons */
+  .lotj-icon { font-size: 1em; vertical-align: middle; }
+
+  /* Responsive */
+  @media (pointer: coarse) {
+    .lotj-gauge { min-height: 44px; }
+    button, [data-mud-action] { min-height: 44px; min-width: 44px; }
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .lotj-gauge .gauge-fill { transition: none; }
+    .lotj-opponent .target-fill { transition: none; }
+  }
+</style>
+</head>
+<body>
+<div class="lotj-status-bar" id="lotj-status-bar">
+  <!-- Ship row (hidden until Ship.Info populated) -->
+  <div class="lotj-ship-row" id="lotj-ship-row">
+    <span class="label">🛡️ Shield</span>
+    <div class="lotj-gauge" style="flex:1;min-width:60px">
+      <div class="gauge-bar"><div class="gauge-fill" id="lotj-shield-fill" style="width:0%"></div></div>
+    </div>
+    <span class="label">Hull</span>
+    <div class="lotj-gauge" style="flex:1;min-width:60px">
+      <div class="gauge-bar"><div class="gauge-fill" id="lotj-hull-fill" style="width:0%"></div></div>
+    </div>
+    <span class="label">Energy</span>
+    <div class="lotj-gauge" style="flex:1;min-width:60px">
+      <div class="gauge-bar"><div class="gauge-fill" id="lotj-energy-fill" style="width:0%"></div></div>
+    </div>
+    <span class="lotj-comlink" id="lotj-comlink-indicator">🔇</span>
+  </div>
+
+  <!-- Vitals row -->
+  <div class="lotj-vitals-row">
+    <div class="lotj-gauge" id="gauge-hp">
+      <div class="gauge-label"><span>❤️ HP</span><span id="lotj-hp-text">0/0</span></div>
+      <div class="gauge-bar" style="position:relative">
+        <div class="gauge-fill hp" id="lotj-hp-fill" style="width:0%"></div>
+        <div class="lotj-wimpy" id="lotj-wimpy-tick"></div>
+      </div>
+    </div>
+    <div class="lotj-gauge" id="gauge-mv">
+      <div class="gauge-label"><span>🏃 MV</span><span id="lotj-mv-text">0/0</span></div>
+      <div class="gauge-bar"><div class="gauge-fill mv" id="lotj-mv-fill" style="width:0%"></div></div>
+    </div>
+    <div class="lotj-gauge" id="gauge-force" style="display:none">
+      <div class="gauge-label"><span>✨ FORCE</span><span id="lotj-force-text">0/0</span></div>
+      <div class="gauge-bar"><div class="gauge-fill force" id="lotj-force-fill" style="width:0%"></div></div>
+    </div>
+    <div class="lotj-gauge" id="gauge-mana" style="display:none">
+      <div class="gauge-label"><span>💠 MANA</span><span id="lotj-mana-text">0/0</span></div>
+      <div class="gauge-bar"><div class="gauge-fill mana" id="lotj-mana-fill" style="width:0%"></div></div>
+    </div>
+  </div>
+
+  <!-- Opponent bar -->
+  <div class="lotj-opponent" id="lotj-opponent-bar" style="display:none">
+    <span class="target-name" id="lotj-target-name"></span>
+    <div class="target-bar"><div class="target-fill" id="lotj-target-fill" style="width:0%"></div></div>
+    <span id="lotj-target-pct"></span>
+  </div>
+</div>
+
+<script>
+  // Ready handshake
+  mudforge.send("ready", { widget: "lotj-status-bar" });
+
+  // Handle bound values from Lua
+  mudforge.onMessage(function(data) {
+    if (data.event === "setBoundValues" && data.values) {
+      updateVitals(data.values);
+    }
+    if (data.event === "shipInfo" && data.ship) {
+      updateShipRow(data.ship);
+    }
+    if (data.event === "enemyInfo" && data.enemy) {
+      updateOpponent(data.enemy);
+    }
+    if (data.event === "comlink" && data.channel) {
+      updateComlink(data.channel);
+    }
+  });
+
+  function updateVitals(v) {
+    // HP
+    if (v.hp !== undefined && v.maxHp !== undefined) {
+      var pct = Math.min(100, Math.max(0, (v.hp / v.maxHp) * 100));
+      document.getElementById("lotj-hp-fill").style.width = pct + "%";
+      document.getElementById("lotj-hp-text").textContent = v.hp + "/" + v.maxHp;
+      // Wimpy tick
+      if (v.wimpy && v.hp <= v.maxHp * (v.wimpy / 100)) {
+        document.getElementById("lotj-wimpy-tick").classList.add("active");
+      } else {
+        document.getElementById("lotj-wimpy-tick").classList.remove("active");
+      }
+    }
+    // Move
+    if (v.move !== undefined && v.maxMove !== undefined) {
+      var pct = Math.min(100, Math.max(0, (v.move / v.maxMove) * 100));
+      document.getElementById("lotj-mv-fill").style.width = pct + "%";
+      document.getElementById("lotj-mv-text").textContent = v.move + "/" + v.maxMove;
+    }
+    // Force (conditional - only show if maxForce > 0)
+    if (v.force !== undefined && v.maxForce !== undefined) {
+      var forceGauge = document.getElementById("gauge-force");
+      if (v.maxForce > 0) {
+        forceGauge.style.display = "flex";
+        var pct = Math.min(100, Math.max(0, (v.force / v.maxForce) * 100));
+        document.getElementById("lotj-force-fill").style.width = pct + "%";
+        document.getElementById("lotj-force-text").textContent = v.force + "/" + v.maxForce;
+      } else {
+        forceGauge.style.display = "none";
+      }
+    }
+    // Mana (conditional - only show if maxMana > 0)
+    if (v.mana !== undefined && v.maxMana !== undefined) {
+      var manaGauge = document.getElementById("gauge-mana");
+      if (v.maxMana > 0) {
+        manaGauge.style.display = "flex";
+        var pct = Math.min(100, Math.max(0, (v.mana / v.maxMana) * 100));
+        document.getElementById("lotj-mana-fill").style.width = pct + "%";
+        document.getElementById("lotj-mana-text").textContent = v.mana + "/" + v.maxMana;
+      } else {
+        manaGauge.style.display = "none";
+      }
+    }
+  }
+
+  function updateShipRow(ship) {
+    var row = document.getElementById("lotj-ship-row");
+    row.classList.add("visible");
+    if (ship.shield !== undefined && ship.maxShield !== undefined) {
+      document.getElementById("lotj-shield-fill").style.width = Math.min(100, (ship.shield / ship.maxShield) * 100) + "%";
+    }
+    if (ship.hull !== undefined && ship.maxHull !== undefined) {
+      document.getElementById("lotj-hull-fill").style.width = Math.min(100, (ship.hull / ship.maxHull) * 100) + "%";
+    }
+    if (ship.energy !== undefined && ship.maxEnergy !== undefined) {
+      document.getElementById("lotj-energy-fill").style.width = Math.min(100, (ship.energy / ship.maxEnergy) * 100) + "%";
+    }
+    if (ship.piloting) {
+      document.getElementById("lotj-comlink-indicator").textContent = "📡 " + ship.piloting;
+    }
+  }
+
+  function updateOpponent(enemy) {
+    var bar = document.getElementById("lotj-opponent-bar");
+    bar.style.display = "flex";
+    document.getElementById("lotj-target-name").textContent = enemy.name || "Unknown";
+    if (enemy.percent !== undefined) {
+      document.getElementById("lotj-target-fill").style.width = enemy.percent + "%";
+      document.getElementById("lotj-target-pct").textContent = enemy.percent + "%";
+    }
+  }
+
+  function updateComlink(channel) {
+    var el = document.getElementById("lotj-comlink-indicator");
+    if (channel && channel.active) {
+      el.textContent = "📡 " + (channel.name || "");
+      el.className = "lotj-comlink active";
+    } else {
+      el.textContent = "🔇 Muted";
+      el.className = "lotj-comlink muted";
+    }
+  }
+</script>
+</body>
+</html>

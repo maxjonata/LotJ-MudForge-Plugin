@@ -1,0 +1,28 @@
+/* LOTJ Status Bar — CSS variables and responsive rules */
+/* Color palette: WCAG AA compliant, Okabe-Ito colorblind safe */
+:root {
+  --lotj-bg: #0B0F14;
+  --lotj-card: #1E293B;
+  --lotj-border: #334155;
+  --lotj-text: #F1F5F9;
+  --lotj-muted: #94A3B8;
+  --lotj-accent: #22D3EE;
+  --lotj-active-tab: #1F5E66;
+  --lotj-warn: #F59E0B;
+  --lotj-danger: #EF4444;
+  --lotj-success: #10B981;
+  --lotj-force: #56B4E9;
+  --lotj-hp: #009E73;
+  --lotj-mv: #E69F00;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .lotj-gauge-fill, .lotj-target-fill { transition: none; }
+}
+
+/* Touch-friendly sizing */
+@media (pointer: coarse) {
+  .lotj-gauge { min-height: 44px; }
+  [data-mud-action] { min-height: 44px; min-width: 44px; }
+}

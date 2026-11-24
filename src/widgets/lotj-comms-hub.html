@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  :root {
+    --lotj-bg: #0B0F14;
+    --lotj-card: #1E293B;
+    --lotj-border: #334155;
+    --lotj-text: #F1F5F9;
+    --lotj-muted: #94A3B8;
+    --lotj-accent: #22D3EE;
+    --lotj-active-tab: #1F5E66;
+    --lotj-warn: #F59E0B;
+    --lotj-danger: #EF4444;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: clamp(11px, 0.8rem, 14px);
+    background: var(--lotj-bg);
+    color: var(--lotj-text);
+    padding: 4px 8px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Tab header */
+  .lotj-tabs {
+    display: flex;
+    gap: 2px;
+    border-bottom: 2px solid var(--lotj-border);
+    padding-bottom: 2px;
+    flex-wrap: wrap;
+  }
+  .lotj-tab {
+    padding: 4px 8px;
+    border-radius: 3px 3px 0 0;
+    cursor: pointer;
+    font-size: 0.75em;
+    background: var(--lotj-card);
+    color: var(--lotj-muted);
+    border: 1px solid transparent;
+    border-bottom: none;
+    min-height: 28px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    user-select: none;
+  }
+  .lotj-tab:hover { color: var(--lotj-text); }
+  .lotj-tab.active {
+    background: var(--lotj-active-tab);
+    color: var(--lotj-text);
+    border-color: var(--lotj-border);
+    border-bottom-color: var(--lotj-active-tab);
+  }
+  .lotj-tab .unread-badge {
+    background: var(--lotj-warn);
+    color: #000;
+    font-size: 0.7em;
+    padding: 0 4px;
+    border-radius: 8px;
+    font-weight: bold;
+    min-width: 16px;
+    text-align: center;
+  }
+
+  /* Tab content */
+  .lotj-tab-content {
+    flex: 1;
+    overflow-y: auto;
+    display: none;
+  }
+  .lotj-tab-content.active { display: block; }
+
+  /* Chat lines */
+  .lotj-msg {
+    padding: 2px 4px;
+    border-bottom: 1px solid rgba(51,65,85,0.3);
+    font-size: 0.85em;
+    line-height: 1.4;
+  }
+  .lotj-msg .lotj-channel {
+    font-weight: bold;
+    margin-right: 4px;
+  }
+  .lotj-msg .lotj-sender {
+    color: var(--lotj-accent);
+    margin-right: 4px;
+  }
+  .lotj-msg .lotj-text { color: var(--lotj-text); }
+
+  /* CombatStats tab */
+  .lotj-stat-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 2px 4px;
+    font-size: 0.8em;
+    border-bottom: 1px solid rgba(51,65,85,0.2);
+  }
+  .lotj-stat-row .lotj-label { color: var(--lotj-muted); }
+  .lotj-stat-row .lotj-value { color: var(--lotj-text); font-weight: bold; }
+
+  /* AutoPilot tab */
+  .lotj-autopilot {
+    padding: 4px;
+    font-size: 0.8em;
+  }
+  .lotj-autopilot .lotj-route {
+    padding: 4px;
+    background: var(--lotj-card);
+    border-radius: 3px;
+    margin-bottom: 4px;
+  }
+  .lotj-autopilot .lotj-route-name { color: var(--lotj-accent); font-weight: bold; }
+  .lotj-autopilot .lotj-route-detail { color: var(--lotj-muted); font-size: 0.9em; }
+
+  /* Mod slot */
+  .lotj-mods-slot {
+    margin-top: 4px;
+    padding-top: 4px;
+    border-top: 1px solid var(--lotj-border);
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .lotj-tab-content { transition: none; }
+  }
+
+  /* Responsive */
+  @media (pointer: coarse) {
+    .lotj-tab { min-height: 44px; min-width: 44px; }
+  }
+</style>
+</head>
+<body>
+<div class="lotj-comms-hub" id="lotj-comms-hub">
+  <!-- Tab header -->
+  <div class="lotj-tabs" id="lotj-tabs">
+    <div class="lotj-tab active" data-tab="all">All</div>
+    <div class="lotj-tab" data-tab="local">Local</div>
+    <div class="lotj-tab" data-tab="commnet">CommNet <span class="unread-badge" id="lotj-commnet-badge" style="display:none">0</span></div>
+    <div class="lotj-tab" data-tab="clan">Clan</div>
+    <div class="lotj-tab" data-tab="broadcast">Broadcast</div>
+    <div class="lotj-tab" data-tab="ooc">OOC</div>
+    <div class="lotj-tab" data-tab="tell">Tell</div>
+    <div class="lotj-tab" data-tab="imm">Imm</div>
+    <div class="lotj-tab" data-tab="stats">Stats</div>
+    <div class="lotj-tab" data-tab="autopilot">AutoPilot</div>
+  </div>
+
+  <!-- All tab -->
+  <div class="lotj-tab-content active" id="tab-all"></div>
+
+  <!-- Channel tabs -->
+  <div class="lotj-tab-content" id="tab-local"></div>
+  <div class="lotj-tab-content" id="tab-commnet"></div>
+  <div class="lotj-tab-content" id="tab-clan"></div>
+  <div class="lotj-tab-content" id="tab-broadcast"></div>
+  <div class="lotj-tab-content" id="tab-ooc"></div>
+  <div class="lotj-tab-content" id="tab-tell"></div>
+  <div class="lotj-tab-content" id="tab-imm"></div>
+
+  <!-- Stats tab -->
+  <div class="lotj-tab-content" id="tab-stats">
+    <div class="lotj-stat-row"><span class="lotj-label">Damage Dealt</span><span class="lotj-value" id="lotj-damage-dealt">0</span></div>
+    <div class="lotj-stat-row"><span class="lotj-label">Hits Given</span><span class="lotj-value" id="lotj-hits-given">0</span></div>
+    <div class="lotj-stat-row"><span class="lotj-label">Misses</span><span class="lotj-value" id="lotj-misses">0</span></div>
+    <div class="lotj-stat-row"><span class="lotj-label">Dodges</span><span class="lotj-value" id="lotj-dodges">0</span></div>
+    <div class="lotj-stat-row"><span class="lotj-label">Damage Taken</span><span class="lotj-value" id="lotj-damage-taken">0</span></div>
+    <div class="lotj-stat-row"><span class="lotj-label">Bacta Change</span><span class="lotj-value" id="lotj-bacta-change">0</span></div>
+  </div>
+
+  <!-- AutoPilot tab -->
+  <div class="lotj-tab-content" id="tab-autopilot">
+    <div class="lotj-autopilot" id="lotj-autopilot-content">
+      <p style="color:var(--lotj-muted);font-size:0.85em">No active route.</p>
+    </div>
+  </div>
+
+  <!-- Mod slot for additional plugins -->
+  <div class="lotj-mods-slot" id="lotj-mods-slot"></div>
+</div>
+
+<script>
+  // Ready handshake
+  mudforge.send("ready", { widget: "lotj-comms-hub" });
+
+  // Tab switching
+  document.getElementById("lotj-tabs").addEventListener("click", function(e) {
+    var tab = e.target.closest(".lotj-tab");
+    if (!tab) return;
+    var tabName = tab.getAttribute("data-tab");
+    // Deactivate all tabs
+    document.querySelectorAll(".lotj-tab").forEach(function(t) { t.classList.remove("active"); });
+    document.querySelectorAll(".lotj-tab-content").forEach(function(c) { c.classList.remove("active"); });
+    // Activate selected
+    tab.classList.add("active");
+    var content = document.getElementById("tab-" + tabName);
+    if (content) content.classList.add("active");
+    // Clear unread badge on CommNet tab
+    if (tabName === "commnet") {
+      var badge = document.getElementById("lotj-commnet-badge");
+      if (badge) badge.style.display = "none";
+    }
+  });
+
+  // Handle messages from Lua
+  mudforge.onMessage(function(data) {
+    if (data.event === "chatMessage" && data.msg) {
+      appendChatMessage(data.msg);
+    }
+    if (data.event === "combatStats" && data.stats) {
+      updateStats(data.stats);
+    }
+    if (data.event === "autopilotRoute" && data.route) {
+      updateAutopilot(data.route);
+    }
+    if (data.event === "unreadBadge" && data.channel) {
+      updateUnreadBadge(data.channel, data.count);
+    }
+  });
+
+  function appendChatMessage(msg) {
+    var channel = msg.channel || "all";
+    var tabMap = {
+      "all": "tab-all",
+      "local": "tab-local",
+      "commnet": "tab-commnet",
+      "clan": "tab-clan",
+      "broadcast": "tab-broadcast",
+      "ooc": "tab-ooc",
+      "tell": "tab-tell",
+      "imm": "tab-imm"
+    };
+    var tabId = tabMap[channel] || "tab-all";
+    var tab = document.getElementById(tabId);
+    if (!tab) return;
+
+    var div = document.createElement("div");
+    div.className = "lotj-msg";
+    div.innerHTML =
+      '<span class="lotj-channel">' + mudforge.escapeHTML(msg.channel) + '</span>' +
+      '<span class="lotj-sender">' + mudforge.escapeHTML(msg.sender || "") + '</span>' +
+      '<span class="lotj-text">' + mudforge.escapeHTML(msg.text || "") + '</span>';
+    tab.appendChild(div);
+    // Keep scroll at bottom
+    tab.scrollTop = tab.scrollHeight;
+  }
+
+  function updateStats(stats) {
+    if (stats.damageDealt !== undefined) document.getElementById("lotj-damage-dealt").textContent = stats.damageDealt;
+    if (stats.hitsGiven !== undefined) document.getElementById("lotj-hits-given").textContent = stats.hitsGiven;
+    if (stats.misses !== undefined) document.getElementById("lotj-misses").textContent = stats.misses;
+    if (stats.dodges !== undefined) document.getElementById("lotj-dodges").textContent = stats.dodges;
+    if (stats.damageTaken !== undefined) document.getElementById("lotj-damage-taken").textContent = stats.damageTaken;
+    if (stats.bactaChange !== undefined) document.getElementById("lotj-bacta-change").textContent = stats.bactaChange;
+  }
+
+  function updateAutopilot(route) {
+    var content = document.getElementById("lotj-autopilot-content");
+    if (!content) return;
+    if (route && route.name) {
+      content.innerHTML =
+        '<div class="lotj-route">' +
+        '<div class="lotj-route-name">' + mudforge.escapeHTML(route.name) + '</div>' +
+        '<div class="lotj-route-detail">' + mudforge.escapeHTML(route.detail || "") + '</div>' +
+        '</div>';
+    } else {
+      content.innerHTML = '<p style="color:var(--lotj-muted);font-size:0.85em">No active route.</p>';
+    }
+  }
+
+  function updateUnreadBadge(channel, count) {
+    var badge = document.getElementById("lotj-" + channel + "-badge");
+    if (badge) {
+      badge.textContent = count;
+      badge.style.display = count > 0 ? "inline" : "none";
+    }
+  }
+</script>
+</body>
+</html>
