@@ -83,7 +83,7 @@ function initStatusBar()
 <script>
   mudforge.send("ready", { widget: "lotj-status-bar" });
   mudforge.onMessage(function(data) {
-    if (data.event === "setBoundValues" && data.values) updateVitals(data.values);
+    if (data.event === "vitals" && data.values) updateVitals(data.values);
     if (data.event === "shipInfo" && data.ship) updateShipRow(data.ship);
     if (data.event === "enemyInfo" && data.enemy) updateOpponent(data.enemy);
     if (data.event === "comlink" && data.channel) updateComlink(data.channel);
@@ -107,11 +107,7 @@ function initStatusBar()
       if (v.maxForce > 0) { fg.style.display = "flex"; document.getElementById("force-fill").style.width = Math.min(100, (v.force / v.maxForce) * 100) + "%"; document.getElementById("force-text").textContent = v.force + "/" + v.maxForce; }
       else { fg.style.display = "none"; }
     }
-    if (v.mana !== undefined && v.maxMana !== undefined) {
-      var mg = document.getElementById("gauge-mana");
-      if (v.maxMana > 0) { mg.style.display = "flex"; document.getElementById("mana-fill").style.width = Math.min(100, (v.mana / v.maxMana) * 100) + "%"; document.getElementById("mana-text").textContent = v.mana + "/" + v.maxMana; }
-      else { mg.style.display = "none"; }
-    }
+    // Mana gauge removed - Force bar is driven by mana/maxMana
   }
   function updateShipRow(ship) {
     var row = document.getElementById("ship-row");

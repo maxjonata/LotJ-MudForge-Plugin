@@ -188,7 +188,7 @@
 
   // Handle bound values from Lua
   mudforge.onMessage(function(data) {
-    if (data.event === "setBoundValues" && data.values) {
+    if (data.event === "vitals" && data.values) {
       updateVitals(data.values);
     }
     if (data.event === "shipInfo" && data.ship) {
