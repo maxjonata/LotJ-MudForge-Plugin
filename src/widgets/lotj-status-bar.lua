@@ -182,19 +182,19 @@ function onGMCPUpdateCharEnemy(data)
   if not statusBar then return end
   -- Strip Mud color codes (&r, &n, etc.) from enemy name
   local name = data.name or ""
-  name = name:gsub("&&r", ""):gsub("&&n", ""):gsub("&&[^rN]", "")
-  setBoundValues(statusBar, {
-    enemyName = name,
-    enemyPercent = data.percent or 0,
-  })
+  name = name:gsub("&.", "")
+  sendWidgetMessage(statusBar, { event = "enemyInfo", enemy = {
+    name = name,
+    percent = data.percent or 0,
+  }})
 end
 
 function onGMCPUpdateCharChat(data)
   if not statusBar then return end
-  setBoundValues(statusBar, {
-    commChannel = data.commChannel or "",
-    commEncrypt = data.commEncrypt or false,
-  })
+  sendWidgetMessage(statusBar, { event = "comlink", channel = {
+    name = data.commChannel or "",
+    active = data.commEncrypt or false,
+  }})
 end
 
 return {
