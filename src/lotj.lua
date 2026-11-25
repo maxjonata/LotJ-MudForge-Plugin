@@ -19,12 +19,29 @@ local WIDGET_DATAPAD    = nil
 
 -- ── Init: create all widgets ───────────────────────────────────
 function init()
+  -- Load sub-widget modules
+  loadModule("src/widgets/lotj-status-bar.lua")
+  loadModule("src/widgets/lotj-comms-hub.lua")
+
+  -- Compute positions based on window size (60/40 split)
+  local winW, winH = getWindowSize()
+  local statusBarX = 20
+  local statusBarY = winH - 96
+  local commsHubX = math.floor(winW * 0.60) + 20
+  local commsHubY = 20
+  local shipHudX = math.floor(winW * 0.60) + 20
+  local shipHudY = 20
+  local radarX = math.floor(winW * 0.60) + 20
+  local radarY = 20
+  local datapadX = 20
+  local datapadY = 60
+
   -- Status Bar (HTML) — two-row layout: ship row (conditional) + vitals row
   WIDGET_STATUS_BAR = createWidget({
     type     = "html",
     name     = "lotj-status-bar",
     title    = "LOTJ Status Bar",
-    position = { x = 0, y = 0 },
+    position = { x = statusBarX, y = statusBarY },
     size     = { width = 320, height = 64 },
     zIndex   = 20,
   })
@@ -34,7 +51,7 @@ function init()
     type     = "html",
     name     = "lotj-comms-hub",
     title    = "LOTJ Comms Hub",
-    position = { x = 0, y = 0 },
+    position = { x = commsHubX, y = commsHubY },
     size     = { width = 360, height = 420 },
     zIndex   = 15,
     visible  = false,
@@ -45,7 +62,7 @@ function init()
     type     = "html",
     name     = "lotj-ship-hud",
     title    = "🛡️ SHIP STATUS",
-    position = { x = 0, y = 0 },
+    position = { x = shipHudX, y = shipHudY },
     size     = { width = 320, height = 220 },
     zIndex   = 18,
     visible  = false,
@@ -56,7 +73,7 @@ function init()
     type     = "canvas",
     name     = "lotj-space-radar",
     title    = "🚀 TACTICAL RADAR",
-    position = { x = 0, y = 0 },
+    position = { x = radarX, y = radarY },
     size     = { width = 180, height = 180 },
     zIndex   = 18,
     visible  = false,
@@ -67,7 +84,7 @@ function init()
     type     = "html",
     name     = "lotj-datapad",
     title    = "📋 HOLOCRON DATAPAD",
-    position = { x = 0, y = 0 },
+    position = { x = datapadX, y = datapadY },
     size     = { width = 360, height = 420 },
     zIndex   = 15,
     visible  = false,
