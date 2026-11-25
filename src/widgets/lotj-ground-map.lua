@@ -55,7 +55,7 @@ function initGroundMap()
   end)
 
   -- Set up triggers for room entry and map events
-  addTrigger("^You enter (.*?)%.$", function(line)
+  addTrigger("^You enter (.*?)\%.$", function(line)
     local roomName = line:match("^You enter (.*?)%.$")
     if roomName then
       currentRoom = roomName
@@ -63,7 +63,7 @@ function initGroundMap()
     end
   end, true)
 
-  addTrigger("^The room is (.*?)%.$", function(line)
+  addTrigger("^The room is (.*?)\%.$", function(line)
     local roomDesc = line:match("^The room is (.*?)%.$")
     if roomDesc then
       updateMapForRoom(roomDesc)
@@ -78,10 +78,11 @@ function initGroundMap()
     end
   end)
 
-  -- Handle window resize for map redraw
+  -- Handle window resize for map repositioning
   on("windowResize", function()
     if groundMap and mapInitialized then
-      redrawMap()
+      moveWidget(groundMap, { x = 20, y = 20 })
+      resizeWidget(groundMap, { width = 400, height = 400 })
     end
   end)
 
@@ -105,34 +106,34 @@ function registerMapperCallbacks()
   end)
 end
 
---- Update map for a specific room
-function updateMapForRoom(roomName)
+--- Update map for a specific room (vnum-based)
+function updateMapForRoom(vnum)
   if not groundMap or not mapInitialized then return end
 
   -- The type="map" widget renders the map database automatically.
   -- We populate rooms via the Mapper API and set the player's current room.
-  if currentRoom then
-    local room = roomCache[currentRoom]
+  if vnum then
+    local room = roomCache[vnum]
     if room then
-      addMapRoom(currentRoom, {
-        name = room.name or currentRoom,
+      addMapRoom(vnum, {
+        name = room.name or ("Room " .. vnum),
         area = room.area or "Unknown",
         x = room.x or 0,
         y = room.y or 0,
         z = room.z or 0,
       })
-      setPlayerRoom(currentRoom)
+      setPlayerRoom(vnum)
     end
   end
 
-  -- Update room symbols for amenities
-  for vnum, data in pairs(roomCache) do
+  -- Update room symbols for amenities (use 1-char key)
+  for roomVnum, data in pairs(roomCache) do
     if data.amenities then
       for _, amenity in ipairs(data.amenities) do
+        setRoomSymbol(roomVnum, amenity)
         local sym = AMENITY_SYMBOLS[amenity]
         if sym then
-          setRoomSymbol(vnum, sym.label)
-          setRoomColor(vnum, sym.color)
+          setRoomColor(roomVnum, sym.color)
         end
       end
     end
@@ -158,6 +159,19 @@ function updateMapDisplay()
   end
 end
 
+-- Parse room entry trigger and store by numeric vnum
+function handleRoomEntry(line)
+  local roomName = line:match("^You enter (.*?)%.$")
+  if roomName then
+    -- Try to extract vnum from room data if available
+    local vnum = tonumber(roomName:match("(%d+)"))
+    if vnum then
+      currentRoom = vnum
+      updateMapForRoom(vnum)
+    end
+  end
+end
+
 --- Handle map click events (click to target)
 function handleMapClick(vnum)
   local room = roomCache[vnum]
@@ -165,6 +179,11 @@ function handleMapClick(vnum)
     emit("lotj:target:set", { room = room.name or ("Room " .. vnum), vnum = vnum })
     print("LOTJ: Target set to " .. (room.name or ("Room " .. vnum)))
   end
+end
+
+-- Handle map click from Mapper API
+function onMapRoomClickHandler(vnum)
+  handleMapClick(vnum)
 end
 
 --- Toggle map visibility

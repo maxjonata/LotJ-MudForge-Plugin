@@ -3,8 +3,8 @@
 
 local commsHub = nil
 
-function initCommsHub()
-  -- Widget already created in init(); just set up event handlers
+function initCommsHub(id)
+  commsHub = id
 
   -- Set initial HTML content with tabbed layout
   setWidgetProperty(commsHub, "content", [[
@@ -89,7 +89,7 @@ function initCommsHub()
     var badge = document.getElementById("lotj-" + tabName + "-badge");
     if (badge) badge.style.display = "none";
     // Return focus to MUD prompt after tab switch
-    focusPrompt();
+    mudforge.send("tabClick", { tab: tabName });
   });
   mudforge.onMessage(function(data) {
     if (data.event === "chatMessage" && data.msg) appendChat(data.msg);
@@ -100,6 +100,17 @@ function initCommsHub()
   function appendChat(msg) {
     var channel = msg.channel || "all";
     var tabMap = { all: "tab-all", local: "tab-local", commnet: "tab-commnet", clan: "tab-clan", broadcast: "tab-broadcast", ooc: "tab-ooc", tell: "tab-tell", imm: "tab-imm" };
+    // Mirror to tab-all for non-all channels
+    if (channel !== "all") {
+      var allTab = document.getElementById("tab-all");
+      if (allTab) {
+        var allDiv = document.createElement("div");
+        allDiv.className = "msg";
+        allDiv.innerHTML = '<span class="ch">' + mudforge.escapeHTML(msg.channel || "") + '</span><span class="sender">' + mudforge.escapeHTML(msg.sender || "") + '</span><span>' + mudforge.escapeHTML(msg.text || "") + '</span>';
+        allTab.appendChild(allDiv);
+        allTab.scrollTop = allTab.scrollHeight;
+      }
+    }
     var tab = document.getElementById(tabMap[channel] || "tab-all");
     if (!tab) return;
     var div = document.createElement("div");
@@ -133,6 +144,9 @@ function initCommsHub()
   registerWidgetEvent(commsHub, "luamsg", function(m)
     if m.event == "ready" then
       -- Widget JS is ready, push initial state
+    end
+    if m.event == "tabClick" then
+      focusPrompt()
     end
   end)
 end

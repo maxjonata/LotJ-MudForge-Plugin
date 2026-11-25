@@ -95,15 +95,22 @@ function init()
   -- Set initial active widget for canvas drawing
   setActiveWidget(WIDGET_SPACE_RADAR)
 
-  -- Initialize sub-widgets
-  if initStatusBar then initStatusBar() end
-  if initCommsHub then initCommsHub() end
+  -- Initialize sub-widgets with widget IDs
+  if initStatusBar then initStatusBar(WIDGET_STATUS_BAR) end
+  if initCommsHub then initCommsHub(WIDGET_COMMS_HUB) end
+  if initGroundMap then initGroundMap() end
 
   -- Register theme on connect (also handled in onConnect for reconnects)
   registerLOTJTheme()
 
   -- Register event handlers
   registerWidgetEvents()
+
+  -- Register GMCP handlers (onGMCPUpdate is MudForge's global hook)
+  onGMCPUpdate("Char.Vitals", onGMCPUpdateCharVitals)
+  onGMCPUpdate("Ship.Info", onGMCPUpdateShipInfo)
+  onGMCPUpdate("Char.Enemy", onGMCPUpdateCharEnemy)
+  onGMCPUpdate("Char.Chat", onGMCPUpdateCharChat)
 end
 
 -- ── Theme Registration ─────────────────────────────────────────
@@ -141,12 +148,6 @@ end
 
 -- ── Widget Event Registration ──────────────────────────────────
 function registerWidgetEvents()
-  -- Combat HUD click events (force power buttons)
-  registerWidgetEvent(WIDGET_COMBAT_HUD, "click", function(data)
-    handleCombatHUDClick(data)
-    focusPrompt()
-  end)
-
   -- Ship HUD click events
   registerWidgetEvent(WIDGET_SHIP_HUD, "click", function(data)
     handleShipHUDClick(data)
@@ -187,23 +188,19 @@ function onSend(sessionId, text)
   -- Block or modify commands (e.g., auto-format force power sends)
 end
 
-function onGMCPUpdate(sessionId, package, data)
-  -- Handle structured Char.Vitals, Ship.Info, Char.Enemy, Char.Chat
-  if package == "Char.Vitals" then
-    onGMCPUpdateCharVitals(data)
-  elseif package == "Ship.Info" then
-    onGMCPUpdateShipInfo(data)
-  elseif package == "Char.Enemy" then
-    onGMCPUpdateCharEnemy(data)
-  elseif package == "Char.Chat" then
-    onGMCPUpdateCharChat(data)
-  end
-end
+
 
 function onSaveState(sessionId)
   -- Persist combat state, crafting timers, faction data
 end
 
+
+
+function cleanup()
+  -- Clean up widget event handlers, timers, etc.
+end
+
+-- ── Placeholder handlers ───────────────────────────────────────
 -- GMCP handler: Char.Vitals (hp, maxHp, move, maxMove, mana, maxMana, wimpy)
 -- Note: Force bar auto-hides when maxMana == 0 (per upstream info-panel.lua)
 -- wimpy is the yellow threshold tick inside the HP bar
@@ -222,7 +219,7 @@ function onGMCPUpdateCharVitals(data)
     values.maxMana = data.maxMana
   end
   if data.wimpy then values.wimpy = data.wimpy end
-  setBoundValues(WIDGET_STATUS_BAR, values)
+  sendWidgetMessage(WIDGET_STATUS_BAR, { event = "vitals", values = values })
 end
 
 -- GMCP handler: Ship.Info (shield, maxShield, hull, maxHull, energy, maxEnergy, piloting, speed, maxSpeed, posX/Y/Z)
@@ -230,18 +227,17 @@ end
 function onGMCPUpdateShipInfo(data)
   if not WIDGET_STATUS_BAR then return end
   if not data or next(data) == nil then
-    setBoundValue(WIDGET_STATUS_BAR, "shipVisible", false)
+    sendWidgetMessage(WIDGET_STATUS_BAR, { event = "shipVisible", visible = false })
     return
   end
-  setBoundValue(WIDGET_STATUS_BAR, "shipVisible", true)
-  setBoundValues(WIDGET_STATUS_BAR, {
+  sendWidgetMessage(WIDGET_STATUS_BAR, { event = "shipVisible", visible = true, ship = {
     shield = data.shield, maxShield = data.maxShield,
     hull = data.hull, maxHull = data.maxHull,
     energy = data.energy, maxEnergy = data.maxEnergy,
     piloting = data.piloting,
     speed = data.speed, maxSpeed = data.maxSpeed,
     posX = data.posX, posY = data.posY, posZ = data.posZ,
-  })
+  }})
 end
 
 -- GMCP handler: Char.Enemy (name with color codes stripped, percent for idle reticle)
@@ -249,26 +245,22 @@ function onGMCPUpdateCharEnemy(data)
   if not WIDGET_STATUS_BAR then return end
   local name = data.name or ""
   name = name:gsub("&.", "")
-  setBoundValues(WIDGET_STATUS_BAR, {
-    enemyName = name,
+  sendWidgetMessage(WIDGET_STATUS_BAR, { event = "enemyInfo", enemy = {
+    name = name,
     enemyPercent = data.percent or 0,
-  })
+  }})
 end
 
 -- GMCP handler: Char.Chat (commChannel, commEncrypt for comlink icon state)
 function onGMCPUpdateCharChat(data)
   if not WIDGET_STATUS_BAR then return end
-  setBoundValues(WIDGET_STATUS_BAR, {
-    commChannel = data.commChannel or "",
-    commEncrypt = data.commEncrypt or false,
-  })
+  sendWidgetMessage(WIDGET_STATUS_BAR, { event = "comlink", channel = {
+    name = data.commChannel or "",
+    active = data.commEncrypt or false,
+  }})
 end
 
-function cleanup()
-  -- Clean up widget event handlers, timers, etc.
-end
-
--- ── Placeholder handlers ───────────────────────────────────────
+-- Placeholder handlers
 function handleCombatHUDClick(data) end
 function handleShipHUDClick(data) end
 function handleDatapadClick(data) end

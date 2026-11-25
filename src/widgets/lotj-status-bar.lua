@@ -3,16 +3,8 @@
 
 local statusBar = nil
 
-function initStatusBar()
-  statusBar = createWidget({
-    type  = "html",
-    name  = "lotj-status-bar",
-    title = "LOTJ Status Bar",
-    position = { x = 0, y = 0 },  -- repositioned on resize
-    size = { width = 320, height = 64 },
-    zIndex = 20,
-    visible = true,
-  })
+function initStatusBar(id)
+  statusBar = id
 
   -- Set initial HTML content
   setWidgetProperty(statusBar, "content", [[
@@ -38,8 +30,8 @@ function initStatusBar()
   .gauge-fill.mv { background: var(--lotj-mv); }
   .gauge-fill.force { background: var(--lotj-force); }
   .gauge-fill.mana { background: var(--lotj-mana); }
-  .wimpy-tick { position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-                pointer-events: none; border-left: 2px solid var(--lotj-warn); opacity: 0; }
+  .wimpy-tick { position: absolute; top: 0; bottom: 0;
+                pointer-events: none; width: 2px; background: var(--lotj-warn); opacity: 0; }
   .wimpy-tick.active { opacity: 1; }
   .opponent-bar { display: none; align-items: center; gap: 4px; padding: 1px 0;
                   border-top: 1px solid var(--lotj-border); font-size: 0.75em; }
@@ -80,7 +72,14 @@ function initStatusBar()
   mudforge.send("ready", { widget: "lotj-status-bar" });
   mudforge.onMessage(function(data) {
     if (data.event === "vitals" && data.values) updateVitals(data.values);
-    if (data.event === "shipVisible" && data.visible) updateShipRow(data.ship);
+    if (data.event === "shipVisible") {
+      if (data.visible === false) {
+        var row = document.getElementById("ship-row");
+        if (row) row.classList.remove("visible");
+      } else {
+        updateShipRow(data.ship);
+      }
+    }
     if (data.event === "enemyInfo" && data.enemy) updateOpponent(data.enemy);
     if (data.event === "comlink" && data.channel) updateComlink(data.channel);
   });
@@ -89,9 +88,14 @@ function initStatusBar()
       var pct = Math.min(100, Math.max(0, (v.hp / v.maxHp) * 100));
       document.getElementById("hp-fill").style.width = pct + "%";
       document.getElementById("hp-text").textContent = v.hp + "/" + v.maxHp;
-      if (v.wimpy && v.maxHp > 0 && v.hp <= v.maxHp * (v.wimpy / 100)) {
-        document.getElementById("wimpy-tick").classList.add("active");
-      } else { document.getElementById("wimpy-tick").classList.remove("active"); }
+      if (v.wimpy && v.wimpy > 0 && v.wimpy < v.maxHp) {
+        var wimpyPct = Math.min(100, (v.wimpy / v.maxHp) * 100);
+        var tick = document.getElementById("wimpy-tick");
+        if (tick) { tick.style.left = wimpyPct + "%"; tick.style.opacity = "1"; }
+      } else {
+        var tick = document.getElementById("wimpy-tick");
+        if (tick) { tick.style.opacity = "0"; }
+      }
     }
     if (v.move !== undefined && v.maxMove !== undefined) {
       var pct = Math.min(100, Math.max(0, (v.move / v.maxMove) * 100));
@@ -167,7 +171,7 @@ function onGMCPUpdateShipInfo(data)
     piloting = data.piloting,
     speed = data.speed, maxSpeed = data.maxSpeed,
     posX = data.posX, posY = data.posY, posZ = data.posZ,
-  })
+  }})
 end
 
 function onGMCPUpdateCharEnemy(data)
