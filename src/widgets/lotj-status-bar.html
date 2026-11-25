@@ -209,10 +209,14 @@
       document.getElementById("lotj-hp-fill").style.width = pct + "%";
       document.getElementById("lotj-hp-text").textContent = v.hp + "/" + v.maxHp;
       // Wimpy tick
-      if (v.wimpy && v.hp <= v.maxHp * (v.wimpy / 100)) {
-        document.getElementById("lotj-wimpy-tick").classList.add("active");
+      if (v.wimpy && v.wimpy > 0 && v.wimpy < v.maxHp) {
+        var wimpyPct = Math.min(100, (v.wimpy / v.maxHp) * 100);
+        var tick = document.getElementById("lotj-wimpy-tick");
+        tick.style.left = wimpyPct + "%";
+        tick.style.opacity = "1";
       } else {
-        document.getElementById("lotj-wimpy-tick").classList.remove("active");
+        var tick = document.getElementById("lotj-wimpy-tick");
+        if (tick) { tick.style.opacity = "0"; }
       }
     }
     // Move
@@ -234,17 +238,7 @@
       }
     }
     // Mana (conditional - only show if maxMana > 0)
-    if (v.mana !== undefined && v.maxMana !== undefined) {
-      var manaGauge = document.getElementById("gauge-mana");
-      if (v.maxMana > 0) {
-        manaGauge.style.display = "flex";
-        var pct = Math.min(100, Math.max(0, (v.mana / v.maxMana) * 100));
-        document.getElementById("lotj-mana-fill").style.width = pct + "%";
-        document.getElementById("lotj-mana-text").textContent = v.mana + "/" + v.maxMana;
-      } else {
-        manaGauge.style.display = "none";
-      }
-    }
+    // Mana gauge removed - Force bar is driven by mana/maxMana (see gauge-force)
   }
 
   function updateShipRow(ship) {

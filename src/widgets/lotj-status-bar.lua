@@ -158,18 +158,17 @@ function onGMCPUpdateCharVitals(data)
     values.maxMana = data.maxMana
   end
   if data.wimpy then values.wimpy = data.wimpy end
-  setBoundValues(statusBar, values)
+  sendWidgetMessage(statusBar, { event = "vitals", values = values })
 end
 
 function onGMCPUpdateShipInfo(data)
   if not statusBar then return end
   if not data or next(data) == nil then
     -- Empty Ship.Info: hide the ship row
-    setBoundValue(statusBar, "shipVisible", false)
+    sendWidgetMessage(statusBar, { event = "shipVisible", visible = false })
     return
   end
-  setBoundValue(statusBar, "shipVisible", true)
-  setBoundValues(statusBar, {
+  sendWidgetMessage(statusBar, { event = "shipVisible", visible = true, ship = {
     shield = data.shield, maxShield = data.maxShield,
     hull = data.hull, maxHull = data.maxHull,
     energy = data.energy, maxEnergy = data.maxEnergy,
