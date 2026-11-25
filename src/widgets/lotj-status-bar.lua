@@ -70,10 +70,6 @@ function initStatusBar()
     <div class="gauge-label"><span>✨ FORCE</span><span id="force-text">0/0</span></div>
     <div class="gauge-bar"><div class="gauge-fill force" id="force-fill" style="width:0%"></div></div>
   </div>
-  <div class="gauge" id="gauge-mana" style="display:none">
-    <div class="gauge-label"><span>💠 MANA</span><span id="mana-text">0/0</span></div>
-    <div class="gauge-bar"><div class="gauge-fill mana" id="mana-fill" style="width:0%"></div></div>
-  </div>
 </div>
 <div class="opponent-bar" id="opponent-bar">
   <span id="target-name" style="color:var(--lotj-muted)"></span>
