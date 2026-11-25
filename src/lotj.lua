@@ -229,7 +229,7 @@ end
 function onGMCPUpdateCharEnemy(data)
   if not WIDGET_STATUS_BAR then return end
   local name = data.name or ""
-  name = name:gsub("&&r", ""):gsub("&&n", ""):gsub("&&[^rN]", "")
+  name = name:gsub("&.", "")
   setBoundValues(WIDGET_STATUS_BAR, {
     enemyName = name,
     enemyPercent = data.percent or 0,

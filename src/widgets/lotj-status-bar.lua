@@ -136,12 +136,9 @@ function initStatusBar()
 </body></html>]])
 
   -- Register luamsg handler for bound value updates
-  registerWidgetEvent(statusBar, "luamsg", function(m)
-    if m.event == "ready" then
-      -- Widget JS is ready, push initial state
-      setWidgetProperty(statusBar, "content", getWidgetProperty(statusBar, "content"))
-    end
-  end)
+  -- NOTE: Do NOT call setWidgetProperty("content", ...) in the "ready" handler.
+  -- That would reload the iframe, firing "ready" again endlessly.
+  -- Push state via sendWidgetMessage instead (see onGMCPUpdate handlers below).
 end
 
 -- GMCP handlers
