@@ -80,7 +80,7 @@ function initStatusBar()
   mudforge.send("ready", { widget: "lotj-status-bar" });
   mudforge.onMessage(function(data) {
     if (data.event === "vitals" && data.values) updateVitals(data.values);
-    if (data.event === "shipInfo" && data.ship) updateShipRow(data.ship);
+    if (data.event === "shipVisible" && data.visible) updateShipRow(data.ship);
     if (data.event === "enemyInfo" && data.enemy) updateOpponent(data.enemy);
     if (data.event === "comlink" && data.channel) updateComlink(data.channel);
   });

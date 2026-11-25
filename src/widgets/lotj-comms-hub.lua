@@ -4,15 +4,7 @@
 local commsHub = nil
 
 function initCommsHub()
-  commsHub = createWidget({
-    type  = "html",
-    name  = "lotj-comms-hub",
-    title = "LOTJ Comms Hub",
-    position = { x = 0, y = 0 },
-    size = { width = 360, height = 420 },
-    zIndex = 15,
-    visible = false,
-  })
+  -- Widget already created in init(); just set up event handlers
 
   -- Set initial HTML content with tabbed layout
   setWidgetProperty(commsHub, "content", [[
@@ -53,13 +45,13 @@ function initCommsHub()
 </style></head><body>
 <div class="tabs" id="tabs">
   <div class="tab active" data-tab="all">All</div>
-  <div class="tab" data-tab="local">Local</div>
-  <div class="tab" data-tab="commnet">CommNet <span class="unread-badge" id="commnet-badge" style="display:none">0</span></div>
-  <div class="tab" data-tab="clan">Clan</div>
-  <div class="tab" data-tab="broadcast">Broadcast</div>
-  <div class="tab" data-tab="ooc">OOC</div>
-  <div class="tab" data-tab="tell">Tell</div>
-  <div class="tab" data-tab="imm">Imm</div>
+  <div class="tab" data-tab="local">Local <span class="unread-badge" id="lotj-local-badge" style="display:none">0</span></div>
+  <div class="tab" data-tab="commnet">CommNet <span class="unread-badge" id="lotj-commnet-badge" style="display:none">0</span></div>
+  <div class="tab" data-tab="clan">Clan <span class="unread-badge" id="lotj-clan-badge" style="display:none">0</span></div>
+  <div class="tab" data-tab="broadcast">Broadcast <span class="unread-badge" id="lotj-broadcast-badge" style="display:none">0</span></div>
+  <div class="tab" data-tab="ooc">OOC <span class="unread-badge" id="lotj-ooc-badge" style="display:none">0</span></div>
+  <div class="tab" data-tab="tell">Tell <span class="unread-badge" id="lotj-tell-badge" style="display:none">0</span></div>
+  <div class="tab" data-tab="imm">Imm <span class="unread-badge" id="lotj-imm-badge" style="display:none">0</span></div>
   <div class="tab" data-tab="stats">Stats</div>
   <div class="tab" data-tab="autopilot">AutoPilot</div>
 </div>
@@ -94,7 +86,10 @@ function initCommsHub()
     tab.classList.add("active");
     var content = document.getElementById("tab-" + tabName);
     if (content) content.classList.add("active");
-    if (tabName === "commnet") { var badge = document.getElementById("commnet-badge"); if (badge) badge.style.display = "none"; }
+    var badge = document.getElementById("lotj-" + tabName + "-badge");
+    if (badge) badge.style.display = "none";
+    // Return focus to MUD prompt after tab switch
+    focusPrompt();
   });
   mudforge.onMessage(function(data) {
     if (data.event === "chatMessage" && data.msg) appendChat(data.msg);

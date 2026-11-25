@@ -24,11 +24,12 @@ function init()
   loadModule("src/widgets/lotj-comms-hub.lua")
 
   -- Compute positions based on window size (60/40 split)
-  local winW, winH = getWindowSize()
+  local win = getWindowSize()
+  local winW, winH = win.width, win.height
   local statusBarX = 20
   local statusBarY = winH - 96
   local commsHubX = math.floor(winW * 0.60) + 20
-  local commsHubY = 20
+  local commsHubY = math.floor(winH * 0.50)
   local shipHudX = math.floor(winW * 0.60) + 20
   local shipHudY = 20
   local radarX = math.floor(winW * 0.60) + 20
