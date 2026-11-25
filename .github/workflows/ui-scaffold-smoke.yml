@@ -1,0 +1,47 @@
+name: UI Scaffold Smoke Test
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  smoke-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Lua
+        uses: leafo/gh-actions-lua@v10
+        with:
+          luaVersion: '5.4'
+
+      - name: Install lua-check
+        run: luarocks install luacheck
+
+      - name: Lint Lua sources
+        run: luacheck src/ --max-line-length 120 --globals mudforge,addTrigger,addTimer,createWidget,setActiveWidget,setGauge,setGauges,sendWidgetMessage,addMacro,addAlias,focusPrompt,registerTheme,loadModule,getWindowSize,on,emit,broadcastPlugin,saveTable,setVariable,savePluginFile,loadPluginFile,addPaletteCommand
+
+      - name: Run scaffold smoke test
+        run: |
+          echo "=== Verifying widget scaffolds ==="
+          for f in src/widgets/*.lua; do
+            echo "Checking $f..."
+            grep -q 'function init' "$f" || { echo "FAIL: $f missing init()"; exit 1; }
+            count=$(grep -c 'createWidget' "$f" || true)
+            if [ "$count" -gt 1 ]; then
+              echo "FAIL: $f has $count createWidget calls (expected 1)"
+              exit 1
+            fi
+            echo "OK: $f passes basic scaffold checks"
+          done
+          echo "=== All scaffold smoke tests passed ==="
+
+      - name: Verify HTML templates exist
+        run: |
+          for html in src/widgets/*.html; do
+            [ -f "$html" ] || { echo "FAIL: missing HTML template $html"; exit 1; }
+            grep -q 'focusPrompt' "$html" || { echo "FAIL: $html missing focusPrompt() in click handlers"; exit 1; }
+            echo "OK: $html has focusPrompt() in click handlers"
+          done
+          echo "=== All HTML template checks passed ==="

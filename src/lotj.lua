@@ -22,6 +22,7 @@ function init()
   -- Load sub-widget modules
   loadModule("src/widgets/lotj-status-bar.lua")
   loadModule("src/widgets/lotj-comms-hub.lua")
+  loadModule("src/widgets/lotj-ground-map.lua")
 
   -- Compute positions based on window size (60/40 split)
   local win = getWindowSize()

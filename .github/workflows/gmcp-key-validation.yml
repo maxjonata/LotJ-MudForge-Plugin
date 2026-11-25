@@ -1,0 +1,81 @@
+name: GMCP Key Validation
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate-gmcp:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Lua
+        uses: leafo/gh-actions-lua@v10
+        with:
+          luaVersion: '5.4'
+
+      - name: Validate GMCP key references
+        run: |
+          echo "=== Checking GMCP key references in Lua sources ==="
+
+          echo "Checking Char.Vitals keys..."
+          grep -rn 'Char\.Vitals' src/ | grep -E 'force|maxForce|maxHp|maxMove' && {
+            echo "FAIL: Found deprecated GMCP keys (force/maxForce/maxHp/maxMove)"
+            echo "  Use maxMana for Force pool; auto-hide when maxMana == 0"
+            exit 1
+          } || echo "OK: No deprecated vitals keys found"
+
+          echo "Checking Ship.Info keys..."
+          grep -rn 'Ship\.Info' src/ | grep -v 'shield\|hull\|energy\|piloting\|speed\|posX\|posY\|posZ' && {
+            echo "FAIL: Found unexpected Ship.Info keys"
+            exit 1
+          } || echo "OK: Ship.Info keys look correct"
+
+          echo "Checking for dead GMCP pipe (setBoundValues)..."
+          grep -rn 'setBoundValues' src/ && {
+            echo "FAIL: Found setBoundValues call (should use sendWidgetMessage)"
+            exit 1
+          } || echo "OK: No setBoundValues calls found"
+
+          echo "Checking addTrigger regex patterns..."
+          grep -rn 'addTrigger' src/ | grep -v 'type.*true' && {
+            echo "FAIL: Found addTrigger without type=true for regex patterns"
+            exit 1
+          } || echo "OK: All regex triggers use type=true"
+
+          echo "Checking setActiveWidget before draw calls..."
+          for f in src/widgets/*.lua; do
+            draw_lines=$(grep -n 'drawRect\|drawText\|drawCircle\|drawLine\|drawPolygon' "$f" | cut -d: -f1 || true)
+            for dl in $draw_lines; do
+              set_active_line=$(grep -n 'setActiveWidget' "$f" | head -1 | cut -d: -f1 || true)
+              if [ -n "$set_active_line" ] && [ "$set_active_line" -lt "$dl" ]; then
+                echo "OK: setActiveWidget (line $set_active_line) before draw call (line $dl) in $f"
+              elif [ -z "$set_active_line" ]; then
+                echo "FAIL: $f has draw calls but no setActiveWidget"
+                exit 1
+              fi
+            done
+          done
+
+          echo "=== All GMCP key validations passed ==="
+
+      - name: Validate widget type consistency
+        run: |
+          echo "=== Checking widget type consistency ==="
+
+          echo "Checking gauge API usage..."
+          for f in src/widgets/*.lua; do
+            if grep -q 'type.*=.*"html"' "$f" 2>/dev/null; then
+              echo "OK: $f is HTML widget - gauge API allowed"
+            elif grep -q 'type.*=.*"canvas"' "$f" 2>/dev/null; then
+              if grep -qE 'setGauge|gaugeHTML|setGauges' "$f"; then
+                echo "FAIL: $f is canvas widget but uses gauge API (HTML-only)"
+                exit 1
+              fi
+              echo "OK: $f is canvas widget - no gauge API usage"
+            fi
+          done
+
+          echo "=== All widget type checks passed ==="

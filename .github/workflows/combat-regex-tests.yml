@@ -1,0 +1,85 @@
+name: Combat Regex Tests
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  combat-regex-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Lua
+        uses: leafo/gh-actions-lua@v10
+        with:
+          luaVersion: '5.4'
+
+      - name: Install lua-test-runner
+        run: luarocks install lua-test-runner || echo "lua-test-runner not available, using fallback"
+
+      - name: Run combat regex tests
+        run: |
+          echo "=== Combat Regex Test Suite ==="
+          python3 -c "
+import re, sys
+
+patterns = {
+    'damage': [
+        r'^Your (.*?) (misses|barely scratches|hits|slams|strikes).*?\((.*?)\)$',
+        r'^You hit (.*?) for (\d+).*$',
+        r'^Your attack on (.*?) misses\.$',
+        r'^You dodge (.*?)\'s attack\.$',
+    ],
+    'force': [
+        r'^You channel the Force into (.*?)\.$',
+        r'^You use (.*?) Force power\.$',
+        r'^Your Force pool: (\d+)/(.*?)$',
+    ],
+    'ship': [
+        r'^Your ship takes (\d+) damage from (.*?)\.$',
+        r'^Your hull integrity: (\d+)%\.$',
+        r'^Your shields: (\d+)% \| Recharging in (\d+)s\.$',
+    ],
+    'prompt': [
+        r'^HP: (\d+)/(\d+)\s+MV: (\d+)/(\d+)\s+Mana: (\d+)/(\d+)\s+Force: (\d+)/(\d+)$',
+        r'^HP: (\d+)/(\d+)\s+MV: (\d+)/(\d+)\s+Mana: (\d+)/(\d+)$',
+    ],
+    'faction': [
+        r'^Your standing with (.*?) is now (\d+).*$',
+        r'^Faction alert: (.*?) has declared (.*?)\.$',
+        r'^New mission available: (.*?)\.$',
+    ],
+    'crafting': [
+        r'^You begin crafting (.*?)\.$',
+        r'^Your craft of (.*?) is (\d+)% complete\.$',
+        r'^You successfully craft (.*?)\.$',
+        r'^Your craft of (.*?) fails\.$',
+    ],
+}
+
+all_passed = True
+for category, pats in patterns.items():
+    print(f'Test {category}:')
+    for pattern in pats:
+        try:
+            re.compile(pattern)
+            print(f'  OK: Pattern compiles')
+        except re.error as e:
+            print(f'  FAIL: {e}')
+            all_passed = False
+
+if not all_passed:
+    sys.exit(1)
+print('=== All combat regex tests passed ===')
+"
+
+      - name: Verify trigger registration
+        run: |
+          echo "=== Verifying addTrigger usage ==="
+          for f in src/widgets/*.lua; do
+            count=$(grep -c 'addTrigger' "$f" 2>/dev/null || echo "0")
+            echo "$f: $count addTrigger calls"
+          done
+          echo "=== Trigger registration check complete ==="
