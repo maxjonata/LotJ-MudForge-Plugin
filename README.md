@@ -26,19 +26,23 @@ Legacy of the Jedi companion plugin for MudForge NextGen Runtime.
 4. Port alias patterns to MudForge `addAlias(pattern, callback)`
 5. Port Numpad bindings to `addMacro` (not `addAlias`)
 
-## Development
+## Development checks
 
-The commands below describe the intended development workflow. This snapshot
-does not include `tests/unit/` or an npm package manifest, and
-`.github/workflows/lotj-ci.yml` is a placeholder, not a validation gate.
+Run the same checks as GitHub Actions from the repository root in Bash. Use Git,
+Lua 5.4 (`lua` and `luac`; CI uses 5.4.8), and Python 3. No Python packages or
+MudForge installation are needed.
 
 ```bash
-# Lint
-lua-check src/
-
-# Unit tests
-lua-test-runner tests/unit/
-
-# Integration tests (headless MudForge)
-npm run test:integration
+git ls-files -z -- 'src/*.lua' | xargs -0 -n 1 luac -p
+lua tests/ui_scaffold_smoke.lua
+lua tests/ground_map_triggers.lua
+python3 tests/ci/gmcp/test_validate.py -v
+python3 scripts/ci/gmcp/validate.py src
+python3 tests/test_combat_regex_fixtures.py -v
+python3 tests/test_build_preview_zip.py -v
 ```
+
+The widget tests stub MudForge APIs and use fabricated gameplay inputs. The
+regex fixtures exercise Python `re`, not MudForge's regex engine. The ZIP test
+builds the archive and checks its contents, but does not import it into MudForge.
+These checks do not connect to LOTJ or validate the live MudForge runtime.

@@ -20,3 +20,6 @@ jobs:
 
       - name: Check captures and rejections on synthetic lines
         run: python3 tests/test_combat_regex_fixtures.py -v
+
+      - name: Build a preview ZIP and verify its layout and contents
+        run: python3 tests/test_build_preview_zip.py -v
