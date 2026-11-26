@@ -54,18 +54,18 @@ function initGroundMap()
     registerMapperCallbacks()
   end)
 
-  -- Set up triggers for room entry and map events
-  addTrigger("^You enter (.*?)\%.$", function(line)
-    local roomName = line:match("^You enter (.*?)%.$")
-    if roomName then
+  -- MudForge uses JS regex; wildcards[1] is the first captured group.
+  addTrigger([[^You enter (.*?)\.$]], function(captures, line, wildcards)
+    local roomName = wildcards and wildcards[1]
+    if roomName and roomName ~= "" then
       currentRoom = roomName
       updateMapForRoom(roomName)
     end
   end, true)
 
-  addTrigger("^The room is (.*?)\%.$", function(line)
-    local roomDesc = line:match("^The room is (.*?)%.$")
-    if roomDesc then
+  addTrigger([[^The room is (.*?)\.$]], function(captures, line, wildcards)
+    local roomDesc = wildcards and wildcards[1]
+    if roomDesc and roomDesc ~= "" then
       updateMapForRoom(roomDesc)
     end
   end, true)
