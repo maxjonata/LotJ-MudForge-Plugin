@@ -1,44 +1,108 @@
 # LotJ-MudForge-Plugin
 
-Legacy of the Jedi companion plugin for MudForge NextGen Runtime.
+Legacy of the Jedi companion plugin for the MudForge NextGen runtime.
 
-## Widgets
+**Status: developer preview, not ready for player installation.** This snapshot
+contains the source, but no native plugin ZIP, MudForge repository index
+(`plugins.json`), or `.mfp` server package. Don't import GitHub's **Download ZIP**
+archive into MudForge or paste `src/lotj.lua` on its own: the main script needs
+three separately registered Lua modules. The workflow below follows MudForge's
+authoring guide, not a verified run of this plugin in the current client.[1]
 
-| Widget | Type | Description |
-|--------|------|-------------|
-| `lotj-status-bar` | HTML | 2-row live status bar with HP/MV/Force/Mana gauges, wimpy tick overlay, conditional Ship.Info row, comlink indicator, opponent bar |
-| `lotj-comms-hub` | HTML | Tabbed chat + automation drawer (All, Local, CommNet, Clan, Broadcast, OOC, Tell, Imm, Stats, AutoPilot) |
-| `lotj-ground-map` | Map | Ground mapper using MudForge Mapper API |
-| `lotj-space-canvas` | Canvas | System radar & galaxy map (toggled via header tabs) |
+## Load the source in the Plugin Editor
 
-## API Corrections (from @ui-ux-designer audit)
+Use a MudForge client with multi-file plugin support and a disposable,
+disconnected test world. The plugin tries to apply the **LOTJ Holocron** theme
+when it starts, so don't use a world whose layout or appearance you want to keep
+unchanged.
 
-- `addTimer` takes `(intervalMs, callback, repeating?)` — **no name string**, milliseconds not seconds
-- `window.mudforge.hasFocus("prompt")` does **not** exist — assert prompt focus on the host input element after `focusPrompt()`
-- `setGauge`/`setGauges` are HTML-widget-only — calling them on canvas triggers PLUGIN WARNING
-- Every `data-mud-action` handler must call `focusPrompt()` at the end
+1. Open **Plugin Manager → Editor** and start a new plugin draft. Copy the
+   contents of [`src/lotj.lua`](src/lotj.lua) into the **main script**, keeping
+   its `plugin` metadata (`LOTJ Companion`, `0.1.0`). Do not add `lotj.lua` as
+   a module.[1]
+2. In the same draft's **Files** panel, add the following three files. Copy the
+   contents from the same checkout and make sure the saved paths match exactly,
+   including case and a single `.lua` extension (the editor can append it).[1]
+   - [`src/widgets/lotj-status-bar.lua`](src/widgets/lotj-status-bar.lua)
+   - [`src/widgets/lotj-comms-hub.lua`](src/widgets/lotj-comms-hub.lua)
+   - [`src/widgets/lotj-ground-map.lua`](src/widgets/lotj-ground-map.lua)
+3. Only after all three files are in place, use **Save & Run** (`Ctrl+Enter`)
+   to save and enable the plugin. Check **Problems** and **Console** before
+   testing any widgets. A `loadModule/dofile` error naming a missing file means
+   you should check the exact path in **Files**, not add a second plugin.[1]
 
-## Setup
+The `loadModule` paths are relative to the plugin, not your working directory.
+The two HTML widgets embed their markup and styles in Lua; the standalone HTML
+and CSS files in the checkout are not needed for this workflow.
 
-1. Clone the LotJ Mudlet UI repo: `https://github.com/LotJ/lotj-mudlet-ui`
-2. Extract trigger/alias patterns from `combatstats.mpackage` and `src/triggers/`
-3. Port regex patterns to MudForge `addTrigger(pattern, callback, { type = "regex" })`
-4. Port alias patterns to MudForge `addAlias(pattern, callback)`
-5. Port Numpad bindings to `addMacro` (not `addAlias`)
+### Native ZIP layout for packagers
 
-## Development
+MudForge's **Plugin Manager** can import a native multi-file plugin ZIP with
+one root script and a same-named directory holding the modules. For example, a
+`LOTJ Companion.zip` would contain these entries at its root, with no enclosing
+repository folder:[1]
 
-The commands below describe the intended development workflow. This snapshot
-does not include `tests/unit/` or an npm package manifest, and
-`.github/workflows/lotj-ci.yml` is a placeholder, not a validation gate.
-
-```bash
-# Lint
-lua-check src/
-
-# Unit tests
-lua-test-runner tests/unit/
-
-# Integration tests (headless MudForge)
-npm run test:integration
+```text
+LOTJ Companion.lua
+LOTJ Companion/src/widgets/lotj-status-bar.lua
+LOTJ Companion/src/widgets/lotj-comms-hub.lua
+LOTJ Companion/src/widgets/lotj-ground-map.lua
 ```
+
+`LOTJ Companion.lua` is a copy of `src/lotj.lua`; each module keeps its
+`src/widgets/` path inside the matching directory. This native ZIP layout
+is not the `.mfp` server-package format, and a release ZIP is not supplied
+by this snapshot.[1]
+
+## Manual smoke checklist
+
+These are checks to run in the client, not results. No LOTJ login is needed
+for the initial load and display checks.
+
+1. In a fresh test world, check that the plugin is enabled, that startup reports
+   no `PLUGIN ERROR`, and that **LOTJ Status Bar** renders its initial HP and MV
+   labels and `0/0` values. Those defaults do not establish that GMCP works.
+2. **LOTJ Comms Hub** and **LOTJ Ground Map** start hidden. For a visual check,
+   set `visible = true` only in the relevant `createWidget` calls in a fresh
+   test copy ([main script](src/lotj.lua) for Comms Hub,
+   [map module](src/widgets/lotj-ground-map.lua) for Ground Map). Click a Comms
+   tab and check that it changes and returns keyboard focus to the prompt. For
+   the map, check that the widget opens and check the console; an empty map
+   offline is not a failure. Saved visibility can override these defaults.[1]
+3. Disable the test plugin when finished. Check that its widgets are no longer
+   active, and restore your previous theme if the preview changed it.
+
+## Current limits
+
+- **Status bar:** The layout includes HP, movement, a conditional Force gauge,
+  and ship and opponent rows. Live updates depend on GMCP and the HTML widget
+  bridge, neither of which has been checked in the client. The Lua handlers send
+  `enemyPercent`, but the embedded HTML reads `percent`, so the opponent gauge
+  is not fully wired.
+- **Comms Hub:** Tab UI and message handlers exist. Live chat ingestion, combat
+  stats, and autopilot are not wired to game input in this snapshot.
+- **Ground Map:** Fixture coverage checks text-trigger captures, not live room
+  tracking. The resize handler passes tables to `moveWidget` and `resizeWidget`,
+  whose documented arguments are separate numbers. The mapper also expects a
+  numeric room ID for `setPlayerRoom`, but the module can pass a room name.[1]
+- **Ship HUD, Tactical Radar, and Holocron Datapad:** Hidden placeholders; no
+  functional radar, galaxy map, or datapad is provided.
+
+## Offline development checks
+
+From the repository root, with Lua 5.4 on `PATH`:
+
+```sh
+lua tests/ui_scaffold_smoke.lua
+lua tests/ground_map_triggers.lua
+```
+
+The [widget smoke](tests/ui_scaffold_smoke.lua) stubs the host calls and does
+not run `src/lotj.lua` or the embedded JavaScript. The
+[ground-map regression](tests/ground_map_triggers.lua) supplies fixture captures
+and does not run the client, its regex engine, or a live mapper. Neither test
+establishes that the plugin loads in MudForge.
+
+## Sources
+
+[1] https://mudforge.org/docs/ai-plugin-guide.md — MudForge — AI Plugin & Library Authoring Guide
