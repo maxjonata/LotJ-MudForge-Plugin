@@ -1,0 +1,28 @@
+name: LOTJ Plugin Lua Syntax
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  lua-syntax:
+    name: Lua 5.4 source syntax
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Set up Lua 5.4
+        uses: leafo/gh-actions-lua@v10
+        with:
+          luaVersion: '5.4.8'
+
+      - name: Parse all tracked Lua sources under src
+        shell: bash
+        run: git ls-files -z -- 'src/*.lua' | xargs -0 -n 1 luac -p

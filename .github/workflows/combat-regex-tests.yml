@@ -1,0 +1,25 @@
+name: Draft Combat and Log Regex Fixtures
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  combat-regex-tests:
+    name: Draft regex fixtures (Python re)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Check captures and rejections on synthetic lines
+        run: python3 tests/test_combat_regex_fixtures.py -v
+
+      - name: Build a preview ZIP and verify its layout and contents
+        run: python3 tests/test_build_preview_zip.py -v

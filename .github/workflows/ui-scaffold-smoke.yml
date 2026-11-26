@@ -1,0 +1,30 @@
+name: UI Scaffold Smoke Test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  smoke-test:
+    name: HTML widget Lua smoke (stubbed host)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Set up Lua 5.4
+        uses: leafo/gh-actions-lua@v10
+        with:
+          luaVersion: '5.4.8'
+
+      - name: Exercise status bar and comms hub Lua modules
+        run: lua tests/ui_scaffold_smoke.lua
+
+      - name: Check ground-map trigger callbacks with synthetic room lines
+        run: lua tests/ground_map_triggers.lua
