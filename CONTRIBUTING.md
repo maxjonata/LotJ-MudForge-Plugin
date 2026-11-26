@@ -20,7 +20,7 @@ The canonical repository is [maxjonata/LotJ-MudForge-Plugin](https://github.com/
 
 1. Review the diff for scope and run `git diff --check` (use `git diff --cached --check` for staged changes). Run focused tests or lint checks for the affected paths. In the PR, state what ran, what passed, and what could not be run or did not apply.
 2. When publication is authorized, push only the topic branch and open its PR against `main`. Where real CI checks are defined for the change, verify they passed for the exact current PR head SHA. If the head changes, rerun or recheck against the new head. A placeholder job or a run for a different SHA is not evidence that the change passed. If no real checks are defined, say so rather than reporting green CI.
-3. Get the user's review and approval before merging, in addition to passing any applicable checks. If the reviewed content changes, send the updated PR back for review. These are project conventions; this guide does not assert that GitHub branch protections or CI are configured.
+3. Merge verified changes once applicable checks pass and repository rules are satisfied. Routine merges do not require separate owner approval. Ask before deleting branches, files, or other project data, and do not enable automatic branch deletion. These conventions do not override GitHub branch protections.
 
 ## History-preserving imports
 
