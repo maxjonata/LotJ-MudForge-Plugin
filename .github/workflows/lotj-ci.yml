@@ -1,0 +1,46 @@
+name: LOTJ Plugin CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install MudForge CLI
+        run: |
+          # Install lua-check and other MudForge tooling
+          echo "TODO: Install MudForge CLI tools"
+      - name: Lint Lua files
+        run: |
+          # Run lua-check on src/**/*.lua
+          echo "TODO: Run lua-check"
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run unit tests
+        run: |
+          # Run lua-test-runner against tests/unit/**/*.lua
+          echo "TODO: Run unit tests"
+      - name: Run integration tests
+        run: |
+          # Run integration test suite
+          echo "TODO: Run integration tests"
+
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        platform: [win32, darwin, linux, webgl]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build for ${{ matrix.platform }}
+        run: |
+          # Transpile Lua → JS and package artifacts
+          echo "TODO: Build for ${{ matrix.platform }}"
