@@ -3,8 +3,8 @@
 Legacy of the Jedi companion plugin for the MudForge NextGen runtime.
 
 **Status: developer preview, not ready for player installation.** This snapshot
-contains the source, but no native plugin ZIP, MudForge repository index
-(`plugins.json`), or `.mfp` server package. Don't import GitHub's **Download ZIP**
+includes a native plugin ZIP builder, but no published release, MudForge repository
+index (`plugins.json`), or `.mfp` server package. Don't import GitHub's **Download ZIP**
 archive into MudForge or paste `src/lotj.lua` on its own: the main script needs
 three separately registered Lua modules. The workflow below follows MudForge's
 authoring guide, not a verified run of this plugin in the current client.[1]
@@ -35,7 +35,17 @@ The `loadModule` paths are relative to the plugin, not your working directory.
 The two HTML widgets embed their markup and styles in Lua; the standalone HTML
 and CSS files in the checkout are not needed for this workflow.
 
-### Native ZIP layout for packagers
+## Build and import the preview ZIP
+
+From the repository root with Python 3:
+
+```sh
+python3 scripts/build_preview_zip.py LOTJ-Companion-preview.zip
+```
+
+Open **Plugin Manager** in a disposable, disconnected test world and import the
+generated `LOTJ-Companion-preview.zip`. Then follow the smoke checklist below.
+The archive is tested offline; import and startup in MudForge are not yet verified.
 
 MudForge's **Plugin Manager** can import a native multi-file plugin ZIP with
 one root script and a same-named directory holding the modules. For example, a
@@ -90,18 +100,25 @@ for the initial load and display checks.
 
 ## Offline development checks
 
-From the repository root, with Lua 5.4 on `PATH`:
+From the repository root in Bash, with Git, Lua 5.4 (`lua` and `luac`), and Python 3:
 
 ```sh
+git ls-files -z -- 'src/*.lua' | xargs -0 -n 1 luac -p
 lua tests/ui_scaffold_smoke.lua
 lua tests/ground_map_triggers.lua
+python3 tests/ci/gmcp/test_validate.py -v
+python3 scripts/ci/gmcp/validate.py src
+python3 tests/test_combat_regex_fixtures.py -v
+python3 tests/test_build_preview_zip.py -v
 ```
 
 The [widget smoke](tests/ui_scaffold_smoke.lua) stubs the host calls and does
 not run `src/lotj.lua` or the embedded JavaScript. The
 [ground-map regression](tests/ground_map_triggers.lua) supplies fixture captures
 and does not run the client, its regex engine, or a live mapper. Neither test
-establishes that the plugin loads in MudForge.
+establishes that the plugin loads in MudForge. The regex suite exercises Python
+`re`; the ZIP suite verifies packaging, not client import. See the
+[architecture guide](docs/architecture.md) for module boundaries.
 
 ## Sources
 
