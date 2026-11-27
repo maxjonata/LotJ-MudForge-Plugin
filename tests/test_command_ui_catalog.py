@@ -161,6 +161,17 @@ class CommittedCatalogTests(unittest.TestCase):
                 self.assertNotEqual(e["pattern"], "reference", e["topic"])
                 self.assertTrue(e["variants"], e["topic"])
 
+    def test_every_help_space_command_has_a_station(self):
+        stations = {e["topic"]: e["station"] for e in self.catalog["entries"]}
+        for e in self.catalog["entries"]:
+            if e["station"] is not None:
+                self.assertIn(e["station"], bc.STATIONS, e["topic"])
+        # The commands listed in HELP SPACE SHIP SHIPS FLIGHT (FIG-02 scope).
+        for topic in ["BOARD", "LAUNCH", "LAND", "RADAR", "PROXIMITY PROX", "TARGET", "FIRE", "CHAFF",
+                      "HYPERSPACE HYPER LIGHTSPEED", "COORDINATES CALC CALCULATE NAVCOMPUTER", "DOCK",
+                      "UNDOCK", "HAIL", "RADIO", "BATTLEGROUP", "SQUADRON", "ACONFIG", "BUYSHIP SELLSHIP"]:
+            self.assertIsNotNone(stations.get(topic), topic)
+
     def test_committed_catalog_is_regenerated(self):
         overrides = json.loads((ROOT / "docs/ui/overrides.json").read_text(encoding="utf-8"))
         rebuilt = bc.build(self.reference["topics"], overrides, bc.figma_links(self.nodes), bc.pattern_frames(self.nodes))
