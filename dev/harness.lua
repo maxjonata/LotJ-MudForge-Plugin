@@ -1,63 +1,61 @@
--- QA-07 DEV harness. Loaded by dev/main.lua BEFORE the production entry point,
--- it replaces the host ports the plugin talks to (send, sendGMCP, getSession,
--- timers) with recorders and wraps the widget/GMCP registration calls so
--- scenarios can drive the real code: GMCP packets, MUD lines (onLine plus the
+-- QA-07 DEV harness. Loaded by dev/main.lua BEFORE the production entry point.
+-- MudForge ignores a plugin's reassignment of API names (seen in the client),
+-- so the harness hands the production code its host ports through LotjHost:
+-- send, sendGMCP, getSession and the timers become recorders, and the
+-- widget/GMCP registration calls are recorded and forwarded to the real client.
+-- Scenarios then drive the real code: GMCP packets, MUD lines (onLine plus the
 -- real trigger engine through feedTriggers), widget messages and timers.
 -- Nothing a scenario does reaches the MUD. Uses only APIs from the MudForge
 -- guide; `setmetatable`/`debug` are blocked in the client, so none are used.
-local real = {
-  createWidget = createWidget,
-  sendWidgetMessage = sendWidgetMessage,
-  registerWidgetEvent = registerWidgetEvent,
-  onGMCPUpdate = onGMCPUpdate,
-}
-
 local state = {
   session = { id = "lotj-dev", connected = true },
   sends = {}, timers = {}, messages = {}, events = {}, gmcp = {}, ids = {},
 }
 
+local host = {}
+LotjHost = host
+
 -- Ports replaced outright: scenarios own the connection and the clock.
-send = function(command)
+function host.send(command)
   state.sends[#state.sends + 1] = command
   return true
 end
-sendGMCP = function(package, payload)
+function host.sendGMCP(package, payload)
   state.sends[#state.sends + 1] = "GMCP " .. tostring(package) .. " " .. tostring(payload)
   return true
 end
-getSession = function() return state.session end
-addTimer = function(interval, callback)
+function host.getSession() return state.session end
+function host.addTimer(interval, callback)
   state.timers[#state.timers + 1] = { interval = interval, callback = callback }
   return "dev-" .. #state.timers
 end
-removeTimer = function(id)
+function host.removeTimer(id)
   local timer = state.timers[tonumber(tostring(id):match("^dev%-(%d+)$") or "")]
   if timer then timer.cancelled = true end
 end
 
 -- Registration calls are recorded, then forwarded so the real client still
 -- renders widgets and keeps its own bookkeeping.
-createWidget = function(config)
-  local id = real.createWidget(config)
+function host.createWidget(config)
+  local id = createWidget(config)
   if id and type(config) == "table" and config.name then state.ids[config.name] = id end
   return id
 end
-sendWidgetMessage = function(id, message)
+function host.sendWidgetMessage(id, message)
   local key = id == nil and "<nil>" or id
   state.messages[key] = state.messages[key] or {}
   table.insert(state.messages[key], message)
-  return real.sendWidgetMessage(id, message)
+  return sendWidgetMessage(id, message)
 end
-registerWidgetEvent = function(id, event, callback)
+function host.registerWidgetEvent(id, event, callback)
   local key = id == nil and "<nil>" or id
   state.events[key] = state.events[key] or {}
   state.events[key][event] = callback
-  return real.registerWidgetEvent(id, event, callback)
+  return registerWidgetEvent(id, event, callback)
 end
-onGMCPUpdate = function(package, callback)
+function host.onGMCPUpdate(package, callback)
   state.gmcp[package] = callback
-  return real.onGMCPUpdate(package, callback)
+  return onGMCPUpdate(package, callback)
 end
 
 local function oneLine(text)
@@ -75,7 +73,7 @@ local function context(settle)
       error(("%s: expected %s, got %s"):format(label or "value", tostring(expected), tostring(actual)), 0)
     end
   end
-  function t.send(command) return send(command) end
+  function t.send(command) return host.send(command) end
   function t.sends() return state.sends end
   function t.lastSend() return state.sends[#state.sends] end
   function t.gmcp(package, data)

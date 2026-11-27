@@ -107,10 +107,18 @@ local function new(options)
   define("onRoomChange", function(callback) host.roomChange = callback end)
   define("onMapRoomClick", function(callback) host.mapRoomClick = callback end)
 
-  local env = setmetatable({}, { __index = function(_, key)
-    if api[key] then return api[key] end
-    return _G[key]
-  end })
+  -- options.protectApi mirrors MudForge: assigning a global that names a host
+  -- API is ignored, so the API stays in place (seen in the client, QA-07).
+  local env = setmetatable({}, {
+    __index = function(_, key)
+      if api[key] then return api[key] end
+      return _G[key]
+    end,
+    __newindex = function(t, key, value)
+      if options.protectApi and api[key] then return end
+      rawset(t, key, value)
+    end,
+  })
   api.loadModule = function(path) return load_env(path, env)() end
   api.print = function(...) record("print", ...) end
   host.env = env

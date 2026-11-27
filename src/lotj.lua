@@ -10,6 +10,17 @@ plugin = {
   settings    = { saveState = true },
 }
 
+-- Host port (QA-07): a plugin cannot reassign MudForge API names, so the DEV
+-- harness (dev/harness.lua) supplies recorders through LotjHost. Release: nil.
+local host = LotjHost or {}
+local send = host.send or send
+local getSession = host.getSession or getSession
+local addTimer = host.addTimer or addTimer
+local removeTimer = host.removeTimer or removeTimer
+local createWidget = host.createWidget or createWidget
+local onGMCPUpdate = host.onGMCPUpdate or onGMCPUpdate
+local registerWidgetEvent = host.registerWidgetEvent or registerWidgetEvent
+
 -- ── Widget IDs (created in init) ──────────────────────────────
 local WIDGET_STATUS_BAR = nil
 local WIDGET_COMMS_HUB  = nil

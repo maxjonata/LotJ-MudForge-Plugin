@@ -1,6 +1,12 @@
 -- lotj-comms-hub.lua
 -- Tabbed chat panel with CombatStats and AutoPilot slots
 
+-- Host port (QA-07): a plugin cannot reassign MudForge API names, so the DEV
+-- harness (dev/harness.lua) supplies recorders through LotjHost. Release: nil.
+local host = LotjHost or {}
+local registerWidgetEvent = host.registerWidgetEvent or registerWidgetEvent
+local sendWidgetMessage = host.sendWidgetMessage or sendWidgetMessage
+
 local commsHub = nil
 local ready = false
 local pending = {}
