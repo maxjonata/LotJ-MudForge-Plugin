@@ -32,7 +32,11 @@ and reports how many cards are pending, without failing.
    domain, application and adapter layers as well.
 2. Keep `lua tests/coverage.lua` passing on Lua 5.1 and 5.4. When coverage
    rises, run `lua tests/coverage.lua --update` on each version and commit the
-   new floor.
+   new floor. The JavaScript inside the widgets has its own gate:
+   `node tests/js_coverage.js` runs every `tests/*_widget.js` with Node's
+   built-in V8 coverage and checks `tests/coverage-floor-js.txt` (`--update`
+   raises it). Load widget scripts with `tests/support/widget_script.js` so
+   their lines map back to the `.lua` file.
 3. After adding cards to the board, regenerate the missing placeholders. The
    generator never overwrites an existing spec:
 

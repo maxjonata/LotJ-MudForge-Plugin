@@ -33,8 +33,7 @@ jobs:
       - name: Fail if src/ coverage fell below this version's floor
         run: lua tests/coverage.lua
 
-      - name: Exercise the embedded widget scripts
+      - name: Run every tests/*_widget.js and gate widget JS line coverage
         run: |
-          node tests/comms_hub_widget.js
-          node tests/scrapper_cockpit_widget.js
-          node tests/target_cockpit_widget.js
+          node tests/js_coverage_check.js
+          node tests/js_coverage.js
