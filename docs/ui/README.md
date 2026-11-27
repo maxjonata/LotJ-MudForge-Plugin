@@ -60,3 +60,7 @@ The clan comes from GMCP (`CLAN`); its colour from the clan name colour set with
 ## RP log is one timeline
 
 Say, emote and comms share one chronological log. They differ only by layout signals, never by recolouring the game's ANSI text: say has a speaker-name column, emotes are indented narration, comms (tell, clan, ship) get a faint band, a channel-coloured left bar and a short tag, and OOC/system lines are small and dim. Chips filter each kind; CommNet 0 keeps its own tab.
+
+## Screen layout (desktop 1440)
+
+Status strip on top; left 340 px = room panel on the ground or the current station at the helm; centre = RP log (flexible, never covered by fixed panels); right 380 px = holographic map on the ground or radar + target cockpit at the helm; bottom = command bar with autocomplete and the window dock. Taking the helm (GMCP) swaps the left and right panels; the RP log stays put. Everything else opens as a floating window that docks. Side panels collapse; below 1280 px the right panel becomes a tab.

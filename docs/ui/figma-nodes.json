@@ -496,6 +496,24 @@
     "WHISPER",
     "YELL"
    ]
+  },
+  {
+   "id": "19:1870",
+   "name": "FIG-03 · Tela inteira 1440",
+   "kind": "section",
+   "topics": []
+  },
+  {
+   "id": "19:1871",
+   "name": "Tela inteira · no chão",
+   "kind": "screen",
+   "topics": []
+  },
+  {
+   "id": "19:2044",
+   "name": "Tela inteira · no leme",
+   "kind": "screen",
+   "topics": []
   }
  ]
 }
