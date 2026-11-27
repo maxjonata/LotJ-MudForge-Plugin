@@ -23,3 +23,6 @@ jobs:
 
       - name: Build a preview ZIP and verify its layout and contents
         run: python3 tests/test_build_preview_zip.py -v
+
+      - name: Extract command metadata from synthetic help pages
+        run: python3 tests/test_extract_help.py -v
