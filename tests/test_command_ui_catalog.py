@@ -92,8 +92,13 @@ class CommittedCatalogTests(unittest.TestCase):
 
     def test_committed_catalog_is_regenerated(self):
         overrides = json.loads((ROOT / "docs/ui/overrides.json").read_text(encoding="utf-8"))
-        rebuilt = bc.build(self.reference["topics"], overrides, bc.figma_links(self.nodes))
+        rebuilt = bc.build(self.reference["topics"], overrides, bc.figma_links(self.nodes), bc.pattern_frames(self.nodes))
         self.assertEqual(rebuilt, self.catalog, "run: python scripts/ui/build_catalog.py")
+
+    def test_every_pattern_has_a_figma_card(self):
+        self.assertEqual(set(self.catalog["pattern_nodes"]), set(bc.PATTERNS))
+        with self.assertRaises(ValueError):
+            bc.build([topic("A", ["a"])], {}, {}, {"nope": "1:1"})
 
     def test_figma_links_point_to_exported_nodes(self):
         known = {n["id"] for n in self.nodes["nodes"]}
