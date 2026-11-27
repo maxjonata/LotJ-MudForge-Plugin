@@ -16,6 +16,9 @@ class PreviewZipTests(unittest.TestCase):
     def test_project_archive_has_only_exact_runtime_files(self):
         expected = {
             "LOTJ Companion.lua": "src/lotj.lua",
+            "LOTJ Companion/src/application/scrapper-cockpit.lua": "src/application/scrapper-cockpit.lua",
+            "LOTJ Companion/src/domain/ship-position.lua": "src/domain/ship-position.lua",
+            "LOTJ Companion/src/widgets/lotj-scrapper-cockpit.lua": "src/widgets/lotj-scrapper-cockpit.lua",
             "LOTJ Companion/src/widgets/lotj-comms-hub.lua": "src/widgets/lotj-comms-hub.lua",
             "LOTJ Companion/src/widgets/lotj-ground-map.lua": "src/widgets/lotj-ground-map.lua",
             "LOTJ Companion/src/widgets/lotj-status-bar.lua": "src/widgets/lotj-status-bar.lua",

@@ -8,14 +8,18 @@ from zipfile import ZIP_DEFLATED, ZipFile, ZipInfo
 
 ROOT = Path(__file__).resolve().parents[1]
 NAME = "LOTJ Companion"
-MODULE = re.compile(rb'^\s*loadModule\("(src/widgets/[A-Za-z0-9_-]+\.lua)"\)\s*$', re.M)
+MODULE = re.compile(
+    rb'^[ \t]*(?:local[ \t]+[A-Za-z_][A-Za-z0-9_]*[ \t]*=[ \t]*)?'
+    rb'loadModule\("(src/(?:widgets|application|domain)/[A-Za-z0-9_-]+\.lua)"\)[ \t]*\r?$',
+    re.M,
+)
 
 
 def build(output: Path) -> None:
     entry = (ROOT / "src/lotj.lua").read_bytes()
     modules = sorted(set(MODULE.findall(entry)))
     if not modules or len(modules) != len(re.findall(rb'\bloadModule\s*\(', entry)):
-        raise ValueError("expected unique literal src/widgets/*.lua loadModule calls")
+        raise ValueError("expected unique literal loadModule calls for src/widgets, src/application, or src/domain")
     files = {f"{NAME}.lua": entry}
     for path in modules:
         relative = PurePosixPath(path.decode("ascii"))

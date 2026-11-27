@@ -16,13 +16,17 @@ local WIDGET_COMMS_HUB  = nil
 local WIDGET_SHIP_HUD   = nil
 local WIDGET_SPACE_RADAR = nil
 local WIDGET_DATAPAD    = nil
+local scrapperCockpit = nil
 
 -- ── Init: create all widgets ───────────────────────────────────
 function init()
   -- Load sub-widget modules
-  loadModule("src/widgets/lotj-status-bar.lua")
+  local statusBar = loadModule("src/widgets/lotj-status-bar.lua")
   loadModule("src/widgets/lotj-comms-hub.lua")
   loadModule("src/widgets/lotj-ground-map.lua")
+  local shipPosition = loadModule("src/domain/ship-position.lua")
+  local cockpitApplication = loadModule("src/application/scrapper-cockpit.lua")
+  local cockpitWidget = loadModule("src/widgets/lotj-scrapper-cockpit.lua")
 
   -- Compute positions based on window size (60/40 split)
   local win = getWindowSize()
@@ -96,9 +100,10 @@ function init()
   setActiveWidget(WIDGET_SPACE_RADAR)
 
   -- Initialize sub-widgets with widget IDs
-  if initStatusBar then initStatusBar(WIDGET_STATUS_BAR) end
+  statusBar.init(WIDGET_STATUS_BAR)
   if initCommsHub then initCommsHub(WIDGET_COMMS_HUB) end
   if initGroundMap then initGroundMap() end
+  scrapperCockpit = cockpitWidget.openWidget(cockpitApplication, shipPosition)
 
   -- Register theme on connect (also handled in onConnect for reconnects)
   registerLOTJTheme()
@@ -108,7 +113,17 @@ function init()
 
   -- Register GMCP handlers (onGMCPUpdate is MudForge's global hook)
   onGMCPUpdate("Char.Vitals", onGMCPUpdateCharVitals)
-  onGMCPUpdate("Ship.Info", onGMCPUpdateShipInfo)
+  onGMCPUpdate("Ship.Info", function(data)
+    if type(data) ~= "table" then data = nil end
+    statusBar.onGMCPUpdateShipInfo(data)
+    if scrapperCockpit then
+      if data then
+        scrapperCockpit.observe(data.posX, data.posY, data.posZ)
+      else
+        scrapperCockpit.observe()
+      end
+    end
+  end)
   onGMCPUpdate("Char.Enemy", onGMCPUpdateCharEnemy)
   onGMCPUpdate("Char.Chat", onGMCPUpdateCharChat)
 end
@@ -175,6 +190,10 @@ function onConnect(sessionId)
   loadSavedState()
 end
 
+function onDisconnect(sessionId)
+  if scrapperCockpit then scrapperCockpit.observe() end
+end
+
 function onLine(sessionId, rawLine, cleanLine)
   -- Parse combat events, prompt data, faction messages
   -- Return false to suppress sensitive combat info display
@@ -220,24 +239,6 @@ function onGMCPUpdateCharVitals(data)
   end
   if data.wimpy then values.wimpy = data.wimpy end
   sendWidgetMessage(WIDGET_STATUS_BAR, { event = "vitals", values = values })
-end
-
--- GMCP handler: Ship.Info (shield, maxShield, hull, maxHull, energy, maxEnergy, piloting, speed, maxSpeed, posX/Y/Z)
--- Empty table → hide the ship row entirely
-function onGMCPUpdateShipInfo(data)
-  if not WIDGET_STATUS_BAR then return end
-  if not data or next(data) == nil then
-    sendWidgetMessage(WIDGET_STATUS_BAR, { event = "shipVisible", visible = false })
-    return
-  end
-  sendWidgetMessage(WIDGET_STATUS_BAR, { event = "shipVisible", visible = true, ship = {
-    shield = data.shield, maxShield = data.maxShield,
-    hull = data.hull, maxHull = data.maxHull,
-    energy = data.energy, maxEnergy = data.maxEnergy,
-    piloting = data.piloting,
-    speed = data.speed, maxSpeed = data.maxSpeed,
-    posX = data.posX, posY = data.posY, posZ = data.posZ,
-  }})
 end
 
 -- GMCP handler: Char.Enemy (name with color codes stripped, percent for idle reticle)
