@@ -91,10 +91,10 @@ for the initial load and display checks.
   is not fully wired.
 - **Comms Hub:** Tab UI and message handlers exist. Live chat ingestion, combat
   stats, and autopilot are not wired to game input in this snapshot.
-- **Ground Map:** Fixture coverage checks text-trigger captures, not live room
-  tracking. The resize handler passes tables to `moveWidget` and `resizeWidget`,
-  whose documented arguments are separate numbers. The mapper also expects a
-  numeric room ID for `setPlayerRoom`, but the module can pass a room name.[1]
+- **Ground Map:** MudForge tracks the player's room. Text captures and map
+  refreshes leave the native cursor in place. Offline fixtures cover room
+  changes and click targets. Live tracking still needs a client check. The
+  resize handler passes tables where MudForge expects separate numbers.[1]
 - **Ship HUD, Tactical Radar, and Holocron Datapad:** Hidden placeholders; no
   functional radar, galaxy map, or datapad is provided.
 

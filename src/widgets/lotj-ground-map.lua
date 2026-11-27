@@ -7,7 +7,6 @@ local mapInitialized = false
 
 -- Room cache for mapper
 local roomCache = {}
-local currentRoom = nil
 
 -- Color palette (Okabe-Ito, WCAG AA)
 local COLORS = {
@@ -47,10 +46,9 @@ function initGroundMap()
     return
   end
 
-  mapInitialized = true
-
-  -- Register Mapper API callbacks via onMapReady
+  -- Mapper writes and callbacks depend on the native map being ready.
   onMapReady(function()
+    mapInitialized = true
     registerMapperCallbacks()
   end)
 
@@ -58,7 +56,6 @@ function initGroundMap()
   addTrigger([[^You enter (.*?)\.$]], function(captures, line, wildcards)
     local roomName = wildcards and wildcards[1]
     if roomName and roomName ~= "" then
-      currentRoom = roomName
       updateMapForRoom(roomName)
     end
   end, true)
@@ -73,8 +70,7 @@ function initGroundMap()
   -- Listen for map data updates via GMCP
   onGMCPUpdate("Room.Info", function(data)
     if data and data.room then
-      currentRoom = data.room.name or currentRoom
-      updateMapForRoom(currentRoom)
+      updateMapDisplay()
     end
   end)
 
@@ -93,9 +89,8 @@ end
 function registerMapperCallbacks()
   -- Mapper API: onRoomChange(newVnum, oldVnum, room)
   onRoomChange(function(newVnum, oldVnum, room)
-    if room then
+    if room and type(newVnum) == "number" then
       roomCache[newVnum] = room
-      currentRoom = room.name or currentRoom
       updateMapDisplay()
     end
   end)
@@ -110,21 +105,17 @@ end
 function updateMapForRoom(vnum)
   if not groundMap or not mapInitialized then return end
 
-  -- The type="map" widget renders the map database automatically.
-  -- We populate rooms via the Mapper API and set the player's current room.
-  if vnum then
-    local room = roomCache[vnum]
-    if room then
-      addMapRoom(vnum, {
-        name = room.name or ("Room " .. vnum),
-        area = room.area or "Unknown",
-        x = room.x or 0,
-        y = room.y or 0,
-        z = room.z or 0,
-      })
-      setPlayerRoom(vnum)
-    end
+  -- Text captures are display labels. Only an explicit numeric ID can
+  -- position the cursor, and setPlayerRoom itself fires onRoomChange.
+  if type(vnum) == "number" and roomCache[vnum] and getPlayerRoom() ~= vnum then
+    setPlayerRoom(vnum)
   end
+  updateMapDisplay()
+end
+
+--- The native map renders rooms and tracks movement. Refresh only our symbols.
+function updateMapDisplay()
+  if not groundMap or not mapInitialized then return end
 
   -- Update room symbols for amenities (use 1-char key)
   for roomVnum, data in pairs(roomCache) do
@@ -140,36 +131,10 @@ function updateMapForRoom(vnum)
   end
 end
 
---- Update map display from room cache
-function updateMapDisplay()
-  if not groundMap or not mapInitialized then return end
-
-  for vnum, data in pairs(roomCache) do
-    addMapRoom(vnum, {
-      name = data.name or ("Room " .. vnum),
-      area = data.area or "Unknown",
-      x = data.x or 0,
-      y = data.y or 0,
-      z = data.z or 0,
-    })
-  end
-
-  if currentRoom then
-    setPlayerRoom(currentRoom)
-  end
-end
-
--- Parse room entry trigger and store by numeric vnum
+-- Accept a room-entry line from callers outside the registered text trigger.
 function handleRoomEntry(line)
-  local roomName = line:match("^You enter (.*?)%.$")
-  if roomName then
-    -- Try to extract vnum from room data if available
-    local vnum = tonumber(roomName:match("(%d+)"))
-    if vnum then
-      currentRoom = vnum
-      updateMapForRoom(vnum)
-    end
-  end
+  local roomName = line:match("^You enter (.+)%.$")
+  if roomName then updateMapForRoom(roomName) end
 end
 
 --- Handle map click events (click to target)
@@ -206,7 +171,6 @@ function cleanupGroundMap()
   end
   mapInitialized = false
   roomCache = {}
-  currentRoom = nil
 end
 
 return {
