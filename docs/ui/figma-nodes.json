@@ -358,6 +358,36 @@
    "name": "Cockpit de alvo · estados",
    "kind": "screen",
    "topics": []
+  },
+  {
+   "id": "17:956",
+   "name": "FIG-02 · Fluxos",
+   "kind": "section",
+   "topics": []
+  },
+  {
+   "id": "17:957",
+   "name": "Fluxo · decolar até pousar",
+   "kind": "flow",
+   "topics": []
+  },
+  {
+   "id": "17:1043",
+   "name": "Fluxo · travar e atirar",
+   "kind": "flow",
+   "topics": []
+  },
+  {
+   "id": "17:1108",
+   "name": "FIG-02 · Mobile 390",
+   "kind": "section",
+   "topics": []
+  },
+  {
+   "id": "17:1109",
+   "name": "Mobile · radar, alvo e decolagem",
+   "kind": "screen",
+   "topics": []
   }
  ]
 }
