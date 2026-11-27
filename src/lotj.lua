@@ -296,46 +296,9 @@ function cleanup()
 end
 
 -- ── Placeholder handlers ───────────────────────────────────────
--- GMCP handler: Char.Vitals (hp, maxHp, move, maxMove, mana, maxMana, wimpy)
--- Note: Force bar auto-hides when maxMana == 0 (per upstream info-panel.lua)
--- wimpy is the yellow threshold tick inside the HP bar
-function onGMCPUpdateCharVitals(data)
-  if not WIDGET_STATUS_BAR then return end
-  local values = {
-    hp = data.hp, maxHp = data.maxHp,
-    move = data.move, maxMove = data.maxMove,
-  }
-  if data.mana ~= nil and data.maxMana ~= nil and data.maxMana > 0 then
-    values.force = data.mana
-    values.maxForce = data.maxMana
-  end
-  if data.mana ~= nil and data.maxMana ~= nil then
-    values.mana = data.mana
-    values.maxMana = data.maxMana
-  end
-  if data.wimpy then values.wimpy = data.wimpy end
-  sendWidgetMessage(WIDGET_STATUS_BAR, { event = "vitals", values = values })
-end
-
--- GMCP handler: Char.Enemy (name with color codes stripped, percent for idle reticle)
-function onGMCPUpdateCharEnemy(data)
-  if not WIDGET_STATUS_BAR then return end
-  local name = data.name or ""
-  name = name:gsub("&.", "")
-  sendWidgetMessage(WIDGET_STATUS_BAR, { event = "enemyInfo", enemy = {
-    name = name,
-    enemyPercent = data.percent or 0,
-  }})
-end
-
--- GMCP handler: Char.Chat (commChannel, commEncrypt for comlink icon state)
-function onGMCPUpdateCharChat(data)
-  if not WIDGET_STATUS_BAR then return end
-  sendWidgetMessage(WIDGET_STATUS_BAR, { event = "comlink", channel = {
-    name = data.commChannel or "",
-    active = data.commEncrypt or false,
-  }})
-end
+-- Char.Vitals, Char.Enemy and Char.Chat are handled by the status bar module
+-- (src/widgets/lotj-status-bar.lua), which defines onGMCPUpdateCharVitals,
+-- onGMCPUpdateCharEnemy and onGMCPUpdateCharChat before init() registers them.
 
 -- Placeholder handlers
 function handleCombatHUDClick(data) end

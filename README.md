@@ -108,9 +108,8 @@ for the initial load and display checks.
 
 - **Status bar:** The layout includes HP, movement, a conditional Force gauge,
   and ship and opponent rows. HP and movement have been checked in a live
-  client session. The Lua handlers send
-  `enemyPercent`, but the embedded HTML reads `percent`, so the opponent gauge
-  is not fully wired.
+  client session. The opponent row receives the name without colour codes and
+  `percent` from `Char.Enemy`; it still needs a live combat check.
 - **Comms Hub:** Recognized Local, CommNet, Clan, Broadcast, OOC, Tell, and
   Imm lines appear in All and their channel tab. The hub keeps the most recent
   250 lines per tab and resets history on a new connection. Opening a channel
@@ -151,7 +150,8 @@ From the repository root in Bash, with Git, Lua 5.1 and/or 5.4 (`lua` and `luac`
 
 ```sh
 git ls-files -z -- 'src/*.lua' | xargs -0 -n 1 luac -p
-lua tests/run.lua
+lua tests/run.lua --coverage
+lua tests/coverage.lua
 node tests/comms_hub_widget.js
 node tests/scrapper_cockpit_widget.js
 node tests/target_cockpit_widget.js
@@ -166,6 +166,15 @@ exits non-zero if any fails; pass a substring to run a subset
 (`lua tests/run.lua cockpit`). Specs load modules with a custom environment
 through [`tests/support/load_env.lua`](tests/support/load_env.lua), which works
 on Lua 5.1 and 5.4.
+
+`--coverage` records which `src/` lines the specs run; `tests/coverage.lua`
+prints per-file line coverage and fails if the total drops below this Lua
+version's floor in [`tests/coverage-floor.txt`](tests/coverage-floor.txt).
+Executable lines come from `luac -l -l` (set `LUAC` if the compiler has another
+name). When a change raises coverage, run `lua tests/coverage.lua --update` on
+each version and commit the new floor; the floor never goes down. Specs that
+need the client use the recording host in
+[`tests/support/fake_host.lua`](tests/support/fake_host.lua).
 
 The [widget smoke](tests/ui_scaffold_smoke_spec.lua) stubs the host calls and does
 not run `src/lotj.lua` or the embedded JavaScript. The
