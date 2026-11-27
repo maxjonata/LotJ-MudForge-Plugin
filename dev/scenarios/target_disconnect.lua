@@ -1,0 +1,15 @@
+-- NAV-08: a disconnect clears the target and later clicks send nothing.
+return { name = "target cockpit: disconnect clears the target", run = function(t)
+  t.post("lotj-scrapper-cockpit", "ready")
+  t.post("lotj-scrapper-cockpit", "radar")
+  t.line("Light Freighter 'Red Fury' 39 8 7")
+  t.line("Your Coordinates: 9 8 7")
+  t.fireTimers(250)
+  t.post("lotj-scrapper-cockpit", "select-target", { name = "Red Fury" })
+  t.disconnect()
+  t.eq(t.last("lotj-scrapper-cockpit", "target").target.status, "none", "target cleared")
+  local before = #t.sends()
+  t.post("lotj-scrapper-cockpit", "aim")
+  t.eq(#t.sends(), before, "no send while disconnected")
+  t.eq(t.last("lotj-scrapper-cockpit").event, "disconnected", "panel is told")
+end }

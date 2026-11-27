@@ -27,6 +27,6 @@ jobs:
         with:
           luaVersion: ${{ matrix.lua }}
 
-      - name: Parse all tracked Lua sources under src
+      - name: Parse all tracked Lua sources under src and dev
         shell: bash
-        run: git ls-files -z -- 'src/*.lua' | xargs -0 -n 1 luac -p
+        run: git ls-files -z -- 'src/*.lua' 'dev/*.lua' | xargs -0 -n 1 luac -p

@@ -68,6 +68,24 @@ local function new(options)
     host.triggers[#host.triggers + 1] = { pattern = pattern, callback = callback, regex = regex }
     return #host.triggers
   end)
+  -- Offline stand-in for the client's trigger engine: plain triggers match as
+  -- substrings; regex triggers only support the `(.*?)` and `\.` the plugin
+  -- uses today. Runs synchronously; the client runs the batch afterwards.
+  define("feedTriggers", function(lines, onDone)
+    if type(lines) == "string" then lines = { lines } end
+    for _, line in ipairs(lines) do
+      for _, trigger in ipairs(host.triggers) do
+        if trigger.regex then
+          local pattern = trigger.pattern:gsub("%(%.%*%?%)", "(.-)"):gsub("\\%.", "%%.")
+          local captures = { line:match(pattern) }
+          if captures[1] then trigger.callback({ line, (table.unpack or unpack)(captures) }, line, captures) end
+        elseif line:find(trigger.pattern, 1, true) then
+          trigger.callback({ line }, line, {})
+        end
+      end
+    end
+    if onDone then onDone(0, #lines) end
+  end)
   define("on", function() end)
   define("emit", function() end)
   define("addTimer", function(interval, callback)
