@@ -1,3 +1,12 @@
+local function coordinate(value)
+  if not value:match("^[+-]?%d+%.?%d*$") and not value:match("^[+-]?%.%d+$") then
+    return nil
+  end
+  local number = tonumber(value)
+  if number and math.abs(number) <= 1e12 then return number end
+  return nil
+end
+
 local function read(line)
   if type(line) ~= "string" then return nil end
   if line:match("^%s*You must be in the cockpit or turret of a ship to do that!%s*$") then
@@ -5,10 +14,10 @@ local function read(line)
   end
 
   -- LotJ's readout uses an object label followed by three signed coordinates.
-  local label, x, y, z = line:match("^%s*(.-)%s+([+-]?%d+)%s+([+-]?%d+)%s+([+-]?%d+)%s*$")
+  local label, x, y, z = line:match("^%s*(.-)%s+(%S+)%s+(%S+)%s+(%S+)%s*$")
   if not label then return nil end
-  x, y, z = tonumber(x), tonumber(y), tonumber(z)
-  if not x or not y or not z or math.abs(x) > 1e12 or math.abs(y) > 1e12 or math.abs(z) > 1e12 then
+  x, y, z = coordinate(x), coordinate(y), coordinate(z)
+  if not x or not y or not z then
     return nil
   end
 

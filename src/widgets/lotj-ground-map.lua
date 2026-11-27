@@ -31,7 +31,7 @@ local AMENITY_SYMBOLS = {
 }
 
 --- Initialize the ground map widget
-function initGroundMap()
+function initGroundMap(publishRoom)
   if groundMap then return end
   groundMap = createWidget({
     type = "map",
@@ -55,7 +55,7 @@ function initGroundMap()
   onMapReady(function()
     if not groundMap or generation ~= mapGeneration then return end
     mapInitialized = true
-    registerMapperCallbacks()
+    registerMapperCallbacks(publishRoom)
   end)
 
   -- MudForge uses JS regex; wildcards[1] is the first captured group.
@@ -92,9 +92,10 @@ function initGroundMap()
 end
 
 --- Register Mapper API callbacks (§11.5)
-function registerMapperCallbacks()
+function registerMapperCallbacks(publishRoom)
   -- Mapper API: onRoomChange(newVnum, oldVnum, room)
   onRoomChange(function(newVnum, oldVnum, room)
+    if publishRoom then publishRoom(room) end
     if room and type(newVnum) == "number" then
       roomCache[newVnum] = room
       updateMapDisplay()

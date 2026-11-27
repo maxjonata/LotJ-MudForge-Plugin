@@ -113,7 +113,12 @@ for the initial load and display checks.
   The range buttons filter by three-dimensional distance. Select a dot or
   contact to inspect its height difference. **Radar** processes a complete
   manual readout using the format observed in the community Mudlet package.[3]
-  The successful ship scan path still needs a live LotJ check. **Galaxy** uses
+  The terminal protocol carries no request ID. The plugin waits briefly for
+  trailing contact rows and discards late rows while a timed-out scan drains.
+  A scan displays at most 256 contacts and reports truncation. After a known
+  system change, request Radar to establish the new origin before live
+  coordinates resume. The successful ship scan path still needs a live LotJ
+  check. **Galaxy** uses
   the public catalogue verified on 2026-11-27 and highlights a matching
   `Ship.System` position when available.[4] **Map** opens MudForge's native
   map in its own widget.

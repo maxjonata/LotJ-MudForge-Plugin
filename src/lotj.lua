@@ -18,6 +18,23 @@ local WIDGET_SPACE_RADAR = nil
 local WIDGET_DATAPAD    = nil
 local scrapperCockpit = nil
 
+local function sendNavigationScan(command)
+  local session = getSession()
+  if not session or not session.connected then return false end
+  send(command)
+  focusPrompt()
+  return true
+end
+
+local function scheduleNavigationReadout(milliseconds, callback)
+  local timer = addTimer(milliseconds, callback)
+  if not timer or timer == "" then
+    callback()
+    return nil
+  end
+  return function() removeTimer(timer) end
+end
+
 -- ── Init: create all widgets ───────────────────────────────────
 function init()
   -- Load sub-widget modules
@@ -104,17 +121,25 @@ function init()
   -- Initialize sub-widgets with widget IDs
   statusBar.init(WIDGET_STATUS_BAR)
   if initCommsHub then initCommsHub(WIDGET_COMMS_HUB) end
-  groundMap.init()
-  scrapperCockpit = cockpitWidget.openWidget({
-    application = cockpitApplication,
-    shipPosition = shipPosition,
-    radarScan = radarScan,
+  local navigation = cockpitWidget.create({
     publicGalaxy = publicGalaxy,
     openMap = groundMap.open,
     openComms = function()
       if WIDGET_COMMS_HUB then showWidget(WIDGET_COMMS_HUB, true) end
     end,
   })
+  if navigation then
+    scrapperCockpit = cockpitApplication.new({
+      shipPosition = shipPosition,
+      radarScan = radarScan,
+      publish = navigation.publish,
+      publishSystem = navigation.publishSystem,
+      scan = sendNavigationScan,
+      schedule = scheduleNavigationReadout,
+    })
+    navigation.bind(scrapperCockpit)
+  end
+  groundMap.init(navigation and navigation.publishRoom)
 
   -- Register theme on connect (also handled in onConnect for reconnects)
   registerLOTJTheme()
@@ -139,7 +164,11 @@ function init()
   onGMCPUpdate("Ship.System", function(data)
     local session = getSession()
     if scrapperCockpit and session and session.connected then
-      scrapperCockpit.observeSystem(data)
+      if type(data) == "table" then
+        scrapperCockpit.observeSystem(data.x, data.y)
+      else
+        scrapperCockpit.observeSystem()
+      end
     end
   end)
   onGMCPUpdate("Char.Enemy", onGMCPUpdateCharEnemy)

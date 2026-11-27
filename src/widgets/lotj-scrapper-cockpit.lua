@@ -198,7 +198,7 @@ local HTML = [=[
     $("contacts").replaceChildren(fragment);
     const c = plotted.find(item => item.id === selected);
     $("contact-detail").textContent = c ? c.name + " · ΔX " + c.x + " · ΔY " + c.y + " · ΔZ " + c.z
-      : (scanState === "complete" ? plotted.length + " of " + contacts.length + " contacts in range" : "");
+      : (["complete", "truncated"].includes(scanState) ? plotted.length + " of " + contacts.length + " contacts in range" : "");
   }
   function selectContact(id, focus) {
     selected = id;
@@ -256,9 +256,15 @@ local HTML = [=[
       scanState = message.scanState || "idle";
       $("position").textContent = position ? "X " + position.x + " · Y " + position.y + " · Z " + position.z
         : "Waiting for ship position";
-      $("radar").disabled = scanState === "scanning";
-      const active = { scanning:"Waiting for radar readout…", timeout:"No complete radar readout arrived.",
-        rejected:"The game requires a ship cockpit or turret to scan." };
+      $("radar").disabled = message.radarBusy === true;
+      const active = {
+        scanning: "Waiting for radar readout…",
+        timeout: message.radarBusy ? "Discarding late lines after an incomplete radar readout…" : "No complete radar readout arrived.",
+        rejected: "The game requires a ship cockpit or turret to scan.",
+        truncated: "Showing the first 256 contacts from this scan.",
+        proximity: "Proximity readout goes to the terminal.",
+        "awaiting-origin": "Run Radar to establish position in the new system.",
+      };
       $("notice").textContent = active[scanState] || "";
       drawRadar();
     } else if (message.event === "disconnected") {
@@ -279,7 +285,7 @@ local HTML = [=[
 </html>
 ]=]
 
-local function openWidget(ports)
+local function create(ports)
   local window = getWindowSize()
   local width = math.min(650, math.max(290, math.floor(window.width * 0.54)))
   local height = math.min(635, math.max(360, window.height - 140))
@@ -294,102 +300,73 @@ local function openWidget(ports)
   if not id then return nil end
 
   local ready, location = false, nil
-  local cockpit = ports.application.new({
-    shipPosition = ports.shipPosition,
-    radarScan = ports.radarScan,
-    publish = function(position, contacts, scanState)
-      if ready then
-        local session = getSession()
-        sendWidgetMessage(id, {
-          event = "position",
-          position = position,
-          contacts = contacts,
-          scanState = scanState,
-          connected = session ~= nil and session.connected == true,
-        })
-      end
-    end,
-    scan = function(kind)
-      local session = getSession()
-      if not session or not session.connected then return false end
-      send(kind)
-      focusPrompt()
-      return true
-    end,
-    afterReadout = function(callback)
-      local timer = addTimer(8000, callback)
-      if not timer or timer == "" then callback() end
-    end,
-  })
+
+  local function publish(position, contacts, scanState, radarBusy)
+    if not ready then return end
+    local session = getSession()
+    sendWidgetMessage(id, {
+      event = "position", position = position, contacts = contacts,
+      scanState = scanState, radarBusy = radarBusy,
+      connected = session ~= nil and session.connected == true,
+    })
+  end
 
   local function publishGalaxy(includeCatalogue)
-    if ready then
-      sendWidgetMessage(id, {
-        event = "galaxy",
-        systems = includeCatalogue and ports.publicGalaxy or nil,
-        location = location,
-      })
-    end
+    if not ready then return end
+    sendWidgetMessage(id, {
+      event = "galaxy",
+      systems = includeCatalogue and ports.publicGalaxy or nil,
+      location = location,
+    })
   end
 
-  local function observeSystem(data)
-    local previous = location
-    location = nil
-    if type(data) == "table" then
-      location = ports.shipPosition.observe(data.x, data.y, 0)
-    end
-    if previous and (not location or previous.x ~= location.x or previous.y ~= location.y) then
-      cockpit.reset()
-    end
-    publishGalaxy(false)
+  local function publishSystem(position)
+    local hadLocation = location ~= nil
+    location = position
+    if hadLocation or location then publishGalaxy(false) end
   end
 
-  local function resetSession()
-    if location then
-      location = nil
-      publishGalaxy(false)
-    end
-    cockpit.reset()
+  local function publishRoom(room)
+    if not ready then return end
+    sendWidgetMessage(id, {
+      event = "room", name = room and room.name, zone = room and (room.zone or room.area),
+    })
   end
 
-  registerWidgetEvent(id, "luamsg", function(message)
-    if not message then return end
-    if message.event == "ready" then
-      ready = true
-      publishGalaxy(true)
-      cockpit.refresh()
-    elseif message.event == "radar" or message.event == "proximity" then
-      if not cockpit.requestScan(message.event) then
-        sendWidgetMessage(id, { event = "disconnected" })
+  local function bind(cockpit)
+    registerWidgetEvent(id, "luamsg", function(message)
+      if not message then return end
+      if message.event == "ready" then
+        ready = true
+        publishGalaxy(true)
+        cockpit.refresh()
+      elseif message.event == "radar" or message.event == "proximity" then
+        if not cockpit.requestScan(message.event) then
+          sendWidgetMessage(id, { event = "disconnected" })
+        end
+      elseif message.event == "read-galaxy" then
+        ready = true
+        publishGalaxy(true)
+      elseif message.event == "read-room" then
+        publishRoom(getCurrentRoom())
+      elseif message.event == "open-map" then
+        ports.openMap()
+      elseif message.event == "open-comms" then
+        ports.openComms()
+      elseif message.event == "fit-panel" then
+        resizeWidget(id, width, height)
       end
-    elseif message.event == "read-galaxy" then
-      ready = true
-      publishGalaxy(true)
-    elseif message.event == "read-room" then
-      local room = getCurrentRoom()
-      sendWidgetMessage(id, { event = "room", name = room and room.name, zone = room and room.zone })
-    elseif message.event == "open-map" then
-      ports.openMap()
-    elseif message.event == "open-comms" then
-      ports.openComms()
-    elseif message.event == "fit-panel" then
-      resizeWidget(id, width, height)
+    end)
+    setWidgetProperty(id, "content", HTML)
+
+    local function showNavigation()
+      showWidget(id, true)
     end
-  end)
-  setWidgetProperty(id, "content", HTML)
-
-  local function showNavigation()
-    showWidget(id, true)
+    registerCommand("lotj-nav", showNavigation, "Open LOTJ Navigation")
+    registerCommand("lotj-cockpit", showNavigation, "Open LOTJ Navigation")
   end
-  registerCommand("lotj-nav", showNavigation, "Open LOTJ Navigation")
-  registerCommand("lotj-cockpit", showNavigation, "Open LOTJ Navigation")
 
-  return {
-    observe = cockpit.observe,
-    readLine = cockpit.readLine,
-    observeSystem = observeSystem,
-    resetSession = resetSession,
-  }
+  return { bind = bind, publish = publish, publishSystem = publishSystem, publishRoom = publishRoom }
 end
 
-return { openWidget = openWidget }
+return { create = create }
