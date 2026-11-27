@@ -11,3 +11,4 @@ node_modules/
 scratch/
 .coverage-hits
 .pending-specs
+.coverage-js/

@@ -1,6 +1,6 @@
+const widgetScript = require("./support/widget_script.js");
 const assert = require("node:assert/strict");
 const fs = require("node:fs");
-const vm = require("node:vm");
 
 const source = fs.readFileSync("src/widgets/lotj-scrapper-cockpit.lua", "utf8");
 const script = source.match(/<script>([\s\S]*?)<\/script>/);
@@ -15,6 +15,7 @@ function element() {
     getAttribute(name) { return attributes.get(name); },
     addEventListener(event, listener) { events.set(event, listener); },
     click() { events.get("click")?.(); },
+    dispatch(type, event) { events.get(type)?.(event); },
     focus() {},
     appendChild(child) { this.children.push(child); },
     replaceChildren(fragment) { this.children = fragment.children; },
@@ -34,11 +35,12 @@ const context = {
   clearRect() { markers.length = 0; paths.length = 0; },
   fillText(...value) { markers.push(value); },
 };
-Object.assign(elements.get("plot"), { width: 720, height: 448, getContext: () => context });
+Object.assign(elements.get("plot"), { width: 720, height: 448, getContext: () => context,
+  getBoundingClientRect: () => ({ left: 0, top: 0, width: 360, height: 224 }) });
 
 const posted = [];
 let onMessage;
-vm.runInNewContext(script[1], {
+widgetScript.run("src/widgets/lotj-scrapper-cockpit.lua", {
   document: {
     getElementById: id => elements.get(id),
     createElement: element,
@@ -113,3 +115,57 @@ elements.get("open-comms").click();
 elements.get("fit-panel").click();
 assert.deepEqual(posted, ["ready", "radar", "proximity", "select-target", "read-galaxy", "read-room", "open-map", "open-comms", "fit-panel"]);
 console.log("PASS: isometric projection, contact altitude, range, and local navigation controls");
+
+// Keyboard tabs: arrows move and wrap, other keys are ignored.
+const tabState = () => ["map", "system", "galaxy"].map(id => elements.get(id).hidden);
+let prevented = 0;
+const key = (id, k) => elements.get("tab-" + id).dispatch("keydown", { key: k, preventDefault: () => prevented++ });
+key("map", "Enter");
+assert.deepEqual(tabState(), [false, true, true], "other keys keep the tab");
+key("map", "ArrowRight");
+assert.deepEqual(tabState(), [true, false, true]);
+key("system", "ArrowLeft");
+key("map", "ArrowLeft");
+assert.deepEqual(tabState(), [true, true, false], "ArrowLeft from the first tab wraps to the last");
+assert.equal(prevented, 3);
+console.log("PASS: arrow keys move between cockpit tabs and wrap");
+
+// Zoom out stops at the widest range.
+for (let i = 0; i < 10; i++) elements.get("zoom-out").click();
+assert.equal(elements.get("range").textContent, "50,000");
+for (let i = 0; i < 10; i++) elements.get("zoom-in").click();
+assert.equal(elements.get("range").textContent, "250");
+elements.get("zoom-out").click();
+console.log("PASS: zoom out and in stay within the documented ranges");
+
+// Canvas click selects the nearest plotted ship; unknown categories still draw.
+posted.length = 0;
+onMessage({ event: "position", position: { x: 0, y: 0, z: 0 }, scanState: "complete",
+  contacts: { 1: { name: "Raider", category: "ship", x: 100, y: 0, z: 0 }, 2: { name: "Hulk", category: "derelict", x: -100, y: 0, z: 0 } } });
+const glyphs = markers.filter(([glyph]) => glyph === "◆");
+assert.ok(glyphs.length >= 2, "an unknown category falls back to the ship glyph");
+const plot = elements.get("plot");
+for (const [, x, y] of glyphs.slice(0, 2)) plot.dispatch("click", { clientX: (x + 5) / 2, clientY: (y - 5) / 2 });
+const selections = JSON.parse(JSON.stringify(posted)).filter(entry => entry === "select-target");
+assert.equal(selections.length, 1, "clicking the ship marker selects it; the derelict is not targetable");
+const before = posted.length;
+plot.dispatch("click", { clientX: 1, clientY: 1 });
+assert.equal(posted.length, before, "a click far from every contact selects nothing");
+console.log("PASS: radar canvas clicks select the nearest ship");
+
+// Room text, empty galaxy, planets, and unknown target status.
+onMessage({ event: "room", name: "Docking Bay 94", zone: "Mos Eisley" });
+assert.equal(elements.get("room").textContent, "Docking Bay 94 · Mos Eisley");
+onMessage({ event: "room", name: "Cantina" });
+assert.equal(elements.get("room").textContent, "Cantina");
+onMessage({ event: "room" });
+assert.equal(elements.get("room").textContent, "Waiting for room information");
+onMessage({ event: "galaxy", systems: { 1: { name: "Kuat", label: "K", x: 5, y: 5, planets: "Kuat" } } });
+elements.get("galaxy-chart").children[0].click();
+assert.match(elements.get("sector-detail").textContent, /Kuat · X 5 · Y 5 · Kuat/);
+onMessage({ event: "galaxy", systems: {} });
+onMessage({ event: "target", target: { status: "locked-by-server", name: "Raider", distance: 1, bearing: 0, elevation: 0, dx: 1, dy: 0, dz: 0 } });
+assert.equal(elements.get("target-status").textContent, "locked-by-server", "an unknown status is shown as-is");
+onMessage({ event: "position", scanState: "awaiting-origin" });
+assert.match(elements.get("notice").textContent, /establish position/);
+console.log("PASS: room, galaxy and target fallbacks render readable text");

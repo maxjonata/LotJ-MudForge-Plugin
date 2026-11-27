@@ -1,6 +1,6 @@
+const widgetScript = require("./support/widget_script.js");
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
-const vm = require('node:vm');
 
 function element() {
   return {
@@ -22,6 +22,11 @@ for (const channel of channels) {
   elements.set('tab-' + channel, element());
   if (channel !== 'all') elements.set('lotj-' + channel + '-badge', element());
 }
+const stats = ['damage-dealt', 'hits-given', 'misses', 'dodges', 'damage-taken', 'bacta-change'];
+for (const stat of stats) elements.set('stat-' + stat, { textContent: '' });
+const autopilot = { html: '' };
+Object.defineProperty(autopilot, 'innerHTML', { set(value) { this.html = value; } });
+elements.set('autopilot-content', autopilot);
 let select, receive;
 elements.get('tabs').addEventListener = (event, callback) => {
   assert.equal(event, 'click');
@@ -32,7 +37,7 @@ elements.get('tabs').addEventListener = (event, callback) => {
 const posts = [];
 const source = fs.readFileSync('src/widgets/lotj-comms-hub.lua', 'utf8');
 const [ , script ] = source.match(/<script>([\s\S]+?)<\/script>/);
-vm.runInNewContext(script, {
+widgetScript.run('src/widgets/lotj-comms-hub.lua', {
   document: {
     getElementById: (id) => elements.get(id),
     createElement: element,
@@ -40,6 +45,7 @@ vm.runInNewContext(script, {
   },
   mudforge: {
     onMessage(callback) { receive = callback; },
+    escapeHTML: (text) => String(text).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'),
     send(event, payload) {
       assert.ok(receive, 'install the receiver before announcing ready');
       posts.push([event, payload]);
@@ -77,3 +83,28 @@ assert.equal(tab('all').childElementCount, 0);
 assert.equal(tab('commnet').childElementCount, 0);
 assert.equal(badge('commnet').textContent, 0);
 console.log('PASS: chat mirrors once, renders text safely, tracks unread counts and bounds per-session history');
+
+receive({ event: 'combatStats', stats: { damageDealt: 120, hitsGiven: 7, misses: 2, dodges: 3, damageTaken: 40, bactaChange: -5 } });
+assert.equal(elements.get('stat-damage-dealt').textContent, 120);
+assert.equal(elements.get('stat-hits-given').textContent, 7);
+assert.equal(elements.get('stat-misses').textContent, 2);
+assert.equal(elements.get('stat-dodges').textContent, 3);
+assert.equal(elements.get('stat-damage-taken').textContent, 40);
+assert.equal(elements.get('stat-bacta-change').textContent, -5);
+receive({ event: 'combatStats', stats: {} });
+assert.equal(elements.get('stat-misses').textContent, 2, 'missing stats keep their values');
+receive({ event: 'combatStats' });
+console.log('PASS: combat stats fill their cells and ignore missing values');
+
+receive({ event: 'autopilotRoute', route: { name: 'Kuat <run>', detail: '3 jumps & "fuel"' } });
+assert.match(autopilot.html, /Kuat &lt;run&gt;/);
+assert.match(autopilot.html, /3 jumps &amp; &quot;fuel&quot;/);
+assert.doesNotMatch(autopilot.html, /<run>/, 'route text is escaped before innerHTML');
+receive({ event: 'autopilotRoute', route: { name: 'Corellia' } });
+assert.match(autopilot.html, /route-detail"><\/div>/);
+receive({ event: 'autopilotRoute', route: {} });
+assert.match(autopilot.html, /No active route/);
+receive({ event: 'autopilotRoute' });
+elements.delete('autopilot-content');
+receive({ event: 'autopilotRoute', route: { name: 'Nowhere' } });
+console.log('PASS: autopilot route renders escaped text or the empty state');

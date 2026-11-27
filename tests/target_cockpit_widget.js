@@ -1,7 +1,7 @@
+const widgetScript = require("./support/widget_script.js");
 // NAV-08 target panel inside the navigation widget, run in a VM with DOM stubs.
 const assert = require("node:assert/strict");
 const fs = require("node:fs");
-const vm = require("node:vm");
 
 const source = fs.readFileSync("src/widgets/lotj-scrapper-cockpit.lua", "utf8");
 const script = source.match(/<script>([\s\S]*?)<\/script>/)[1];
@@ -29,7 +29,7 @@ Object.assign(elements.get("plot"), { width: 720, height: 448, getContext: () =>
 
 const posted = [];
 let onMessage;
-vm.runInNewContext(script, {
+widgetScript.run("src/widgets/lotj-scrapper-cockpit.lua", {
   document: { getElementById: id => elements.get(id), createElement: element, createDocumentFragment: element },
   mudforge: { send: (event, data) => posted.push(JSON.parse(JSON.stringify([event, data ?? null]))), onMessage: fn => { onMessage = fn; } },
 });
