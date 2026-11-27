@@ -340,6 +340,24 @@
    "name": "FIG-02 · Estações da nave",
    "kind": "section",
    "topics": []
+  },
+  {
+   "id": "17:799",
+   "name": "FIG-02 · Radar 3D e cockpit de alvo",
+   "kind": "section",
+   "topics": []
+  },
+  {
+   "id": "17:800",
+   "name": "Radar 3D · altitude, trilha e rumo",
+   "kind": "screen",
+   "topics": []
+  },
+  {
+   "id": "17:889",
+   "name": "Cockpit de alvo · estados",
+   "kind": "screen",
+   "topics": []
   }
  ]
 }
