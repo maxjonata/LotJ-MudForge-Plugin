@@ -169,6 +169,30 @@
    "kind": "pattern",
    "pattern": "palette",
    "topics": []
+  },
+  {
+   "id": "12:312",
+   "name": "04 · Janelas, autocomplete e temas",
+   "kind": "section",
+   "topics": []
+  },
+  {
+   "id": "12:330",
+   "name": "Datapad Window",
+   "kind": "component",
+   "topics": []
+  },
+  {
+   "id": "12:342",
+   "name": "Window Dock",
+   "kind": "component",
+   "topics": []
+  },
+  {
+   "id": "12:364",
+   "name": "Command Bar · Autocomplete",
+   "kind": "component",
+   "topics": []
   }
  ]
 }

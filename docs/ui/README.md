@@ -30,3 +30,12 @@ CI fails if a topic has no destination, the committed catalog is stale, or a fra
 - Patterns are inferred from the syntax line. Each FIG phase reviews its area by hand and records corrections in `overrides.json`.
 - 446 topics have no `Syntax:` line. Some of them are still commands described in prose (for example `NAVCOMMANDS`). The phase that owns the area moves them out of `reference` with an override.
 - Responses to commands are not known without a live session; flows show them as pending until they are confirmed in game.
+
+## Visual direction
+
+- Old Star Wars computer terminal: amber phosphor on near-black by default, square corners, Share Tech Mono / Rajdhani / Bruno Ace SC, glow on active frames, tick rulers and segment bars (reference: Figma community file "Star Wars UI Library").
+- Dense: spacing 2–16 px, text 10–13 px.
+- Long text is an in-world object: the datapad is a floating window that minimizes to the window dock.
+- Universal fallback: the command bar with fuzzy autocomplete. It is our own widget, because MudForge does not expose what is typed in its native command line; a choice can be handed to it with `focusPrompt(text)`.
+- Themes: default amber, or the clan theme derived from the clan name colour (GMCP `CLAN`, colours set in game with `clancolorname`). Presets: amber, blue sensor, imperial red, green console.
+- Ground map (FIG-03): holographic isometric map in the style of Star Wars Jedi: Fallen Order, built from MudForge mapper coordinates.
