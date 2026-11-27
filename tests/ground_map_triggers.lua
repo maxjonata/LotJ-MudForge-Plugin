@@ -10,6 +10,7 @@ local on_resize, moved, resized
 local function noop() end
 local env = {
   createWidget = function() return "ground-map-test-id" end,
+  destroyWidget = noop,
   onMapReady = function(callback) on_ready = callback end,
   onRoomChange = function(callback) room_changed = callback end,
   onMapRoomClick = function(callback) room_clicked = callback end,
@@ -119,3 +120,24 @@ widget.updateMapForRoom(42)
 widget.updateMapForRoom(42) -- already there
 assert(cursor_writes == 1 and native_room == 42, "an explicit known room ID should move the cursor once")
 print("PASS: explicit numeric room selection does not feed back into movement")
+
+-- A widget ID may be reused after cleanup, so an older queued callback must
+-- not unlock the replacement map's resize handler.
+widget.cleanup()
+triggers = {}
+widget.init()
+local pending_ready = on_ready
+local previous_resize = on_resize
+widget.cleanup()
+triggers = {}
+widget.init()
+moved, resized = false, false
+pending_ready()
+on_resize()
+assert(not moved and not resized, "an old readiness callback must not enable the replacement map")
+on_ready()
+previous_resize()
+assert(not moved and not resized, "an old resize handler must not act on the replacement map")
+on_resize()
+assert(moved and resized, "the replacement map must resize once its own callback runs")
+print("PASS: only the current map's callbacks can resize the widget")
