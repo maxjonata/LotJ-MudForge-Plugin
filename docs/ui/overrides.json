@@ -1,5 +1,179 @@
 {
- "LIGHT": {"status": "inactive", "note": "Help: these commands are no longer in use on this mud."},
- "PTALK": {"status": "inactive", "note": "Help: this command is no longer in use."},
- "TAMP": {"status": "inactive", "note": "Help: these commands are no longer in use on this mud."}
+ "ACONFIG": {
+  "station": "pilot"
+ },
+ "ADDCREW CREW": {
+  "station": "access"
+ },
+ "ADDPILOT REMPILOT": {
+  "station": "access"
+ },
+ "AUTOLAUNCH": {
+  "station": "pilot"
+ },
+ "AUTOPILOT": {
+  "station": "pilot"
+ },
+ "AUTORECHARGE SHIELDS RECHARGE": {
+  "station": "weapons"
+ },
+ "AUTOTRACK": {
+  "station": "pilot"
+ },
+ "BATTLEGROUP": {
+  "station": "fleet"
+ },
+ "BOARD": {
+  "station": "access"
+ },
+ "BUYSHIP SELLSHIP": {
+  "station": "shipyard"
+ },
+ "CARGO LISTCARGO BUYCARGO SELLCARGO JETTISON": {
+  "station": "engineering"
+ },
+ "CHAFF": {
+  "station": "weapons"
+ },
+ "CLANBUYSHIP": {
+  "station": "shipyard"
+ },
+ "CLOAK CLOAKING": {
+  "station": "weapons"
+ },
+ "CLOSEHATCH OPENHATCH HATCH": {
+  "station": "access"
+ },
+ "COORDINATES CALC CALCULATE NAVCOMPUTER": {
+  "station": "nav"
+ },
+ "DOCK": {
+  "station": "engineering"
+ },
+ "EMERGENCY_REFUEL": {
+  "station": "engineering"
+ },
+ "FACE": {
+  "station": "pilot"
+ },
+ "FIRE": {
+  "station": "weapons"
+ },
+ "FLEETRADAR": {
+  "station": "fleet"
+ },
+ "FUEL REFUEL": {
+  "station": "engineering"
+ },
+ "HAIL": {
+  "station": "comms"
+ },
+ "HANGAR HANGARS OPENBAY CLOSEBAY REMOTEBAY TURRET TURRETS": {
+  "station": "engineering"
+ },
+ "HYPERSPACE HYPER LIGHTSPEED": {
+  "station": "nav"
+ },
+ "INFO": {
+  "station": "nav"
+ },
+ "LAND": {
+  "station": "pilot"
+ },
+ "LAUNCH": {
+  "station": "pilot"
+ },
+ "LEAVESHIP": {
+  "station": "access"
+ },
+ "LIGHT": {
+  "status": "inactive",
+  "note": "Help: these commands are no longer in use on this mud."
+ },
+ "LOADSHIP": {
+  "station": "engineering"
+ },
+ "MOBILE REFUEL": {
+  "station": "engineering"
+ },
+ "NAVCOMMANDS": {
+  "station": "fleet"
+ },
+ "NAVSTAT NAVSTATUS NAVCHART": {
+  "station": "nav"
+ },
+ "PILOT": {
+  "station": "access"
+ },
+ "PROXIMITY PROX": {
+  "station": "nav"
+ },
+ "PTALK": {
+  "status": "inactive",
+  "note": "Help: this command is no longer in use."
+ },
+ "RADAR": {
+  "station": "nav"
+ },
+ "RADIO": {
+  "station": "comms"
+ },
+ "REFUEL": {
+  "station": "engineering"
+ },
+ "RELOAD": {
+  "station": "weapons"
+ },
+ "RENAMESHIP": {
+  "station": "shipyard"
+ },
+ "REPAIRSHIP SHIP_MAINTENANCE SHIPMAINTENANCE 'SHIP MAINTENANCE'": {
+  "station": "engineering"
+ },
+ "SELFDESTRUCT": {
+  "station": "engineering"
+ },
+ "SHIP_SYSTEMS 'SHIP SYSTEMS' STATUS": {
+  "station": "nav"
+ },
+ "SPEED VELOCITY ACCELERATE": {
+  "station": "pilot"
+ },
+ "SQUADRON": {
+  "station": "fleet"
+ },
+ "STARSYSTEMS": {
+  "station": "nav"
+ },
+ "STATUS": {
+  "station": "nav"
+ },
+ "TAMP": {
+  "status": "inactive",
+  "note": "Help: these commands are no longer in use on this mud."
+ },
+ "TARGET": {
+  "station": "weapons"
+ },
+ "TRACTORBEAM 'TRACTOR BEAMS' TRACTOR": {
+  "station": "weapons"
+ },
+ "TRADESHIP": {
+  "station": "shipyard"
+ },
+ "TRANSFERFUEL": {
+  "station": "engineering"
+ },
+ "TRANSPONDER": {
+  "station": "nav"
+ },
+ "UNDOCK": {
+  "station": "engineering"
+ },
+ "UNLOADSHIP": {
+  "station": "engineering"
+ },
+ "VECTOR COURSE TRAJECTORY": {
+  "station": "pilot"
+ }
 }

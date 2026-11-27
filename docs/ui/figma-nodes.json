@@ -223,6 +223,171 @@
    "name": "Screen Bezel · Neutro",
    "kind": "component",
    "topics": []
+  },
+  {
+   "id": "17:465",
+   "name": "Estação · Piloto",
+   "kind": "screen",
+   "station": "pilot",
+   "topics": [
+    "ACONFIG",
+    "AUTOLAUNCH",
+    "AUTOPILOT",
+    "AUTOTRACK",
+    "FACE",
+    "LAND",
+    "LAUNCH",
+    "SPEED VELOCITY ACCELERATE",
+    "VECTOR COURSE TRAJECTORY"
+   ]
+  },
+  {
+   "id": "17:517",
+   "name": "Estação · Navegação e sensores",
+   "kind": "screen",
+   "station": "nav",
+   "topics": [
+    "COORDINATES CALC CALCULATE NAVCOMPUTER",
+    "HYPERSPACE HYPER LIGHTSPEED",
+    "INFO",
+    "NAVSTAT NAVSTATUS NAVCHART",
+    "PROXIMITY PROX",
+    "RADAR",
+    "SHIP_SYSTEMS 'SHIP SYSTEMS' STATUS",
+    "STARSYSTEMS",
+    "STATUS",
+    "TRANSPONDER"
+   ]
+  },
+  {
+   "id": "17:569",
+   "name": "Estação · Armas e defesa",
+   "kind": "screen",
+   "station": "weapons",
+   "topics": [
+    "AUTORECHARGE SHIELDS RECHARGE",
+    "CHAFF",
+    "CLOAK CLOAKING",
+    "FIRE",
+    "RELOAD",
+    "TARGET",
+    "TRACTORBEAM 'TRACTOR BEAMS' TRACTOR"
+   ]
+  },
+  {
+   "id": "17:617",
+   "name": "Estação · Acesso e tripulação",
+   "kind": "screen",
+   "station": "access",
+   "topics": [
+    "ADDCREW CREW",
+    "ADDPILOT REMPILOT",
+    "BOARD",
+    "CLOSEHATCH OPENHATCH HATCH",
+    "LEAVESHIP",
+    "PILOT"
+   ]
+  },
+  {
+   "id": "17:659",
+   "name": "Estação · Engenharia e logística",
+   "kind": "screen",
+   "station": "engineering",
+   "topics": [
+    "CARGO LISTCARGO BUYCARGO SELLCARGO JETTISON",
+    "DOCK",
+    "EMERGENCY_REFUEL",
+    "FUEL REFUEL",
+    "HANGAR HANGARS OPENBAY CLOSEBAY REMOTEBAY TURRET TURRETS",
+    "LOADSHIP",
+    "MOBILE REFUEL",
+    "REFUEL",
+    "REPAIRSHIP SHIP_MAINTENANCE SHIPMAINTENANCE 'SHIP MAINTENANCE'",
+    "SELFDESTRUCT",
+    "TRANSFERFUEL",
+    "UNDOCK",
+    "UNLOADSHIP"
+   ]
+  },
+  {
+   "id": "17:714",
+   "name": "Estação · Esquadrão e frota",
+   "kind": "screen",
+   "station": "fleet",
+   "topics": [
+    "BATTLEGROUP",
+    "FLEETRADAR",
+    "NAVCOMMANDS",
+    "SQUADRON"
+   ]
+  },
+  {
+   "id": "17:753",
+   "name": "Estação · Comunicação e estaleiro",
+   "kind": "screen",
+   "station": "comms+shipyard",
+   "topics": [
+    "BUYSHIP SELLSHIP",
+    "CLANBUYSHIP",
+    "HAIL",
+    "RADIO",
+    "RENAMESHIP",
+    "TRADESHIP"
+   ]
+  },
+  {
+   "id": "17:464",
+   "name": "FIG-02 · Estações da nave",
+   "kind": "section",
+   "topics": []
+  },
+  {
+   "id": "17:799",
+   "name": "FIG-02 · Radar 3D e cockpit de alvo",
+   "kind": "section",
+   "topics": []
+  },
+  {
+   "id": "17:800",
+   "name": "Radar 3D · altitude, trilha e rumo",
+   "kind": "screen",
+   "topics": []
+  },
+  {
+   "id": "17:889",
+   "name": "Cockpit de alvo · estados",
+   "kind": "screen",
+   "topics": []
+  },
+  {
+   "id": "17:956",
+   "name": "FIG-02 · Fluxos",
+   "kind": "section",
+   "topics": []
+  },
+  {
+   "id": "17:957",
+   "name": "Fluxo · decolar até pousar",
+   "kind": "flow",
+   "topics": []
+  },
+  {
+   "id": "17:1043",
+   "name": "Fluxo · travar e atirar",
+   "kind": "flow",
+   "topics": []
+  },
+  {
+   "id": "17:1108",
+   "name": "FIG-02 · Mobile 390",
+   "kind": "section",
+   "topics": []
+  },
+  {
+   "id": "17:1109",
+   "name": "Mobile · radar, alvo e decolagem",
+   "kind": "screen",
+   "topics": []
   }
  ]
 }
