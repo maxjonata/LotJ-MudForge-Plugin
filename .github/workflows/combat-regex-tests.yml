@@ -26,3 +26,6 @@ jobs:
 
       - name: Extract command metadata from synthetic help pages
         run: python3 tests/test_extract_help.py -v
+
+      - name: Generate pending acceptance specs from a synthetic board
+        run: python3 tests/test_pending_specs.py -v

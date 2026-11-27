@@ -21,6 +21,26 @@ implementation and update each item with evidence after verification. See the
 
   Use `git worktree list` to see which branches are checked out where. Remove a worktree only after handing off or merging its work and confirming there are no uncommitted edits. Keep the branch if it is still needed for review or handoff.
 
+## Tests first
+
+Every roadmap card in Todo has a pending acceptance spec in `tests/acceptance/`,
+generated from the card's **Aceite** criteria. `lua tests/run.lua` prints them
+and reports how many cards are pending, without failing.
+
+1. When you start a card, replace its `pending(...)` call with real assertions
+   and confirm they fail before writing the code. Add focused specs for the
+   domain, application and adapter layers as well.
+2. Keep `lua tests/coverage.lua` passing on Lua 5.1 and 5.4. When coverage
+   rises, run `lua tests/coverage.lua --update` on each version and commit the
+   new floor.
+3. After adding cards to the board, regenerate the missing placeholders. The
+   generator never overwrites an existing spec:
+
+   ```sh
+   gh project item-list 1 --owner maxjonata --format json -L 500 > board.json
+   python scripts/roadmap/pending_specs.py board.json tests/acceptance
+   ```
+
 ## Verification and review
 
 1. Review the diff for scope and run `git diff --check` (use `git diff --cached --check` for staged changes). Run focused tests or lint checks for the affected paths. In the PR, state what ran, what passed, and what could not be run or did not apply.
