@@ -35,11 +35,11 @@
   "direct": 125,
   "editor": 2,
   "flow": 2,
-  "form": 203,
+  "form": 204,
   "list": 8,
   "readout": 46,
   "reference": 446,
-  "target": 121,
+  "target": 120,
   "toggle": 5
  },
  "entries": [
@@ -4287,7 +4287,7 @@
    "url": "https://www.legendsofthejedi.com/help?topic=CLANBOUNTY",
    "kind": "command",
    "area": "clan",
-   "pattern": "target",
+   "pattern": "form",
    "variants": [
     {
      "syntax": "clanbounty",
@@ -4297,11 +4297,15 @@
     },
     {
      "syntax": "clanbounty <character> <amount",
-     "pattern": "target",
+     "pattern": "form",
      "args": [
       {
        "name": "character",
        "type": "character"
+      },
+      {
+       "name": "amount",
+       "type": "number"
       }
      ],
      "preconditions": []

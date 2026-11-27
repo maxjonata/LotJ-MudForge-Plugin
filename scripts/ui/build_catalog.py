@@ -123,6 +123,13 @@ def _is_note(inner):
 
 def args(syntax):
     out = []
+    # The help sometimes leaves the last placeholder open ("clanbounty <character> <amount").
+    syntax = syntax.rstrip()
+    if syntax.count("(") > syntax.count(")") and syntax.rfind("(") > syntax.rfind(")"):
+        syntax = syntax[:syntax.rfind("(")].rstrip()  # a cut-off note such as "(For"
+    for opener, closer in (("<", ">"), ("[", "]")):
+        if syntax.count(opener) > syntax.count(closer) and syntax.rfind(opener) > syntax.rfind(closer):
+            syntax += closer
     for match in _TOKEN_RE.finditer(syntax):
         inner = next(g for g in match.groups() if g is not None)
         if match.group(2) is not None and _is_note(inner):

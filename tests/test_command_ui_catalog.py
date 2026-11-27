@@ -74,6 +74,10 @@ class ArgTests(unittest.TestCase):
         self.assertEqual(e["notes"], ["Required by level 30"])
         self.assertEqual(len(bc.entry(topic("DISGUISE", ["Disguise list", "Fire <Weapon Type>"]))["variants"]), 2)
 
+    def test_unclosed_last_placeholder_is_kept(self):
+        self.assertEqual([a["type"] for a in bc.args("clanbounty <character> <amount")], ["character", "number"])
+        self.assertEqual(len(bc.args("inductlog <name OR date> (For")), 1)
+
     def test_literal_subcommands_are_not_args(self):
         self.assertEqual(bc.args("launch abort"), [])
         self.assertEqual(bc.args("launch"), [])
