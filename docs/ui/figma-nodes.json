@@ -553,6 +553,18 @@
    "name": "Datapad · escrever, inbox, discos, segurança",
    "kind": "screen",
    "topics": []
+  },
+  {
+   "id": "22:616",
+   "name": "06 · Tecla iluminada (profundidade)",
+   "kind": "section",
+   "topics": []
+  },
+  {
+   "id": "22:471",
+   "name": "Console Key",
+   "kind": "component",
+   "topics": []
   }
  ]
 }

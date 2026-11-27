@@ -41,6 +41,13 @@ CI fails if a topic has no destination, the committed catalog is stale, or a fra
 - Themes: default amber, or the clan theme derived from the clan name colour (GMCP `CLAN`, colours set in game with `clancolorname`). Presets: amber, blue sensor, imperial red, green console.
 - Ground map (FIG-03): holographic isometric map in the style of Star Wars Jedi: Fallen Order, built from MudForge mapper coordinates.
 
+## Console key and depth
+
+- Keys are the `Console Key` component (section "06 · Tecla iluminada"): a fully coloured square cap that looks lit, sunk in a dark well. Depth comes from the well's inner shadow and bottom lip, the cap's top-light gradient, top highlight and bottom shade, a gloss band, a coloured glow and a drop shadow. Nothing is flat.
+- Colours: Amber, Green, Red, Blue, White. States: Rest (lit), Hover (brighter, label in Basic), Pressed (cap sinks, glow shrinks), Off (unlit, command unavailable).
+- The label sits above the key in Aurebesh (font "Aurebesh AF" Canon) and turns into Basic (Share Tech Mono) on hover. A player setting turns Aurebesh off (`Script labels` false, `Basic labels` true).
+- The datapad casing uses the same language: bevelled hull with a drop shadow, recessed screen bezel, glass glare over the screen, glowing status lights and Console Key hardware keys.
+
 ## Every control has a purpose
 
 No loose decoration that looks like a control. Each key sends one real command (radar, proximity, chaff, launch, land, autopilot), each light shows a named state read from GMCP or confirmed text (shields up, hyper ready, target sent, unread channel), each toggle is a real on/off command (autopilot, headlights, cloak), and each display says its data source and age. Hull structure (vents, seams, rivets) is the only non-functional art.
