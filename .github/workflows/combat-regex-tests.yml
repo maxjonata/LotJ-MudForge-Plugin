@@ -29,3 +29,6 @@ jobs:
 
       - name: Generate pending acceptance specs from a synthetic board
         run: python3 tests/test_pending_specs.py -v
+
+      - name: Package and install the DEV harness plugin into a temporary folder
+        run: python3 tests/test_install_dev_plugin.py -v

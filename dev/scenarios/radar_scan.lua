@@ -1,0 +1,18 @@
+-- NAV-02/03: one click sends one `radar`; the readout becomes radar contacts.
+return { name = "radar: a scan click sends radar and reads contacts", run = function(t)
+  t.post("lotj-scrapper-cockpit", "ready")
+  t.post("lotj-scrapper-cockpit", "radar")
+  t.eq(#t.sends(), 1, "one send per click")
+  t.eq(t.lastSend(), "radar", "documented command")
+  t.line("Light Freighter 'Red Fury' 39 8 7")
+  t.line("(STAR) Primary -15 100 -42")
+  t.line("Your Coordinates: 9 8 7")
+  t.fireTimers(250)
+  local radar = t.last("lotj-scrapper-cockpit", "position")
+  t.eq(radar.scanState, "complete", "scan state")
+  t.eq(#radar.contacts, 2, "contacts")
+  t.eq(radar.contacts[1].name, "Red Fury", "ship name")
+  t.eq(radar.contacts[2].category, "star", "star category")
+  t.eq(radar.position.x, 9, "origin x")
+  t.eq(#t.sends(), 1, "reading the readout is passive")
+end }

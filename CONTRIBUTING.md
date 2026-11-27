@@ -41,6 +41,27 @@ and reports how many cards are pending, without failing.
    python scripts/roadmap/pending_specs.py board.json tests/acceptance
    ```
 
+## Feature tests inside MudForge (DEV plugin)
+
+`dev/` holds **LotJ Plugin DEV**, a separate plugin that bundles the production
+code with feature scenarios (`dev/scenarios/*.lua`, listed in
+`dev/scenarios/index.lua`). It replaces `send`, `sendGMCP`, `getSession` and
+the timers with recorders, so nothing reaches the MUD, and drives the real code
+with simulated GMCP, MUD lines (`onLine` and the client's own trigger engine via
+`feedTriggers`) and widget messages. It is never part of the release ZIP.
+
+The same scenarios run offline in `tests/acceptance/qa_07_spec.lua`. To run
+them in the desktop app, use a throwaway world with the release plugin off:
+
+1. First time: `python scripts/dev/install_dev_plugin.py --zip lotj-dev.zip`,
+   then import `lotj-dev.zip` in Plugin Manager.
+2. After each change: `python scripts/dev/install_dev_plugin.py`. It copies the
+   files into `~/MudForge/plugins`, the app hot-reloads the plugin, and the
+   terminal prints one `LOTJDEV PASS|FAIL <scenario>` line each and
+   `LOTJDEV SUMMARY passed=N failed=M`. Type `lotjdev [filter]` to rerun.
+
+Add a scenario for every feature that crosses layers, and list it in the index.
+
 ## Verification and review
 
 1. Review the diff for scope and run `git diff --check` (use `git diff --cached --check` for staged changes). Run focused tests or lint checks for the affected paths. In the PR, state what ran, what passed, and what could not be run or did not apply.
