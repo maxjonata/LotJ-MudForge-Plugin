@@ -32,6 +32,8 @@ local specs = list_specs()
 assert(#specs > 0, "no *_spec.lua files found under tests/")
 
 if coverage then os.remove(HITS) end
+local PENDING = ".pending-specs"
+os.remove(PENDING)
 
 local failed = {}
 for _, spec in ipairs(specs) do
@@ -45,6 +47,13 @@ for _, spec in ipairs(specs) do
   end
 end
 
-print(("%d specs, %d failed"):format(#specs, #failed))
+local pendingCount = 0
+local pendingFile = io.open(PENDING, "r")
+if pendingFile then
+  for _ in pendingFile:lines() do pendingCount = pendingCount + 1 end
+  pendingFile:close()
+  os.remove(PENDING)
+end
+print(("%d specs, %d failed, %d roadmap cards pending"):format(#specs, #failed, pendingCount))
 for _, spec in ipairs(failed) do print("FAILED: " .. spec) end
 os.exit(#failed == 0 and 0 or 1)
