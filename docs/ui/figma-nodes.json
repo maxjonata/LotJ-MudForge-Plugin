@@ -437,32 +437,9 @@
   },
   {
    "id": "18:1388",
-   "name": "RP · say, emote e comms em colunas",
-   "kind": "screen",
-   "topics": [
-    "BEEP",
-    "BROADCAST",
-    "CGTALK",
-    "CHANNEL CHANNELS",
-    "CLANTALK",
-    "CURRENTCOM",
-    "EMOTE , POSE SOCIAL",
-    "IMMCHAT MORTCHAT",
-    "LANGUAGES LANGUAGE LEARN LANG",
-    "NEWBIECHAT",
-    "OSAY",
-    "SAY",
-    "SAYTO",
-    "SHIPTALK",
-    "SPEAK",
-    "TELL REPLY",
-    "TELL REPLY DM DIRECTMESSAGE",
-    "THINK",
-    "TONE",
-    "TUNE",
-    "WHISPER",
-    "YELL"
-   ],
+   "name": "RP · colunas (substituído pela linha do tempo única)",
+   "kind": "superseded",
+   "topics": [],
    "station": "rp"
   },
   {
@@ -489,6 +466,36 @@
    "name": "Mobile · sala, RP e mapa",
    "kind": "screen",
    "topics": []
+  },
+  {
+   "id": "19:1715",
+   "name": "RP · linha do tempo única",
+   "kind": "screen",
+   "station": "rp",
+   "topics": [
+    "BEEP",
+    "BROADCAST",
+    "CGTALK",
+    "CHANNEL CHANNELS",
+    "CLANTALK",
+    "CURRENTCOM",
+    "EMOTE , POSE SOCIAL",
+    "IMMCHAT MORTCHAT",
+    "LANGUAGES LANGUAGE LEARN LANG",
+    "NEWBIECHAT",
+    "OSAY",
+    "SAY",
+    "SAYTO",
+    "SHIPTALK",
+    "SPEAK",
+    "TELL REPLY",
+    "TELL REPLY DM DIRECTMESSAGE",
+    "THINK",
+    "TONE",
+    "TUNE",
+    "WHISPER",
+    "YELL"
+   ]
   }
  ]
 }

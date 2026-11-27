@@ -56,3 +56,7 @@ Each theme is a whole console, not a recolour: hull, bezels, screen art, keys an
 | Other clans | One console each, designed when the in-game `clans` list (name and colour) is confirmed | Same rule |
 
 The clan comes from GMCP (`CLAN`); its colour from the clan name colour set with `clancolorname`.
+
+## RP log is one timeline
+
+Say, emote and comms share one chronological log. They differ only by layout signals, never by recolouring the game's ANSI text: say has a speaker-name column, emotes are indented narration, comms (tell, clan, ship) get a faint band, a channel-coloured left bar and a short tag, and OOC/system lines are small and dim. Chips filter each kind; CommNet 0 keeps its own tab.
