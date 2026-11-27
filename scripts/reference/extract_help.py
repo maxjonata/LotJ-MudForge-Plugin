@@ -21,7 +21,11 @@ _SYNTAX_RE = re.compile(r"^\s*syntax\s*:\s*(.*)$", re.I)
 _SEE_ALSO_RE = re.compile(r"^\s*see also\s*:\s*(.*)$", re.I)
 # Some pages keep the MUD's two-digit colour codes as plain text ("08Syntax: 14say").
 _CODED_RE = re.compile(r"^\d{2}(?:syntax|see also)\s*:", re.I | re.M)
-_CODE_RE = re.compile(r"(?<!\d)\d{2}(?!\d)")
+# A code starts a line, follows a label colon, sits right before text
+# ("14say", "<07message") or right after it ("message14>"). A number standing
+# alone ("<10>", "Level 20") is kept.
+_CODE_RE = re.compile(r"^\d{2}|(?<=:)\d{2}|(?<=: )\d{2}(?!\d)|(?<!\d)\d{2}(?=[A-Za-z<\[(&'#])"
+                      r"|(?<=[A-Za-z>\])'#])\d{2}(?!\d)", re.M)
 
 # Tags are a search aid, flagged as inferred: they are guesses, not game facts.
 TAG_WORDS = {

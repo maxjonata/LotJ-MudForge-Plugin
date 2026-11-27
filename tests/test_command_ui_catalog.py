@@ -31,6 +31,15 @@ class ArgTests(unittest.TestCase):
                            "choices": ["full", "high", "normal", "half", "low", "stun"]}])
         self.assertEqual(bc.args("rip <on/off>")[0]["type"], "toggle")
 
+    def test_numeric_ranges(self):
+        self.assertEqual(bc.args("promote <0-11>"), [{"name": "0-11", "type": "number", "min": 0, "max": 11}])
+        self.assertEqual(bc.args("saberform <0 - 7>")[0]["max"], 7)
+
+    def test_explanatory_parentheticals_are_notes(self):
+        self.assertEqual(bc.args("description (opens the editor)"), [])
+        self.assertEqual(bc.variant_pattern("description (opens the editor)"), "direct")
+        self.assertEqual(bc.args("calculate (system) (x)")[0]["type"], "place")
+
     def test_literal_subcommands_are_not_args(self):
         self.assertEqual(bc.args("launch abort"), [])
         self.assertEqual(bc.args("launch"), [])
@@ -51,6 +60,14 @@ class PatternTests(unittest.TestCase):
         listing = bc.entry(topic("STANCE", ["stance <stance> OR stance list"]))
         self.assertEqual(listing["pattern"], "list")
         self.assertEqual([v["syntax"] for v in listing["variants"]], ["stance <stance>", "stance list"])
+
+    def test_or_markers_split_variants(self):
+        e = bc.entry(topic("NOTE", ["note list (number) OR: Mail list (number)", "Or: Palm list"]))
+        self.assertEqual([v["syntax"] for v in e["variants"]], ["note list (number)", "Mail list (number)", "Palm list"])
+
+    def test_clan_commands_stay_in_clan_area(self):
+        self.assertEqual(bc.entry(topic("CLANCRIMES CRIMES", ["clancrimes"], ["ship", "economy"]))["area"], "clan")
+        self.assertEqual(bc.entry(topic("CLANTALK", ["clantalk <message>"], ["comms"]))["area"], "comms")
 
     def test_abort_variant_makes_a_flow(self):
         self.assertEqual(bc.entry(topic("LAUNCH", ["launch", "launch orbit", "launch abort"], ["ship"]))["pattern"], "flow")

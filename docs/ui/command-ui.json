@@ -32,14 +32,14 @@
  "counts": {
   "comms": 16,
   "craft": 26,
-  "direct": 123,
+  "direct": 125,
   "editor": 6,
   "flow": 2,
-  "form": 202,
+  "form": 201,
   "list": 5,
   "readout": 47,
   "reference": 446,
-  "target": 122,
+  "target": 121,
   "toggle": 5
  },
  "entries": [
@@ -973,14 +973,11 @@
     },
     {
      "syntax": "affected by (abbreviation: af by)",
-     "pattern": "form",
-     "args": [
-      {
-       "name": "abbreviation: af by",
-       "type": "text"
-      }
-     ],
-     "preconditions": []
+     "pattern": "direct",
+     "args": [],
+     "preconditions": [
+      "abbreviation: af by"
+     ]
     }
    ],
    "status": "planned",
@@ -2711,7 +2708,7 @@
    ],
    "url": "https://www.legendsofthejedi.com/help?topic=BOUNTY%20CLANBOUNTY",
    "kind": "command",
-   "area": "economy",
+   "area": "clan",
    "pattern": "form",
    "variants": [
     {
@@ -4122,7 +4119,7 @@
    ],
    "url": "https://www.legendsofthejedi.com/help?topic=CLANBOUNTY",
    "kind": "command",
-   "area": "general",
+   "area": "clan",
    "pattern": "target",
    "variants": [
     {
@@ -4153,7 +4150,7 @@
    ],
    "url": "https://www.legendsofthejedi.com/help?topic=CLANBUYSHIP",
    "kind": "command",
-   "area": "space",
+   "area": "clan",
    "pattern": "target",
    "variants": [
     {
@@ -4178,19 +4175,16 @@
    ],
    "url": "https://www.legendsofthejedi.com/help?topic=CLANCRIMES",
    "kind": "command",
-   "area": "space",
+   "area": "clan",
    "pattern": "form",
    "variants": [
     {
      "syntax": "clancrimes (to view the current list)",
-     "pattern": "form",
-     "args": [
-      {
-       "name": "to view the current list",
-       "type": "text"
-      }
-     ],
-     "preconditions": []
+     "pattern": "direct",
+     "args": [],
+     "preconditions": [
+      "to view the current list"
+     ]
     },
     {
      "syntax": "clancrimes <crime types> (for the clan leader to set crimes)",
@@ -4199,13 +4193,11 @@
       {
        "name": "crime types",
        "type": "text"
-      },
-      {
-       "name": "for the clan leader to set crimes",
-       "type": "name"
       }
      ],
-     "preconditions": []
+     "preconditions": [
+      "for the clan leader to set crimes"
+     ]
     }
    ],
    "status": "planned",
@@ -4219,7 +4211,7 @@
    ],
    "url": "https://www.legendsofthejedi.com/help?topic=CLANDB%20DATANET",
    "kind": "command",
-   "area": "general",
+   "area": "clan",
    "pattern": "form",
    "variants": [
     {
@@ -4296,7 +4288,7 @@
    ],
    "url": "https://www.legendsofthejedi.com/help?topic=CLANDESCRIPTION",
    "kind": "command",
-   "area": "general",
+   "area": "clan",
    "pattern": "direct",
    "variants": [
     {
@@ -4319,7 +4311,7 @@
    ],
    "url": "https://www.legendsofthejedi.com/help?topic=CLANDROIDS%20CONTROLDROID%20'DROIDS%20CLAN'%20CLANDROID",
    "kind": "command",
-   "area": "general",
+   "area": "clan",
    "pattern": "target",
    "variants": [
     {
@@ -4371,7 +4363,7 @@
    ],
    "url": "https://www.legendsofthejedi.com/help?topic=CLANMESSAGE%20CLAN_MESSAGE",
    "kind": "command",
-   "area": "general",
+   "area": "clan",
    "pattern": "form",
    "variants": [
     {
@@ -4400,7 +4392,7 @@
    ],
    "url": "https://www.legendsofthejedi.com/help?topic=CLANMOTD",
    "kind": "command",
-   "area": "general",
+   "area": "clan",
    "pattern": "direct",
    "variants": [
     {
@@ -4427,7 +4419,7 @@
    ],
    "url": "https://www.legendsofthejedi.com/help?topic=CLANSELLSHIP%20SELLCLANSHIP",
    "kind": "command",
-   "area": "space",
+   "area": "clan",
    "pattern": "target",
    "variants": [
     {
@@ -4492,7 +4484,7 @@
    ],
    "url": "https://www.legendsofthejedi.com/help?topic=CLANVENDOR%20BUYCLANVENDOR%20PLACECLANVENDOR%20PRICECLANVENDOR%20DEPOSITCLANGOLD",
    "kind": "command",
-   "area": "economy",
+   "area": "clan",
    "pattern": "form",
    "variants": [
     {
@@ -4559,7 +4551,7 @@
    ],
    "url": "https://www.legendsofthejedi.com/help?topic=CLAN_EVENTS%20'CLAN%20EVENTS'%20CLANEVENTS",
    "kind": "command",
-   "area": "general",
+   "area": "clan",
    "pattern": "form",
    "variants": [
     {
@@ -4584,7 +4576,7 @@
    ],
    "url": "https://www.legendsofthejedi.com/help?topic=CLAN_GREET",
    "kind": "command",
-   "area": "general",
+   "area": "clan",
    "pattern": "direct",
    "variants": [
     {
@@ -5503,19 +5495,16 @@
    ],
    "url": "https://www.legendsofthejedi.com/help?topic=CRIMES",
    "kind": "command",
-   "area": "space",
+   "area": "clan",
    "pattern": "form",
    "variants": [
     {
      "syntax": "clancrimes (to view the current list)",
-     "pattern": "form",
-     "args": [
-      {
-       "name": "to view the current list",
-       "type": "text"
-      }
-     ],
-     "preconditions": []
+     "pattern": "direct",
+     "args": [],
+     "preconditions": [
+      "to view the current list"
+     ]
     },
     {
      "syntax": "clancrimes <crime types> (for the clan leader to set crimes)",
@@ -5524,13 +5513,11 @@
       {
        "name": "crime types",
        "type": "text"
-      },
-      {
-       "name": "for the clan leader to set crimes",
-       "type": "name"
       }
      ],
-     "preconditions": []
+     "preconditions": [
+      "for the clan leader to set crimes"
+     ]
     }
    ],
    "status": "planned",
@@ -6054,18 +6041,15 @@
    "url": "https://www.legendsofthejedi.com/help?topic=DECORATESHIP",
    "kind": "command",
    "area": "space",
-   "pattern": "target",
+   "pattern": "direct",
    "variants": [
     {
      "syntax": "decorateship (change the ship's info description)",
-     "pattern": "target",
-     "args": [
-      {
-       "name": "change the ship's info description",
-       "type": "ship"
-      }
-     ],
-     "preconditions": []
+     "pattern": "direct",
+     "args": [],
+     "preconditions": [
+      "change the ship's info description"
+     ]
     }
    ],
    "status": "planned",
@@ -6281,14 +6265,11 @@
    "variants": [
     {
      "syntax": "description (opens the editor)",
-     "pattern": "form",
-     "args": [
-      {
-       "name": "opens the editor",
-       "type": "text"
-      }
-     ],
-     "preconditions": []
+     "pattern": "direct",
+     "args": [],
+     "preconditions": [
+      "opens the editor"
+     ]
     }
    ],
    "status": "planned",
@@ -7909,33 +7890,29 @@
    "variants": [
     {
      "syntax": "drink <object> (drink liquid from a drink container)",
-     "pattern": "form",
+     "pattern": "target",
      "args": [
       {
        "name": "object",
        "type": "object"
-      },
-      {
-       "name": "drink liquid from a drink container",
-       "type": "object"
       }
      ],
-     "preconditions": []
+     "preconditions": [
+      "drink liquid from a drink container"
+     ]
     },
     {
      "syntax": "eat <object> (eat food or a magical pill)",
-     "pattern": "form",
+     "pattern": "target",
      "args": [
       {
        "name": "object",
        "type": "object"
-      },
-      {
-       "name": "eat food or a magical pill",
-       "type": "text"
       }
      ],
-     "preconditions": []
+     "preconditions": [
+      "eat food or a magical pill"
+     ]
     },
     {
      "syntax": "eat <object> <container> (eat directly from a container)",
@@ -7948,13 +7925,11 @@
       {
        "name": "container",
        "type": "object"
-      },
-      {
-       "name": "eat directly from a container",
-       "type": "object"
       }
      ],
-     "preconditions": []
+     "preconditions": [
+      "eat directly from a container"
+     ]
     }
    ],
    "status": "planned",
@@ -9895,7 +9870,9 @@
      "args": [
       {
        "name": "0 - 7",
-       "type": "text"
+       "type": "number",
+       "min": 0,
+       "max": 7
       }
      ],
      "preconditions": []
@@ -10585,7 +10562,9 @@
      "args": [
       {
        "name": "1-2251",
-       "type": "text"
+       "type": "number",
+       "min": 1,
+       "max": 2251
       }
      ],
      "preconditions": []
@@ -10862,25 +10841,19 @@
    "variants": [
     {
      "syntax": "history (opens a prompt)",
-     "pattern": "form",
-     "args": [
-      {
-       "name": "opens a prompt",
-       "type": "text"
-      }
-     ],
-     "preconditions": []
+     "pattern": "direct",
+     "args": [],
+     "preconditions": [
+      "opens a prompt"
+     ]
     },
     {
      "syntax": "history Display (shows your history)",
-     "pattern": "form",
-     "args": [
-      {
-       "name": "shows your history",
-       "type": "text"
-      }
-     ],
-     "preconditions": []
+     "pattern": "direct",
+     "args": [],
+     "preconditions": [
+      "shows your history"
+     ]
     },
     {
      "syntax": "Required by level 30",
@@ -11535,7 +11508,7 @@
    ],
    "url": "https://www.legendsofthejedi.com/help?topic=INSPIRE%20INSPIRECRIME",
    "kind": "command",
-   "area": "economy",
+   "area": "clan",
    "pattern": "direct",
    "variants": [
     {
@@ -15215,13 +15188,9 @@
    "pattern": "editor",
    "variants": [
     {
-     "syntax": "note list (number) OR: Mail list (number)",
+     "syntax": "note list (number)",
      "pattern": "form",
      "args": [
-      {
-       "name": "number",
-       "type": "number"
-      },
       {
        "name": "number",
        "type": "number"
@@ -15230,13 +15199,9 @@
      "preconditions": []
     },
     {
-     "syntax": "note read (number) OR: Mail read (number)",
+     "syntax": "Mail list (number)",
      "pattern": "form",
      "args": [
-      {
-       "name": "number",
-       "type": "number"
-      },
       {
        "name": "number",
        "type": "number"
@@ -15245,19 +15210,54 @@
      "preconditions": []
     },
     {
-     "syntax": "note read all OR: Mail read all",
+     "syntax": "note read (number)",
+     "pattern": "form",
+     "args": [
+      {
+       "name": "number",
+       "type": "number"
+      }
+     ],
+     "preconditions": []
+    },
+    {
+     "syntax": "Mail read (number)",
+     "pattern": "form",
+     "args": [
+      {
+       "name": "number",
+       "type": "number"
+      }
+     ],
+     "preconditions": []
+    },
+    {
+     "syntax": "note read all",
      "pattern": "direct",
      "args": [],
      "preconditions": []
     },
     {
-     "syntax": "note take (number) OR: Mail take (number)",
+     "syntax": "Mail read all",
+     "pattern": "direct",
+     "args": [],
+     "preconditions": []
+    },
+    {
+     "syntax": "note take (number)",
      "pattern": "form",
      "args": [
       {
        "name": "number",
        "type": "number"
-      },
+      }
+     ],
+     "preconditions": []
+    },
+    {
+     "syntax": "Mail take (number)",
+     "pattern": "form",
+     "args": [
       {
        "name": "number",
        "type": "number"
@@ -15283,13 +15283,19 @@
      "preconditions": []
     },
     {
-     "syntax": "note post OR: Mail post",
+     "syntax": "note post",
      "pattern": "direct",
      "args": [],
      "preconditions": []
     },
     {
-     "syntax": "note remove (number) OR: Mail remove",
+     "syntax": "Mail post",
+     "pattern": "direct",
+     "args": [],
+     "preconditions": []
+    },
+    {
+     "syntax": "note remove (number)",
      "pattern": "form",
      "args": [
       {
@@ -15297,6 +15303,12 @@
        "type": "number"
       }
      ],
+     "preconditions": []
+    },
+    {
+     "syntax": "Mail remove",
+     "pattern": "direct",
+     "args": [],
      "preconditions": []
     },
     {
@@ -16263,7 +16275,7 @@
    "url": "https://www.legendsofthejedi.com/help?topic=PLANETS%20PLANET",
    "kind": "command",
    "area": "general",
-   "pattern": "form",
+   "pattern": "direct",
    "variants": [
     {
      "syntax": "planets",
@@ -16273,25 +16285,19 @@
     },
     {
      "syntax": "planets ai (to show support, military, and crime details)",
-     "pattern": "form",
-     "args": [
-      {
-       "name": "to show support, military, and crime details",
-       "type": "text"
-      }
-     ],
-     "preconditions": []
+     "pattern": "direct",
+     "args": [],
+     "preconditions": [
+      "to show support, military, and crime details"
+     ]
     },
     {
      "syntax": "planets income (to show cashflow information for your clan's planets)",
-     "pattern": "form",
-     "args": [
-      {
-       "name": "to show cashflow information for your clan's planets",
-       "type": "name"
-      }
-     ],
-     "preconditions": []
+     "pattern": "direct",
+     "args": [],
+     "preconditions": [
+      "to show cashflow information for your clan's planets"
+     ]
     }
    ],
    "status": "planned",
@@ -16465,7 +16471,9 @@
       },
       {
        "name": "0-11",
-       "type": "text"
+       "type": "number",
+       "min": 0,
+       "max": 11
       }
      ],
      "preconditions": []
@@ -21678,7 +21686,7 @@
    ],
    "url": "https://www.legendsofthejedi.com/help?topic=TRADEBOUNTY%20CLANTRADEBOUNTY",
    "kind": "command",
-   "area": "economy",
+   "area": "clan",
    "pattern": "form",
    "variants": [
     {
@@ -21742,25 +21750,19 @@
     },
     {
      "syntax": "tradedroid self (to trade a clan droid to yourself)",
-     "pattern": "form",
-     "args": [
-      {
-       "name": "to trade a clan droid to yourself",
-       "type": "name"
-      }
-     ],
-     "preconditions": []
+     "pattern": "direct",
+     "args": [],
+     "preconditions": [
+      "to trade a clan droid to yourself"
+     ]
     },
     {
      "syntax": "tradedroid self clan (to trade your droid to your clan)",
-     "pattern": "form",
-     "args": [
-      {
-       "name": "to trade your droid to your clan",
-       "type": "name"
-      }
-     ],
-     "preconditions": []
+     "pattern": "direct",
+     "args": [],
+     "preconditions": [
+      "to trade your droid to your clan"
+     ]
     }
    ],
    "status": "planned",
@@ -22064,7 +22066,7 @@
      "preconditions": []
     },
     {
-     "syntax": "Or: Palm <item> <container>",
+     "syntax": "Palm <item> <container>",
      "pattern": "form",
      "args": [
       {

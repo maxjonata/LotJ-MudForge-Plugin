@@ -57,6 +57,9 @@ _TYPE_WORDS = [
     ("name", {"skill", "spell", "social", "class", "race", "language", "tone", "option", "ability",
               "power", "channel", "frequency", "clan", "type"}),
 ]
+_RANGE_RE = re.compile(r"^\s*(-?\d+)\s*-\s*(-?\d+)\s*$")
+_OR_SPLIT_RE = re.compile(r"\s+(?:OR:?|Or:|or:)\s+")
+_OR_LEAD_RE = re.compile(r"^(?:or|OR|Or):\s*")
 _TOGGLES = {"on/off", "on|off", "off/on", "off|on", "yes/no", "yes|no"}
 _AREA_KEYWORDS = {
     "room": {"north", "south", "east", "west", "up", "down", "northeast", "northwest", "southeast",
@@ -83,6 +86,9 @@ def _words(text):
 def _arg(inner):
     inner = " ".join(inner.split())
     low = inner.lower()
+    span = _RANGE_RE.match(inner)
+    if span:
+        return {"name": inner, "type": "number", "min": int(span.group(1)), "max": int(span.group(2))}
     if low in _TOGGLES:
         return {"name": inner, "type": "toggle"}
     if "|" in inner or ("/" in inner and " " not in inner):
@@ -96,11 +102,17 @@ def _arg(inner):
     return {"name": inner, "type": "text"}
 
 
+def _is_note(inner):
+    """Round brackets hold either an argument "(x)" or a note "(opens the editor)"."""
+    inner = inner.strip()
+    return bool(_PRECONDITION_RE.match(inner)) or len(inner.split()) >= 3
+
+
 def args(syntax):
     out = []
     for match in _TOKEN_RE.finditer(syntax):
         inner = next(g for g in match.groups() if g is not None)
-        if match.group(2) is not None and _PRECONDITION_RE.match(inner.strip()):
+        if match.group(2) is not None and _is_note(inner):
             continue
         arg = _arg(inner)
         if match.group(3) is not None:
@@ -110,7 +122,7 @@ def args(syntax):
 
 
 def preconditions(syntax):
-    return [g.strip() for g in re.findall(r"\(([^()]+)\)", syntax) if _PRECONDITION_RE.match(g.strip())]
+    return [g.strip() for g in re.findall(r"\(([^()]+)\)", syntax) if _is_note(g)]
 
 
 def variant_pattern(syntax):
@@ -127,8 +139,8 @@ def variant_pattern(syntax):
 def _variants(syntax_lines):
     variants = []
     for line in syntax_lines:
-        for part in re.split(r"\s+OR\s+", line):
-            part = " ".join(part.split())
+        for part in _OR_SPLIT_RE.split(_OR_LEAD_RE.sub("", line.strip())):
+            part = " ".join(_OR_LEAD_RE.sub("", part).split())
             if part:
                 variants.append({"syntax": part, "pattern": variant_pattern(part),
                                  "args": args(part), "preconditions": preconditions(part)})
@@ -155,6 +167,8 @@ def _area(t, kind, pattern):
             return area
     if keywords & _COMMS_KEYWORDS:
         return "comms"
+    if any(k.startswith("clan") or "crime" in k for k in keywords):
+        return "clan"
     tags = set(t["inferred_tags"])
     for tag, area in _TAG_AREAS:
         if tag in tags:
