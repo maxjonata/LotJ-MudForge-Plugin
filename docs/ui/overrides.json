@@ -1,0 +1,5 @@
+{
+ "LIGHT": {"status": "inactive", "note": "Help: these commands are no longer in use on this mud."},
+ "PTALK": {"status": "inactive", "note": "Help: this command is no longer in use."},
+ "TAMP": {"status": "inactive", "note": "Help: these commands are no longer in use on this mud."}
+}
