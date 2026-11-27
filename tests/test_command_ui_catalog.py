@@ -40,6 +40,20 @@ class ArgTests(unittest.TestCase):
         self.assertEqual(bc.variant_pattern("description (opens the editor)"), "direct")
         self.assertEqual(bc.args("calculate (system) (x)")[0]["type"], "place")
 
+    def test_optional_marker_inside_angle_brackets(self):
+        self.assertEqual(bc.args("challenge <target> <optional: bet>")[1],
+                         {"name": "bet", "type": "text", "optional": True})
+
+    def test_or_inside_a_placeholder_is_one_argument(self):
+        e = bc.entry(topic("INDUCTLOG", ["inductlog <name of either person OR date OR induct OR outcast>"]))
+        self.assertEqual(len(e["variants"]), 1)
+        self.assertEqual(len(e["variants"][0]["args"]), 1)
+
+    def test_trailing_explanation_is_not_syntax(self):
+        v = bc.entry(topic("CHARSHEET", ["charsheet status: See all available entry options"]))["variants"][0]
+        self.assertEqual(v["syntax"], "charsheet status")
+        self.assertEqual(v["preconditions"], ["See all available entry options"])
+
     def test_literal_subcommands_are_not_args(self):
         self.assertEqual(bc.args("launch abort"), [])
         self.assertEqual(bc.args("launch"), [])
@@ -76,6 +90,14 @@ class PatternTests(unittest.TestCase):
         self.assertEqual(bc.entry(topic("RADAR", ["radar"], ["ship"]))["area"], "space")
         self.assertEqual(bc.entry(topic("AFFLICTION", ["feel affliction <target>"], ["force"]))["area"], "force")
         self.assertEqual(bc.entry(topic("TIME", ["time"]))["area"], "general")
+
+    def test_help_indexes_are_not_routed_by_prose_tags(self):
+        self.assertEqual(bc.entry(topic("NEWBIE_INDEX INDEX", ["HELP #"], ["ship"]))["area"], "general")
+        self.assertEqual(bc.entry(topic("CHAFF", ["chaff"], ["ship"]))["area"], "space")
+
+    def test_editor_only_when_a_variant_writes(self):
+        self.assertEqual(bc.entry(topic("MAIL", ["mail list <sent/received/all>", "mail read <#>"]))["pattern"], "list")
+        self.assertEqual(bc.entry(topic("DATAMEM", ["datamem write new", "datamem list"]))["pattern"], "editor")
 
     def test_overrides_win(self):
         built = bc.build([topic("PTALK", ["ptalk <message>"])], {"PTALK": {"status": "inactive", "note": "x"}})

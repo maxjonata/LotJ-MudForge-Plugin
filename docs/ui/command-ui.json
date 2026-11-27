@@ -33,13 +33,13 @@
   "comms": 16,
   "craft": 26,
   "direct": 125,
-  "editor": 6,
+  "editor": 2,
   "flow": 2,
   "form": 201,
-  "list": 5,
+  "list": 8,
   "readout": 47,
   "reference": 446,
-  "target": 121,
+  "target": 122,
   "toggle": 5
  },
  "entries": [
@@ -649,8 +649,9 @@
        "type": "character"
       },
       {
-       "name": "optional: increased bet",
-       "type": "text"
+       "name": "increased bet",
+       "type": "text",
+       "optional": true
       }
      ],
      "preconditions": []
@@ -3831,8 +3832,9 @@
        "type": "character"
       },
       {
-       "name": "optional: bet",
-       "type": "text"
+       "name": "bet",
+       "type": "text",
+       "optional": true
       }
      ],
      "preconditions": []
@@ -3924,19 +3926,23 @@
    "pattern": "form",
    "variants": [
     {
-     "syntax": "charsheet status: See all available entry options",
+     "syntax": "charsheet status",
      "pattern": "direct",
      "args": [],
-     "preconditions": []
+     "preconditions": [
+      "See all available entry options"
+     ]
     },
     {
-     "syntax": "charsheet display: See your current character sheet",
+     "syntax": "charsheet display",
      "pattern": "direct",
      "args": [],
-     "preconditions": []
+     "preconditions": [
+      "See your current character sheet"
+     ]
     },
     {
-     "syntax": "charsheet edit <field name>: Edit or add a new entry",
+     "syntax": "charsheet edit <field name>",
      "pattern": "form",
      "args": [
       {
@@ -3944,10 +3950,12 @@
        "type": "text"
       }
      ],
-     "preconditions": []
+     "preconditions": [
+      "Edit or add a new entry"
+     ]
     },
     {
-     "syntax": "charsheet clear <field name>: Remove an entry",
+     "syntax": "charsheet clear <field name>",
      "pattern": "form",
      "args": [
       {
@@ -3955,7 +3963,9 @@
        "type": "text"
       }
      ],
-     "preconditions": []
+     "preconditions": [
+      "Remove an entry"
+     ]
     }
    ],
    "status": "planned",
@@ -10741,7 +10751,7 @@
    ],
    "url": "https://www.legendsofthejedi.com/help?topic=HELP",
    "kind": "command",
-   "area": "force",
+   "area": "general",
    "pattern": "form",
    "variants": [
     {
@@ -10837,7 +10847,7 @@
    "url": "https://www.legendsofthejedi.com/help?topic=HISTORY%20BIO%20BACKGROUND",
    "kind": "command",
    "area": "character",
-   "pattern": "editor",
+   "pattern": "direct",
    "variants": [
     {
      "syntax": "history (opens a prompt)",
@@ -11321,7 +11331,7 @@
    "url": "https://www.legendsofthejedi.com/help?topic=INDUCTLOG",
    "kind": "command",
    "area": "general",
-   "pattern": "direct",
+   "pattern": "target",
    "variants": [
     {
      "syntax": "inductlog",
@@ -11330,27 +11340,14 @@
      "preconditions": []
     },
     {
-     "syntax": "inductlog <name of either person",
-     "pattern": "direct",
-     "args": [],
-     "preconditions": []
-    },
-    {
-     "syntax": "date",
-     "pattern": "direct",
-     "args": [],
-     "preconditions": []
-    },
-    {
-     "syntax": "induct",
-     "pattern": "direct",
-     "args": [],
-     "preconditions": []
-    },
-    {
-     "syntax": "outcast> (For",
-     "pattern": "direct",
-     "args": [],
+     "syntax": "inductlog <name of either person OR date OR induct OR outcast> (For",
+     "pattern": "target",
+     "args": [
+      {
+       "name": "name of either person OR date OR induct OR outcast",
+       "type": "character"
+      }
+     ],
      "preconditions": []
     }
    ],
@@ -12859,7 +12856,7 @@
    "url": "https://www.legendsofthejedi.com/help?topic=MAIL",
    "kind": "command",
    "area": "datapad",
-   "pattern": "editor",
+   "pattern": "list",
    "variants": [
     {
      "syntax": "mail list <sent/received/all>",
@@ -14938,7 +14935,7 @@
    ],
    "url": "https://www.legendsofthejedi.com/help?topic=NEWBIE_INDEX%20INDEX",
    "kind": "command",
-   "area": "space",
+   "area": "general",
    "pattern": "direct",
    "variants": [
     {
@@ -15185,7 +15182,7 @@
    "url": "https://www.legendsofthejedi.com/help?topic=NOTE%20TERMINAL",
    "kind": "command",
    "area": "datapad",
-   "pattern": "editor",
+   "pattern": "list",
    "variants": [
     {
      "syntax": "note list (number)",
@@ -16574,7 +16571,7 @@
    "url": "https://www.legendsofthejedi.com/help?topic=PROPOSEDESC",
    "kind": "command",
    "area": "force",
-   "pattern": "editor",
+   "pattern": "list",
    "variants": [
     {
      "syntax": "proposedesc list <all/open>",
@@ -18228,25 +18225,31 @@
    "pattern": "form",
    "variants": [
     {
-     "syntax": "rpctrial create: Creates a new draft RPC case",
+     "syntax": "rpctrial create",
      "pattern": "direct",
      "args": [],
-     "preconditions": []
+     "preconditions": [
+      "Creates a new draft RPC case"
+     ]
     },
     {
-     "syntax": "rpctrial review: Review a draft in progress",
+     "syntax": "rpctrial review",
      "pattern": "direct",
      "args": [],
-     "preconditions": []
+     "preconditions": [
+      "Review a draft in progress"
+     ]
     },
     {
-     "syntax": "rpctrial delete: Delete a draft in progress",
+     "syntax": "rpctrial delete",
      "pattern": "direct",
      "args": [],
-     "preconditions": []
+     "preconditions": [
+      "Delete a draft in progress"
+     ]
     },
     {
-     "syntax": "rpctrial edit <field> [value]: Edits a field",
+     "syntax": "rpctrial edit <field> [value]",
      "pattern": "form",
      "args": [
       {
@@ -18259,16 +18262,20 @@
        "optional": true
       }
      ],
-     "preconditions": []
+     "preconditions": [
+      "Edits a field"
+     ]
     },
     {
-     "syntax": "rpctrial submit: Submit a draft restore request to the RPC",
+     "syntax": "rpctrial submit",
      "pattern": "direct",
      "args": [],
-     "preconditions": []
+     "preconditions": [
+      "Submit a draft restore request to the RPC"
+     ]
     },
     {
-     "syntax": "rpctrial status <character name>: Check the status of a case",
+     "syntax": "rpctrial status <character name>",
      "pattern": "target",
      "args": [
       {
@@ -18276,7 +18283,9 @@
        "type": "character"
       }
      ],
-     "preconditions": []
+     "preconditions": [
+      "Check the status of a case"
+     ]
     }
    ],
    "status": "planned",

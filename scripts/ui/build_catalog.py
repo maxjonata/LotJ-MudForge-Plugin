@@ -72,6 +72,9 @@ _AREA_KEYWORDS = {
 }
 _TAG_AREAS = [("ship", "space"), ("force", "force"), ("combat", "combat"), ("economy", "economy"),
               ("comms", "comms")]
+# Inferred tags come from the whole help page. They route commands (each FIG
+# phase corrects its area in overrides.json), but never a help index such as
+# "HELP #", whose page mentions every subject.
 _COMMS_KEYWORDS = {"say", "tell", "reply", "emote", "pemote", "yell", "shout", "whisper", "ooc",
                    "chat", "commnet", "broadcast", "clantalk", "shiptalk", "gtell", "ptalk",
                    "think", "speak", "language", "tone", "beep", "osay", "to"}
@@ -85,6 +88,11 @@ def _words(text):
 
 def _arg(inner):
     inner = " ".join(inner.split())
+    optional = re.match(r"(?i)optional\s*:\s*", inner)
+    if optional:
+        arg = _arg(inner[optional.end():])
+        arg["optional"] = True
+        return arg
     low = inner.lower()
     span = _RANGE_RE.match(inner)
     if span:
@@ -136,14 +144,43 @@ def variant_pattern(syntax):
     return "form"
 
 
+def _outside(line, start):
+    """True when position `start` is not inside <...>, (...) or [...]."""
+    depth = 0
+    for ch in line[:start]:
+        if ch in "<([":
+            depth += 1
+        elif ch in ">)]" and depth:
+            depth -= 1
+    return depth == 0
+
+
+def _split_or(line):
+    parts, last = [], 0
+    for match in _OR_SPLIT_RE.finditer(line):
+        if _outside(line, match.start()):
+            parts.append(line[last:match.start()])
+            last = match.end()
+    return parts + [line[last:]]
+
+
+def _explanation(part):
+    """'charsheet status: See all ...' -> ('charsheet status', 'See all ...')."""
+    for match in re.finditer(r":\s+(?=[A-Z])", part):
+        if _outside(part, match.start()):
+            return part[:match.start()].strip(), part[match.end():].strip()
+    return part, None
+
+
 def _variants(syntax_lines):
     variants = []
     for line in syntax_lines:
-        for part in _OR_SPLIT_RE.split(_OR_LEAD_RE.sub("", line.strip())):
-            part = " ".join(_OR_LEAD_RE.sub("", part).split())
+        for part in _split_or(_OR_LEAD_RE.sub("", line.strip())):
+            part, note = _explanation(" ".join(_OR_LEAD_RE.sub("", part).split()))
             if part:
+                notes = preconditions(part) + ([note] if note else [])
                 variants.append({"syntax": part, "pattern": variant_pattern(part),
-                                 "args": args(part), "preconditions": preconditions(part)})
+                                 "args": args(part), "preconditions": notes})
     return variants
 
 
@@ -170,6 +207,8 @@ def _area(t, kind, pattern):
     if any(k.startswith("clan") or "crime" in k for k in keywords):
         return "clan"
     tags = set(t["inferred_tags"])
+    if all(line.strip().lower().startswith("help") for line in t["syntax"]):
+        return "general"
     for tag, area in _TAG_AREAS:
         if tag in tags:
             return area
@@ -184,7 +223,9 @@ def _pattern(t, kind, variants):
     keywords = {k.lower() for k in t["keywords"]}
     if any(k.startswith("make") for k in keywords):
         return "craft"
-    if keywords & _EDITOR_KEYWORDS:
+    if keywords & _EDITOR_KEYWORDS and any(
+            {"write", "editor", "compose", "edit"} & set(_words(v["syntax"])) or
+            any(a["type"] == "text" for a in v["args"]) for v in variants):
         return "editor"
     if keywords & _COMMS_KEYWORDS:
         return "comms"
