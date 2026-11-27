@@ -11,17 +11,21 @@ permissions:
 
 jobs:
   lua-syntax:
-    name: Lua 5.4 source syntax
+    name: Lua ${{ matrix.lua }} source syntax
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        lua: ['5.1.5', '5.4.8']
     steps:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
 
-      - name: Set up Lua 5.4
+      - name: Set up Lua ${{ matrix.lua }}
         uses: leafo/gh-actions-lua@v10
         with:
-          luaVersion: '5.4.8'
+          luaVersion: ${{ matrix.lua }}
 
       - name: Parse all tracked Lua sources under src
         shell: bash

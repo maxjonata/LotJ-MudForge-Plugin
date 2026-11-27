@@ -11,28 +11,26 @@ permissions:
 
 jobs:
   smoke-test:
-    name: HTML widget Lua smoke (stubbed host)
+    name: Lua specs and widget smoke (Lua ${{ matrix.lua }})
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        lua: ['5.1.5', '5.4.8']
     steps:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
 
-      - name: Set up Lua 5.4
+      - name: Set up Lua ${{ matrix.lua }}
         uses: leafo/gh-actions-lua@v10
         with:
-          luaVersion: '5.4.8'
+          luaVersion: ${{ matrix.lua }}
 
-      - name: Exercise status bar and comms hub Lua modules
+      - name: Run every tests/**/*_spec.lua
+        run: lua tests/run.lua
+
+      - name: Exercise the embedded widget scripts
         run: |
-          lua tests/ui_scaffold_smoke.lua
-          lua tests/chat_line.lua
           node tests/comms_hub_widget.js
-
-      - name: Exercise the Scrapper Cockpit through the plugin entry point
-        run: |
-          lua tests/scrapper_cockpit.lua
           node tests/scrapper_cockpit_widget.js
-
-      - name: Check ground-map trigger callbacks with synthetic room lines
-        run: lua tests/ground_map_triggers.lua

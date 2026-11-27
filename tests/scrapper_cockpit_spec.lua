@@ -73,11 +73,9 @@ local env = setmetatable({
   focusPrompt = function() focus_calls = focus_calls + 1 end,
 }, { __index = _G })
 
+local load_env = dofile("tests/support/load_env.lua")
 local function load_in_host(path)
-  if _VERSION == "Lua 5.1" then
-    return setfenv(assert(loadfile(path)), env)()
-  end
-  return assert(loadfile(path, "t", env))()
+  return load_env(path, env)()
 end
 
 env.loadModule = load_in_host

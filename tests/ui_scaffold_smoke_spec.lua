@@ -1,9 +1,9 @@
 -- Standalone Lua smoke for the two HTML widget modules. Host APIs are stubs;
 -- this does not run MudForge, the plugin entry point, or the embedded JS.
-assert(_VERSION == "Lua 5.4", "run the scaffold smoke with Lua 5.4")
+local load_env = dofile("tests/support/load_env.lua")
 
 local function load_widget(name, env)
-  return assert(loadfile("src/widgets/" .. name .. ".lua", "t", setmetatable(env, { __index = _G })))()
+  return load_env("src/widgets/" .. name .. ".lua", setmetatable(env, { __index = _G }))()
 end
 
 local function expect_html(widget, property, html)

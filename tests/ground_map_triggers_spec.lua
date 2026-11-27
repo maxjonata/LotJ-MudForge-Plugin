@@ -1,5 +1,5 @@
 -- Standalone regression for the ground-map Lua module with stubbed MudForge APIs.
-assert(_VERSION == "Lua 5.4", "run the ground-map regression with Lua 5.4")
+local load_env = dofile("tests/support/load_env.lua")
 
 local triggers, updates = {}, {}
 local on_ready, room_changed, room_clicked, room_info, target
@@ -54,7 +54,7 @@ local env = {
     return pattern
   end,
 }
-local widget = assert(loadfile("src/widgets/lotj-ground-map.lua", "t", env))()
+local widget = load_env("src/widgets/lotj-ground-map.lua", env)()
 env.updateMapForRoom = function(value)
   assert(type(value) == "string", "map update must receive a string capture")
   updates[#updates + 1] = value
