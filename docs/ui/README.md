@@ -40,3 +40,15 @@ CI fails if a topic has no destination, the committed catalog is stale, or a fra
 - Universal fallback: the command bar with fuzzy autocomplete. It is our own widget, because MudForge does not expose what is typed in its native command line; a choice can be handed to it with `focusPrompt(text)`.
 - Themes: default amber, or the clan theme derived from the clan name colour (GMCP `CLAN`, colours set in game with `clancolorname`). Presets: amber, blue sensor, imperial red, green console.
 - Ground map (FIG-03): holographic isometric map in the style of Star Wars Jedi: Fallen Order, built from MudForge mapper coordinates.
+
+## Console per theme
+
+Each theme is a whole console, not a recolour: hull, bezels, screen art, keys and screen colour all change, while the screen layout and the components on them stay the same.
+
+| Theme | Console | Used when |
+|---|---|---|
+| Neutral (default) | Freighter: warm grey ribbed hull with rivets, rounded CRT bezels with scanlines, amber screens, round coloured buttons and toggles | Default for everyone, and for any clan without its own console |
+| Empire (clan) | Bridge: gunmetal hull with vents, light-grey bezels with LED pills, red vector screens, white square keys | Player in that clan chooses the clan UI |
+| Other clans | One console each, designed when the in-game `clans` list (name and colour) is confirmed | Same rule |
+
+The clan comes from GMCP (`CLAN`); its colour from the clan name colour set with `clancolorname`.

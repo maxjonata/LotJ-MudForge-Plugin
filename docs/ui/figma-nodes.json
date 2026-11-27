@@ -196,19 +196,31 @@
   },
   {
    "id": "14:417",
-   "name": "05 · Console de ponte",
+   "name": "05 · Consoles por tema (neutro + clãs)",
    "kind": "section",
    "topics": []
   },
   {
    "id": "14:418",
-   "name": "Console · Desktop 1440 (Imperial)",
+   "name": "Console · Tema de clã · Império (1440)",
    "kind": "screen",
    "topics": []
   },
   {
    "id": "14:537",
-   "name": "Screen Bezel",
+   "name": "Screen Bezel · Império",
+   "kind": "component",
+   "topics": []
+  },
+  {
+   "id": "15:687",
+   "name": "Console · Neutro (padrão, 1440)",
+   "kind": "screen",
+   "topics": []
+  },
+  {
+   "id": "15:804",
+   "name": "Screen Bezel · Neutro",
    "kind": "component",
    "topics": []
   }
