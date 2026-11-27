@@ -33,6 +33,16 @@ local HTML = [=[
     min-height:31px; text-align:left; overflow-wrap:anywhere; }
   .contact[aria-pressed="true"], .sector[aria-pressed="true"] { border-color:var(--mint); background:#1a4449; }
   .detail { min-height:1.3em; font:12px ui-monospace,monospace; color:var(--muted); margin:8px 0 0; }
+  .target { margin-top:10px; border:1px solid var(--edge); border-radius:8px; padding:9px 10px; background:#0d1f29; }
+  .target h3 { margin:0 0 6px; font-size:14px; display:flex; gap:8px; align-items:center; justify-content:space-between; }
+  .badge { font-size:11px; padding:2px 7px; border-radius:10px; border:1px solid var(--edge); color:var(--muted); }
+  .target[data-status="selected"] .badge { color:var(--mint); border-color:var(--mint); }
+  .target[data-status="sent"] { border-color:var(--amber); animation:pulse 1.6s ease-in-out infinite; }
+  .target[data-status="sent"] .badge { color:var(--amber); border-color:var(--amber); }
+  .target[data-status="lost"] { border-style:dashed; opacity:.75; }
+  #target-warning { color:var(--amber); font-size:12px; margin:6px 0 0; }
+  @keyframes pulse { 50% { box-shadow:0 0 0 3px rgba(241,206,140,.35) inset; } }
+  @media (prefers-reduced-motion: reduce) { .target[data-status="sent"] { animation:none; } }
   .sky { position:relative; width:100%; aspect-ratio:1.55; min-height:255px; isolation:isolate; border:1px solid var(--edge); border-radius:8px;
     overflow:hidden; background:
       radial-gradient(circle at 15% 13%,#88b1bf 0 1px,transparent 2px) 0 0/47px 41px,
@@ -91,6 +101,18 @@ local HTML = [=[
   <p id="notice" role="status"></p>
   <div id="contacts" class="contacts" aria-label="Contacts in range"></div>
   <p id="contact-detail" class="detail" aria-live="polite"></p>
+  <section id="target" class="target" aria-label="Target" data-status="none" hidden>
+    <h3><span id="target-name"></span><span id="target-status" class="badge"></span></h3>
+    <div id="target-geo" class="readout" aria-live="polite"></div>
+    <div class="actions" style="margin-top:8px">
+      <button id="target-aim" class="tool primary" type="button">Target</button>
+      <button id="target-face" class="tool" type="button">Face</button>
+      <select id="target-weapon" class="tool" aria-label="Weapon"><option value="">Best weapon</option><option value="turbolaser">Turbolaser</option><option value="laser">Laser</option><option value="ion">Ion</option><option value="autoblaster">Autoblaster</option><option value="missile">Missile</option><option value="torpedo">Torpedo</option><option value="rocket">Rocket</option><option value="burst">Burst</option></select>
+      <button id="target-fire" class="tool" type="button">Fire</button>
+      <button id="target-clear" class="tool" type="button">Clear</button>
+    </div>
+    <p id="target-warning" role="alert" hidden>Targeting is an aggressive act: the other ship may target and fire back. Press Target again to confirm.</p>
+  </section>
 </section>
 <section id="galaxy" class="panel" role="tabpanel" aria-labelledby="tab-galaxy" hidden>
   <div class="bar"><span class="readout">Public systems · galactic X / Y</span>
@@ -107,6 +129,9 @@ local HTML = [=[
   const glyphs = { ship: "◆", planet: "●", star: "✦" };
   const canvas = $("plot"), ctx = canvas.getContext("2d");
   let position, contacts = [], selected, plotted = [], rangeIndex = 2, scanState = "idle";
+  let target = { status: "none" }, armedFor;
+  const targetLabels = { selected: "Selected · not targeted", sent: "Target sent · unconfirmed",
+    lost: "Lost from radar · run Radar" };
   let systems = [], galaxyLocation, sector;
 
   function switchTab(name, focus) {
@@ -133,6 +158,31 @@ local HTML = [=[
   }
   for (const event of ["radar", "proximity", "open-map", "open-comms", "fit-panel"]) {
     $(event).addEventListener("click", () => mudforge.send(event, {}));
+  }
+  $("target-aim").addEventListener("click", () => {
+    if (armedFor !== target.name) { armedFor = target.name; $("target-warning").hidden = false; return; }
+    $("target-warning").hidden = true;
+    mudforge.send("aim", {});
+  });
+  $("target-face").addEventListener("click", () => mudforge.send("face", {}));
+  $("target-fire").addEventListener("click", () => mudforge.send("fire", { weapon: $("target-weapon").value || null }));
+  $("target-clear").addEventListener("click", () => mudforge.send("clear-target", {}));
+  function renderTarget() {
+    const panel = $("target"), status = target.status;
+    panel.hidden = status === "none";
+    panel.dataset.status = status;
+    if (armedFor !== undefined && armedFor !== target.name) armedFor = undefined;
+    if (armedFor === undefined) $("target-warning").hidden = true;
+    if (status === "none") return;
+    $("target-name").textContent = target.name;
+    $("target-status").textContent = targetLabels[status] || status;
+    $("target-geo").textContent = "Distance " + Math.round(target.distance) + " · Bearing " + Math.round(target.bearing)
+      + "° · Elevation " + Math.round(target.elevation) + "° · ΔX " + target.dx + " · ΔY " + target.dy + " · ΔZ " + target.dz;
+    const visible = status === "selected" || status === "sent";
+    $("target-aim").disabled = !visible;
+    $("target-face").disabled = !visible;
+    $("target-fire").disabled = status !== "sent";
+    $("target-weapon").disabled = status !== "sent";
   }
   $("zoom-in").addEventListener("click", () => {
     if (rangeIndex > 0) { rangeIndex--; drawRadar(); }
@@ -196,12 +246,24 @@ local HTML = [=[
       fragment.appendChild(button);
     }
     $("contacts").replaceChildren(fragment);
+    const locked = target.status === "none" ? undefined : plotted.filter(c => c.category === "ship" && c.name === target.name)
+      .sort((a, b) => a.distance - b.distance)[0];
+    if (locked) {
+      const [rx, ry] = locked.point, color = target.status === "sent" ? "#f1ce8c" : "#68ead3";
+      ctx.strokeStyle = color; ctx.lineWidth = 2;
+      ctx.beginPath(); ctx.arc(rx, ry, 13, 0, Math.PI * 2); ctx.stroke();
+      line([rx - 19, ry], [rx - 8, ry], color); line([rx + 8, ry], [rx + 19, ry], color);
+      line([rx, ry - 19], [rx, ry - 8], color); line([rx, ry + 8], [rx, ry + 19], color);
+      ctx.lineWidth = 1;
+    }
     const c = plotted.find(item => item.id === selected);
     $("contact-detail").textContent = c ? c.name + " · ΔX " + c.x + " · ΔY " + c.y + " · ΔZ " + c.z
       : (["complete", "truncated"].includes(scanState) ? plotted.length + " of " + contacts.length + " contacts in range" : "");
   }
   function selectContact(id, focus) {
     selected = id;
+    const chosen = plotted.find(item => item.id === id);
+    if (chosen && chosen.category === "ship") mudforge.send("select-target", { name: chosen.name });
     drawRadar();
     if (focus) $("contacts").querySelector('[aria-pressed="true"]')?.focus();
   }
@@ -267,6 +329,10 @@ local HTML = [=[
       };
       $("notice").textContent = active[scanState] || "";
       drawRadar();
+    } else if (message.event === "target") {
+      target = message.target && message.target.status ? message.target : { status: "none" };
+      renderTarget();
+      drawRadar();
     } else if (message.event === "disconnected") {
       $("notice").textContent = "Connect to the game to scan.";
     } else if (message.event === "galaxy") {
@@ -311,6 +377,11 @@ local function create(ports)
     })
   end
 
+  local function publishTarget(snapshot)
+    if not ready then return end
+    sendWidgetMessage(id, { event = "target", target = snapshot })
+  end
+
   local function publishGalaxy(includeCatalogue)
     if not ready then return end
     sendWidgetMessage(id, {
@@ -333,15 +404,27 @@ local function create(ports)
     })
   end
 
-  local function bind(cockpit)
+  local function bind(cockpit, target)
     registerWidgetEvent(id, "luamsg", function(message)
       if not message then return end
       if message.event == "ready" then
         ready = true
         publishGalaxy(true)
         cockpit.refresh()
+        if target then target.refresh() end
       elseif message.event == "radar" or message.event == "proximity" then
         if not cockpit.requestScan(message.event) then
+          sendWidgetMessage(id, { event = "disconnected" })
+        end
+      elseif target and message.event == "select-target" then
+        local data = message.data
+        target.select(type(data) == "table" and data.name or nil)
+      elseif target and message.event == "clear-target" then
+        target.clear()
+      elseif target and (message.event == "aim" or message.event == "face" or message.event == "fire") then
+        local data = message.data
+        local weapon = message.event == "fire" and type(data) == "table" and data.weapon or nil
+        if not target[message.event](weapon) and not (getSession() or {}).connected then
           sendWidgetMessage(id, { event = "disconnected" })
         end
       elseif message.event == "read-galaxy" then
@@ -366,7 +449,10 @@ local function create(ports)
     registerCommand("lotj-cockpit", showNavigation, "Open LOTJ Navigation")
   end
 
-  return { bind = bind, publish = publish, publishSystem = publishSystem, publishRoom = publishRoom }
+  return {
+    bind = bind, publish = publish, publishSystem = publishSystem, publishRoom = publishRoom,
+    publishTarget = publishTarget,
+  }
 end
 
 return { create = create }

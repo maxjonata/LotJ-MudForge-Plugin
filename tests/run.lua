@@ -1,12 +1,12 @@
 -- Test runner for Lua 5.1 (MudForge) and 5.4.
--- Runs every tracked tests/**/*_spec.lua in its own interpreter process, from
+-- Runs every tests/**/*_spec.lua that git tracks or would track in its own interpreter process, from
 -- the repository root, and exits non-zero if any spec fails.
 -- Usage: lua tests/run.lua [pattern]
 local interpreter = arg[-1] or "lua"
 local filter = arg[1]
 
 local function list_specs()
-  local pipe = assert(io.popen("git ls-files -- tests"))
+  local pipe = assert(io.popen("git ls-files --cached --others --exclude-standard -- tests"))
   local specs = {}
   for path in pipe:lines() do
     if path:match("_spec%.lua$") and (not filter or path:find(filter, 1, true)) then

@@ -17,6 +17,7 @@ local WIDGET_SHIP_HUD   = nil
 local WIDGET_SPACE_RADAR = nil
 local WIDGET_DATAPAD    = nil
 local scrapperCockpit = nil
+local targetCockpit = nil
 local commsHub, chatLine
 
 local function sendNavigationScan(command)
@@ -47,6 +48,8 @@ function init()
   local radarScan = loadModule("src/domain/radar-scan.lua")
   local publicGalaxy = loadModule("src/domain/public-galaxy.lua")
   local cockpitApplication = loadModule("src/application/scrapper-cockpit.lua")
+  local targetLock = loadModule("src/domain/target-lock.lua")
+  local targetApplication = loadModule("src/application/target-cockpit.lua")
   local cockpitWidget = loadModule("src/widgets/lotj-scrapper-cockpit.lua")
 
   -- Compute positions based on window size (60/40 split)
@@ -132,15 +135,23 @@ function init()
     end,
   })
   if navigation then
+    targetCockpit = targetApplication.new({
+      targetLock = targetLock,
+      send = sendNavigationScan,
+      publish = navigation.publishTarget,
+    })
     scrapperCockpit = cockpitApplication.new({
       shipPosition = shipPosition,
       radarScan = radarScan,
-      publish = navigation.publish,
+      publish = function(position, contacts, scanState, radarBusy)
+        navigation.publish(position, contacts, scanState, radarBusy)
+        targetCockpit.onRadar(position, contacts)
+      end,
       publishSystem = navigation.publishSystem,
       scan = sendNavigationScan,
       schedule = scheduleNavigationReadout,
     })
-    navigation.bind(scrapperCockpit)
+    navigation.bind(scrapperCockpit, targetCockpit)
   end
   groundMap.init(navigation and navigation.publishRoom)
 
@@ -241,6 +252,7 @@ function onConnect(sessionId)
   local session = getSession()
   if session and session.id == sessionId and session.connected then
     if scrapperCockpit then scrapperCockpit.resetSession() end
+    if targetCockpit then targetCockpit.reset() end
     if commsHub then commsHub.resetHistory() end
   end
 end
@@ -249,6 +261,7 @@ function onDisconnect(sessionId)
   local session = getSession()
   if scrapperCockpit and (not session or (session.id == sessionId and not session.connected)) then
     scrapperCockpit.resetSession()
+    if targetCockpit then targetCockpit.reset() end
   end
 end
 

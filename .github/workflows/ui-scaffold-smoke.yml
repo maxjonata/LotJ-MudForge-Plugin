@@ -34,3 +34,4 @@ jobs:
         run: |
           node tests/comms_hub_widget.js
           node tests/scrapper_cockpit_widget.js
+          node tests/target_cockpit_widget.js
