@@ -3,6 +3,18 @@
  "note": "Frames in the LotJ Flight Deck Figma file and the help topics each one draws. Pattern cards define how a pattern looks; a topic becomes designed only when a screen frame lists it in topics.",
  "nodes": [
   {
+   "id": "12:84",
+   "name": "01 · Fundamentos",
+   "kind": "section",
+   "topics": []
+  },
+  {
+   "id": "12:2",
+   "name": "00 · Índice",
+   "kind": "section",
+   "topics": []
+  },
+  {
    "id": "10:2",
    "name": "02 · Componentes",
    "kind": "section",
