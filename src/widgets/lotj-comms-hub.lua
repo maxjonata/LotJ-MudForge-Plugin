@@ -2,9 +2,27 @@
 -- Tabbed chat panel with CombatStats and AutoPilot slots
 
 local commsHub = nil
+local ready = false
+local pending = {}
+local HISTORY_LIMIT = 250
 
 function initCommsHub(id)
   commsHub = id
+  ready, pending = false, {}
+  if not id or id == "" then return end
+
+  registerWidgetEvent(id, "luamsg", function(m)
+    if commsHub ~= id then return end
+    if m.event == "ready" and not ready then
+      ready = true
+      for _, msg in ipairs(pending) do
+        sendWidgetMessage(id, { event = "chatMessage", msg = msg })
+      end
+      pending = {}
+    elseif m.event == "tabClick" then
+      focusPrompt()
+    end
+  end)
 
   -- Set initial HTML content with tabbed layout
   setWidgetProperty(commsHub, "content", [[
@@ -76,7 +94,10 @@ function initCommsHub(id)
 </div>
 <div class="mods-slot" id="mods-slot"></div>
 <script>
-  mudforge.send("ready", { widget: "lotj-comms-hub" });
+  var channels = ["all", "local", "commnet", "clan", "broadcast", "ooc", "tell", "imm"];
+  var activeChannel = "all";
+  var unread = {};
+  var historyLimit = 250;
   document.getElementById("tabs").addEventListener("click", function(e) {
     var tab = e.target.closest(".tab");
     if (!tab) return;
@@ -86,38 +107,50 @@ function initCommsHub(id)
     tab.classList.add("active");
     var content = document.getElementById("tab-" + tabName);
     if (content) content.classList.add("active");
-    var badge = document.getElementById("lotj-" + tabName + "-badge");
-    if (badge) badge.style.display = "none";
+    activeChannel = tabName;
+    updateBadge(tabName, 0);
     // Return focus to MUD prompt after tab switch
     mudforge.send("tabClick", { tab: tabName });
   });
   mudforge.onMessage(function(data) {
     if (data.event === "chatMessage" && data.msg) appendChat(data.msg);
+    if (data.event === "chatReset") resetHistory();
     if (data.event === "combatStats" && data.stats) updateStats(data.stats);
     if (data.event === "autopilotRoute" && data.route) updateAutopilot(data.route);
     if (data.event === "unreadBadge" && data.channel) updateBadge(data.channel, data.count);
   });
   function appendChat(msg) {
-    var channel = msg.channel || "all";
-    var tabMap = { all: "tab-all", local: "tab-local", commnet: "tab-commnet", clan: "tab-clan", broadcast: "tab-broadcast", ooc: "tab-ooc", tell: "tab-tell", imm: "tab-imm" };
-    // Mirror to tab-all for non-all channels
-    if (channel !== "all") {
-      var allTab = document.getElementById("tab-all");
-      if (allTab) {
-        var allDiv = document.createElement("div");
-        allDiv.className = "msg";
-        allDiv.innerHTML = '<span class="ch">' + mudforge.escapeHTML(msg.channel || "") + '</span><span class="sender">' + mudforge.escapeHTML(msg.sender || "") + '</span><span>' + mudforge.escapeHTML(msg.text || "") + '</span>';
-        allTab.appendChild(allDiv);
-        allTab.scrollTop = allTab.scrollHeight;
-      }
+    var channel = channels.includes(msg.channel) ? msg.channel : "all";
+    appendTo("all", channel, msg);
+    if (channel === "all") return;
+    appendTo(channel, channel, msg);
+    if (activeChannel !== channel) {
+      updateBadge(channel, Math.min(historyLimit, (unread[channel] || 0) + 1));
     }
-    var tab = document.getElementById(tabMap[channel] || "tab-all");
-    if (!tab) return;
-    var div = document.createElement("div");
-    div.className = "msg";
-    div.innerHTML = '<span class="ch">' + mudforge.escapeHTML(msg.channel || "") + '</span><span class="sender">' + mudforge.escapeHTML(msg.sender || "") + '</span><span>' + mudforge.escapeHTML(msg.text || "") + '</span>';
-    tab.appendChild(div);
+  }
+  function appendTo(tabName, channel, msg) {
+    var tab = document.getElementById("tab-" + tabName);
+    var row = document.createElement("div");
+    row.className = "msg";
+    addText(row, "ch", channel);
+    addText(row, "sender", msg.sender);
+    addText(row, "", msg.text);
+    tab.appendChild(row);
+    if (tab.childElementCount > historyLimit) tab.firstElementChild.remove();
     tab.scrollTop = tab.scrollHeight;
+  }
+  function addText(row, className, text) {
+    if (!text) return;
+    var span = document.createElement("span");
+    span.className = className;
+    span.textContent = text;
+    row.appendChild(span);
+  }
+  function resetHistory() {
+    channels.forEach(function(channel) {
+      document.getElementById("tab-" + channel).replaceChildren();
+      updateBadge(channel, 0);
+    });
   }
   function updateStats(stats) {
     if (stats.damageDealt !== undefined) document.getElementById("stat-damage-dealt").textContent = stats.damageDealt;
@@ -135,26 +168,30 @@ function initCommsHub(id)
   }
   function updateBadge(channel, count) {
     var badge = document.getElementById("lotj-" + channel + "-badge");
-    if (badge) { badge.textContent = count; badge.style.display = count > 0 ? "inline" : "none"; }
+    if (badge) {
+      unread[channel] = count;
+      badge.textContent = count;
+      badge.style.display = count > 0 ? "inline" : "none";
+    }
   }
+  mudforge.send("ready", { widget: "lotj-comms-hub" });
 </script>
 </body></html>]])
-
-  -- Register luamsg handler
-  registerWidgetEvent(commsHub, "luamsg", function(m)
-    if m.event == "ready" then
-      -- Widget JS is ready, push initial state
-    end
-    if m.event == "tabClick" then
-      focusPrompt()
-    end
-  end)
 end
 
--- Chat channel trigger handlers (placeholders — wired via addTrigger in main plugin)
 function handleChatMessage(msg)
-  if not commsHub then return end
+  if not commsHub or commsHub == "" then return end
+  if not ready then
+    if #pending == HISTORY_LIMIT then table.remove(pending, 1) end
+    pending[#pending + 1] = msg
+    return
+  end
   sendWidgetMessage(commsHub, { event = "chatMessage", msg = msg })
+end
+
+local function resetHistory()
+  pending = {}
+  if ready then sendWidgetMessage(commsHub, { event = "chatReset" }) end
 end
 
 function handleCombatStats(stats)
@@ -175,6 +212,7 @@ end
 return {
   init = initCommsHub,
   handleChatMessage = handleChatMessage,
+  resetHistory = resetHistory,
   handleCombatStats = handleCombatStats,
   handleAutopilotRoute = handleAutopilotRoute,
   handleUnreadBadge = handleUnreadBadge,

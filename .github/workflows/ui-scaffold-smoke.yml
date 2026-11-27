@@ -24,7 +24,10 @@ jobs:
           luaVersion: '5.4.8'
 
       - name: Exercise status bar and comms hub Lua modules
-        run: lua tests/ui_scaffold_smoke.lua
+        run: |
+          lua tests/ui_scaffold_smoke.lua
+          lua tests/chat_line.lua
+          node tests/comms_hub_widget.js
 
       - name: Exercise the Scrapper Cockpit through the plugin entry point
         run: |
