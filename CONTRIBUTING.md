@@ -2,9 +2,10 @@
 
 The canonical repository is [maxjonata/LotJ-MudForge-Plugin](https://github.com/maxjonata/LotJ-MudForge-Plugin). Use `origin` for that repository. Never put passwords, tokens, or private keys in remote URLs, commits, PRs, logs, or chat. Use approved authentication, such as an SSH agent or a Git credential manager, instead of embedding credentials in a URL.
 
-The [project roadmap](docs/ROADMAP.md) tracks what is planned, in progress, or
-verified. Record the scope and acceptance criteria there before implementation
-and update the evidence after verification.
+The [GitHub Project roadmap](https://github.com/users/maxjonata/projects/1/views/1)
+is the shared work queue. Record scope and acceptance criteria there before
+implementation and update each item with evidence after verification. See the
+[repository roadmap reference](docs/ROADMAP.md) for the historical baseline.
 
 ## Branches and parallel worktrees
 
