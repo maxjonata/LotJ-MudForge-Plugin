@@ -6,9 +6,11 @@ local on_ready, room_changed, room_clicked, room_info, target
 local symbols = {}
 local cursor_writes = 0
 local native_room = 42
+local on_resize, moved, resized
 local function noop() end
 local env = {
   createWidget = function() return "ground-map-test-id" end,
+  destroyWidget = noop,
   onMapReady = function(callback) on_ready = callback end,
   onRoomChange = function(callback) room_changed = callback end,
   onMapRoomClick = function(callback) room_clicked = callback end,
@@ -16,7 +18,18 @@ local env = {
     assert(event == "Room.Info")
     room_info = callback
   end,
-  on = noop,
+  on = function(event, callback)
+    assert(event == "windowResize")
+    on_resize = callback
+  end,
+  moveWidget = function(id, x, y)
+    assert(id == "ground-map-test-id" and x == 20 and y == 20, "moveWidget requires separate coordinates")
+    moved = true
+  end,
+  resizeWidget = function(id, width, height)
+    assert(id == "ground-map-test-id" and width == 400 and height == 400, "resizeWidget requires separate dimensions")
+    resized = true
+  end,
   print = noop,
   pairs = pairs,
   type = type,
@@ -48,7 +61,12 @@ env.updateMapForRoom = function(value)
   widget.updateMapForRoom(value)
 end
 widget.init()
+on_resize()
+assert(not moved and not resized, "resize before map readiness must be ignored")
 on_ready()
+on_resize()
+assert(moved and resized, "a ready map must receive move and resize calls")
+print("PASS: window resize uses numeric widget coordinates and dimensions")
 
 local enter = assert(triggers["^You enter (.*?)\\.$"], "missing room-entry regex")
 local describe = assert(triggers["^The room is (.*?)\\.$"], "missing room-description regex")
@@ -102,3 +120,24 @@ widget.updateMapForRoom(42)
 widget.updateMapForRoom(42) -- already there
 assert(cursor_writes == 1 and native_room == 42, "an explicit known room ID should move the cursor once")
 print("PASS: explicit numeric room selection does not feed back into movement")
+
+-- A widget ID may be reused after cleanup, so an older queued callback must
+-- not unlock the replacement map's resize handler.
+widget.cleanup()
+triggers = {}
+widget.init()
+local pending_ready = on_ready
+local previous_resize = on_resize
+widget.cleanup()
+triggers = {}
+widget.init()
+moved, resized = false, false
+pending_ready()
+on_resize()
+assert(not moved and not resized, "an old readiness callback must not enable the replacement map")
+on_ready()
+previous_resize()
+assert(not moved and not resized, "an old resize handler must not act on the replacement map")
+on_resize()
+assert(moved and resized, "the replacement map must resize once its own callback runs")
+print("PASS: only the current map's callbacks can resize the widget")

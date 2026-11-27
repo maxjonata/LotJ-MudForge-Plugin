@@ -4,6 +4,7 @@
 
 local groundMap = nil
 local mapInitialized = false
+local mapGeneration = 0
 
 -- Room cache for mapper
 local roomCache = {}
@@ -31,6 +32,7 @@ local AMENITY_SYMBOLS = {
 
 --- Initialize the ground map widget
 function initGroundMap()
+  if groundMap then return end
   groundMap = createWidget({
     type = "map",
     name = "lotj-ground-map",
@@ -46,8 +48,12 @@ function initGroundMap()
     return
   end
 
-  -- Mapper writes and callbacks depend on the native map being ready.
+  mapGeneration = mapGeneration + 1
+  local generation = mapGeneration
+
+  -- A queued callback may run after cleanup and creation of a replacement map.
   onMapReady(function()
+    if not groundMap or generation ~= mapGeneration then return end
     mapInitialized = true
     registerMapperCallbacks()
   end)
@@ -76,9 +82,9 @@ function initGroundMap()
 
   -- Handle window resize for map repositioning
   on("windowResize", function()
-    if groundMap and mapInitialized then
-      moveWidget(groundMap, { x = 20, y = 20 })
-      resizeWidget(groundMap, { width = 400, height = 400 })
+    if groundMap and mapInitialized and generation == mapGeneration then
+      moveWidget(groundMap, 20, 20)
+      resizeWidget(groundMap, 400, 400)
     end
   end)
 

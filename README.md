@@ -102,8 +102,8 @@ for the initial load and display checks.
   stats, and autopilot are not wired to game input in this snapshot.
 - **Ground Map:** MudForge tracks the player's room. Text captures and map
   refreshes leave the native cursor in place. Offline fixtures cover room
-  changes and click targets. Live tracking still needs a client check. The
-  resize handler passes tables where MudForge expects separate numbers.[1]
+  changes, click targets, and the resize handler. Live tracking still needs a
+  client check.[1]
 - **Scrapper Cockpit:** Open with `/lotj-cockpit`. The position display uses
   `Ship.Info` packets with all three numeric coordinates. The Radar and
   Proximity buttons request the game's text readouts while connected.[2] The
