@@ -514,6 +514,12 @@
    "name": "Tela inteira · no leme",
    "kind": "screen",
    "topics": []
+  },
+  {
+   "id": "20:2254",
+   "name": "Radar 3D · painel",
+   "kind": "component",
+   "topics": []
   }
  ]
 }

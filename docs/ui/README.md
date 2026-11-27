@@ -64,3 +64,13 @@ Say, emote and comms share one chronological log. They differ only by layout sig
 ## Screen layout (desktop 1440)
 
 Status strip on top; left 340 px = room panel on the ground or the current station at the helm; centre = RP log (flexible, never covered by fixed panels); right 380 px = holographic map on the ground or radar + target cockpit at the helm; bottom = command bar with autocomplete and the window dock. Taking the helm (GMCP) swaps the left and right panels; the RP log stays put. Everything else opens as a floating window that docks. Side panels collapse; below 1280 px the right panel becomes a tab.
+
+## Required elements (check every screen that shows the piece)
+
+Shared pieces are Figma components; screens use instances, never redrawn copies.
+
+- **Radar 3D** (component "Radar 3D · painel"): source + age + range; three range rings; our ship with the commanded-course arrow (SHIPHEAD); every contact with a Δz stem from our plane; trail dots; dashed estimated heading only after two readings, "hdg ?" otherwise; planets in green; selected target ringed in red; view filters (ships, planets, missiles); contact list with distance and Δz sharing the selection; RADAR, PROX, CHAFF keys and range; legend behind "?".
+- **Target cockpit**: state (none, selected, sent, lost); name, distance, Δz, heading; TARGET (confirm once per ship), FACE, FIRE ▾ (only when sent) with weapon list; lost = actions grey + RADAR.
+- **Room panel**: name, area/planet, description, people/ships/objects with ☰ menus, exit compass (open, none, locked), actions, source + age.
+- **RP log**: one timeline; say name column; indented emotes; comms band + channel bar + tag; own-line marker; dim OOC/system; filter chips with unread; game ANSI colours untouched.
+- **Holo map**: area name, explored %, deck selector, you, explored/seen rooms, open/locked exits, turbolift, faded other deck, legend, places list, controls.
