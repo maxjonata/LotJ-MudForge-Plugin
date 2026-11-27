@@ -109,13 +109,13 @@ separate fixes; an extraction is not a rewrite.
   trigger, and UI fixtures. Assert values, call arguments and counts, negative
   paths (especially no unintended sends), and lifecycle behavior such as no
   duplicate listeners on reconnect. Retain the existing
-  [widget smoke](../tests/ui_scaffold_smoke.lua) and
-  [ground-map trigger fixtures](../tests/ground_map_triggers.lua).
+  [widget smoke](../tests/ui_scaffold_smoke_spec.lua) and
+  [ground-map trigger fixtures](../tests/ground_map_triggers_spec.lua).
 - **CI:** make Lua 5.1-compatible syntax, the focused unit/contract tests, and
   existing GMCP/regex regressions repeatable PR checks; add ZIP layout and
-  completeness checks when packaging changes. The draft's Lua 5.4 syntax/smoke
-  checks are useful but do not certify Lua 5.1 compatibility or MudForge's
-  transpiler, regex engine, or widget bridge. Use a targeted, disconnected
+  completeness checks when packaging changes. `tests/run.lua` runs the specs on
+  Lua 5.1.5 and 5.4.8 in CI; neither certifies MudForge's transpiler, regex
+  engine, or widget bridge. Use a targeted, disconnected
   MudForge smoke check for loader or host-facing changes when the client is
   available; record unverified client behavior otherwise. Routine regression
   testing belongs in deterministic CI, not a routine AI QA pass.

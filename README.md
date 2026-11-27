@@ -130,13 +130,12 @@ for the initial load and display checks.
 
 ## Offline development checks
 
-From the repository root in Bash, with Git, Lua 5.4 (`lua` and `luac`), Node.js, and Python 3:
+From the repository root in Bash, with Git, Lua 5.1 and/or 5.4 (`lua` and `luac`), Node.js, and Python 3. MudForge runs Lua 5.1, and CI runs every Lua check on both versions:
 
 ```sh
 git ls-files -z -- 'src/*.lua' | xargs -0 -n 1 luac -p
-lua tests/ui_scaffold_smoke.lua
-lua tests/ground_map_triggers.lua
-lua tests/scrapper_cockpit.lua
+lua tests/run.lua
+node tests/comms_hub_widget.js
 node tests/scrapper_cockpit_widget.js
 python3 tests/ci/gmcp/test_validate.py -v
 python3 scripts/ci/gmcp/validate.py src
@@ -144,15 +143,21 @@ python3 tests/test_combat_regex_fixtures.py -v
 python3 tests/test_build_preview_zip.py -v
 ```
 
-The [widget smoke](tests/ui_scaffold_smoke.lua) stubs the host calls and does
+`tests/run.lua` runs every tracked `tests/**/*_spec.lua` in its own process and
+exits non-zero if any fails; pass a substring to run a subset
+(`lua tests/run.lua cockpit`). Specs load modules with a custom environment
+through [`tests/support/load_env.lua`](tests/support/load_env.lua), which works
+on Lua 5.1 and 5.4.
+
+The [widget smoke](tests/ui_scaffold_smoke_spec.lua) stubs the host calls and does
 not run `src/lotj.lua` or the embedded JavaScript. The
-[ground-map regression](tests/ground_map_triggers.lua) supplies fixture captures
+[ground-map regression](tests/ground_map_triggers_spec.lua) supplies fixture captures
 and does not run the client, its regex engine, or a live mapper. Neither test
 establishes that the plugin loads in MudForge. The regex suite exercises Python
 `re`; the ZIP suite verifies packaging, not client import. See the
 [architecture guide](docs/architecture.md) for module boundaries.
 
-The [cockpit regression](tests/scrapper_cockpit.lua) exercises module loading,
+The [cockpit regression](tests/scrapper_cockpit_spec.lua) exercises module loading,
 GMCP dispatch, grouped terminal readouts, the HTML message interface, and
 manual scan requests against a stubbed host. The JavaScript test checks the
 view controls and projection of different elevations.
