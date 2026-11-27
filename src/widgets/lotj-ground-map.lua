@@ -77,8 +77,8 @@ function initGroundMap()
   -- Handle window resize for map repositioning
   on("windowResize", function()
     if groundMap and mapInitialized then
-      moveWidget(groundMap, { x = 20, y = 20 })
-      resizeWidget(groundMap, { width = 400, height = 400 })
+      moveWidget(groundMap, 20, 20)
+      resizeWidget(groundMap, 400, 400)
     end
   end)
 
