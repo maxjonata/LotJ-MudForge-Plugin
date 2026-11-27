@@ -388,6 +388,107 @@
    "name": "Mobile · radar, alvo e decolagem",
    "kind": "screen",
    "topics": []
+  },
+  {
+   "id": "18:1230",
+   "name": "FIG-03 · Sala, entidades e turbolift",
+   "kind": "section",
+   "topics": []
+  },
+  {
+   "id": "18:1231",
+   "name": "Painel de sala",
+   "kind": "screen",
+   "topics": [
+    "CONSIDER",
+    "DROP GET GIVE PUT TAKE",
+    "ENTER LEAVE",
+    "EXAMINE LOOK",
+    "EXITS",
+    "FOLLOW GROUP",
+    "GLANCE",
+    "KNOCK",
+    "LIFT",
+    "NORTH SOUTH EAST WEST UP DOWN",
+    "NORTHEAST NORTHWEST SOUTHEAST SOUTHWEST",
+    "OPEN CLOSE LOCK UNLOCK PICK",
+    "PULL PRESS PUSH LEVERS PULLCHAINS SWITCHES BUTTONS",
+    "REST SLEEP STAND WAKE",
+    "SCAN",
+    "SEARCH",
+    "SIT",
+    "TAXI",
+    "TURBOLIFT"
+   ],
+   "station": "room"
+  },
+  {
+   "id": "18:1298",
+   "name": "Menus de contexto · pessoa, objeto, porta + turbolift",
+   "kind": "screen",
+   "topics": [],
+   "station": "room"
+  },
+  {
+   "id": "18:1387",
+   "name": "FIG-03 · RP e comunicações",
+   "kind": "section",
+   "topics": []
+  },
+  {
+   "id": "18:1388",
+   "name": "RP · say, emote e comms em colunas",
+   "kind": "screen",
+   "topics": [
+    "BEEP",
+    "BROADCAST",
+    "CGTALK",
+    "CHANNEL CHANNELS",
+    "CLANTALK",
+    "CURRENTCOM",
+    "EMOTE , POSE SOCIAL",
+    "IMMCHAT MORTCHAT",
+    "LANGUAGES LANGUAGE LEARN LANG",
+    "NEWBIECHAT",
+    "OSAY",
+    "SAY",
+    "SAYTO",
+    "SHIPTALK",
+    "SPEAK",
+    "TELL REPLY",
+    "TELL REPLY DM DIRECTMESSAGE",
+    "THINK",
+    "TONE",
+    "TUNE",
+    "WHISPER",
+    "YELL"
+   ],
+   "station": "rp"
+  },
+  {
+   "id": "18:1490",
+   "name": "FIG-03 · Mapa holográfico",
+   "kind": "section",
+   "topics": []
+  },
+  {
+   "id": "18:1491",
+   "name": "Mapa holográfico · sala e conveses",
+   "kind": "screen",
+   "topics": [],
+   "station": "room"
+  },
+  {
+   "id": "18:1613",
+   "name": "FIG-03 · Mobile 390",
+   "kind": "section",
+   "topics": []
+  },
+  {
+   "id": "18:1614",
+   "name": "Mobile · sala, RP e mapa",
+   "kind": "screen",
+   "topics": []
   }
  ]
 }
