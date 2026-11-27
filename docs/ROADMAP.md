@@ -32,6 +32,28 @@ e às comunicações.
 | QA-02 | Prévia importada e ativada no MudForge 2.0.6762. HP e movimento receberam dados do LotJ. Os dois botões do piloto chegaram ao servidor, que exigiu cockpit ou torreta para responder com dados. | Teste na versão `beafae8`, sessão descartável **LotJ Plugin Test** |
 | DOC-01 | Índice local e offline da documentação com 1.112 documentos, incluindo 1.000 tópicos do LotJ e o manual do MudForge. | `.cache/referencia/index.html` na cópia principal deste host. Outras estações usam os links de referência abaixo. |
 
+## Épicos de paridade com o Mudlet
+
+Em 27 de novembro de 2026 o quadro recebeu os épicos abaixo. Cada cartão tem
+paridade, camada, fonte e critério de aceite, e o quadro é a fonte de verdade.
+Legenda: **T** temos, **P** parcial, **N** não temos, **U** UX nova.
+Cartão sem fonte vira Pesquisa ou Bloqueado. Nunca inventar comando ou API.
+
+| Épico | Cartões | Foco |
+| --- | --- | --- |
+| FND — Fundação | FND-01..06 | Lua 5.1 no CI e runner de specs, camadas Onion com root único, event bus, `Core.Supports.Set`, classificador de linhas, settings por mundo. Bloqueia os demais. |
+| NAV — Pilotagem | NAV-03..11 | Radar real, auto-radar, hyper pronto, troca de aba, chaff, **cockpit de alvo (NAV-08)**, mira inimiga (pesquisa), painel de voo, autoflight. |
+| GAL — Galáxia | GAL-01..03 | Mapa a partir de `Galaxy.Systems`, menu `calculate`/`showplanet`, marcadores. |
+| ROOM — Sala | ROOM-01..05 | Painel fixo de sala, entidades com clique direito, ground mapper, estados de movimento, numpad. |
+| COMMS | COMMS-02..03 | Comlinks por personagem, badges e atalhos de abas. |
+| HUD | HUD-01..04 | Vitais consolidados, feed de eventos sem spam, combatstats, oponente. |
+| ONB — Novatos | ONB-01..04 | Tutorial, paleta de comandos, Holocron com metadados, links clicáveis. |
+| UTIL | UTIL-01..09 | Automações da comunidade, todas **bloqueadas** até a regra anti-bot do LotJ ser verificada. UTIL-07..09 não são automação. |
+
+Os metadados de comandos do LotJ (nome, sintaxe, categoria, contexto e link do
+help) vão para `docs/reference/lotj-commands.json`. O texto integral do help
+fica só na referência local. GAME-01 foi substituído por estes épicos.
+
 ## Referências
 
 - [Manual de autoria e API do MudForge](https://mudforge.org/docs/ai-plugin-guide.md)
