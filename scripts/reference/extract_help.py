@@ -19,6 +19,13 @@ _BODY_RE = re.compile(r'<pre class="help-body[^"]*"[^>]*>(.*?)</pre>', re.S)
 _KEYWORD_RE = re.compile(r"'([^']*)'|\"([^\"]*)\"|(\S+)")
 _SYNTAX_RE = re.compile(r"^\s*syntax\s*:\s*(.*)$", re.I)
 _SEE_ALSO_RE = re.compile(r"^\s*see also\s*:\s*(.*)$", re.I)
+# Some pages keep the MUD's two-digit colour codes as plain text ("08Syntax: 14say").
+_CODED_RE = re.compile(r"^\d{2}(?:syntax|see also)\s*:", re.I | re.M)
+# A code starts a line, follows a label colon, sits right before text
+# ("14say", "<07message") or right after it ("message14>"). A number standing
+# alone ("<10>", "Level 20") is kept.
+_CODE_RE = re.compile(r"^\d{2}|(?<=:)\d{2}|(?<=: )\d{2}(?!\d)|(?<!\d)\d{2}(?=[A-Za-z<\[(&'#])"
+                      r"|(?<=[A-Za-z>\])'#])\d{2}(?!\d)", re.M)
 
 # Tags are a search aid, flagged as inferred: they are guesses, not game facts.
 TAG_WORDS = {
@@ -60,6 +67,8 @@ def parse_page(text):
     query = urllib.parse.urlparse(url).query
     topic = urllib.parse.unquote(urllib.parse.parse_qs(query).get("topic", [""])[0])
     body = html.unescape(body_match.group(1))
+    if _CODED_RE.search(body):
+        body = _CODE_RE.sub("", body)
     lines = body.splitlines()
 
     syntax, see_also = [], []

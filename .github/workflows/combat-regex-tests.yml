@@ -32,3 +32,6 @@ jobs:
 
       - name: Package and install the DEV harness plugin into a temporary folder
         run: python3 tests/test_install_dev_plugin.py -v
+
+      - name: Check every help topic has a UI destination (FIG-01)
+        run: python3 tests/test_command_ui_catalog.py -v

@@ -34,6 +34,17 @@ MULTI = page("%27FAKE%20DODGE%27%20%27DODGE%27", """Syntax:  fake dodge
 
 Pretend skill.""")
 
+COLOURED = page("FAKESAY", """07General Command
+08Syntax: 14fakesay &lt;07message14&gt;
+44Syntax: 51fakesay to &lt;target51&gt; [&lt;code51&gt;]
+
+07Made-up text.""")
+
+CODED_NUMBER = page("FAKEPROMOTE", """08Syntax: 14fakepromote &lt;10&gt;
+14        fakepromote list &lt;07#14&gt; &lt;slot #51&gt;
+Level 20 text.
+08See Also: 31 FAKEFIRE, FAKETARGET""")
+
 PROSE = page("FAKEFAQ", "Made-up guide with no syntax line.\n\nSee also: FAKEFIRE")
 
 
@@ -51,6 +62,16 @@ class ParseTests(unittest.TestCase):
         entry = extract_help.parse_page(MULTI)
         self.assertEqual(entry["keywords"], ["FAKE DODGE", "DODGE"])
         self.assertEqual(entry["syntax"], ["fake dodge", "fake dodge stop"])
+
+    def test_colour_codes_do_not_hide_syntax(self):
+        entry = extract_help.parse_page(COLOURED)
+        self.assertEqual(entry["syntax"], ["fakesay <message>", "fakesay to <target> [<code>]"])
+        self.assertTrue(entry["is_command"])
+
+    def test_colour_stripping_keeps_real_numbers(self):
+        entry = extract_help.parse_page(CODED_NUMBER)
+        self.assertEqual(entry["syntax"], ["fakepromote <10>", "fakepromote list <#> <slot #>"])
+        self.assertEqual(entry["see_also"], ["FAKEFIRE", "FAKETARGET"])
 
     def test_prose_page_is_not_a_command(self):
         entry = extract_help.parse_page(PROSE)

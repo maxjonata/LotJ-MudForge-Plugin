@@ -1,0 +1,228 @@
+{
+ "file": "di7gVGyxuNJgE6WZq6Li2g",
+ "note": "Frames in the LotJ Flight Deck Figma file and the help topics each one draws. Pattern cards define how a pattern looks; a topic becomes designed only when a screen frame lists it in topics.",
+ "nodes": [
+  {
+   "id": "12:84",
+   "name": "01 · Fundamentos",
+   "kind": "section",
+   "topics": []
+  },
+  {
+   "id": "12:2",
+   "name": "00 · Índice",
+   "kind": "section",
+   "topics": []
+  },
+  {
+   "id": "10:2",
+   "name": "02 · Componentes",
+   "kind": "section",
+   "topics": []
+  },
+  {
+   "id": "11:2",
+   "name": "03 · Padrões",
+   "kind": "section",
+   "topics": []
+  },
+  {
+   "id": "10:33",
+   "name": "Command Button",
+   "kind": "component",
+   "topics": []
+  },
+  {
+   "id": "10:34",
+   "name": "Context Menu",
+   "kind": "component",
+   "topics": []
+  },
+  {
+   "id": "10:77",
+   "name": "Radar Contact",
+   "kind": "component",
+   "topics": []
+  },
+  {
+   "id": "10:103",
+   "name": "Arg Field",
+   "kind": "component",
+   "topics": []
+  },
+  {
+   "id": "10:128",
+   "name": "Flow Step",
+   "kind": "component",
+   "topics": []
+  },
+  {
+   "id": "10:153",
+   "name": "Toast",
+   "kind": "component",
+   "topics": []
+  },
+  {
+   "id": "10:179",
+   "name": "Channel Badge",
+   "kind": "component",
+   "topics": []
+  },
+  {
+   "id": "10:191",
+   "name": "Terminal Line",
+   "kind": "component",
+   "topics": []
+  },
+  {
+   "id": "10:207",
+   "name": "Toggle Row",
+   "kind": "component",
+   "topics": []
+  },
+  {
+   "id": "10:208",
+   "name": "Readout Tile",
+   "kind": "component",
+   "topics": []
+  },
+  {
+   "id": "11:3",
+   "name": "Pattern · direct",
+   "kind": "pattern",
+   "pattern": "direct",
+   "topics": []
+  },
+  {
+   "id": "11:27",
+   "name": "Pattern · target",
+   "kind": "pattern",
+   "pattern": "target",
+   "topics": []
+  },
+  {
+   "id": "11:62",
+   "name": "Pattern · form",
+   "kind": "pattern",
+   "pattern": "form",
+   "topics": []
+  },
+  {
+   "id": "11:86",
+   "name": "Pattern · flow",
+   "kind": "pattern",
+   "pattern": "flow",
+   "topics": []
+  },
+  {
+   "id": "11:117",
+   "name": "Pattern · toggle",
+   "kind": "pattern",
+   "pattern": "toggle",
+   "topics": []
+  },
+  {
+   "id": "11:141",
+   "name": "Pattern · list",
+   "kind": "pattern",
+   "pattern": "list",
+   "topics": []
+  },
+  {
+   "id": "11:174",
+   "name": "Pattern · editor",
+   "kind": "pattern",
+   "pattern": "editor",
+   "topics": []
+  },
+  {
+   "id": "11:198",
+   "name": "Pattern · craft",
+   "kind": "pattern",
+   "pattern": "craft",
+   "topics": []
+  },
+  {
+   "id": "11:223",
+   "name": "Pattern · comms",
+   "kind": "pattern",
+   "pattern": "comms",
+   "topics": []
+  },
+  {
+   "id": "11:251",
+   "name": "Pattern · readout",
+   "kind": "pattern",
+   "pattern": "readout",
+   "topics": []
+  },
+  {
+   "id": "11:271",
+   "name": "Pattern · reference",
+   "kind": "pattern",
+   "pattern": "reference",
+   "topics": []
+  },
+  {
+   "id": "11:286",
+   "name": "Pattern · palette",
+   "kind": "pattern",
+   "pattern": "palette",
+   "topics": []
+  },
+  {
+   "id": "12:312",
+   "name": "04 · Janelas, autocomplete e temas",
+   "kind": "section",
+   "topics": []
+  },
+  {
+   "id": "12:330",
+   "name": "Datapad Window",
+   "kind": "component",
+   "topics": []
+  },
+  {
+   "id": "12:342",
+   "name": "Window Dock",
+   "kind": "component",
+   "topics": []
+  },
+  {
+   "id": "12:364",
+   "name": "Command Bar · Autocomplete",
+   "kind": "component",
+   "topics": []
+  },
+  {
+   "id": "14:417",
+   "name": "05 · Consoles por tema (neutro + clãs)",
+   "kind": "section",
+   "topics": []
+  },
+  {
+   "id": "14:418",
+   "name": "Console · Tema de clã · Império (1440)",
+   "kind": "screen",
+   "topics": []
+  },
+  {
+   "id": "14:537",
+   "name": "Screen Bezel · Império",
+   "kind": "component",
+   "topics": []
+  },
+  {
+   "id": "15:687",
+   "name": "Console · Neutro (padrão, 1440)",
+   "kind": "screen",
+   "topics": []
+  },
+  {
+   "id": "15:804",
+   "name": "Screen Bezel · Neutro",
+   "kind": "component",
+   "topics": []
+  }
+ ]
+}

@@ -122,9 +122,16 @@
     "LFR",
     "LOOKING_FOR_ROLEPLAY"
    ],
-   "syntax": [],
+   "syntax": [
+    "lfr",
+    "lfr <on/off>",
+    "lfr create <title>",
+    "lfr description <ID>",
+    "lfr view <ID>",
+    "lfr enroute <ID>"
+   ],
    "see_also": [],
-   "is_command": false,
+   "is_command": true,
    "inferred_tags": [],
    "url": "https://www.legendsofthejedi.com/help?topic='LFR'%20'LOOKING_FOR_ROLEPLAY'"
   },
@@ -763,9 +770,11 @@
     "ALIGNMENT",
     "ALIGN"
    ],
-   "syntax": [],
+   "syntax": [
+    "alignment <#>"
+   ],
    "see_also": [],
-   "is_command": false,
+   "is_command": true,
    "inferred_tags": [
     "force"
    ],
@@ -904,9 +913,14 @@
    "keywords": [
     "APPRENTICESTAT"
    ],
-   "syntax": [],
-   "see_also": [],
-   "is_command": false,
+   "syntax": [
+    "Apprenticestat"
+   ],
+   "see_also": [
+    "HELP FORCE",
+    "HELP APPRENTICE"
+   ],
+   "is_command": true,
    "inferred_tags": [
     "force"
    ],
@@ -1359,9 +1373,21 @@
    "keywords": [
     "BATTLEGROUP"
    ],
-   "syntax": [],
-   "see_also": [],
-   "is_command": false,
+   "syntax": [
+    "battlegroup join <flagship>",
+    "battlegroup <requesting ship>",
+    "battlegroup position <position #>",
+    "battlegroup nav <ship/all> <command>",
+    "battlegroup target <ship/all> <victim>",
+    "battlegroup bombard <planet>",
+    "battlegroup message <message>",
+    "battlegroup quit",
+    "battlegroup eject <ship>"
+   ],
+   "see_also": [
+    "NAVCOMMANDS FLEETRADAR SQUADRON"
+   ],
+   "is_command": true,
    "inferred_tags": [
     "ship"
    ],
@@ -1449,7 +1475,9 @@
     "BIO_TEMPLATE"
    ],
    "syntax": [],
-   "see_also": [],
+   "see_also": [
+    "HELP HISTORY"
+   ],
    "is_command": false,
    "inferred_tags": [],
    "url": "https://www.legendsofthejedi.com/help?topic=BIOTEMPLATE%20BIO_TEMPLATE"
@@ -1804,7 +1832,9 @@
     "WEBBUFFER"
    ],
    "syntax": [],
-   "see_also": [],
+   "see_also": [
+    "HELP CONFIG"
+   ],
    "is_command": false,
    "inferred_tags": [
     "force"
@@ -1819,9 +1849,13 @@
     "TYPO",
     "COMPLAIN"
    ],
-   "syntax": [],
+   "syntax": [
+    "bug report",
+    "idea submit",
+    "typo report"
+   ],
    "see_also": [],
-   "is_command": false,
+   "is_command": true,
    "inferred_tags": [
     "comms"
    ],
@@ -1835,11 +1869,16 @@
     "TYPO",
     "SUGGESTION"
    ],
-   "syntax": [],
+   "syntax": [
+    "bug report",
+    "idea submit",
+    "typo report"
+   ],
    "see_also": [],
-   "is_command": false,
+   "is_command": true,
    "inferred_tags": [
-    "comms"
+    "comms",
+    "force"
    ],
    "url": "https://www.legendsofthejedi.com/help?topic=BUG%20IDEA%20TYPO%20SUGGESTION"
   },
@@ -2413,9 +2452,14 @@
     "CHARACTER",
     "SHEET"
    ],
-   "syntax": [],
+   "syntax": [
+    "charsheet status: See all available entry options",
+    "charsheet display: See your current character sheet",
+    "charsheet edit <field name>: Edit or add a new entry",
+    "charsheet clear <field name>: Remove an entry"
+   ],
    "see_also": [],
-   "is_command": false,
+   "is_command": true,
    "inferred_tags": [],
    "url": "https://www.legendsofthejedi.com/help?topic=CHARSHEET%20CHARACTER%20SHEET"
   },
@@ -3056,9 +3100,13 @@
    "keywords": [
     "COLORCHECK"
    ],
-   "syntax": [],
-   "see_also": [],
-   "is_command": false,
+   "syntax": [
+    "colorcheck <string>"
+   ],
+   "see_also": [
+    "HELP COLORS"
+   ],
+   "is_command": true,
    "inferred_tags": [],
    "url": "https://www.legendsofthejedi.com/help?topic=COLORCHECK"
   },
@@ -3623,9 +3671,16 @@
     "CYBER",
     "CYBERNETIC"
    ],
-   "syntax": [],
-   "see_also": [],
-   "is_command": false,
+   "syntax": [
+    "cyber <target>"
+   ],
+   "see_also": [
+    "HELP DEVELOP",
+    "HELP INJECT",
+    "HELP REVIVE",
+    "HELP MAKEBLADE"
+   ],
+   "is_command": true,
    "inferred_tags": [],
    "url": "https://www.legendsofthejedi.com/help?topic=CYBERNETICS%20CYBER%20CYBERNETIC"
   },
@@ -3635,9 +3690,11 @@
     "CYBERNETIC_EXPERT",
     "CYBERNETIC EXPERT"
    ],
-   "syntax": [],
+   "syntax": [
+    "cyber <victim> remove <cybernetic name>"
+   ],
    "see_also": [],
-   "is_command": false,
+   "is_command": true,
    "inferred_tags": [],
    "url": "https://www.legendsofthejedi.com/help?topic=CYBERNETIC_EXPERT%20'CYBERNETIC%20EXPERT'"
   },
@@ -3822,7 +3879,10 @@
     "SAFE"
    ],
    "syntax": [],
-   "see_also": [],
+   "see_also": [
+    "HELP PERM",
+    "HELP RESTORE"
+   ],
    "is_command": false,
    "inferred_tags": [
     "economy"
@@ -3849,12 +3909,15 @@
    "keywords": [
     "DECORATESHIP"
    ],
-   "syntax": [],
+   "syntax": [
+    "decorateship (change the ship's info description)"
+   ],
    "see_also": [
     "HELP REMODEL"
    ],
-   "is_command": false,
+   "is_command": true,
    "inferred_tags": [
+    "force",
     "ship"
    ],
    "url": "https://www.legendsofthejedi.com/help?topic=DECORATESHIP"
@@ -3980,12 +4043,14 @@
     "DESCRIPTION",
     "DESC"
    ],
-   "syntax": [],
+   "syntax": [
+    "description (opens the editor)"
+   ],
    "see_also": [
     "HELP DESCRIPTION_EXAMPLE",
     "DESCARMOR"
    ],
-   "is_command": false,
+   "is_command": true,
    "inferred_tags": [],
    "url": "https://www.legendsofthejedi.com/help?topic=DESCRIPTION%20DESC"
   },
@@ -4234,9 +4299,13 @@
    "keywords": [
     "DISARM"
    ],
-   "syntax": [],
-   "see_also": [],
-   "is_command": false,
+   "syntax": [
+    "disarm"
+   ],
+   "see_also": [
+    "HELP GRIP"
+   ],
+   "is_command": true,
    "inferred_tags": [
     "combat"
    ],
@@ -4381,9 +4450,13 @@
    "keywords": [
     "DOCK"
    ],
-   "syntax": [],
-   "see_also": [],
-   "is_command": false,
+   "syntax": [
+    "dock <target shipname> [<docking code>]"
+   ],
+   "see_also": [
+    "INFO UNDOCK TRANSFERFUEL"
+   ],
+   "is_command": true,
    "inferred_tags": [
     "ship"
    ],
@@ -4772,9 +4845,27 @@
    "keywords": [
     "DUTY"
    ],
-   "syntax": [],
-   "see_also": [],
-   "is_command": false,
+   "syntax": [
+    "duty droid <command>",
+    "duty droid assist",
+    "duty droid ignore",
+    "duty droid follow",
+    "duty droid dismiss",
+    "duty droid wear",
+    "duty droid textcolor <#>",
+    "duty droid currentcom <comlink>",
+    "duty droid tune <comlink> <channel>",
+    "duty droid emote <roleplay>",
+    "duty droid leave"
+   ],
+   "see_also": [
+    "MAKEDROID",
+    "DROIDSTAT",
+    "RENAMEDROID",
+    "TRADEDROID",
+    "UPGRADEDROID"
+   ],
+   "is_command": true,
    "inferred_tags": [
     "comms"
    ],
@@ -4991,10 +5082,16 @@
    "keywords": [
     "EMPTY"
    ],
-   "syntax": [],
-   "see_also": [],
-   "is_command": false,
-   "inferred_tags": [],
+   "syntax": [
+    "empty <container>"
+   ],
+   "see_also": [
+    "HELP FILL"
+   ],
+   "is_command": true,
+   "inferred_tags": [
+    "force"
+   ],
    "url": "https://www.legendsofthejedi.com/help?topic=EMPTY"
   },
   {
@@ -5134,9 +5231,11 @@
    "keywords": [
     "ENHANCEARMOR"
    ],
-   "syntax": [],
+   "syntax": [
+    "enhancearmor <armor> <underlay/coating>"
+   ],
    "see_also": [],
-   "is_command": false,
+   "is_command": true,
    "inferred_tags": [],
    "url": "https://www.legendsofthejedi.com/help?topic=ENHANCEARMOR"
   },
@@ -5225,6 +5324,7 @@
     "LEAVE"
    ],
    "syntax": [
+    "enter",
     "leave"
    ],
    "see_also": [],
@@ -6175,7 +6275,12 @@
     "FORCE"
    ],
    "syntax": [],
-   "see_also": [],
+   "see_also": [
+    "HELP FORCE_GUIDELINES",
+    "HELP APPRENTICE",
+    "HELP HOLOCRON",
+    "HELP SUBCLASS"
+   ],
    "is_command": false,
    "inferred_tags": [
     "force"
@@ -6201,9 +6306,11 @@
     "FORESIGHT",
     "SENSES"
    ],
-   "syntax": [],
+   "syntax": [
+    "Use of the skill is automatic once learned."
+   ],
    "see_also": [],
-   "is_command": false,
+   "is_command": true,
    "inferred_tags": [
     "force"
    ],
@@ -6337,11 +6444,13 @@
    "keywords": [
     "GAG"
    ],
-   "syntax": [],
+   "syntax": [
+    "gag <target>"
+   ],
    "see_also": [
     "HELP BIND HELP UNBIND HELP SUBDUE HELP SUBMIT HELP STRUGGLE HELP"
    ],
-   "is_command": false,
+   "is_command": true,
    "inferred_tags": [],
    "url": "https://www.legendsofthejedi.com/help?topic=GAG"
   },
@@ -6746,12 +6855,17 @@
     "HAIRSTYLE",
     "STYLEHAIR"
    ],
-   "syntax": [],
-   "see_also": [
-    "31 HELP HAIRCOLORS"
+   "syntax": [
+    "dye",
+    "stylehair <1-2251>"
    ],
-   "is_command": false,
-   "inferred_tags": [],
+   "see_also": [
+    "HELP HAIRCOLORS"
+   ],
+   "is_command": true,
+   "inferred_tags": [
+    "force"
+   ],
    "url": "https://www.legendsofthejedi.com/help?topic=HAIR%20HAIRSTYLE%20STYLEHAIR"
   },
   {
@@ -6997,7 +7111,9 @@
     "HOLOCRON"
    ],
    "syntax": [],
-   "see_also": [],
+   "see_also": [
+    "Help Force"
+   ],
    "is_command": false,
    "inferred_tags": [
     "force"
@@ -7208,9 +7324,11 @@
     "IMMCHAT",
     "MORTCHAT"
    ],
-   "syntax": [],
+   "syntax": [
+    "immchat<message>"
+   ],
    "see_also": [],
-   "is_command": false,
+   "is_command": true,
    "inferred_tags": [
     "comms"
    ],
@@ -7304,9 +7422,14 @@
    "keywords": [
     "INFO"
    ],
-   "syntax": [],
-   "see_also": [],
-   "is_command": false,
+   "syntax": [
+    "info",
+    "info <ship>"
+   ],
+   "see_also": [
+    "HELP SHIPSTATS"
+   ],
+   "is_command": true,
    "inferred_tags": [
     "ship"
    ],
@@ -8220,9 +8343,17 @@
     "LOCKER",
     "LOCKERS"
    ],
-   "syntax": [],
+   "syntax": [
+    "locker list",
+    "locker purchase",
+    "locker purchase clan",
+    "locker open all/<#>",
+    "locker close all/<#>",
+    "locker sell <#>",
+    "locker label <#> <new label>"
+   ],
    "see_also": [],
-   "is_command": false,
+   "is_command": true,
    "inferred_tags": [
     "economy"
    ],
@@ -8402,13 +8533,16 @@
    "keywords": [
     "MAINCHANGE"
    ],
-   "syntax": [],
+   "syntax": [
+    "mainchange <class name>"
+   ],
    "see_also": [
     "LCLASSCHANGE"
    ],
-   "is_command": false,
+   "is_command": true,
    "inferred_tags": [
-    "economy"
+    "economy",
+    "force"
    ],
    "url": "https://www.legendsofthejedi.com/help?topic=MAINCHANGE"
   },
@@ -8672,7 +8806,13 @@
    "syntax": [
     "makedroid <type>"
    ],
-   "see_also": [],
+   "see_also": [
+    "DROIDSTAT",
+    "UPGRADEDROID",
+    "RENAMEDROID",
+    "TRADEDROID",
+    "DUTY"
+   ],
    "is_command": true,
    "inferred_tags": [],
    "url": "https://www.legendsofthejedi.com/help?topic=MAKEDROID%20DROID"
@@ -9689,9 +9829,13 @@
     "NAVSTATUS",
     "NAVCHART"
    ],
-   "syntax": [],
+   "syntax": [
+    "navstatus",
+    "navstatus load <chart>",
+    "navstatus clear"
+   ],
    "see_also": [],
-   "is_command": false,
+   "is_command": true,
    "inferred_tags": [
     "ship"
    ],
@@ -10546,7 +10690,11 @@
     "PILOTFAQ"
    ],
    "syntax": [],
-   "see_also": [],
+   "see_also": [
+    "NAVCHART",
+    "NAVSTATUS",
+    "SHIPS"
+   ],
    "is_command": false,
    "inferred_tags": [
     "comms",
@@ -11387,10 +11535,18 @@
    "keywords": [
     "REMODULATE"
    ],
-   "syntax": [],
-   "see_also": [],
-   "is_command": false,
-   "inferred_tags": [],
+   "syntax": [
+    "remodulate <datapad in inventory> <modulation code>"
+   ],
+   "see_also": [
+    "HELP MAKEDATAPAD",
+    "HELP DATASTAT"
+   ],
+   "is_command": true,
+   "inferred_tags": [
+    "force",
+    "ship"
+   ],
    "url": "https://www.legendsofthejedi.com/help?topic=REMODULATE"
   },
   {
@@ -11547,9 +11703,11 @@
    "keywords": [
     "REPAIRHULL"
    ],
-   "syntax": [],
+   "syntax": [
+    "repairhull <ship>"
+   ],
    "see_also": [],
-   "is_command": false,
+   "is_command": true,
    "inferred_tags": [
     "combat",
     "ship"
@@ -11756,7 +11914,11 @@
     "RESTORE"
    ],
    "syntax": [],
-   "see_also": [],
+   "see_also": [
+    "HELP DEATH",
+    "HELP PERM",
+    "HELP RPCTRIAL"
+   ],
    "is_command": false,
    "inferred_tags": [
     "combat",
@@ -11929,9 +12091,11 @@
    "keywords": [
     "ROSTER"
    ],
-   "syntax": [],
+   "syntax": [
+    "roster"
+   ],
    "see_also": [],
-   "is_command": false,
+   "is_command": true,
    "inferred_tags": [],
    "url": "https://www.legendsofthejedi.com/help?topic=ROSTER"
   },
@@ -12162,9 +12326,13 @@
    "keywords": [
     "SAY"
    ],
-   "syntax": [],
-   "see_also": [],
-   "is_command": false,
+   "syntax": [
+    "say <message>"
+   ],
+   "see_also": [
+    "HELP SAYTO"
+   ],
+   "is_command": true,
    "inferred_tags": [],
    "url": "https://www.legendsofthejedi.com/help?topic=SAY"
   },
@@ -14715,9 +14883,11 @@
    "keywords": [
     "UNLOADSHIP"
    ],
-   "syntax": [],
+   "syntax": [
+    "unloadship <ship>"
+   ],
    "see_also": [],
-   "is_command": false,
+   "is_command": true,
    "inferred_tags": [
     "ship"
    ],
@@ -14928,11 +15098,34 @@
     "SHOP",
     "SETVENDOR"
    ],
-   "syntax": [],
-   "see_also": [],
-   "is_command": false,
+   "syntax": [
+    "buyvendor",
+    "placevendor",
+    "nameshop",
+    "descshop",
+    "pricevendor <object> <price>",
+    "collectgold",
+    "vendors",
+    "vendors inventory",
+    "sellvendor",
+    "setvendor tone <tone>",
+    "setvendor textcolor <text color>",
+    "setvendor greeting <greeting message>",
+    "setvendor description",
+    "setvendor race <race>",
+    "setvendor skincolor <skin color>",
+    "setvendor sex <sex>",
+    "setvendor hiddenowner"
+   ],
+   "see_also": [
+    "HELP CLANVENDOR",
+    "HELP BUY",
+    "HELP CLOSESHOP"
+   ],
+   "is_command": true,
    "inferred_tags": [
-    "economy"
+    "economy",
+    "force"
    ],
    "url": "https://www.legendsofthejedi.com/help?topic=VENDOR%20SHOP%20SETVENDOR"
   },
@@ -15271,7 +15464,9 @@
     "WIS"
    ],
    "syntax": [],
-   "see_also": [],
+   "see_also": [
+    "HELP STAT_CHART"
+   ],
    "is_command": false,
    "inferred_tags": [],
    "url": "https://www.legendsofthejedi.com/help?topic=WISDOM%20WIS"
