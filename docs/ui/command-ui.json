@@ -852,8 +852,8 @@
    ],
    "notes": [],
    "station": "pilot",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:465"
   },
   {
    "topic": "ACTION ACTIONS",
@@ -929,8 +929,8 @@
    ],
    "notes": [],
    "station": "access",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:617"
   },
   {
    "topic": "ADDICTION",
@@ -983,8 +983,8 @@
    ],
    "notes": [],
    "station": "access",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:617"
   },
   {
    "topic": "ADEPT",
@@ -1845,8 +1845,8 @@
    ],
    "notes": [],
    "station": "pilot",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:465"
   },
   {
    "topic": "AUTOPILOT",
@@ -1867,8 +1867,8 @@
    ],
    "notes": [],
    "station": "pilot",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:465"
   },
   {
    "topic": "AUTORECHARGE SHIELDS RECHARGE",
@@ -1897,8 +1897,8 @@
    ],
    "notes": [],
    "station": "weapons",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:569"
   },
   {
    "topic": "AUTOTRACK",
@@ -1919,8 +1919,8 @@
    ],
    "notes": [],
    "station": "pilot",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:465"
   },
   {
    "topic": "AVATAR AVATARS",
@@ -2418,8 +2418,8 @@
    ],
    "notes": [],
    "station": "fleet",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:714"
   },
   {
    "topic": "BEEP",
@@ -2810,8 +2810,8 @@
    ],
    "notes": [],
    "station": "access",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:617"
   },
   {
    "topic": "BOMBARD BOMB BOMBARDMENT",
@@ -3517,8 +3517,8 @@
    ],
    "notes": [],
    "station": "shipyard",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:753"
   },
   {
    "topic": "BUYSTRUCTURE",
@@ -3865,8 +3865,8 @@
    ],
    "notes": [],
    "station": "engineering",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:659"
   },
   {
    "topic": "CARNAGE",
@@ -4094,8 +4094,8 @@
    ],
    "notes": [],
    "station": "weapons",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:569"
   },
   {
    "topic": "CHAGRIAN  CHAMPALA",
@@ -4513,8 +4513,8 @@
    ],
    "notes": [],
    "station": "shipyard",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:753"
   },
   {
    "topic": "CLANCRIMES",
@@ -5130,8 +5130,8 @@
    ],
    "notes": [],
    "station": "weapons",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:569"
   },
   {
    "topic": "CLONES CLONE CLONING",
@@ -5227,8 +5227,8 @@
    ],
    "notes": [],
    "station": "access",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:617"
   },
   {
    "topic": "CLOSESHOP",
@@ -5769,8 +5769,8 @@
    ],
    "notes": [],
    "station": "nav",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:517"
   },
   {
    "topic": "COPYOVER",
@@ -7598,8 +7598,8 @@
    ],
    "notes": [],
    "station": "engineering",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:659"
   },
   {
    "topic": "DOCTOR",
@@ -8680,8 +8680,8 @@
    ],
    "notes": [],
    "station": "engineering",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:659"
   },
   {
    "topic": "EMOTE , POSE SOCIAL",
@@ -9537,8 +9537,8 @@
    ],
    "notes": [],
    "station": "pilot",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:465"
   },
   {
    "topic": "FAKESIGNAL",
@@ -9786,8 +9786,8 @@
    ],
    "notes": [],
    "station": "weapons",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:569"
   },
   {
    "topic": "FIRRERREO",
@@ -9912,8 +9912,8 @@
    "variants": [],
    "notes": [],
    "station": "fleet",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:714"
   },
   {
    "topic": "FLIST",
@@ -10768,8 +10768,8 @@
    ],
    "notes": [],
    "station": "engineering",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:659"
   },
   {
    "topic": "FURY",
@@ -11412,8 +11412,8 @@
    ],
    "notes": [],
    "station": "comms",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:753"
   },
   {
    "topic": "HAIR HAIRSTYLE STYLEHAIR",
@@ -11527,8 +11527,8 @@
    ],
    "notes": [],
    "station": "engineering",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:659"
   },
   {
    "topic": "HAPAN HAPANS",
@@ -12010,8 +12010,8 @@
    ],
    "notes": [],
    "station": "nav",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:517"
   },
   {
    "topic": "HYPOTHESIZE",
@@ -12327,8 +12327,8 @@
    ],
    "notes": [],
    "station": "nav",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:517"
   },
   {
    "topic": "INFORM",
@@ -13007,8 +13007,8 @@
    ],
    "notes": [],
    "station": "pilot",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:465"
   },
   {
    "topic": "LANGLIMIT",
@@ -13139,8 +13139,8 @@
    ],
    "notes": [],
    "station": "pilot",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:465"
   },
   {
    "topic": "LAW",
@@ -13275,8 +13275,8 @@
    ],
    "notes": [],
    "station": "access",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:617"
   },
   {
    "topic": "LEETSPEAK",
@@ -13590,8 +13590,8 @@
    ],
    "notes": [],
    "station": "engineering",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:659"
   },
   {
    "topic": "LOCATESHIP",
@@ -15396,8 +15396,8 @@
    ],
    "notes": [],
    "station": "engineering",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:659"
   },
   {
    "topic": "MOBILE_REFUEL",
@@ -15955,8 +15955,8 @@
    "variants": [],
    "notes": [],
    "station": "fleet",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:714"
   },
   {
    "topic": "NAVIGATION",
@@ -16026,8 +16026,8 @@
    ],
    "notes": [],
    "station": "nav",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:517"
   },
   {
    "topic": "NAVSTATUS",
@@ -17483,8 +17483,8 @@
    ],
    "notes": [],
    "station": "access",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:617"
   },
   {
    "topic": "PILOTING",
@@ -18132,8 +18132,8 @@
    ],
    "notes": [],
    "station": "nav",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:517"
   },
   {
    "topic": "PSHIELD PSHIELDS",
@@ -18554,8 +18554,8 @@
    ],
    "notes": [],
    "station": "nav",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:517"
   },
   {
    "topic": "RADIO",
@@ -18581,8 +18581,8 @@
    ],
    "notes": [],
    "station": "comms",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:753"
   },
   {
    "topic": "RALLY",
@@ -18694,8 +18694,8 @@
    ],
    "notes": [],
    "station": "engineering",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:659"
   },
   {
    "topic": "REINFORCEMENTS",
@@ -18773,8 +18773,8 @@
    ],
    "notes": [],
    "station": "weapons",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:569"
   },
   {
    "topic": "REMODEL",
@@ -18927,8 +18927,8 @@
    ],
    "notes": [],
    "station": "shipyard",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:753"
   },
   {
    "topic": "RENAMESTRUCTURE",
@@ -19156,8 +19156,8 @@
    ],
    "notes": [],
    "station": "engineering",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:659"
   },
   {
    "topic": "REPAIRSTRUCTURE",
@@ -20411,8 +20411,8 @@
    ],
    "notes": [],
    "station": "engineering",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:659"
   },
   {
    "topic": "SENATEAPPS SENATORAPPS SENATE SENATOR",
@@ -20998,8 +20998,8 @@
    ],
    "notes": [],
    "station": "nav",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:517"
   },
   {
    "topic": "SHORT",
@@ -21819,8 +21819,8 @@
    ],
    "notes": [],
    "station": "pilot",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:465"
   },
   {
    "topic": "SPICE MAKESPICE TAKEDRUG TOXICITY REFINERY ADDICTION POTENCY DRUGS WITHDRAWAL 'SPICE REFINING'",
@@ -22051,8 +22051,8 @@
    ],
    "notes": [],
    "station": "fleet",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:714"
   },
   {
    "topic": "STAFF",
@@ -22088,8 +22088,8 @@
    ],
    "notes": [],
    "station": "nav",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:517"
   },
   {
    "topic": "START BEGIN",
@@ -22137,8 +22137,8 @@
    ],
    "notes": [],
    "station": "nav",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:517"
   },
   {
    "topic": "STAT_CHART",
@@ -22705,8 +22705,8 @@
    ],
    "notes": [],
    "station": "weapons",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:569"
   },
   {
    "topic": "TAX TAXES",
@@ -23558,8 +23558,8 @@
    ],
    "notes": [],
    "station": "weapons",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:569"
   },
   {
    "topic": "TRADEBOUNTY CLANTRADEBOUNTY",
@@ -23683,8 +23683,8 @@
    ],
    "notes": [],
    "station": "shipyard",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:753"
   },
   {
    "topic": "TRAFFICKING BUYCONTRABAND SELLCONTRABAND",
@@ -23783,8 +23783,8 @@
    ],
    "notes": [],
    "station": "engineering",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:659"
   },
   {
    "topic": "TRANSMIT HOLOTRANSMITTER HOLO",
@@ -23846,8 +23846,8 @@
    ],
    "notes": [],
    "station": "nav",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:517"
   },
   {
    "topic": "TRANSPORTATION",
@@ -24250,8 +24250,8 @@
    ],
    "notes": [],
    "station": "engineering",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:659"
   },
   {
    "topic": "UNFAMILIAR",
@@ -24304,8 +24304,8 @@
    ],
    "notes": [],
    "station": "engineering",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:659"
   },
   {
    "topic": "UPGRADE UPGRADESHIP DISMANTLE STRIPSHIP",
@@ -24706,8 +24706,8 @@
    ],
    "notes": [],
    "station": "pilot",
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "17:465"
   },
   {
    "topic": "VENDOR SHOP",
