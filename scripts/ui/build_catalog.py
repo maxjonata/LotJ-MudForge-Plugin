@@ -116,7 +116,8 @@ def _arg(inner):
 def _is_note(inner):
     """Round brackets hold either an argument "(x)" or a note "(opens the editor)"."""
     inner = inner.strip()
-    return bool(_PRECONDITION_RE.match(inner)) or len(inner.split()) >= 3
+    return (bool(_PRECONDITION_RE.match(inner)) or len(inner.split()) >= 3 or ":" in inner
+            or bool(re.match(r"(?i)(no|abbrev\w*|alias|e\.g\.?|see)\b", inner)))
 
 
 def args(syntax):
@@ -201,6 +202,8 @@ def _area(t, kind, pattern, variants=()):
         return "reference"
     if pattern == "craft":
         return "crafting"
+    if any(line.strip().lower().startswith("feel ") for line in t["syntax"]):
+        return "force"
     keywords = {k.lower() for k in t["keywords"]}
     clan = any(k.startswith("clan") for k in keywords)
     if not clan and any(a["type"] == "ship" for v in variants for a in v["args"]):

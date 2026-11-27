@@ -60,6 +60,11 @@ class ArgTests(unittest.TestCase):
         self.assertEqual(v["syntax"], "charsheet status")
         self.assertEqual(v["preconditions"], ["See all available entry options"])
 
+    def test_short_annotations_are_notes(self):
+        self.assertEqual(bc.args("arm (no argument)"), [])
+        self.assertEqual(bc.args("affected (abbrevation: af)"), [])
+        self.assertEqual(bc.variant_pattern("affected (abbrevation: af)"), "direct")
+
     def test_literal_subcommands_are_not_args(self):
         self.assertEqual(bc.args("launch abort"), [])
         self.assertEqual(bc.args("launch"), [])
@@ -96,6 +101,10 @@ class PatternTests(unittest.TestCase):
         self.assertEqual(bc.entry(topic("RADAR", ["radar"], ["ship"]))["area"], "space")
         self.assertEqual(bc.entry(topic("AFFLICTION", ["feel affliction <target>"], ["force"]))["area"], "force")
         self.assertEqual(bc.entry(topic("TIME", ["time"]))["area"], "general")
+
+    def test_force_powers_route_to_force(self):
+        self.assertEqual(bc.entry(topic("SLEEP", ["feel sleep <victim>"], ["force"]))["area"], "force")
+        self.assertEqual(bc.entry(topic("REST SLEEP STAND WAKE", ["sleep"]))["area"], "room")
 
     def test_a_ship_argument_routes_to_space(self):
         self.assertEqual(bc.entry(topic("BOARD", ["board <target ship>"], ["ship"]))["area"], "space")

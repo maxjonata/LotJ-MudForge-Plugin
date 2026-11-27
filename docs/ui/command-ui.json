@@ -32,10 +32,10 @@
  "counts": {
   "comms": 16,
   "craft": 26,
-  "direct": 125,
+  "direct": 126,
   "editor": 2,
   "flow": 2,
-  "form": 204,
+  "form": 203,
   "list": 8,
   "readout": 45,
   "reference": 446,
@@ -959,18 +959,15 @@
    "url": "https://www.legendsofthejedi.com/help?topic=AFFECTED%20'AFFECTED%20BY'",
    "kind": "command",
    "area": "general",
-   "pattern": "form",
+   "pattern": "direct",
    "variants": [
     {
      "syntax": "affected (abbrevation: af)",
-     "pattern": "form",
-     "args": [
-      {
-       "name": "abbrevation: af",
-       "type": "text"
-      }
-     ],
-     "preconditions": []
+     "pattern": "direct",
+     "args": [],
+     "preconditions": [
+      "abbrevation: af"
+     ]
     },
     {
      "syntax": "affected by (abbreviation: af by)",
@@ -1553,14 +1550,11 @@
     },
     {
      "syntax": "Arm (no argument)",
-     "pattern": "form",
-     "args": [
-      {
-       "name": "no argument",
-       "type": "text"
-      }
-     ],
-     "preconditions": []
+     "pattern": "direct",
+     "args": [],
+     "preconditions": [
+      "no argument"
+     ]
     }
    ],
    "status": "planned",
@@ -11444,7 +11438,7 @@
    ],
    "url": "https://www.legendsofthejedi.com/help?topic=INFRAVISION",
    "kind": "command",
-   "area": "general",
+   "area": "force",
    "pattern": "target",
    "variants": [
     {
@@ -15918,7 +15912,7 @@
    ],
    "url": "https://www.legendsofthejedi.com/help?topic='PASS%20DOOR'",
    "kind": "command",
-   "area": "general",
+   "area": "force",
    "pattern": "direct",
    "variants": [
     {
@@ -19722,7 +19716,7 @@
    ],
    "url": "https://www.legendsofthejedi.com/help?topic=SLEEP",
    "kind": "command",
-   "area": "room",
+   "area": "force",
    "pattern": "target",
    "variants": [
     {
@@ -23243,7 +23237,7 @@
    ],
    "url": "https://www.legendsofthejedi.com/help?topic=VISION",
    "kind": "command",
-   "area": "general",
+   "area": "force",
    "pattern": "target",
    "variants": [
     {
