@@ -55,11 +55,10 @@ return the module's values, and are not cached. `require()` is the separate
 flat-name library loader with a restricted sandbox, not a filesystem resolver
 for bundled features (guide §§16, 16.4).
 
-The native preview builder (`scripts/build_preview_zip.py`, on the separate
-preview packaging branch) currently discovers only unique, standalone
-`loadModule("src/widgets/<name>.lua")` calls in the entry script. A new physical
-module directory **or** a change to capture module return values needs a builder
-and ZIP-test update in the same change or beforehand. Keep the file list explicit
+The native preview builder (`scripts/build_preview_zip.py`) discovers unique,
+literal `loadModule` calls from `src/widgets`, `src/application`, and
+`src/domain`, including calls assigned to locals. Update the builder and ZIP
+test if a new module path falls outside those directories. Keep the file list explicit
 and check that the archive contains `LOTJ Companion.lua` and every registered
 module at `LOTJ Companion/<exact plugin-relative path>`. Do not rely on nested
 loads or assume that a successful ZIP build proves the client loaded the plugin

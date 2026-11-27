@@ -6,7 +6,7 @@ Legacy of the Jedi companion plugin for the MudForge NextGen runtime.
 includes a native plugin ZIP builder, but no published release, MudForge repository
 index (`plugins.json`), or `.mfp` server package. Don't import GitHub's **Download ZIP**
 archive into MudForge or paste `src/lotj.lua` on its own: the main script needs
-three separately registered Lua modules. The workflow below follows MudForge's
+the separately registered Lua modules listed below. The workflow below follows MudForge's
 authoring guide, not a verified run of this plugin in the current client.[1]
 
 ## Load the source in the Plugin Editor
@@ -20,19 +20,22 @@ unchanged.
    contents of [`src/lotj.lua`](src/lotj.lua) into the **main script**, keeping
    its `plugin` metadata (`LOTJ Companion`, `0.1.0`). Do not add `lotj.lua` as
    a module.[1]
-2. In the same draft's **Files** panel, add the following three files. Copy the
+2. In the same draft's **Files** panel, add the following files. Copy the
    contents from the same checkout and make sure the saved paths match exactly,
    including case and a single `.lua` extension (the editor can append it).[1]
    - [`src/widgets/lotj-status-bar.lua`](src/widgets/lotj-status-bar.lua)
    - [`src/widgets/lotj-comms-hub.lua`](src/widgets/lotj-comms-hub.lua)
    - [`src/widgets/lotj-ground-map.lua`](src/widgets/lotj-ground-map.lua)
-3. Only after all three files are in place, use **Save & Run** (`Ctrl+Enter`)
+   - [`src/domain/ship-position.lua`](src/domain/ship-position.lua)
+   - [`src/application/scrapper-cockpit.lua`](src/application/scrapper-cockpit.lua)
+   - [`src/widgets/lotj-scrapper-cockpit.lua`](src/widgets/lotj-scrapper-cockpit.lua)
+3. Only after all six files are in place, use **Save & Run** (`Ctrl+Enter`)
    to save and enable the plugin. Check **Problems** and **Console** before
    testing any widgets. A `loadModule/dofile` error naming a missing file means
    you should check the exact path in **Files**, not add a second plugin.[1]
 
 The `loadModule` paths are relative to the plugin, not your working directory.
-The two HTML widgets embed their markup and styles in Lua; the standalone HTML
+The HTML widgets embed their markup and styles in Lua; the standalone HTML
 and CSS files in the checkout are not needed for this workflow.
 
 ## Build and import the preview ZIP
@@ -57,10 +60,13 @@ LOTJ Companion.lua
 LOTJ Companion/src/widgets/lotj-status-bar.lua
 LOTJ Companion/src/widgets/lotj-comms-hub.lua
 LOTJ Companion/src/widgets/lotj-ground-map.lua
+LOTJ Companion/src/domain/ship-position.lua
+LOTJ Companion/src/application/scrapper-cockpit.lua
+LOTJ Companion/src/widgets/lotj-scrapper-cockpit.lua
 ```
 
 `LOTJ Companion.lua` is a copy of `src/lotj.lua`; each module keeps its
-`src/widgets/` path inside the matching directory. This native ZIP layout
+path inside the matching directory. This native ZIP layout
 is not the `.mfp` server-package format, and a release ZIP is not supplied
 by this snapshot.[1]
 
@@ -79,7 +85,10 @@ for the initial load and display checks.
    tab and check that it changes and returns keyboard focus to the prompt. For
    the map, check that the widget opens and check the console; an empty map
    offline is not a failure. Saved visibility can override these defaults.[1]
-3. Disable the test plugin when finished. Check that its widgets are no longer
+3. Type `/lotj-cockpit` to open **LOTJ Scrapper Cockpit**. A disconnected
+   test world should show “Waiting for ship position”. Clicking either scan
+   button should ask for a connection.
+4. Disable the test plugin when finished. Check that its widgets are no longer
    active, and restore your previous theme if the preview changed it.
 
 ## Current limits
@@ -95,6 +104,10 @@ for the initial load and display checks.
   refreshes leave the native cursor in place. Offline fixtures cover room
   changes and click targets. Live tracking still needs a client check. The
   resize handler passes tables where MudForge expects separate numbers.[1]
+- **Scrapper Cockpit:** Open with `/lotj-cockpit`. The position display uses
+  `Ship.Info` packets with all three numeric coordinates. The Radar and
+  Proximity buttons request the game's text readouts while connected.[2] The
+  cockpit does not parse scan output yet.
 - **Ship HUD, Tactical Radar, and Holocron Datapad:** Hidden placeholders; no
   functional radar, galaxy map, or datapad is provided.
 
@@ -106,6 +119,7 @@ From the repository root in Bash, with Git, Lua 5.4 (`lua` and `luac`), and Pyth
 git ls-files -z -- 'src/*.lua' | xargs -0 -n 1 luac -p
 lua tests/ui_scaffold_smoke.lua
 lua tests/ground_map_triggers.lua
+lua tests/scrapper_cockpit.lua
 python3 tests/ci/gmcp/test_validate.py -v
 python3 scripts/ci/gmcp/validate.py src
 python3 tests/test_combat_regex_fixtures.py -v
@@ -120,6 +134,12 @@ establishes that the plugin loads in MudForge. The regex suite exercises Python
 `re`; the ZIP suite verifies packaging, not client import. See the
 [architecture guide](docs/architecture.md) for module boundaries.
 
+The [cockpit regression](tests/scrapper_cockpit.lua) exercises module loading,
+GMCP dispatch, the HTML message interface and manual scan requests against
+a stubbed host.
+
 ## Sources
 
 [1] https://mudforge.org/docs/ai-plugin-guide.md — MudForge — AI Plugin & Library Authoring Guide
+
+[2] https://www.legendsofthejedi.com/help?topic=SPACE+SHIP+SHIPS+FLIGHT — Legends of the Jedi ship command help

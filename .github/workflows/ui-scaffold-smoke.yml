@@ -26,5 +26,10 @@ jobs:
       - name: Exercise status bar and comms hub Lua modules
         run: lua tests/ui_scaffold_smoke.lua
 
+      - name: Exercise the Scrapper Cockpit through the plugin entry point
+        run: |
+          lua tests/scrapper_cockpit.lua
+          node tests/scrapper_cockpit_widget.js
+
       - name: Check ground-map trigger callbacks with synthetic room lines
         run: lua tests/ground_map_triggers.lua
