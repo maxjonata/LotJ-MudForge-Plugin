@@ -31,7 +31,8 @@ class ValidatorTests(unittest.TestCase):
     def assert_invalid(self, lua, diagnostic, line):
         result = self.run_lua(lua)
         self.assertEqual(result.returncode, 1, result.stdout + result.stderr)
-        self.assertIn(f"src/widgets/plugin.lua:{line}: {diagnostic}", result.stderr)
+        source = Path("src/widgets/plugin.lua")
+        self.assertIn(f"{source}:{line}: {diagnostic}", result.stderr)
 
     def test_vitals_comment_and_documented_camel_case_pass(self):
         self.assert_valid('''
