@@ -532,6 +532,27 @@
    "name": "Mapa · legenda no hover (estado)",
    "kind": "state",
    "topics": []
+  },
+  {
+   "id": "20:2783",
+   "name": "FIG-03 · Datapad (aparelho completo)",
+   "kind": "section",
+   "topics": []
+  },
+  {
+   "id": "20:2784",
+   "name": "Datapad · arquivos (aparelho)",
+   "kind": "screen",
+   "topics": [
+    "DATAMEM",
+    "DATASTAT"
+   ]
+  },
+  {
+   "id": "20:2873",
+   "name": "Datapad · escrever, inbox, discos, segurança",
+   "kind": "screen",
+   "topics": []
   }
  ]
 }

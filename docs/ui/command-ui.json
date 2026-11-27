@@ -6435,8 +6435,8 @@
    ],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "20:2784"
   },
   {
    "topic": "DATAPAD DATAMEM_GUIDE",
@@ -6473,8 +6473,8 @@
    ],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "20:2784"
   },
   {
    "topic": "DATHOMIR  DATHOMIRI",
