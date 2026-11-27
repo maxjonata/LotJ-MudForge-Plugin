@@ -34,6 +34,7 @@ CI fails if a topic has no destination, the committed catalog is stale, or a fra
 ## Visual direction
 
 - Old Star Wars computer terminal: amber phosphor on near-black by default, square corners, Share Tech Mono / Rajdhani / Bruno Ace SC, glow on active frames, tick rulers and segment bars (reference: Figma community file "Star Wars UI Library").
+- Hardware language: every panel lives in a physical console — gunmetal hull with seams and vents, light-grey screen bezels with an LED pill and status dot, red vector screen art, white square keys, LED dashes and knobs on the deck (reference photo supplied by the user; section "05 · Console de ponte").
 - Dense: spacing 2–16 px, text 10–13 px.
 - Long text is an in-world object: the datapad is a floating window that minimizes to the window dock.
 - Universal fallback: the command bar with fuzzy autocomplete. It is our own widget, because MudForge does not expose what is typed in its native command line; a choice can be handed to it with `focusPrompt(text)`.
