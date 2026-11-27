@@ -65,6 +65,15 @@ class ArgTests(unittest.TestCase):
         self.assertEqual(bc.args("affected (abbrevation: af)"), [])
         self.assertEqual(bc.variant_pattern("affected (abbrevation: af)"), "direct")
 
+    def test_role_restrictions_are_notes(self):
+        self.assertEqual(bc.args("speak all (immortals only)"), [])
+
+    def test_prose_rows_are_notes_not_variants(self):
+        e = bc.entry(topic("HISTORY BIO BACKGROUND", ["history (opens a prompt)", "Required by level 30"]))
+        self.assertEqual([v["syntax"] for v in e["variants"]], ["history (opens a prompt)"])
+        self.assertEqual(e["notes"], ["Required by level 30"])
+        self.assertEqual(len(bc.entry(topic("DISGUISE", ["Disguise list", "Fire <Weapon Type>"]))["variants"]), 2)
+
     def test_literal_subcommands_are_not_args(self):
         self.assertEqual(bc.args("launch abort"), [])
         self.assertEqual(bc.args("launch"), [])

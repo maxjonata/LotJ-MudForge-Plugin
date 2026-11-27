@@ -117,7 +117,8 @@ def _is_note(inner):
     """Round brackets hold either an argument "(x)" or a note "(opens the editor)"."""
     inner = inner.strip()
     return (bool(_PRECONDITION_RE.match(inner)) or len(inner.split()) >= 3 or ":" in inner
-            or bool(re.match(r"(?i)(no|abbrev\w*|alias|e\.g\.?|see)\b", inner)))
+            or bool(re.match(r"(?i)(no|abbrev\w*|alias|e\.g\.?|see)\b", inner))
+            or bool(re.search(r"(?i)\bonly\b", inner)))
 
 
 def args(syntax):
@@ -176,15 +177,26 @@ def _explanation(part):
     return part, None
 
 
-def _variants(syntax_lines):
+def _is_prose(line, keywords):
+    """'Required by level 30' is a help remark, not a command form."""
+    words = line.split()
+    return (len(words) >= 3 and line[:1].isupper() and not _TOKEN_RE.search(line)
+            and words[0].lower() not in {k.lower() for k in keywords})
+
+
+def _variants(syntax_lines, keywords=(), notes=None):
     variants = []
     for line in syntax_lines:
+        if _is_prose(_OR_LEAD_RE.sub("", line.strip()), keywords):
+            if notes is not None:
+                notes.append(" ".join(line.split()))
+            continue
         for part in _split_or(_OR_LEAD_RE.sub("", line.strip())):
             part, note = _explanation(" ".join(_OR_LEAD_RE.sub("", part).split()))
             if part:
-                notes = preconditions(part) + ([note] if note else [])
+                pre = preconditions(part) + ([note] if note else [])
                 variants.append({"syntax": part, "pattern": variant_pattern(part),
-                                 "args": args(part), "preconditions": notes})
+                                 "args": args(part), "preconditions": pre})
     return variants
 
 
@@ -192,7 +204,7 @@ def _kind(t):
     if not t["syntax"]:
         return "reference"
     first = t["syntax"][0].strip().lower()
-    if first.startswith(("passive", "n/a")) or ("automatic" in first and not _TOKEN_RE.search(first)):
+    if first.startswith(("passive", "n/a", "use of the skill")) or ("automatic" in first and not _TOKEN_RE.search(first)):
         return "passive"
     return "command"
 
@@ -248,7 +260,8 @@ def _pattern(t, kind, variants):
 
 def entry(t):
     kind = _kind(t)
-    variants = _variants(t["syntax"]) if kind == "command" else []
+    notes = []
+    variants = _variants(t["syntax"], t["keywords"], notes) if kind == "command" else []
     pattern = _pattern(t, kind, variants)
     return {
         "topic": t["topic"],
@@ -258,6 +271,7 @@ def entry(t):
         "area": _area(t, kind, pattern, variants),
         "pattern": pattern,
         "variants": variants,
+        "notes": notes,
         "status": "planned",
         "figma_node": None,
     }

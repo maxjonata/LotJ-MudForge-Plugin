@@ -32,12 +32,12 @@
  "counts": {
   "comms": 16,
   "craft": 26,
-  "direct": 126,
+  "direct": 125,
   "editor": 2,
   "flow": 2,
   "form": 203,
   "list": 8,
-  "readout": 45,
+  "readout": 46,
   "reference": 446,
   "target": 121,
   "toggle": 5
@@ -60,6 +60,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -77,6 +78,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -91,6 +93,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -118,6 +121,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -144,6 +148,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -158,6 +163,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -184,6 +190,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -260,6 +267,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -290,6 +298,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -304,6 +313,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -330,6 +340,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -343,6 +354,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -356,6 +368,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -369,6 +382,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -382,6 +396,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -395,6 +410,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -408,6 +424,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -421,6 +438,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -434,6 +452,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -447,6 +466,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -460,6 +480,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -473,6 +494,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -486,6 +508,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -499,6 +522,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -512,6 +536,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -525,6 +550,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -538,6 +564,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -551,6 +578,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -564,6 +592,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -589,6 +618,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -602,6 +632,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -616,6 +647,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -668,6 +700,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -747,6 +780,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -772,6 +806,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -786,6 +821,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -811,6 +847,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -843,6 +880,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -856,6 +894,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -893,6 +932,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -906,6 +946,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -920,6 +961,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -934,6 +976,7 @@
    "area": "general",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -947,6 +990,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -978,6 +1022,7 @@
      ]
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -1003,6 +1048,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -1023,6 +1069,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -1048,6 +1095,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -1083,6 +1131,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -1096,6 +1145,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -1122,6 +1172,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -1135,6 +1186,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -1160,6 +1212,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -1194,6 +1247,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -1207,6 +1261,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -1232,6 +1287,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -1248,6 +1304,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -1282,6 +1339,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -1336,6 +1394,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -1356,6 +1415,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -1387,6 +1447,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -1400,6 +1461,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -1434,6 +1496,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -1510,6 +1573,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -1524,6 +1588,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -1557,6 +1622,7 @@
      ]
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -1582,6 +1648,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -1607,6 +1674,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -1621,6 +1689,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -1634,6 +1703,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -1649,6 +1719,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -1664,6 +1735,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -1689,6 +1761,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -1709,6 +1782,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -1737,6 +1811,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -1757,6 +1832,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -1771,6 +1847,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -1796,6 +1873,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -1816,6 +1894,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -1829,6 +1908,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -1866,6 +1946,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -1879,6 +1960,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -1933,6 +2015,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -2040,6 +2123,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -2053,6 +2137,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -2066,6 +2151,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -2086,6 +2172,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -2106,6 +2193,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -2230,6 +2318,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -2266,6 +2355,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -2291,6 +2381,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -2311,6 +2402,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -2326,6 +2418,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -2356,6 +2449,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -2370,6 +2464,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -2383,6 +2478,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -2396,6 +2492,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -2421,6 +2518,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -2461,6 +2559,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -2477,6 +2576,7 @@
    "area": "combat",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -2502,6 +2602,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -2527,6 +2628,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -2540,6 +2642,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -2565,6 +2668,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -2590,6 +2694,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -2632,6 +2737,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -2647,6 +2753,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -2661,6 +2768,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -2692,6 +2800,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -2781,6 +2890,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -2795,6 +2905,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -2811,6 +2922,7 @@
    "area": "combat",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -2836,6 +2948,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -2905,6 +3018,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -2930,6 +3044,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -2944,6 +3059,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -2979,6 +3095,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -3014,6 +3131,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -3028,6 +3146,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -3070,6 +3189,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -3105,6 +3225,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -3209,6 +3330,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -3222,6 +3344,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -3259,6 +3382,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -3284,6 +3408,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -3302,6 +3427,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -3339,6 +3465,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -3352,6 +3479,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -3387,6 +3515,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -3407,6 +3536,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -3421,6 +3551,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -3441,6 +3572,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -3455,6 +3587,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -3470,6 +3603,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -3490,6 +3624,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -3503,6 +3638,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -3581,6 +3717,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -3601,6 +3738,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -3626,6 +3764,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -3656,6 +3795,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -3669,6 +3809,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -3698,6 +3839,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -3712,6 +3854,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -3725,6 +3868,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -3750,6 +3894,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -3770,6 +3915,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -3790,6 +3936,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -3804,6 +3951,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -3834,6 +3982,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -3864,6 +4013,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -3877,6 +4027,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -3890,6 +4041,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -3904,6 +4056,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -3962,6 +4115,7 @@
      ]
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -3975,6 +4129,7 @@
    "area": "general",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -3988,6 +4143,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -4003,6 +4159,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -4028,6 +4185,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -4043,6 +4201,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -4068,6 +4227,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -4086,6 +4246,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -4099,6 +4260,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -4113,6 +4275,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -4144,6 +4307,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -4169,6 +4333,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -4204,6 +4369,7 @@
      ]
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -4256,6 +4422,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -4269,6 +4436,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -4282,6 +4450,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -4302,6 +4471,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -4342,6 +4512,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -4356,6 +4527,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -4386,6 +4558,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -4412,6 +4585,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -4449,6 +4623,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -4474,6 +4649,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -4543,6 +4719,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -4570,6 +4747,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -4590,6 +4768,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -4603,6 +4782,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -4623,6 +4803,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -4639,6 +4820,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -4659,6 +4841,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -4679,6 +4862,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -4696,6 +4880,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -4721,6 +4906,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -4742,6 +4928,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -4769,6 +4956,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -4783,6 +4971,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -4833,6 +5022,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -4853,6 +5043,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -4867,6 +5058,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -4892,6 +5084,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -4909,6 +5102,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -4922,6 +5116,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -4935,6 +5130,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -4948,6 +5144,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -4973,6 +5170,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -4986,6 +5184,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -4999,6 +5198,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -5039,6 +5239,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -5052,6 +5253,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -5075,6 +5277,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -5108,6 +5311,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -5133,6 +5337,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -5146,6 +5351,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -5159,6 +5365,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -5184,6 +5391,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -5201,6 +5409,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -5237,6 +5446,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -5251,6 +5461,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -5264,6 +5475,7 @@
    "area": "general",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -5277,6 +5489,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -5302,6 +5515,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -5325,6 +5539,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -5338,6 +5553,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -5351,6 +5567,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -5364,6 +5581,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -5389,6 +5607,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -5409,6 +5628,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -5422,6 +5642,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -5436,6 +5657,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -5450,6 +5672,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -5463,6 +5686,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -5476,6 +5700,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -5489,6 +5714,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -5524,6 +5750,7 @@
      ]
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -5549,6 +5776,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -5574,6 +5802,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -5611,6 +5840,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -5638,6 +5868,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -5668,6 +5899,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -5681,6 +5913,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -5694,6 +5927,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -5707,6 +5941,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -5721,6 +5956,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -5734,6 +5970,7 @@
    "area": "general",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -5747,6 +5984,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -5941,6 +6179,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -5955,6 +6194,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -5975,6 +6215,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -5989,6 +6230,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -6002,6 +6244,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -6018,6 +6261,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -6038,6 +6282,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -6060,6 +6305,7 @@
      ]
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -6075,6 +6321,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -6088,6 +6335,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -6114,6 +6362,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -6139,6 +6388,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -6164,6 +6414,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -6184,6 +6435,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -6220,6 +6472,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -6257,6 +6510,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -6280,6 +6534,7 @@
      ]
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -6293,6 +6548,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -6313,6 +6569,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -6333,6 +6590,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -6346,6 +6604,7 @@
    "area": "combat",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -6371,6 +6630,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -6400,6 +6660,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -6415,6 +6676,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -6458,6 +6720,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -6471,6 +6734,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -6485,6 +6749,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -6510,6 +6775,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -6539,6 +6805,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -6569,6 +6836,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -6614,6 +6882,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -6627,6 +6896,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -6640,6 +6910,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -6660,6 +6931,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -6673,6 +6945,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -6755,6 +7028,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -6780,6 +7054,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -6805,6 +7080,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -6830,6 +7106,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -6845,6 +7122,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -6994,6 +7272,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -7024,6 +7303,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -7049,6 +7329,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -7062,6 +7343,7 @@
    "area": "combat",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -7075,6 +7357,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -7100,6 +7383,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -7125,6 +7409,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -7150,6 +7435,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -7179,6 +7465,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -7192,6 +7479,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -7206,6 +7494,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -7231,6 +7520,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -7283,6 +7573,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -7316,6 +7607,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -7336,6 +7628,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -7350,6 +7643,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -7363,6 +7657,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -7377,6 +7672,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -7391,6 +7687,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -7536,6 +7833,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -7551,6 +7849,7 @@
    "area": "combat",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -7580,6 +7879,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -7593,6 +7893,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -7607,6 +7908,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -7636,6 +7938,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -7649,6 +7952,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -7663,6 +7967,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -7772,6 +8077,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -7836,6 +8142,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -7856,6 +8163,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -7869,6 +8177,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -7882,6 +8191,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -7940,6 +8250,7 @@
      ]
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -7953,6 +8264,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -7966,6 +8278,7 @@
    "area": "general",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -7979,6 +8292,7 @@
    "area": "general",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -7999,6 +8313,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -8012,6 +8327,7 @@
    "area": "general",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -8032,6 +8348,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -8071,6 +8388,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -8118,6 +8436,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -8143,6 +8462,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -8180,6 +8500,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -8193,6 +8514,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -8208,6 +8530,7 @@
    "area": "combat",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -8221,6 +8544,7 @@
    "area": "combat",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -8250,6 +8574,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -8264,6 +8589,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -8279,6 +8605,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -8306,6 +8633,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -8339,6 +8667,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -8354,6 +8683,7 @@
    "area": "combat",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -8363,17 +8693,11 @@
     "ENHANCED_TRACKING"
    ],
    "url": "https://www.legendsofthejedi.com/help?topic=ENHANCED_TRACKING",
-   "kind": "command",
+   "kind": "passive",
    "area": "space",
-   "pattern": "direct",
-   "variants": [
-    {
-     "syntax": "Use of the skill is included in 'track' once learned.",
-     "pattern": "direct",
-     "args": [],
-     "preconditions": []
-    }
-   ],
+   "pattern": "readout",
+   "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -8387,6 +8711,7 @@
    "area": "general",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -8412,6 +8737,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -8432,6 +8758,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -8459,6 +8786,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -8473,6 +8801,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -8488,6 +8817,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -8504,6 +8834,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -8521,6 +8852,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -8557,6 +8889,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -8579,6 +8912,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -8599,6 +8933,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -8612,6 +8947,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -8625,6 +8961,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -8638,6 +8975,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -8758,6 +9096,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -8778,6 +9117,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -8792,6 +9132,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -8805,6 +9146,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -8830,6 +9172,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -8859,6 +9202,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -8873,6 +9217,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -8898,6 +9243,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -8927,6 +9273,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -8952,6 +9299,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -8966,6 +9314,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -8979,6 +9328,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -8992,6 +9342,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -9028,6 +9379,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -9059,6 +9411,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -9072,6 +9425,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -9102,6 +9456,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -9127,6 +9482,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -9140,6 +9496,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -9160,6 +9517,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -9173,6 +9531,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -9248,6 +9607,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -9268,6 +9628,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -9290,6 +9651,7 @@
      ]
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -9327,6 +9689,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -9340,6 +9703,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -9383,6 +9747,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -9403,6 +9768,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -9428,6 +9794,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -9453,6 +9820,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -9478,6 +9846,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -9503,6 +9872,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -9523,6 +9893,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -9548,6 +9919,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -9573,6 +9945,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -9593,6 +9966,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -9613,6 +9987,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -9633,6 +10008,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -9646,6 +10022,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -9671,6 +10048,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -9689,6 +10067,7 @@
    "area": "force",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -9703,6 +10082,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -9723,6 +10103,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -9749,6 +10130,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -9762,6 +10144,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -9787,6 +10170,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -9800,6 +10184,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -9813,6 +10198,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -9827,6 +10213,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -9840,6 +10227,7 @@
    "area": "general",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -9854,6 +10242,7 @@
    "area": "force",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -9886,6 +10275,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -9899,6 +10289,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -9912,6 +10303,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -9925,6 +10317,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -9959,6 +10352,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -9979,6 +10373,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10011,6 +10406,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10024,6 +10420,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10049,6 +10446,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10063,6 +10461,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10077,6 +10476,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10097,6 +10497,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10122,6 +10523,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10136,6 +10538,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10156,6 +10559,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10171,6 +10575,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10187,6 +10592,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10200,6 +10606,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10231,6 +10638,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10244,6 +10652,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10258,6 +10667,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10271,6 +10681,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10292,6 +10703,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10317,6 +10729,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10330,6 +10743,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10350,6 +10764,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10399,6 +10814,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10413,6 +10829,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10426,6 +10843,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10439,6 +10857,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10452,6 +10871,7 @@
    "area": "force",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10465,6 +10885,7 @@
    "area": "general",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10478,6 +10899,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10503,6 +10925,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10543,6 +10966,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10578,6 +11002,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10591,6 +11016,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10652,6 +11078,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10666,6 +11093,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10679,6 +11107,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10710,6 +11139,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10739,6 +11169,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10764,6 +11195,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10798,6 +11230,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10812,6 +11245,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10832,6 +11266,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10862,13 +11297,10 @@
      "preconditions": [
       "shows your history"
      ]
-    },
-    {
-     "syntax": "Required by level 30",
-     "pattern": "direct",
-     "args": [],
-     "preconditions": []
     }
+   ],
+   "notes": [
+    "Required by level 30"
    ],
    "status": "planned",
    "figma_node": null
@@ -10884,6 +11316,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10904,6 +11337,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10920,6 +11354,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10949,6 +11384,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10962,6 +11398,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -10981,6 +11418,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11001,6 +11439,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11014,6 +11453,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11030,6 +11470,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11044,6 +11485,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11058,6 +11500,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11097,6 +11540,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11122,6 +11566,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11135,6 +11580,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11148,6 +11594,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11162,6 +11609,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11175,6 +11623,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11200,6 +11649,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11226,6 +11676,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11239,6 +11690,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11252,6 +11704,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11268,6 +11721,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11281,6 +11735,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11318,6 +11773,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11355,6 +11811,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11386,6 +11843,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11415,6 +11873,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11428,6 +11887,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11453,6 +11913,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11478,6 +11939,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11498,6 +11960,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11519,6 +11982,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11561,6 +12025,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11574,6 +12039,7 @@
    "area": "combat",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11588,6 +12054,7 @@
    "area": "combat",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11602,6 +12069,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11627,6 +12095,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11640,6 +12109,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11653,6 +12123,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11668,6 +12139,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11693,6 +12165,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11706,6 +12179,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11742,6 +12216,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11756,6 +12231,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11770,6 +12246,7 @@
    "area": "combat",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11783,6 +12260,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11796,6 +12274,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11812,6 +12291,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11826,6 +12306,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11848,6 +12329,7 @@
      ]
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11861,6 +12343,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11875,6 +12358,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11912,6 +12396,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11937,6 +12422,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -11950,6 +12436,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -12006,6 +12493,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -12019,6 +12507,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -12064,6 +12553,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -12077,6 +12567,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -12090,6 +12581,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -12128,6 +12620,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -12141,6 +12634,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -12154,6 +12648,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -12167,6 +12662,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -12192,6 +12688,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -12205,6 +12702,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -12230,6 +12728,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -12250,6 +12749,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -12263,6 +12763,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -12276,6 +12777,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -12301,6 +12803,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -12322,6 +12825,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -12335,6 +12839,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -12364,6 +12869,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -12377,6 +12883,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -12402,6 +12909,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -12427,6 +12935,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "inactive",
    "figma_node": null,
    "note": "Help: these commands are no longer in use on this mud."
@@ -12441,6 +12950,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -12454,6 +12964,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -12469,6 +12980,7 @@
    "area": "force",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -12489,6 +13001,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -12502,6 +13015,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -12535,6 +13049,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -12560,6 +13075,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -12576,6 +13092,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -12591,6 +13108,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -12628,6 +13146,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -12709,6 +13228,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -12729,6 +13249,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -12743,6 +13264,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -12768,6 +13290,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -12782,6 +13305,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -12797,6 +13321,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -12811,6 +13336,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -12836,6 +13362,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -12849,6 +13376,7 @@
    "area": "general",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -12923,6 +13451,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -12992,6 +13521,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -13017,6 +13547,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -13030,6 +13561,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -13046,6 +13578,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -13072,6 +13605,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -13097,6 +13631,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -13135,6 +13670,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -13160,6 +13696,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -13185,6 +13722,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -13210,6 +13748,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -13235,6 +13774,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -13264,6 +13804,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -13293,6 +13834,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -13322,6 +13864,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -13347,6 +13890,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -13373,6 +13917,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -13398,6 +13943,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -13427,6 +13973,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -13453,6 +14000,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -13478,6 +14026,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -13503,6 +14052,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -13528,6 +14078,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -13555,6 +14106,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -13580,6 +14132,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -13605,6 +14158,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -13634,6 +14188,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -13659,6 +14214,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -13685,6 +14241,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -13710,6 +14267,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -13723,6 +14281,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -13738,6 +14297,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -13758,6 +14318,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -13771,6 +14332,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -13785,6 +14347,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -13810,6 +14373,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -13823,6 +14387,7 @@
    "area": "general",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -13837,6 +14402,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -13862,6 +14428,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -13876,6 +14443,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -13889,6 +14457,7 @@
    "area": "general",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -13902,6 +14471,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -13922,6 +14492,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -13991,6 +14562,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14004,6 +14576,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14020,6 +14593,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14034,6 +14608,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14048,6 +14623,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14061,6 +14637,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14103,6 +14680,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14130,6 +14708,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14143,6 +14722,7 @@
    "area": "general",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14156,6 +14736,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14169,6 +14750,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14182,6 +14764,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14203,6 +14786,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14223,6 +14807,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14240,6 +14825,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14274,6 +14860,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14290,6 +14877,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14303,6 +14891,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14316,6 +14905,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14348,6 +14938,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14362,6 +14953,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14375,6 +14967,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14389,6 +14982,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14402,6 +14996,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14418,6 +15013,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14433,6 +15029,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14446,6 +15043,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14460,6 +15058,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14473,6 +15072,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14486,6 +15086,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14499,6 +15100,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14512,6 +15114,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14525,6 +15128,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14538,6 +15142,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14551,6 +15156,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14564,6 +15170,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14577,6 +15184,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14590,6 +15198,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14603,6 +15212,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14616,6 +15226,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14629,6 +15240,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14643,6 +15255,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14656,6 +15269,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14669,6 +15283,7 @@
    "area": "general",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14683,6 +15298,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14696,6 +15312,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14709,6 +15326,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14722,6 +15340,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14761,6 +15380,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14798,6 +15418,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14812,6 +15433,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14837,6 +15459,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14850,6 +15473,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14863,6 +15487,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14876,6 +15501,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14889,6 +15515,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14903,6 +15530,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14928,6 +15556,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14949,6 +15578,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14974,6 +15604,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -14999,6 +15630,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -15012,6 +15644,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -15025,6 +15658,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -15038,6 +15672,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -15051,6 +15686,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -15065,6 +15701,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -15078,6 +15715,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -15133,6 +15771,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -15174,6 +15813,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -15346,6 +15986,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -15371,6 +16012,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -15391,6 +16033,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -15404,6 +16047,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -15424,6 +16068,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -15437,6 +16082,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -15450,6 +16096,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -15514,6 +16161,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -15528,6 +16176,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -15541,6 +16190,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -15642,6 +16292,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -15657,6 +16308,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -15688,6 +16340,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -15703,6 +16356,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -15716,6 +16370,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -15741,6 +16396,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -15780,6 +16436,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -15798,6 +16455,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -15818,6 +16476,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -15843,6 +16502,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -15869,6 +16529,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -15889,6 +16550,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -15902,6 +16564,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -15922,6 +16585,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -15951,6 +16615,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -15965,6 +16630,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -15980,6 +16646,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -15993,6 +16660,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16007,6 +16675,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16020,6 +16689,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16033,6 +16703,7 @@
    "area": "general",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16046,6 +16717,7 @@
    "area": "force",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16062,6 +16734,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16088,6 +16761,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16108,6 +16782,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16121,6 +16796,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16136,6 +16812,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16152,6 +16829,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16165,6 +16843,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16178,6 +16857,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16191,6 +16871,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16222,6 +16903,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16238,6 +16920,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16251,6 +16934,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16264,6 +16948,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16301,6 +16986,7 @@
      ]
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16314,6 +17000,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16327,6 +17014,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16352,6 +17040,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16372,6 +17061,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16408,6 +17098,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16421,6 +17112,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16434,6 +17126,7 @@
    "area": "force",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16449,6 +17142,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16480,6 +17174,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16551,6 +17246,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16564,6 +17260,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16621,6 +17318,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16641,6 +17339,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16655,6 +17354,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16705,6 +17405,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16731,6 +17432,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16756,6 +17458,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16776,6 +17479,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16801,6 +17505,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "inactive",
    "figma_node": null,
    "note": "Help: this command is no longer in use."
@@ -16831,6 +17536,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16861,6 +17567,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16874,6 +17581,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16927,6 +17635,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16940,6 +17649,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16954,6 +17664,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16968,6 +17679,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16983,6 +17695,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -16996,6 +17709,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -17010,6 +17724,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -17024,6 +17739,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -17039,6 +17755,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -17052,6 +17769,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -17069,6 +17787,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -17089,6 +17808,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -17114,6 +17834,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -17127,6 +17848,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -17140,6 +17862,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -17156,6 +17879,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -17169,6 +17893,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -17182,6 +17907,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -17215,6 +17941,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -17235,6 +17962,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -17255,6 +17983,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -17288,6 +18017,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -17319,6 +18049,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -17348,6 +18079,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -17378,6 +18110,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -17403,6 +18136,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -17432,6 +18166,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -17461,6 +18196,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -17492,6 +18228,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -17517,6 +18254,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -17542,6 +18280,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -17567,6 +18306,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -17592,6 +18332,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -17617,6 +18358,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -17645,6 +18387,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -17670,6 +18413,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -17695,6 +18439,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -17720,6 +18465,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -17733,6 +18479,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -17746,6 +18493,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -17766,6 +18514,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -17791,6 +18540,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -17821,6 +18571,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -17850,25 +18601,12 @@
       }
      ],
      "preconditions": []
-    },
-    {
-     "syntax": "Add - allows you to add a person's name to your resident list.",
-     "pattern": "direct",
-     "args": [],
-     "preconditions": []
-    },
-    {
-     "syntax": "Remove - remove a person from your resident list",
-     "pattern": "direct",
-     "args": [],
-     "preconditions": []
-    },
-    {
-     "syntax": "Clear - Clear your resident list",
-     "pattern": "direct",
-     "args": [],
-     "preconditions": []
     }
+   ],
+   "notes": [
+    "Add - allows you to add a person's name to your resident list.",
+    "Remove - remove a person from your resident list",
+    "Clear - Clear your resident list"
    ],
    "status": "planned",
    "figma_node": null
@@ -17895,6 +18633,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -17936,6 +18675,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -17949,6 +18689,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -17993,6 +18734,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18006,6 +18748,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18031,6 +18774,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18051,6 +18795,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18076,6 +18821,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18101,6 +18847,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18114,6 +18861,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18128,6 +18876,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18141,6 +18890,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18155,6 +18905,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18175,6 +18926,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18195,6 +18947,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18208,6 +18961,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18221,6 +18975,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18234,6 +18989,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18247,6 +19003,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18324,6 +19081,7 @@
      ]
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18337,6 +19095,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18351,6 +19110,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18364,6 +19124,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18377,6 +19138,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18390,6 +19152,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18415,6 +19178,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18428,6 +19192,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18441,6 +19206,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18461,6 +19227,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18474,6 +19241,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18494,6 +19262,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18519,6 +19288,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18548,6 +19318,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18573,6 +19344,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18586,6 +19358,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18599,6 +19372,7 @@
    "area": "space",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18613,6 +19387,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18651,6 +19426,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18665,6 +19441,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18685,6 +19462,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18716,6 +19494,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18730,6 +19509,7 @@
    "area": "combat",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18750,6 +19530,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18777,6 +19558,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18806,6 +19588,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18822,6 +19605,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18848,6 +19632,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18873,6 +19658,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18906,6 +19692,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18939,6 +19726,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -18969,6 +19757,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -19009,6 +19798,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -19025,6 +19815,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -19045,6 +19836,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -19070,6 +19862,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -19141,6 +19934,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -19166,6 +19960,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -19180,6 +19975,7 @@
    "area": "general",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -19193,6 +19989,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -19206,6 +20003,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -19221,6 +20019,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -19234,6 +20033,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -19247,6 +20047,7 @@
    "area": "space",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -19262,6 +20063,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -19275,6 +20077,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -19300,6 +20103,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -19314,6 +20118,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -19347,6 +20152,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -19372,6 +20178,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -19428,6 +20235,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -19457,6 +20265,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -19482,6 +20291,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -19502,6 +20312,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -19549,6 +20360,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -19580,6 +20392,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -19605,6 +20418,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -19630,6 +20444,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -19644,6 +20459,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -19664,6 +20480,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -19679,6 +20496,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -19693,6 +20511,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -19706,6 +20525,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -19731,6 +20551,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -19768,6 +20589,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -19782,6 +20604,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -19811,6 +20634,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -19824,6 +20648,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -19900,6 +20725,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -19925,6 +20751,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -19938,6 +20765,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -19952,6 +20780,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -19967,6 +20796,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -19996,6 +20826,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -20012,6 +20843,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -20025,6 +20857,7 @@
    "area": "space",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -20042,6 +20875,7 @@
    "area": "space",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -20074,16 +20908,14 @@
     },
     {
      "syntax": "speak all (immortals only)",
-     "pattern": "form",
-     "args": [
-      {
-       "name": "immortals only",
-       "type": "text"
-      }
-     ],
-     "preconditions": []
+     "pattern": "direct",
+     "args": [],
+     "preconditions": [
+      "immortals only"
+     ]
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -20111,6 +20943,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -20160,6 +20993,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -20181,6 +21015,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -20206,6 +21041,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -20219,6 +21055,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -20239,6 +21076,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -20252,6 +21090,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -20329,6 +21168,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -20342,6 +21182,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -20362,6 +21203,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -20376,6 +21218,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -20407,6 +21250,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -20420,6 +21264,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -20453,6 +21298,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -20467,6 +21313,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -20487,6 +21334,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -20502,6 +21350,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -20516,6 +21365,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -20529,6 +21379,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -20542,6 +21393,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -20562,6 +21414,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -20591,6 +21444,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -20624,6 +21478,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -20649,6 +21504,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -20669,6 +21525,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -20684,6 +21541,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -20704,6 +21562,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -20729,6 +21588,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -20749,6 +21609,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -20774,6 +21635,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -20788,6 +21650,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -20813,6 +21676,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -20832,6 +21696,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -20845,6 +21710,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -20870,6 +21736,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "inactive",
    "figma_node": null,
    "note": "Help: these commands are no longer in use on this mud."
@@ -20900,6 +21767,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -20925,6 +21793,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -20939,6 +21808,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -20959,6 +21829,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -21003,6 +21874,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -21045,6 +21917,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -21074,6 +21947,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -21130,6 +22004,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -21188,6 +22063,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -21203,6 +22079,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -21216,6 +22093,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -21236,6 +22114,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -21249,6 +22128,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -21269,6 +22149,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -21283,6 +22164,7 @@
    "area": "general",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -21314,6 +22196,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -21388,6 +22271,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -21401,6 +22285,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -21421,6 +22306,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -21452,6 +22338,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -21495,6 +22382,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -21508,6 +22396,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -21521,6 +22410,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -21552,6 +22442,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -21565,6 +22456,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -21578,6 +22470,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -21591,6 +22484,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -21604,6 +22498,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -21618,6 +22513,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -21643,6 +22539,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -21720,6 +22617,7 @@
      ]
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -21750,6 +22648,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -21810,6 +22709,7 @@
      ]
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -21839,6 +22739,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -21893,6 +22794,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -21908,6 +22810,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -21933,6 +22836,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -21948,6 +22852,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -21992,6 +22897,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -22005,6 +22911,7 @@
    "area": "general",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -22019,6 +22926,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -22032,6 +22940,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -22057,6 +22966,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -22070,6 +22980,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -22085,6 +22996,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -22141,6 +23053,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -22181,6 +23094,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -22206,6 +23120,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -22219,6 +23134,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -22235,6 +23151,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -22248,6 +23165,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -22263,6 +23181,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -22276,6 +23195,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -22289,6 +23209,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -22306,6 +23227,7 @@
    "area": "combat",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -22335,6 +23257,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -22360,6 +23283,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -22385,6 +23309,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -22410,6 +23335,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -22519,6 +23445,7 @@
      ]
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -22548,6 +23475,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -22627,6 +23555,7 @@
      ]
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -22660,6 +23589,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -22686,6 +23616,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -22699,6 +23630,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -22712,6 +23644,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -22725,6 +23658,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -22794,6 +23728,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -22944,6 +23879,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -23101,6 +24037,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -23114,6 +24051,7 @@
    "area": "force",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -23158,6 +24096,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -23172,6 +24111,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -23190,6 +24130,7 @@
    "area": "combat",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -23227,6 +24168,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -23252,6 +24194,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -23272,6 +24215,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -23287,6 +24231,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -23300,6 +24245,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -23379,6 +24325,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -23392,6 +24339,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -23405,6 +24353,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -23436,6 +24385,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -23450,6 +24400,7 @@
    "area": "space",
    "pattern": "readout",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -23469,6 +24420,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -23482,6 +24434,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -23495,6 +24448,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -23508,6 +24462,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -23537,6 +24492,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -23550,6 +24506,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -23581,6 +24538,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -23595,6 +24553,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -23624,6 +24583,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -23637,6 +24597,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -23651,6 +24612,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -23665,6 +24627,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -23679,6 +24642,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -23714,6 +24678,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -23739,6 +24704,7 @@
      "preconditions": []
     }
    ],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -23755,6 +24721,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -23769,6 +24736,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -23784,6 +24752,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -23798,6 +24767,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -23811,6 +24781,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   },
@@ -23824,6 +24795,7 @@
    "area": "reference",
    "pattern": "reference",
    "variants": [],
+   "notes": [],
    "status": "planned",
    "figma_node": null
   }
