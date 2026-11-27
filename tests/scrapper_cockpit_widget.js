@@ -111,5 +111,5 @@ assert.equal(elements.get("map").hidden, false);
 elements.get("open-map").click();
 elements.get("open-comms").click();
 elements.get("fit-panel").click();
-assert.deepEqual(posted, ["ready", "radar", "proximity", "read-galaxy", "read-room", "open-map", "open-comms", "fit-panel"]);
+assert.deepEqual(posted, ["ready", "radar", "proximity", "select-target", "read-galaxy", "read-room", "open-map", "open-comms", "fit-panel"]);
 console.log("PASS: isometric projection, contact altitude, range, and local navigation controls");

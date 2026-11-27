@@ -25,13 +25,16 @@ unchanged.
    including case and a single `.lua` extension (the editor can append it).[1]
    - [`src/widgets/lotj-status-bar.lua`](src/widgets/lotj-status-bar.lua)
    - [`src/widgets/lotj-comms-hub.lua`](src/widgets/lotj-comms-hub.lua)
+   - [`src/domain/chat-line.lua`](src/domain/chat-line.lua)
    - [`src/widgets/lotj-ground-map.lua`](src/widgets/lotj-ground-map.lua)
    - [`src/domain/ship-position.lua`](src/domain/ship-position.lua)
    - [`src/domain/radar-scan.lua`](src/domain/radar-scan.lua)
    - [`src/domain/public-galaxy.lua`](src/domain/public-galaxy.lua)
    - [`src/application/scrapper-cockpit.lua`](src/application/scrapper-cockpit.lua)
+   - [`src/domain/target-lock.lua`](src/domain/target-lock.lua)
+   - [`src/application/target-cockpit.lua`](src/application/target-cockpit.lua)
    - [`src/widgets/lotj-scrapper-cockpit.lua`](src/widgets/lotj-scrapper-cockpit.lua)
-3. Only after all eight files are in place, use **Save & Run** (`Ctrl+Enter`)
+3. Only after all eleven files are in place, use **Save & Run** (`Ctrl+Enter`)
    to save and enable the plugin. Check **Problems** and **Console** before
    testing any widgets. A `loadModule/dofile` error naming a missing file means
    you should check the exact path in **Files**, not add a second plugin.[1]
@@ -62,11 +65,14 @@ repository folder:[1]
 LOTJ Companion.lua
 LOTJ Companion/src/widgets/lotj-status-bar.lua
 LOTJ Companion/src/widgets/lotj-comms-hub.lua
+LOTJ Companion/src/domain/chat-line.lua
 LOTJ Companion/src/widgets/lotj-ground-map.lua
 LOTJ Companion/src/domain/ship-position.lua
 LOTJ Companion/src/domain/radar-scan.lua
 LOTJ Companion/src/domain/public-galaxy.lua
 LOTJ Companion/src/application/scrapper-cockpit.lua
+LOTJ Companion/src/domain/target-lock.lua
+LOTJ Companion/src/application/target-cockpit.lua
 LOTJ Companion/src/widgets/lotj-scrapper-cockpit.lua
 ```
 
@@ -92,7 +98,9 @@ for the initial load and display checks.
    While disconnected, **Radar** and **Proximity** show a connection notice.
    In a ship cockpit or turret, click **Radar** and check that the objects in
    the completed readout appear at their relative positions. **Proximity**
-   sends the game's text readout to the terminal.[2]
+   sends the game's text readout to the terminal.[2] Click a ship contact to
+   open the target panel, then check that **Target** warns once before sending
+   `target <ship>`, and that **Face** and **Fire** send one command each.
 4. Disable the test plugin when finished. Check that its widgets are no longer
    active, and restore your previous theme if the preview changed it.
 
@@ -126,6 +134,15 @@ for the initial load and display checks.
   the public catalogue verified on 2026-11-27 and highlights a matching
   `Ship.System` position when available.[4] **Map** opens MudForge's native
   map in its own widget.
+- **Target cockpit (NAV-08):** Clicking a radar ship selects it. The panel shows
+  distance, bearing, elevation and ΔX/ΔY/ΔZ, and the radar draws a reticle.
+  **Target**, **Face** and **Fire** (best weapon or one of the eight weapon
+  types in HELP FIRE) each send one documented command. Because HELP TARGET
+  calls targeting an aggressive act, **Target** asks for a second click per ship.
+  The help documents no reply messages, so the panel shows "Target sent ·
+  unconfirmed" instead of a confirmed lock. Geometry uses the last radar
+  readout, and a ship missing from a new readout is shown as lost. Whether we
+  are in an enemy's sights (NAV-09) is still under research.
 - **Ship HUD and Holocron Datapad:** Hidden placeholders.
 
 ## Offline development checks
@@ -137,6 +154,7 @@ git ls-files -z -- 'src/*.lua' | xargs -0 -n 1 luac -p
 lua tests/run.lua
 node tests/comms_hub_widget.js
 node tests/scrapper_cockpit_widget.js
+node tests/target_cockpit_widget.js
 python3 tests/ci/gmcp/test_validate.py -v
 python3 scripts/ci/gmcp/validate.py src
 python3 tests/test_combat_regex_fixtures.py -v

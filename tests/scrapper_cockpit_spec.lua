@@ -102,8 +102,12 @@ local function post(event, data)
   widget_events.luamsg({ event = event, data = data })
 end
 
+-- Target snapshots (NAV-08) interleave with navigation messages; they have
+-- their own assertions below.
 local function latest()
-  return messages[#messages]
+  for i = #messages, 1, -1 do
+    if messages[i].event ~= "target" then return messages[i] end
+  end
 end
 
 local ship_info = assert(gmcp["Ship.Info"])
@@ -252,3 +256,45 @@ assert(latest().position.x == 9 and latest().scanState == "truncated" and #lates
 ship_info({ posX = 10, posY = 0, posZ = 0 })
 assert(latest().position.x == 10, "the scan establishes the new origin and resumes live movement")
 print("PASS: radar reads formatted rows, handles out-of-order coordinates and reports truncated or late readouts")
+
+-- NAV-08: target cockpit through the entry point.
+local function latestTarget()
+  for i = #messages, 1, -1 do
+    if messages[i].event == "target" then return messages[i].target end
+  end
+end
+post("radar", {})
+line("Light Freighter 'Red Fury' 39 8 7")
+line("Tatooine 100 100 100")
+line("Your Coordinates: 9 8 7")
+fireTimer(250)
+local before_target = #sends
+post("select-target", { name = "Tatooine" })
+assert(latestTarget().status == "none", "planets cannot be targeted")
+post("select-target", { name = "Red Fury" })
+local selected = latestTarget()
+assert(selected.status == "selected" and selected.distance == 30 and selected.dx == 30,
+  "selecting a radar ship publishes its relative geometry")
+post("fire", { weapon = "laser" })
+assert(#sends == before_target, "selection is passive and fire needs a sent target")
+post("aim", {})
+assert(#sends == before_target + 1 and sends[#sends] == "target Red Fury")
+assert(latestTarget().status == "sent")
+post("fire", { weapon = "laser" })
+post("face", {})
+assert(sends[#sends - 1] == "fire laser" and sends[#sends] == "face Red Fury")
+post("fire", { weapon = "plasma" })
+assert(#sends == before_target + 3, "undocumented weapons are not sent")
+ship_info({ posX = 9, posY = 8, posZ = 7 })
+assert(#sends == before_target + 3, "passive updates never send")
+post("clear-target", {})
+assert(latestTarget().status == "none")
+post("select-target", { name = "Red Fury" })
+connected = false
+env.onDisconnect("second")
+assert(latestTarget().status == "none", "disconnect clears the target")
+local after_disconnect = #sends
+post("aim", {})
+assert(#sends == after_disconnect and latest().event == "disconnected",
+  "a target action while disconnected tells the panel and sends nothing")
+print("PASS: target cockpit selects radar ships and sends one documented command per click")
