@@ -3,7 +3,8 @@ assert(_VERSION == "Lua 5.4", "run the ground-map regression with Lua 5.4")
 
 local triggers, updates = {}, {}
 local on_ready, room_changed, room_clicked, room_info, target
-local moves, symbols = {}, {}
+local symbols = {}
+local cursor_writes = 0
 local native_room = 42
 local function noop() end
 local env = {
@@ -22,7 +23,7 @@ local env = {
   ipairs = ipairs,
   getPlayerRoom = function() return native_room end,
   setPlayerRoom = function(vnum)
-    moves[#moves + 1] = vnum
+    cursor_writes = cursor_writes + 1
     local previous = native_room
     native_room = vnum
     room_changed(vnum, previous, { name = "Docking Bay" })
@@ -60,7 +61,7 @@ end
 fire(enter, "You enter Docking Bay.", "Docking Bay")
 assert(#updates == 1 and updates[1] == "Docking Bay", "room entry must forward Docking Bay")
 widget.updateMapDisplay()
-assert(#moves == 0, "a room name must not move the map cursor")
+assert(cursor_writes == 0, "a room name must not move the map cursor")
 print("PASS: room entry forwards the captured room name")
 
 fire(describe, "The room is The room is bright.", "The room is bright")
@@ -78,7 +79,7 @@ fire(enter, "You enter .", "")
 fire(describe, "The room is .", "")
 assert(#updates == 3, "nonmatches and missing/empty captures must not update the map")
 widget.updateMapDisplay()
-assert(#moves == 0, "refresh must not turn a text capture into a map position")
+assert(cursor_writes == 0, "refresh must not turn a text capture into a map position")
 print("PASS: nonmatches and missing/empty captures leave the map unchanged")
 
 room_changed(42, 10, { name = "Docking Bay", amenities = { "B" } })
@@ -89,7 +90,7 @@ room_info({ room = { name = "42" } })
 room_info({})
 env.handleRoomEntry("You enter Docking Bay 42.")
 widget.updateMapDisplay()
-assert(#moves == 0, "passive updates must not echo or rewind the mapper position")
+assert(cursor_writes == 0, "passive updates must not echo or rewind the mapper position")
 assert(symbols[42] == "B", "amenities must use the numeric mapper ID")
 room_clicked(42)
 assert(target and target.room == "Docking Bay" and target.vnum == 42,
@@ -99,5 +100,5 @@ print("PASS: map updates preserve the native cursor, amenities, and click target
 widget.updateMapForRoom(73) -- not yet cached
 widget.updateMapForRoom(42)
 widget.updateMapForRoom(42) -- already there
-assert(#moves == 1 and moves[1] == 42, "an explicit known room ID should move the cursor once")
+assert(cursor_writes == 1 and native_room == 42, "an explicit known room ID should move the cursor once")
 print("PASS: explicit numeric room selection does not feed back into movement")
