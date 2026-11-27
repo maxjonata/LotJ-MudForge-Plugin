@@ -157,6 +157,10 @@ function onMapRoomClickHandler(vnum)
   handleMapClick(vnum)
 end
 
+local function openGroundMap()
+  if groundMap then showWidget(groundMap, true) end
+end
+
 --- Toggle map visibility
 function toggleGroundMap()
   if not groundMap then return end
@@ -182,6 +186,7 @@ end
 return {
   init = initGroundMap,
   toggle = toggleGroundMap,
+  open = openGroundMap,
   cleanup = cleanupGroundMap,
   handleMapClick = handleMapClick,
   updateMapForRoom = updateMapForRoom,

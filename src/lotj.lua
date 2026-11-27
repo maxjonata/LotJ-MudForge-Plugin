@@ -4,9 +4,9 @@
 plugin = {
   id          = "lotj",
   name        = "LOTJ Companion",
-  version     = "0.1.0",
+  version     = "0.2.0",
   author      = "Mindcloud Team",
-  description = "Combat HUD, Force tracker, ship status, faction events, crafting progress, and character sheet for LOTJ.",
+  description = "Navigation panel with an isometric radar, public galaxy chart, ground mapper and live vitals for LOTJ.",
   settings    = { saveState = true },
 }
 
@@ -23,8 +23,10 @@ function init()
   -- Load sub-widget modules
   local statusBar = loadModule("src/widgets/lotj-status-bar.lua")
   loadModule("src/widgets/lotj-comms-hub.lua")
-  loadModule("src/widgets/lotj-ground-map.lua")
+  local groundMap = loadModule("src/widgets/lotj-ground-map.lua")
   local shipPosition = loadModule("src/domain/ship-position.lua")
+  local radarScan = loadModule("src/domain/radar-scan.lua")
+  local publicGalaxy = loadModule("src/domain/public-galaxy.lua")
   local cockpitApplication = loadModule("src/application/scrapper-cockpit.lua")
   local cockpitWidget = loadModule("src/widgets/lotj-scrapper-cockpit.lua")
 
@@ -102,8 +104,17 @@ function init()
   -- Initialize sub-widgets with widget IDs
   statusBar.init(WIDGET_STATUS_BAR)
   if initCommsHub then initCommsHub(WIDGET_COMMS_HUB) end
-  if initGroundMap then initGroundMap() end
-  scrapperCockpit = cockpitWidget.openWidget(cockpitApplication, shipPosition)
+  groundMap.init()
+  scrapperCockpit = cockpitWidget.openWidget({
+    application = cockpitApplication,
+    shipPosition = shipPosition,
+    radarScan = radarScan,
+    publicGalaxy = publicGalaxy,
+    openMap = groundMap.open,
+    openComms = function()
+      if WIDGET_COMMS_HUB then showWidget(WIDGET_COMMS_HUB, true) end
+    end,
+  })
 
   -- Register theme on connect (also handled in onConnect for reconnects)
   registerLOTJTheme()
@@ -123,6 +134,12 @@ function init()
       else
         scrapperCockpit.observe()
       end
+    end
+  end)
+  onGMCPUpdate("Ship.System", function(data)
+    local session = getSession()
+    if scrapperCockpit and session and session.connected then
+      scrapperCockpit.observeSystem(data)
     end
   end)
   onGMCPUpdate("Char.Enemy", onGMCPUpdateCharEnemy)
@@ -191,20 +208,23 @@ function onConnect(sessionId)
   loadSavedState()
   local session = getSession()
   if scrapperCockpit and session and session.id == sessionId and session.connected then
-    scrapperCockpit.observe()
+    scrapperCockpit.resetSession()
   end
 end
 
 function onDisconnect(sessionId)
   local session = getSession()
   if scrapperCockpit and (not session or (session.id == sessionId and not session.connected)) then
-    scrapperCockpit.observe()
+    scrapperCockpit.resetSession()
   end
 end
 
 function onLine(sessionId, rawLine, cleanLine)
-  -- Parse combat events, prompt data, faction messages
-  -- Return false to suppress sensitive combat info display
+  if not scrapperCockpit then return end
+  local session = getSession()
+  if session and session.connected and session.id == sessionId then
+    scrapperCockpit.readLine(cleanLine)
+  end
 end
 
 function onCommand(sessionId, command)
