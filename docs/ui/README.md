@@ -41,6 +41,10 @@ CI fails if a topic has no destination, the committed catalog is stale, or a fra
 - Themes: default amber, or the clan theme derived from the clan name colour (GMCP `CLAN`, colours set in game with `clancolorname`). Presets: amber, blue sensor, imperial red, green console.
 - Ground map (FIG-03): holographic isometric map in the style of Star Wars Jedi: Fallen Order, built from MudForge mapper coordinates.
 
+## Every control has a purpose
+
+No loose decoration that looks like a control. Each key sends one real command (radar, proximity, chaff, launch, land, autopilot), each light shows a named state read from GMCP or confirmed text (shields up, hyper ready, target sent, unread channel), each toggle is a real on/off command (autopilot, headlights, cloak), and each display says its data source and age. Hull structure (vents, seams, rivets) is the only non-functional art.
+
 ## Console per theme
 
 Each theme is a whole console, not a recolour: hull, bezels, screen art, keys and screen colour all change, while the screen layout and the components on them stay the same.
