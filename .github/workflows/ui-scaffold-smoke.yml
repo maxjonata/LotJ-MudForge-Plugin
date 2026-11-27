@@ -27,8 +27,11 @@ jobs:
         with:
           luaVersion: ${{ matrix.lua }}
 
-      - name: Run every tests/**/*_spec.lua
-        run: lua tests/run.lua
+      - name: Run every tests/**/*_spec.lua with line coverage
+        run: lua tests/run.lua --coverage
+
+      - name: Fail if src/ coverage fell below this version's floor
+        run: lua tests/coverage.lua
 
       - name: Exercise the embedded widget scripts
         run: |

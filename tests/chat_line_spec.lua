@@ -31,3 +31,15 @@ for _, line in ipairs({
 end
 assert(chat.read(nil) == nil)
 print("PASS: LotJ chat lines route to a single channel and terminal noise stays unclassified")
+
+for _, line in ipairs({
+  "[Hail from Red Fury] Approach vector clear",
+  "[INTERCOM: Bridge] All hands",
+  "You sign, in Lorrdian 'Wait.'",
+}) do
+  local result = assert(chat.read(line), line)
+  assert(result.channel == "local" and result.sender == nil and result.text == line,
+    "hails, intercom and sign language keep the whole line: " .. line)
+end
+assert(chat.read("Somebody mutters 'hi'") == nil, "unknown speech verbs are not chat")
+print("PASS: hails, intercom and sign language route to Local without a sender")

@@ -89,3 +89,13 @@ do -- state values are immutable snapshots
   assert(s.status == "selected" and t ~= s, "transitions return new tables")
   print("PASS: transitions do not mutate their input")
 end
+
+do -- the nearest same-named ship wins regardless of order
+  local o = { x = 0, y = 0, z = 0 }
+  local far = { category = "ship", name = "Twin", x = 300, y = 0, z = 0 }
+  local close = { category = "ship", name = "Twin", x = 10, y = 0, z = 0 }
+  local other = { category = "ship", name = "Other", x = 1, y = 0, z = 0 }
+  assert(lock.select(lock.empty(), o, { far, other, close }, "Twin").distance == 10)
+  assert(lock.select(lock.empty(), o, { close, other, far }, "Twin").distance == 10)
+  print("PASS: duplicate names resolve to the nearest ship")
+end

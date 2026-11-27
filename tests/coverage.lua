@@ -1,0 +1,87 @@
+-- Line coverage report for src/**/*.lua with a ratchet floor.
+-- Executable lines come from `luac -l -l` (every instruction's line), hits from
+-- tests/support/coverage.lua. Run after `lua tests/run.lua --coverage`.
+-- Usage: lua tests/coverage.lua [--update]
+--   --update raises this interpreter's floor in tests/coverage-floor.txt (never lowers it).
+local HITS, FLOOR = ".coverage-hits", "tests/coverage-floor.txt"
+local update = arg[1] == "--update"
+local luac = os.getenv("LUAC") or (arg[-1] or "lua"):gsub("lua([^/\\]*)$", "luac%1")
+
+local function lines(command)
+  local pipe = assert(io.popen(command))
+  local out = {}
+  for line in pipe:lines() do out[#out + 1] = line end
+  pipe:close()
+  return out
+end
+
+local hits = {}
+local file = io.open(HITS, "r")
+assert(file, "no " .. HITS .. ": run `lua tests/run.lua --coverage` first")
+for row in file:lines() do
+  local path, line = row:match("^(.-)\t(%d+)$")
+  if path then
+    hits[path] = hits[path] or {}
+    hits[path][tonumber(line)] = true
+  end
+end
+file:close()
+
+local totalExec, totalHit, report = 0, 0, {}
+for _, path in ipairs(lines("git ls-files -- src")) do
+  if path:match("%.lua$") then
+    local executable = {}
+    for _, row in ipairs(lines(luac .. ' -l -l -p "' .. path .. '"')) do
+      local line, opcode = row:match("^%s+%d+%s+%[(%d+)%]%s+(%u+)")
+      -- 5.4 VARARGPREP runs before the line hook can fire; it is never "hit".
+      if line and opcode ~= "VARARGPREP" then executable[tonumber(line)] = true end
+    end
+    local exec, hit, missed = 0, 0, {}
+    for line in pairs(executable) do
+      exec = exec + 1
+      if hits[path] and hits[path][line] then hit = hit + 1 else missed[#missed + 1] = line end
+    end
+    assert(exec > 0, "luac listed no lines for " .. path .. " (is `" .. luac .. "` the matching luac?)")
+    table.sort(missed)
+    totalExec, totalHit = totalExec + exec, totalHit + hit
+    report[#report + 1] = { path = path, pct = 100 * hit / exec, exec = exec, missed = missed }
+  end
+end
+table.sort(report, function(a, b) return a.pct < b.pct end)
+
+for _, r in ipairs(report) do
+  local sample = {}
+  for i = 1, math.min(12, #r.missed) do sample[i] = r.missed[i] end
+  print(("%6.1f%%  %4d lines  %s%s"):format(r.pct, r.exec, r.path,
+    #r.missed > 0 and ("  missed: " .. table.concat(sample, ",") .. (#r.missed > 12 and ",…" or "")) or ""))
+end
+local total = 100 * totalHit / totalExec
+-- One "Lua 5.x <percent>" line per interpreter: luac lists different lines per version.
+local floors = {}
+local floorFile = io.open(FLOOR, "r")
+if floorFile then
+  for row in floorFile:lines() do
+    local version, value = row:match("^(Lua %d%.%d)%s+([%d%.]+)$")
+    if version then floors[version] = tonumber(value) end
+  end
+  floorFile:close()
+end
+local floor = floors[_VERSION] or 0
+print(("TOTAL %.1f%% of %d lines (%s), floor %.1f%%"):format(total, totalExec, _VERSION, floor))
+
+if update then
+  local measured = math.floor(total * 10) / 10
+  if measured > floor then
+    floors[_VERSION] = measured
+    local versions = {}
+    for version in pairs(floors) do versions[#versions + 1] = version end
+    table.sort(versions)
+    local out = assert(io.open(FLOOR, "w"))
+    for _, version in ipairs(versions) do out:write(("%s %.1f\n"):format(version, floors[version])) end
+    out:close()
+    print(("floor raised to %.1f%%"):format(measured))
+  end
+elseif total + 1e-9 < floor then
+  print("FAILED: coverage fell below the floor")
+  os.exit(1)
+end
