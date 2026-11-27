@@ -47,7 +47,13 @@ class ArgTests(unittest.TestCase):
     def test_or_inside_a_placeholder_is_one_argument(self):
         e = bc.entry(topic("INDUCTLOG", ["inductlog <name of either person OR date OR induct OR outcast>"]))
         self.assertEqual(len(e["variants"]), 1)
-        self.assertEqual(len(e["variants"][0]["args"]), 1)
+        self.assertEqual(e["variants"][0]["args"], [{"name": "name of either person OR date OR induct OR outcast",
+                                                     "type": "choice", "choices": ["name of either person", "date", "induct", "outcast"]}])
+        self.assertEqual(e["pattern"], "form")
+
+    def test_automatic_as_an_argument_is_not_passive(self):
+        e = bc.entry(topic("PTURRETS", ["pturrets <manual/automatic>"], ["ship"]))
+        self.assertEqual((e["kind"], e["pattern"]), ("command", "form"))
 
     def test_trailing_explanation_is_not_syntax(self):
         v = bc.entry(topic("CHARSHEET", ["charsheet status: See all available entry options"]))["variants"][0]

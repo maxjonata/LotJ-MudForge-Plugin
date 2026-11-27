@@ -99,6 +99,9 @@ def _arg(inner):
         return {"name": inner, "type": "number", "min": int(span.group(1)), "max": int(span.group(2))}
     if low in _TOGGLES:
         return {"name": inner, "type": "toggle"}
+    alternatives = re.split(r"\s+OR\s+", inner, flags=re.I)
+    if len(alternatives) > 1:
+        return {"name": inner, "type": "choice", "choices": alternatives}
     if "|" in inner or ("/" in inner and " " not in inner):
         return {"name": inner, "type": "choice", "choices": [c for c in re.split(r"[|/]", inner) if c]}
     words = set(_words(inner))
@@ -188,7 +191,7 @@ def _kind(t):
     if not t["syntax"]:
         return "reference"
     first = t["syntax"][0].strip().lower()
-    if first.startswith(("passive", "n/a")) or "automatic" in first:
+    if first.startswith(("passive", "n/a")) or ("automatic" in first and not _TOKEN_RE.search(first)):
         return "passive"
     return "command"
 

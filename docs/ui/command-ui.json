@@ -35,11 +35,11 @@
   "direct": 125,
   "editor": 2,
   "flow": 2,
-  "form": 201,
+  "form": 204,
   "list": 8,
-  "readout": 47,
+  "readout": 45,
   "reference": 446,
-  "target": 122,
+  "target": 121,
   "toggle": 5
  },
  "entries": [
@@ -5849,7 +5849,11 @@
       },
       {
        "name": "amount or 1 if blank",
-       "type": "number"
+       "type": "choice",
+       "choices": [
+        "amount",
+        "1 if blank"
+       ]
       }
      ],
      "preconditions": []
@@ -11331,7 +11335,7 @@
    "url": "https://www.legendsofthejedi.com/help?topic=INDUCTLOG",
    "kind": "command",
    "area": "general",
-   "pattern": "target",
+   "pattern": "form",
    "variants": [
     {
      "syntax": "inductlog",
@@ -11341,11 +11345,17 @@
     },
     {
      "syntax": "inductlog <name of either person OR date OR induct OR outcast> (For",
-     "pattern": "target",
+     "pattern": "form",
      "args": [
       {
        "name": "name of either person OR date OR induct OR outcast",
-       "type": "character"
+       "type": "choice",
+       "choices": [
+        "name of either person",
+        "date",
+        "induct",
+        "outcast"
+       ]
       }
      ],
      "preconditions": []
@@ -16807,10 +16817,26 @@
     "PTURRETS"
    ],
    "url": "https://www.legendsofthejedi.com/help?topic=PTURRETS",
-   "kind": "passive",
+   "kind": "command",
    "area": "space",
-   "pattern": "readout",
-   "variants": [],
+   "pattern": "form",
+   "variants": [
+    {
+     "syntax": "pturrets <manual/automatic>",
+     "pattern": "form",
+     "args": [
+      {
+       "name": "manual/automatic",
+       "type": "choice",
+       "choices": [
+        "manual",
+        "automatic"
+       ]
+      }
+     ],
+     "preconditions": []
+    }
+   ],
    "status": "planned",
    "figma_node": null
   },
@@ -16821,10 +16847,26 @@
     "PTURRET"
    ],
    "url": "https://www.legendsofthejedi.com/help?topic=PTURRETS%20PTURRET",
-   "kind": "passive",
+   "kind": "command",
    "area": "space",
-   "pattern": "readout",
-   "variants": [],
+   "pattern": "form",
+   "variants": [
+    {
+     "syntax": "pturrets <manual/automatic>",
+     "pattern": "form",
+     "args": [
+      {
+       "name": "manual/automatic",
+       "type": "choice",
+       "choices": [
+        "manual",
+        "automatic"
+       ]
+      }
+     ],
+     "preconditions": []
+    }
+   ],
    "status": "planned",
    "figma_node": null
   },
