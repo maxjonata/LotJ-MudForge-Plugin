@@ -4,9 +4,9 @@
 plugin = {
   id          = "lotj",
   name        = "LOTJ Companion",
-  version     = "0.1.0",
+  version     = "0.2.0",
   author      = "Mindcloud Team",
-  description = "Combat HUD, Force tracker, ship status, faction events, crafting progress, and character sheet for LOTJ.",
+  description = "Navigation panel with an isometric radar, public galaxy chart, ground mapper and live vitals for LOTJ.",
   settings    = { saveState = true },
 }
 
@@ -18,13 +18,32 @@ local WIDGET_SPACE_RADAR = nil
 local WIDGET_DATAPAD    = nil
 local scrapperCockpit = nil
 
+local function sendNavigationScan(command)
+  local session = getSession()
+  if not session or not session.connected then return false end
+  send(command)
+  focusPrompt()
+  return true
+end
+
+local function scheduleNavigationReadout(milliseconds, callback)
+  local timer = addTimer(milliseconds, callback)
+  if not timer or timer == "" then
+    callback()
+    return nil
+  end
+  return function() removeTimer(timer) end
+end
+
 -- ── Init: create all widgets ───────────────────────────────────
 function init()
   -- Load sub-widget modules
   local statusBar = loadModule("src/widgets/lotj-status-bar.lua")
   loadModule("src/widgets/lotj-comms-hub.lua")
-  loadModule("src/widgets/lotj-ground-map.lua")
+  local groundMap = loadModule("src/widgets/lotj-ground-map.lua")
   local shipPosition = loadModule("src/domain/ship-position.lua")
+  local radarScan = loadModule("src/domain/radar-scan.lua")
+  local publicGalaxy = loadModule("src/domain/public-galaxy.lua")
   local cockpitApplication = loadModule("src/application/scrapper-cockpit.lua")
   local cockpitWidget = loadModule("src/widgets/lotj-scrapper-cockpit.lua")
 
@@ -102,8 +121,25 @@ function init()
   -- Initialize sub-widgets with widget IDs
   statusBar.init(WIDGET_STATUS_BAR)
   if initCommsHub then initCommsHub(WIDGET_COMMS_HUB) end
-  if initGroundMap then initGroundMap() end
-  scrapperCockpit = cockpitWidget.openWidget(cockpitApplication, shipPosition)
+  local navigation = cockpitWidget.create({
+    publicGalaxy = publicGalaxy,
+    openMap = groundMap.open,
+    openComms = function()
+      if WIDGET_COMMS_HUB then showWidget(WIDGET_COMMS_HUB, true) end
+    end,
+  })
+  if navigation then
+    scrapperCockpit = cockpitApplication.new({
+      shipPosition = shipPosition,
+      radarScan = radarScan,
+      publish = navigation.publish,
+      publishSystem = navigation.publishSystem,
+      scan = sendNavigationScan,
+      schedule = scheduleNavigationReadout,
+    })
+    navigation.bind(scrapperCockpit)
+  end
+  groundMap.init(navigation and navigation.publishRoom)
 
   -- Register theme on connect (also handled in onConnect for reconnects)
   registerLOTJTheme()
@@ -122,6 +158,16 @@ function init()
         scrapperCockpit.observe(data.posX, data.posY, data.posZ)
       else
         scrapperCockpit.observe()
+      end
+    end
+  end)
+  onGMCPUpdate("Ship.System", function(data)
+    local session = getSession()
+    if scrapperCockpit and session and session.connected then
+      if type(data) == "table" then
+        scrapperCockpit.observeSystem(data.x, data.y)
+      else
+        scrapperCockpit.observeSystem()
       end
     end
   end)
@@ -191,20 +237,23 @@ function onConnect(sessionId)
   loadSavedState()
   local session = getSession()
   if scrapperCockpit and session and session.id == sessionId and session.connected then
-    scrapperCockpit.observe()
+    scrapperCockpit.resetSession()
   end
 end
 
 function onDisconnect(sessionId)
   local session = getSession()
   if scrapperCockpit and (not session or (session.id == sessionId and not session.connected)) then
-    scrapperCockpit.observe()
+    scrapperCockpit.resetSession()
   end
 end
 
 function onLine(sessionId, rawLine, cleanLine)
-  -- Parse combat events, prompt data, faction messages
-  -- Return false to suppress sensitive combat info display
+  if not scrapperCockpit then return end
+  local session = getSession()
+  if session and session.connected and session.id == sessionId then
+    scrapperCockpit.readLine(cleanLine)
+  end
 end
 
 function onCommand(sessionId, command)
