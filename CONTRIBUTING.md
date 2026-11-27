@@ -62,6 +62,17 @@ them in the desktop app, use a throwaway world with the release plugin off:
 
 Add a scenario for every feature that crosses layers, and list it in the index.
 
+Two client rules shape the DEV plugin (seen in MudForge 2.0.6762):
+
+- A plugin cannot reassign MudForge API names such as `send`. Production
+  modules therefore take `send`, `getSession`, the timers, `createWidget`,
+  `sendWidgetMessage`, `registerWidgetEvent` and `onGMCPUpdate` from
+  `LotjHost` when it is set. The release plugin never sets it.
+- The hot reload matches a saved file to a plugin by its `plugin = { id }`
+  table and did not refresh the imported `src/` modules. The installer serves
+  the production modules from `release/` instead, and renames the entry
+  point's table in that copy only.
+
 ## Verification and review
 
 1. Review the diff for scope and run `git diff --check` (use `git diff --cached --check` for staged changes). Run focused tests or lint checks for the affected paths. In the PR, state what ran, what passed, and what could not be run or did not apply.

@@ -19,7 +19,7 @@ local function find(lines, pattern)
 end
 
 do -- loading the DEV plugin runs every scenario once and reports a summary
-  local host = fake_host.new()
+  local host = fake_host.new({ protectApi = true })
   load_env("dev/main.lua", host.env)()
   assert(host.env.plugin.name == "LotJ Plugin DEV" and host.env.plugin.id == "lotj-dev",
     "the DEV plugin keeps its own identity after loading the production entry point")
@@ -40,7 +40,7 @@ do -- loading the DEV plugin runs every scenario once and reports a summary
 end
 
 do -- a failing scenario is reported, the run continues, and state is reset
-  local host = fake_host.new()
+  local host = fake_host.new({ protectApi = true })
   load_env("dev/main.lua", host.env)()
   host.env.init()
   local harness = host.env.LotjDev

@@ -2,6 +2,12 @@
 -- LOTJ Ground Map widget using MudForge type="map" and Mapper API §11.5
 -- Part of the LotJ MudForge Plugin
 
+-- Host port (QA-07): a plugin cannot reassign MudForge API names, so the DEV
+-- harness (dev/harness.lua) supplies recorders through LotjHost. Release: nil.
+local host = LotjHost or {}
+local createWidget = host.createWidget or createWidget
+local onGMCPUpdate = host.onGMCPUpdate or onGMCPUpdate
+
 local groundMap = nil
 local mapInitialized = false
 local mapGeneration = 0

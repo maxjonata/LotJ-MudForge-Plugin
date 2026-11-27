@@ -1,6 +1,11 @@
 -- lotj-status-bar.lua
 -- Two-row live status bar: ship row (conditional) + vitals row with wimpy tick overlay
 
+-- Host port (QA-07): a plugin cannot reassign MudForge API names, so the DEV
+-- harness (dev/harness.lua) supplies recorders through LotjHost. Release: nil.
+local host = LotjHost or {}
+local sendWidgetMessage = host.sendWidgetMessage or sendWidgetMessage
+
 local statusBar = nil
 
 function initStatusBar(id)

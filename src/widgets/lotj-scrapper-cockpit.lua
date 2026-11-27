@@ -1,3 +1,11 @@
+-- Host port (QA-07): a plugin cannot reassign MudForge API names, so the DEV
+-- harness (dev/harness.lua) supplies recorders through LotjHost. Release: nil.
+local host = LotjHost or {}
+local createWidget = host.createWidget or createWidget
+local getSession = host.getSession or getSession
+local sendWidgetMessage = host.sendWidgetMessage or sendWidgetMessage
+local registerWidgetEvent = host.registerWidgetEvent or registerWidgetEvent
+
 local HTML = [=[
 <!doctype html>
 <html lang="en">

@@ -11,8 +11,10 @@ plugin = {
 }
 local devPlugin = plugin
 
-loadModule("dev/harness.lua") -- must run first: it replaces the host ports
-loadModule("src/lotj.lua")    -- the production entry point, hooks included
+loadModule("dev/harness.lua") -- must run first: it supplies LotjHost
+-- The production entry point, hooks included. Installed copies serve it from
+-- release/ (scripts/dev/install_dev_plugin.py); the repo checkout from src/.
+loadModule(loadfile("release/lotj.lua") and "release/lotj.lua" or "src/lotj.lua")
 plugin = devPlugin
 
 local productionInit = init
