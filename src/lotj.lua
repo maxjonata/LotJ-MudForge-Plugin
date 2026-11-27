@@ -17,6 +17,7 @@ local WIDGET_SHIP_HUD   = nil
 local WIDGET_SPACE_RADAR = nil
 local WIDGET_DATAPAD    = nil
 local scrapperCockpit = nil
+local commsHub, chatLine
 
 local function sendNavigationScan(command)
   local session = getSession()
@@ -39,7 +40,8 @@ end
 function init()
   -- Load sub-widget modules
   local statusBar = loadModule("src/widgets/lotj-status-bar.lua")
-  loadModule("src/widgets/lotj-comms-hub.lua")
+  local commsWidget = loadModule("src/widgets/lotj-comms-hub.lua")
+  local chatParser = loadModule("src/domain/chat-line.lua")
   local groundMap = loadModule("src/widgets/lotj-ground-map.lua")
   local shipPosition = loadModule("src/domain/ship-position.lua")
   local radarScan = loadModule("src/domain/radar-scan.lua")
@@ -120,7 +122,8 @@ function init()
 
   -- Initialize sub-widgets with widget IDs
   statusBar.init(WIDGET_STATUS_BAR)
-  if initCommsHub then initCommsHub(WIDGET_COMMS_HUB) end
+  commsWidget.init(WIDGET_COMMS_HUB)
+  commsHub, chatLine = commsWidget, chatParser
   local navigation = cockpitWidget.create({
     publicGalaxy = publicGalaxy,
     openMap = groundMap.open,
@@ -236,8 +239,9 @@ function onConnect(sessionId)
   -- Load saved state
   loadSavedState()
   local session = getSession()
-  if scrapperCockpit and session and session.id == sessionId and session.connected then
-    scrapperCockpit.resetSession()
+  if session and session.id == sessionId and session.connected then
+    if scrapperCockpit then scrapperCockpit.resetSession() end
+    if commsHub then commsHub.resetHistory() end
   end
 end
 
@@ -249,10 +253,12 @@ function onDisconnect(sessionId)
 end
 
 function onLine(sessionId, rawLine, cleanLine)
-  if not scrapperCockpit then return end
   local session = getSession()
-  if session and session.connected and session.id == sessionId then
-    scrapperCockpit.readLine(cleanLine)
+  if not session or not session.connected or session.id ~= sessionId then return end
+  if scrapperCockpit then scrapperCockpit.readLine(cleanLine) end
+  if commsHub and chatLine then
+    local message = chatLine.read(cleanLine)
+    if message then commsHub.handleChatMessage(message) end
   end
 end
 

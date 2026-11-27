@@ -103,8 +103,12 @@ for the initial load and display checks.
   client session. The Lua handlers send
   `enemyPercent`, but the embedded HTML reads `percent`, so the opponent gauge
   is not fully wired.
-- **Comms Hub:** Tab UI and message handlers exist. Live chat ingestion, combat
-  stats, and autopilot are not wired to game input in this snapshot.
+- **Comms Hub:** Recognized Local, CommNet, Clan, Broadcast, OOC, Tell, and
+  Imm lines appear in All and their channel tab. The hub keeps the most recent
+  250 lines per tab and resets history on a new connection. Opening a channel
+  clears its unread count. The terminal keeps the original line. Offline tests
+  use formats from the [community chat triggers](https://github.com/LotJ/lotj-mudlet-ui/blob/dc6ae9c471c6aa8e4dcfdb4814b79a4cc0c3753c/src/triggers/chat/triggers.json).
+  Live channel verification, Debug, combat stats, and autopilot are pending.
 - **Ground Map:** MudForge tracks the player's room. Text captures and map
   refreshes leave the native cursor in place. Offline fixtures cover room
   changes, click targets, and the resize handler. Live tracking still needs a

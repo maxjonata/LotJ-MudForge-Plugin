@@ -3,6 +3,7 @@ local function noop() end
 local cockpit_id = "lotj-scrapper-cockpit"
 local widgets, commands, gmcp = {}, {}, {}
 local widget_events, messages, sends = {}, {}, {}
+local comms_handler, chat_messages = nil, {}
 local opens, focus_calls = 0, 0
 local local_widgets, timers = {}, {}
 local status_ship_visible
@@ -28,6 +29,10 @@ local env = setmetatable({
     gmcp[event] = callback
   end,
   registerWidgetEvent = function(id, event, callback)
+    if id == "lotj-comms-hub" and event == "luamsg" then
+      assert(not comms_handler, "duplicate comms handler")
+      comms_handler = callback
+    end
     if id ~= cockpit_id then return end
     assert(not widget_events[event], "duplicate cockpit event handler")
     widget_events[event] = callback
@@ -49,6 +54,7 @@ local env = setmetatable({
   end,
   sendWidgetMessage = function(id, value)
     if id == cockpit_id then messages[#messages + 1] = value end
+    if id == "lotj-comms-hub" then chat_messages[#chat_messages + 1] = value end
     if id == "lotj-status-bar" and value.event == "shipVisible" then
       status_ship_visible = value.visible
     end
@@ -83,6 +89,16 @@ assert(#sends == 0 and opens == 0, "init must be passive")
 assert(commands["lotj-cockpit"], "missing /lotj-cockpit command")("")
 assert(commands["lotj-nav"], "missing /lotj-nav command")("")
 assert(opens == 2 and #sends == 0, "opening either alias must not send anything")
+
+local chat = "(OOC) Pilot: Checking in"
+assert(env.onLine("first", "\27[32m" .. chat .. "\27[0m", chat) == nil, "chat must leave the terminal line alone")
+env.onLine("other", chat, chat)
+env.onLine("first", "Your Coordinates: 0 0 0", "Your Coordinates: 0 0 0")
+assert(#chat_messages == 0)
+comms_handler({ event = "ready" })
+assert(#chat_messages == 1 and chat_messages[1].event == "chatMessage")
+assert(chat_messages[1].msg.channel == "ooc" and chat_messages[1].msg.text == "Checking in")
+assert(#sends == 0 and focus_calls == 0, "received chat must leave the game and prompt unchanged")
 
 local function post(event, data)
   widget_events.luamsg({ event = event, data = data })
