@@ -38,6 +38,7 @@ local HTML = [=[
       const p = message.position;
       position.textContent = p ? "X " + p.x + " · Y " + p.y + " · Z " + p.z
         : "Waiting for ship position";
+      if (message.connected) notice.textContent = "";
     }
     if (message.event === "disconnected") notice.textContent = "Connect to the game to scan.";
   });
@@ -63,7 +64,12 @@ local function openWidget(application, shipPosition)
     shipPosition = shipPosition,
     publish = function(position)
       if ready then
-        sendWidgetMessage(id, { event = "position", position = position })
+        local session = getSession()
+        sendWidgetMessage(id, {
+          event = "position",
+          position = position,
+          connected = session ~= nil and session.connected == true,
+        })
       end
     end,
     scan = function(kind)

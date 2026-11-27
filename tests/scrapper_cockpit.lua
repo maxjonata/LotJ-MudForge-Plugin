@@ -5,10 +5,10 @@ local widgets, commands, gmcp = {}, {}, {}
 local widget_events, messages, sends = {}, {}, {}
 local opens, focus_calls = 0, 0
 local status_ship_visible
-local connected = false
+local connected, session_id = true, "first"
 local env = setmetatable({
   getWindowSize = function() return { width = 1280, height = 800 } end,
-  getSession = function() return { connected = connected } end,
+  getSession = function() return { id = session_id, connected = connected } end,
   createWidget = function(config)
     widgets[config.name] = config
     return config.name
@@ -96,16 +96,24 @@ ship_info(nil)
 assert(status_ship_visible == false and latest().position == nil)
 ship_info({ posX = 0, posY = 0, posZ = 0 })
 assert(latest().position.x == 0, "zero is a valid coordinate")
-env.onDisconnect("test")
+connected = false
+env.onDisconnect("first")
 assert(latest().position == nil, "the position must clear on disconnect")
+local published = #messages
+ship_info({ posX = 99, posY = 99, posZ = 99 })
+assert(#messages == published, "a packet delivered after disconnect must not repopulate the cockpit")
 post("hover", {})
 post("selection", { xyz = "12 -34 0" })
 assert(#sends == 0 and focus_calls == 0, "passive input must never send or focus")
 
 post("radar", {})
 assert(#sends == 0 and latest().event == "disconnected" and focus_calls == 0)
-connected = true
-env.onConnect("test")
+connected, session_id = true, "second"
+env.onConnect("second")
+assert(latest().event == "position" and latest().connected, "connection must dismiss the scan notice")
+ship_info({ posX = 20, posY = 0, posZ = 0 })
+env.onDisconnect("first")
+assert(latest().position.x == 20, "a late disconnect must not clear the current position")
 post("radar", { command = "launch" })
 post("proximity", {})
 assert(#sends == 2 and sends[1] == "radar" and sends[2] == "proximity" and focus_calls == 2,

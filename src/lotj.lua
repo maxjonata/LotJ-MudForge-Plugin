@@ -116,7 +116,8 @@ function init()
   onGMCPUpdate("Ship.Info", function(data)
     if type(data) ~= "table" then data = nil end
     statusBar.onGMCPUpdateShipInfo(data)
-    if scrapperCockpit then
+    local session = getSession()
+    if scrapperCockpit and session and session.connected then
       if data then
         scrapperCockpit.observe(data.posX, data.posY, data.posZ)
       else
@@ -188,10 +189,17 @@ function onConnect(sessionId)
   registerLOTJTheme()
   -- Load saved state
   loadSavedState()
+  local session = getSession()
+  if scrapperCockpit and session and session.id == sessionId and session.connected then
+    scrapperCockpit.observe()
+  end
 end
 
 function onDisconnect(sessionId)
-  if scrapperCockpit then scrapperCockpit.observe() end
+  local session = getSession()
+  if scrapperCockpit and (not session or (session.id == sessionId and not session.connected)) then
+    scrapperCockpit.observe()
+  end
 end
 
 function onLine(sessionId, rawLine, cleanLine)
