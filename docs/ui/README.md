@@ -69,8 +69,9 @@ Status strip on top; left 340 px = room panel on the ground or the current stati
 
 Shared pieces are Figma components; screens use instances, never redrawn copies.
 
-- **Radar 3D** (component "Radar 3D · painel"): source + age + range; three range rings; our ship with the commanded-course arrow (SHIPHEAD); every contact with a Δz stem from our plane; trail dots; dashed estimated heading only after two readings, "hdg ?" otherwise; planets in green; selected target ringed in red; view filters (ships, planets, missiles); contact list with distance and Δz sharing the selection; RADAR, PROX, CHAFF keys and range; legend behind "?".
+- **Radar 3D** (component "Radar 3D · painel"): source + age + range; three range rings; our ship with the commanded-course arrow (SHIPHEAD); every contact with a Δz stem from our plane; trail dots; dashed estimated heading only after two readings, "hdg ?" otherwise; planets in green; selected target ringed in red; view filters (ships, planets, missiles); contact list with distance and Δz sharing the selection; RADAR, PROX, CHAFF keys and range; translucent LEGEND button whose tooltip (on hover) holds the legend.
 - **Target cockpit**: state (none, selected, sent, lost); name, distance, Δz, heading; TARGET (confirm once per ship), FACE, FIRE ▾ (only when sent) with weapon list; lost = actions grey + RADAR.
 - **Room panel**: name, area/planet, description, people/ships/objects with ☰ menus, exit compass (open, none, locked), actions, source + age.
 - **RP log**: one timeline; say name column; indented emotes; comms band + channel bar + tag; own-line marker; dim OOC/system; filter chips with unread; game ANSI colours untouched.
-- **Holo map**: area name, explored %, deck selector, you, explored/seen rooms, open/locked exits, turbolift, faded other deck, legend, places list, controls.
+- **Holo map**: area name, explored %, deck selector, you, a dotted trail of your last 3 steps fading from your room to nothing, explored/seen rooms, open/locked exits, turbolift, faded other deck, translucent LEGEND button with the legend as a hover tooltip, places list, controls.
+- **Legends** are never a fixed panel: always a translucent LEGEND button with the legend in a hover tooltip.

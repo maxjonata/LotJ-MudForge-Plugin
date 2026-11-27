@@ -520,6 +520,18 @@
    "name": "Radar 3D · painel",
    "kind": "component",
    "topics": []
+  },
+  {
+   "id": "20:2585",
+   "name": "Radar · legenda no hover (estado)",
+   "kind": "state",
+   "topics": []
+  },
+  {
+   "id": "20:2696",
+   "name": "Mapa · legenda no hover (estado)",
+   "kind": "state",
+   "topics": []
   }
  ]
 }
