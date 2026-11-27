@@ -196,12 +196,15 @@ def _kind(t):
     return "command"
 
 
-def _area(t, kind, pattern):
+def _area(t, kind, pattern, variants=()):
     if kind == "reference":
         return "reference"
     if pattern == "craft":
         return "crafting"
     keywords = {k.lower() for k in t["keywords"]}
+    clan = any(k.startswith("clan") for k in keywords)
+    if not clan and any(a["type"] == "ship" for v in variants for a in v["args"]):
+        return "space"
     for area, vocabulary in _AREA_KEYWORDS.items():
         if keywords & vocabulary:
             return area
@@ -249,7 +252,7 @@ def entry(t):
         "keywords": t["keywords"],
         "url": t["url"],
         "kind": kind,
-        "area": _area(t, kind, pattern),
+        "area": _area(t, kind, pattern, variants),
         "pattern": pattern,
         "variants": variants,
         "status": "planned",

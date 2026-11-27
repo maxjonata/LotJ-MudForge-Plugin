@@ -1447,7 +1447,7 @@
    ],
    "url": "https://www.legendsofthejedi.com/help?topic=ARENA",
    "kind": "command",
-   "area": "combat",
+   "area": "space",
    "pattern": "list",
    "variants": [
     {
@@ -2581,7 +2581,7 @@
    ],
    "url": "https://www.legendsofthejedi.com/help?topic=BOARD",
    "kind": "command",
-   "area": "datapad",
+   "area": "space",
    "pattern": "target",
    "variants": [
     {

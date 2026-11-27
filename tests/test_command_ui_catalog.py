@@ -97,6 +97,10 @@ class PatternTests(unittest.TestCase):
         self.assertEqual(bc.entry(topic("AFFLICTION", ["feel affliction <target>"], ["force"]))["area"], "force")
         self.assertEqual(bc.entry(topic("TIME", ["time"]))["area"], "general")
 
+    def test_a_ship_argument_routes_to_space(self):
+        self.assertEqual(bc.entry(topic("BOARD", ["board <target ship>"], ["ship"]))["area"], "space")
+        self.assertEqual(bc.entry(topic("CLANBUYSHIP", ["clanbuyship <ship>"], ["ship"]))["area"], "clan")
+
     def test_help_indexes_are_not_routed_by_prose_tags(self):
         self.assertEqual(bc.entry(topic("NEWBIE_INDEX INDEX", ["HELP #"], ["ship"]))["area"], "general")
         self.assertEqual(bc.entry(topic("CHAFF", ["chaff"], ["ship"]))["area"], "space")
