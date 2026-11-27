@@ -52,6 +52,8 @@ STATIONS = {
     "fleet": "Esquadrão e frota: squadron, battlegroup, radar de frota.",
     "engineering": "Engenharia e logística: atracar, baias, combustível, carga, reparo.",
     "shipyard": "Estaleiro e propriedade: comprar, vender, transferir, renomear.",
+    "room": "Sala (FIG-03): saídas, movimento, portas, turbolift, entidades e objetos.",
+    "rp": "RP e comunicações (FIG-03): say, emote, tell, canais, idioma e comlink.",
 }
 
 _TOKEN_RE = re.compile(r"<([^<>]+)>|\(([^()]+)\)|\[([^\[\]]+)\]")

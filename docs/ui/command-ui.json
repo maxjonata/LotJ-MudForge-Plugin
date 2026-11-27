@@ -37,7 +37,9 @@
   "comms": "Comunicação da nave: rádio e saudação.",
   "fleet": "Esquadrão e frota: squadron, battlegroup, radar de frota.",
   "engineering": "Engenharia e logística: atracar, baias, combustível, carga, reparo.",
-  "shipyard": "Estaleiro e propriedade: comprar, vender, transferir, renomear."
+  "shipyard": "Estaleiro e propriedade: comprar, vender, transferir, renomear.",
+  "room": "Sala (FIG-03): saídas, movimento, portas, turbolift, entidades e objetos.",
+  "rp": "RP e comunicações (FIG-03): say, emote, tell, canais, idioma e comlink."
  },
  "counts": {
   "comms": 16,
@@ -2455,7 +2457,7 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "rp",
    "status": "planned",
    "figma_node": null
   },
@@ -3169,7 +3171,7 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "rp",
    "status": "planned",
    "figma_node": null
   },
@@ -4049,7 +4051,7 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "rp",
    "status": "planned",
    "figma_node": null
   },
@@ -4173,7 +4175,7 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "rp",
    "status": "planned",
    "figma_node": null
   },
@@ -4839,7 +4841,7 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "rp",
    "status": "planned",
    "figma_node": null
   },
@@ -5670,7 +5672,7 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "room",
    "status": "planned",
    "figma_node": null
   },
@@ -6084,7 +6086,7 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "rp",
    "status": "planned",
    "figma_node": null
   },
@@ -8145,7 +8147,7 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "room",
    "status": "planned",
    "figma_node": null
   },
@@ -8720,7 +8722,7 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "rp",
    "status": "planned",
    "figma_node": null
   },
@@ -9135,7 +9137,7 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "room",
    "status": "planned",
    "figma_node": null
   },
@@ -9456,7 +9458,7 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "room",
    "status": "planned",
    "figma_node": null
   },
@@ -9478,7 +9480,7 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "room",
    "status": "planned",
    "figma_node": null
   },
@@ -10133,7 +10135,7 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "room",
    "status": "planned",
    "figma_node": null
   },
@@ -11067,7 +11069,7 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "room",
    "status": "planned",
    "figma_node": null
   },
@@ -12152,7 +12154,7 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "rp",
    "status": "planned",
    "figma_node": null
   },
@@ -12933,7 +12935,7 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "room",
    "status": "planned",
    "figma_node": null
   },
@@ -13068,7 +13070,7 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "rp",
    "status": "planned",
    "figma_node": null
   },
@@ -13415,7 +13417,7 @@
    "pattern": "reference",
    "variants": [],
    "notes": [],
-   "station": null,
+   "station": "room",
    "status": "planned",
    "figma_node": null
   },
@@ -16210,7 +16212,7 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "rp",
    "status": "planned",
    "figma_node": null
   },
@@ -16435,7 +16437,7 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "room",
    "status": "planned",
    "figma_node": null
   },
@@ -16478,7 +16480,7 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "room",
    "status": "planned",
    "figma_node": null
   },
@@ -16968,7 +16970,7 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "room",
    "status": "planned",
    "figma_node": null
   },
@@ -17077,7 +17079,7 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "rp",
    "status": "planned",
    "figma_node": null
   },
@@ -18369,7 +18371,7 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "room",
    "status": "planned",
    "figma_node": null
   },
@@ -19454,7 +19456,7 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "room",
    "status": "planned",
    "figma_node": null
   },
@@ -20097,7 +20099,7 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "rp",
    "status": "planned",
    "figma_node": null
   },
@@ -20128,7 +20130,7 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "rp",
    "status": "planned",
    "figma_node": null
   },
@@ -20155,7 +20157,7 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "room",
    "status": "planned",
    "figma_node": null
   },
@@ -20312,7 +20314,7 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "room",
    "status": "planned",
    "figma_node": null
   },
@@ -20946,7 +20948,7 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "rp",
    "status": "planned",
    "figma_node": null
   },
@@ -21336,7 +21338,7 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "room",
    "status": "planned",
    "figma_node": null
   },
@@ -21789,7 +21791,7 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "rp",
    "status": "planned",
    "figma_node": null
   },
@@ -22742,7 +22744,7 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "room",
    "status": "planned",
    "figma_node": null
   },
@@ -22921,7 +22923,7 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "rp",
    "status": "planned",
    "figma_node": null
   },
@@ -22981,7 +22983,7 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "rp",
    "status": "planned",
    "figma_node": null
   },
@@ -23121,7 +23123,7 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "rp",
    "status": "planned",
    "figma_node": null
   },
@@ -23375,7 +23377,7 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "rp",
    "status": "planned",
    "figma_node": null
   },
@@ -24050,7 +24052,7 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "rp",
    "status": "planned",
    "figma_node": null
   },
@@ -24092,7 +24094,7 @@
    "pattern": "reference",
    "variants": [],
    "notes": [],
-   "station": null,
+   "station": "room",
    "status": "planned",
    "figma_node": null
   },
@@ -25490,7 +25492,7 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "rp",
    "status": "planned",
    "figma_node": null
   },
@@ -25712,7 +25714,7 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "rp",
    "status": "planned",
    "figma_node": null
   },

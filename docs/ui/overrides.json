@@ -23,8 +23,14 @@
  "BATTLEGROUP": {
   "station": "fleet"
  },
+ "BEEP": {
+  "station": "rp"
+ },
  "BOARD": {
   "station": "access"
+ },
+ "BROADCAST": {
+  "station": "rp"
  },
  "BUYSHIP SELLSHIP": {
   "station": "shipyard"
@@ -32,11 +38,20 @@
  "CARGO LISTCARGO BUYCARGO SELLCARGO JETTISON": {
   "station": "engineering"
  },
+ "CGTALK": {
+  "station": "rp"
+ },
  "CHAFF": {
   "station": "weapons"
  },
+ "CHANNEL CHANNELS": {
+  "station": "rp"
+ },
  "CLANBUYSHIP": {
   "station": "shipyard"
+ },
+ "CLANTALK": {
+  "station": "rp"
  },
  "CLOAK CLOAKING": {
   "station": "weapons"
@@ -44,14 +59,35 @@
  "CLOSEHATCH OPENHATCH HATCH": {
   "station": "access"
  },
+ "CONSIDER": {
+  "station": "room"
+ },
  "COORDINATES CALC CALCULATE NAVCOMPUTER": {
   "station": "nav"
+ },
+ "CURRENTCOM": {
+  "station": "rp"
  },
  "DOCK": {
   "station": "engineering"
  },
+ "DROP GET GIVE PUT TAKE": {
+  "station": "room"
+ },
  "EMERGENCY_REFUEL": {
   "station": "engineering"
+ },
+ "EMOTE , POSE SOCIAL": {
+  "station": "rp"
+ },
+ "ENTER LEAVE": {
+  "station": "room"
+ },
+ "EXAMINE LOOK": {
+  "station": "room"
+ },
+ "EXITS": {
+  "station": "room"
  },
  "FACE": {
   "station": "pilot"
@@ -62,8 +98,14 @@
  "FLEETRADAR": {
   "station": "fleet"
  },
+ "FOLLOW GROUP": {
+  "station": "room"
+ },
  "FUEL REFUEL": {
   "station": "engineering"
+ },
+ "GLANCE": {
+  "station": "room"
  },
  "HAIL": {
   "station": "comms"
@@ -74,17 +116,29 @@
  "HYPERSPACE HYPER LIGHTSPEED": {
   "station": "nav"
  },
+ "IMMCHAT MORTCHAT": {
+  "station": "rp"
+ },
  "INFO": {
   "station": "nav"
  },
+ "KNOCK": {
+  "station": "room"
+ },
  "LAND": {
   "station": "pilot"
+ },
+ "LANGUAGES LANGUAGE LEARN LANG": {
+  "station": "rp"
  },
  "LAUNCH": {
   "station": "pilot"
  },
  "LEAVESHIP": {
   "station": "access"
+ },
+ "LIFT": {
+  "station": "room"
  },
  "LIGHT": {
   "status": "inactive",
@@ -102,6 +156,21 @@
  "NAVSTAT NAVSTATUS NAVCHART": {
   "station": "nav"
  },
+ "NEWBIECHAT": {
+  "station": "rp"
+ },
+ "NORTH SOUTH EAST WEST UP DOWN": {
+  "station": "room"
+ },
+ "NORTHEAST NORTHWEST SOUTHEAST SOUTHWEST": {
+  "station": "room"
+ },
+ "OPEN CLOSE LOCK UNLOCK PICK": {
+  "station": "room"
+ },
+ "OSAY": {
+  "station": "rp"
+ },
  "PILOT": {
   "station": "access"
  },
@@ -111,6 +180,9 @@
  "PTALK": {
   "status": "inactive",
   "note": "Help: this command is no longer in use."
+ },
+ "PULL PRESS PUSH LEVERS PULLCHAINS SWITCHES BUTTONS": {
+  "station": "room"
  },
  "RADAR": {
   "station": "nav"
@@ -130,11 +202,35 @@
  "REPAIRSHIP SHIP_MAINTENANCE SHIPMAINTENANCE 'SHIP MAINTENANCE'": {
   "station": "engineering"
  },
+ "REST SLEEP STAND WAKE": {
+  "station": "room"
+ },
+ "SAY": {
+  "station": "rp"
+ },
+ "SAYTO": {
+  "station": "rp"
+ },
+ "SCAN": {
+  "station": "room"
+ },
+ "SEARCH": {
+  "station": "room"
+ },
  "SELFDESTRUCT": {
   "station": "engineering"
  },
+ "SHIPTALK": {
+  "station": "rp"
+ },
  "SHIP_SYSTEMS 'SHIP SYSTEMS' STATUS": {
   "station": "nav"
+ },
+ "SIT": {
+  "station": "room"
+ },
+ "SPEAK": {
+  "station": "rp"
  },
  "SPEED VELOCITY ACCELERATE": {
   "station": "pilot"
@@ -155,6 +251,21 @@
  "TARGET": {
   "station": "weapons"
  },
+ "TAXI": {
+  "station": "room"
+ },
+ "TELL REPLY": {
+  "station": "rp"
+ },
+ "TELL REPLY DM DIRECTMESSAGE": {
+  "station": "rp"
+ },
+ "THINK": {
+  "station": "rp"
+ },
+ "TONE": {
+  "station": "rp"
+ },
  "TRACTORBEAM 'TRACTOR BEAMS' TRACTOR": {
   "station": "weapons"
  },
@@ -167,6 +278,12 @@
  "TRANSPONDER": {
   "station": "nav"
  },
+ "TUNE": {
+  "station": "rp"
+ },
+ "TURBOLIFT": {
+  "station": "room"
+ },
  "UNDOCK": {
   "station": "engineering"
  },
@@ -175,5 +292,11 @@
  },
  "VECTOR COURSE TRAJECTORY": {
   "station": "pilot"
+ },
+ "WHISPER": {
+  "station": "rp"
+ },
+ "YELL": {
+  "station": "rp"
  }
 }
