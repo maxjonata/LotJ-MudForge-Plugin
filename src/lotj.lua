@@ -30,6 +30,7 @@ local WIDGET_DATAPAD    = nil
 local scrapperCockpit = nil
 local targetCockpit = nil
 local commsHub, chatLine
+local liveReadout -- UI-04: GMCP gauges on the station console
 
 local function sendGameCommand(command)
   local session = getSession()
@@ -72,6 +73,8 @@ function init()
   local commandForm = loadModule("src/domain/command-form.lua")
   local consoleApplication = loadModule("src/application/station-console.lua")
   local consoleWidget = loadModule("src/widgets/lotj-station-console.lua")
+  local liveRules = loadModule("src/domain/live-readout.lua")
+  local liveApplication = loadModule("src/application/live-readout.lua")
 
   -- Compute positions based on window size (60/40 split)
   local win = getWindowSize()
@@ -144,7 +147,7 @@ function init()
   })
   WIDGET_DATAPAD = datapad and datapad.id
   -- Station consoles (UI-03): every catalog command on a key, the palette and the Holocron.
-  consoleWidget.create({
+  local console = consoleWidget.create({
     kit = uiKit, font = uiFont, dock = dock,
     position = { x = datapadX + 20, y = datapadY + 20 },
     openDatapad = datapad and function()
@@ -154,7 +157,11 @@ function init()
     newApp = function(publish)
       return consoleApplication.new({ catalog = consoleCatalog, rules = commandForm, send = sendGameCommand, publish = publish })
     end,
+    newLive = function(publish)
+      return liveApplication.new({ rules = liveRules, publish = publish })
+    end,
   })
+  liveReadout = console and console.live
 
   -- Set initial active widget for canvas drawing
   setActiveWidget(WIDGET_SPACE_RADAR)
@@ -198,8 +205,16 @@ function init()
   registerWidgetEvents()
 
   -- Register GMCP handlers (onGMCPUpdate is MudForge's global hook)
-  onGMCPUpdate("Char.Vitals", onGMCPUpdateCharVitals)
+  -- One listener per package: each feeds its widget, then the live readouts.
+  local function observeLive(package, data)
+    if liveReadout then liveReadout.observe(package, data) end
+  end
+  onGMCPUpdate("Char.Vitals", function(data)
+    onGMCPUpdateCharVitals(data)
+    observeLive("Char.Vitals", data)
+  end)
   onGMCPUpdate("Ship.Info", function(data)
+    observeLive("Ship.Info", data)
     if type(data) ~= "table" then data = nil end
     statusBar.onGMCPUpdateShipInfo(data)
     local session = getSession()
@@ -221,7 +236,11 @@ function init()
       end
     end
   end)
-  onGMCPUpdate("Char.Enemy", onGMCPUpdateCharEnemy)
+  onGMCPUpdate("Char.Enemy", function(data)
+    onGMCPUpdateCharEnemy(data)
+    observeLive("Char.Enemy", data)
+  end)
+  onGMCPUpdate("Char.Info", function(data) observeLive("Char.Info", data) end)
   onGMCPUpdate("Char.Chat", onGMCPUpdateCharChat)
 end
 
@@ -284,6 +303,7 @@ function onConnect(sessionId)
     if scrapperCockpit then scrapperCockpit.resetSession() end
     if targetCockpit then targetCockpit.reset() end
     if commsHub then commsHub.resetHistory() end
+    if liveReadout then liveReadout.reset() end
   end
 end
 
@@ -293,6 +313,7 @@ function onDisconnect(sessionId)
     scrapperCockpit.resetSession()
     if targetCockpit then targetCockpit.reset() end
   end
+  if liveReadout and (not session or (session.id == sessionId and not session.connected)) then liveReadout.reset() end
 end
 
 function onLine(sessionId, rawLine, cleanLine)

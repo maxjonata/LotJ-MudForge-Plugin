@@ -12,4 +12,5 @@ return {
   "dev/scenarios/fed_triggers.lua",
   "dev/scenarios/datapad.lua",
   "dev/scenarios/station_console.lua",
+  "dev/scenarios/live_readout.lua",
 }
