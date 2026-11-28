@@ -152,7 +152,7 @@ def key_color(entry, station):
     p = entry["pattern"]
     if p == "toggle":
         return "blue"
-    if station == "combat" and p == "target":
+    if (station == "combat" or (isinstance(station, (tuple, list)) and entry.get("station") == "combat")) and p == "target":
         return "red"
     if p == "target":
         return "white"
@@ -161,7 +161,8 @@ def key_color(entry, station):
 
 def card(svg, x, y, w, title, subtitle, station, cols=3, extra_top=0, notes=(), filt=None, lights=()):
     """Console card with one key per command of a station. Returns the card height."""
-    es = [e for e in catalog()["entries"] if e.get("station") == station and e["kind"] != "reference" and (filt is None or filt(e))]
+    stations = station if isinstance(station, (tuple, list)) else (station,)
+    es = [e for e in catalog()["entries"] if e.get("station") in stations and e["kind"] != "reference" and (filt is None or filt(e))]
     keys, seen = [], set()
     for e in es:
         if e["pattern"] == "readout":
@@ -212,7 +213,7 @@ def card(svg, x, y, w, title, subtitle, station, cols=3, extra_top=0, notes=(), 
     for n in notes:
         svg.text(x + 14, cy, n, 8, PAL["dim"])
         cy += 13
-    svg.text(x + 14, y + h - 16, f"{len(es)} topics · station '{station}'", 8, PAL["faint"])
+    svg.text(x + 14, y + h - 16, f"{len(es)} topics · station '{'/'.join(stations)}'", 8, PAL["faint"])
     return h
 
 

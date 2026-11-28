@@ -49,7 +49,12 @@
   "workshop": "Oficina (FIG-05): fabricar, coletar, minerar, construir e melhorar.",
   "slicer": "Slicer e segurança (FIG-05): hackear, travas, câmeras, perícia e sabotagem.",
   "droids": "Droides (FIG-05): estado, nome, venda, reparo e melhoria de droides.",
-  "datapad": "Datapad (FIG-05): datamem, datastat, mail e notas."
+  "datapad": "Datapad (FIG-05): datamem, datastat, mail e notas.",
+  "clan": "Clã (FIG-06): membros, cargos, divisões, recompensas, crimes e mensagens.",
+  "planet": "Planetas (FIG-06): planetas, escudos, governo, residência e prisão.",
+  "events": "Eventos e comunidade (FIG-06): notícias, votações, RPC, dados e páginas.",
+  "onboarding": "Boas-vindas e conta (FIG-06): ajuda, raça, cores, tela, conta e personagem.",
+  "system": "Sistema e utilidades (FIG-06): o resto dos comandos, sem painel próprio."
  },
  "counts": {
   "comms": 16,
@@ -83,9 +88,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "system",
+   "status": "designed",
+   "figma_node": "27:2536"
   },
   {
    "topic": "\"SMALL_SPACECRAFT\" \"MEDIUM_SPACECRAFT\" \"CORVETTE_SPACECRAFT\" \"LARGE_SPACECRAFT\" \"HEAVY_SPACECRAFT\"",
@@ -103,8 +108,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "'CONTAINERS' 'CONTAINER'",
@@ -119,8 +124,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "'FEEL ARMOR' ARMOR_SPELL 'FORCE ARMOR'",
@@ -192,8 +197,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "'KNOW ESSENCE' KNOW_ESSENCE",
@@ -297,9 +302,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "system",
+   "status": "designed",
+   "figma_node": "27:2536"
   },
   {
    "topic": "'LIGHTSABER THROW' LIGHTSABER_THROW",
@@ -346,8 +351,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "'REMOVE MASKING' REMOVE_MASKING",
@@ -389,8 +394,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "10",
@@ -404,8 +409,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "11",
@@ -419,8 +424,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "12",
@@ -434,8 +439,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "13",
@@ -449,8 +454,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "14",
@@ -464,8 +469,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "15",
@@ -479,8 +484,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "16",
@@ -494,8 +499,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "17",
@@ -509,8 +514,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "2",
@@ -524,8 +529,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "3",
@@ -539,8 +544,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "4",
@@ -554,8 +559,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "5",
@@ -569,8 +574,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "6",
@@ -584,8 +589,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "7",
@@ -599,8 +604,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "8",
@@ -614,8 +619,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "9",
@@ -629,8 +634,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "A",
@@ -644,8 +649,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "ABDICATE",
@@ -670,9 +675,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "clan",
+   "status": "designed",
+   "figma_node": "27:2219"
   },
   {
    "topic": "ABEDNEDO",
@@ -686,8 +691,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "ABYSSIN  BYSS",
@@ -702,8 +707,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "ACCEPT",
@@ -836,9 +841,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "onboarding",
+   "status": "designed",
+   "figma_node": "27:2440"
   },
   {
    "topic": "ACONFIG",
@@ -880,8 +885,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "ACTIONDESC",
@@ -906,9 +911,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "onboarding",
+   "status": "designed",
+   "figma_node": "27:2440"
   },
   {
    "topic": "ADDCREW CREW",
@@ -956,8 +961,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "ADDPILOT REMPILOT",
@@ -1010,8 +1015,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "ADVANCED_DISARM 'ADVANCED DISARM'",
@@ -1026,8 +1031,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "ADVANCED_ELECTRONICS 'ADVANCED ELECTRONICS'",
@@ -1057,8 +1062,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "AFFECTED 'AFFECTED BY'",
@@ -1218,8 +1223,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "ALIGNMENT ALIGN",
@@ -1261,8 +1266,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "AMBUSH",
@@ -1339,8 +1344,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "ANSI",
@@ -1365,9 +1370,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "onboarding",
+   "status": "designed",
+   "figma_node": "27:2440"
   },
   {
    "topic": "APPLICATIONS APPLICATION APPS APP",
@@ -1384,8 +1389,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "APPOINT",
@@ -1419,9 +1424,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "clan",
+   "status": "designed",
+   "figma_node": "27:2219"
   },
   {
    "topic": "APPRENTICE APPRENTICESTAT",
@@ -1546,8 +1551,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "AREAS COMMANDS SOCIALS",
@@ -1581,9 +1586,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "planet",
+   "status": "designed",
+   "figma_node": "27:2356"
   },
   {
    "topic": "ARENA",
@@ -1659,9 +1664,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "system",
+   "status": "designed",
+   "figma_node": "27:2536"
   },
   {
    "topic": "ARKANIAN  ARKANIA",
@@ -1676,8 +1681,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "ARM",
@@ -1781,8 +1786,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "ARMOR_GUIDE",
@@ -1796,8 +1801,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "ARMOR_TABLE 'ARMOR TABLE' ARMORTABLE",
@@ -1813,8 +1818,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "ASTROMECH ASTRO_DROID 'ASTRO DROID'",
@@ -1830,8 +1835,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "AUTOLAUNCH",
@@ -1947,8 +1952,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "AWAKEN FORCE",
@@ -2011,8 +2016,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "BACKSTAB CIRCLE",
@@ -2065,8 +2070,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "BANK",
@@ -2245,8 +2250,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "BARAGWIN",
@@ -2260,8 +2265,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "BASH",
@@ -2534,8 +2539,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "BIND HANDCUFFS",
@@ -2582,8 +2587,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "BIOTEMPLATE_SHEET",
@@ -2597,8 +2602,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "BITH",
@@ -2612,8 +2617,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "BLACKJACK",
@@ -2698,9 +2703,9 @@
    "pattern": "readout",
    "variants": [],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "combat",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "BLOCK",
@@ -2752,9 +2757,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "weapons",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "BLOOD TOXICITY",
@@ -2768,8 +2773,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "BLOODBATH",
@@ -2865,9 +2870,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "weapons",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "BOMBSQUAD BOMB_SQUAD 'BOMB SQUAD'",
@@ -2883,8 +2888,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "BOTHAN  BOTHAWUI",
@@ -2899,8 +2904,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "BOTTING BOT",
@@ -2931,9 +2936,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "system",
+   "status": "designed",
+   "figma_node": "27:2536"
   },
   {
    "topic": "BOUNTY CLANBOUNTY",
@@ -3022,9 +3027,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "clan",
+   "status": "designed",
+   "figma_node": "27:2219"
   },
   {
    "topic": "BOUNTY_HUNTING 'BOUNTY HUNTING'",
@@ -3039,8 +3044,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "BOWCASTER BOWCASTERS 'ADVANCED BOWCASTER' 'BOWCASTER MASTERY'",
@@ -3056,9 +3061,9 @@
    "pattern": "readout",
    "variants": [],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "combat",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "BREACH",
@@ -3198,8 +3203,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "BUG IDEA TYPO COMPLAIN",
@@ -3234,9 +3239,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "events",
+   "status": "designed",
+   "figma_node": "27:2394"
   },
   {
    "topic": "BUG IDEA TYPO SUGGESTION",
@@ -3271,9 +3276,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "events",
+   "status": "designed",
+   "figma_node": "27:2394"
   },
   {
    "topic": "BUILDPORT BP",
@@ -3288,8 +3293,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "BUILDSHIP BLUEPRINT",
@@ -3331,9 +3336,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "shipyard",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "BUILDSTRUCTURE",
@@ -3490,8 +3495,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "BUYSHIP SELLSHIP",
@@ -3576,8 +3581,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "BUZZ INVITE",
@@ -3614,9 +3619,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "system",
+   "status": "designed",
+   "figma_node": "27:2536"
   },
   {
    "topic": "C",
@@ -3630,8 +3635,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "CALL",
@@ -3705,8 +3710,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "CAMOUFLAGE",
@@ -3743,8 +3748,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "CAPITALRULES CAPITAL_RULES 'CAPITAL RULES'",
@@ -3760,8 +3765,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "CAPTURE",
@@ -3797,8 +3802,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "CARGO LISTCARGO BUYCARGO SELLCARGO JETTISON",
@@ -3973,8 +3978,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "CENSOR",
@@ -4003,9 +4008,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "system",
+   "status": "designed",
+   "figma_node": "27:2536"
   },
   {
    "topic": "CEREAN  CEREANS",
@@ -4020,8 +4025,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "CGRULES",
@@ -4035,8 +4040,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "CGTALK",
@@ -4083,9 +4088,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "clan",
+   "status": "designed",
+   "figma_node": "27:2219"
   },
   {
    "topic": "CHAFF",
@@ -4122,8 +4127,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "CHALLENGE",
@@ -4201,8 +4206,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "CHAOTIC_GOOD",
@@ -4216,8 +4221,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "CHARISMA CHA",
@@ -4232,8 +4237,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "CHARSHEET CHARACTER SHEET",
@@ -4322,8 +4327,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "CHISS CSILLA CHEUNH",
@@ -4339,8 +4344,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "CHOKE",
@@ -4383,8 +4388,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "CLAIMBOUNTY",
@@ -4430,8 +4435,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "CLANAPP",
@@ -4445,8 +4450,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "CLANBASE CLAN_BASE",
@@ -4461,8 +4466,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "CLANBOUNTY",
@@ -4497,9 +4502,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "clan",
+   "status": "designed",
+   "figma_node": "27:2219"
   },
   {
    "topic": "CLANBUYSHIP",
@@ -4561,9 +4566,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "clan",
+   "status": "designed",
+   "figma_node": "27:2219"
   },
   {
    "topic": "CLANDB DATANET",
@@ -4615,9 +4620,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "clan",
+   "status": "designed",
+   "figma_node": "27:2219"
   },
   {
    "topic": "CLANDB_SETUP",
@@ -4631,8 +4636,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "CLANDB_SETUP2",
@@ -4646,8 +4651,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "CLANDESCRIPTION",
@@ -4667,9 +4672,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "clan",
+   "status": "designed",
+   "figma_node": "27:2219"
   },
   {
    "topic": "CLANDROIDS CONTROLDROID 'DROIDS CLAN' CLANDROID",
@@ -4709,9 +4714,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "clan",
+   "status": "designed",
+   "figma_node": "27:2219"
   },
   {
    "topic": "CLANLIMITS CAPITALSHIP_OWNERSHIP",
@@ -4726,8 +4731,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "CLANMESSAGE CLAN_MESSAGE",
@@ -4757,9 +4762,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "clan",
+   "status": "designed",
+   "figma_node": "27:2219"
   },
   {
    "topic": "CLANMOTD",
@@ -4785,9 +4790,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "clan",
+   "status": "designed",
+   "figma_node": "27:2219"
   },
   {
    "topic": "CLANSELLSHIP SELLCLANSHIP",
@@ -4824,9 +4829,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "clan",
+   "status": "designed",
+   "figma_node": "27:2219"
   },
   {
    "topic": "CLANTALK",
@@ -4922,9 +4927,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "clan",
+   "status": "designed",
+   "figma_node": "27:2219"
   },
   {
    "topic": "CLAN_EVENTS 'CLAN EVENTS' CLANEVENTS",
@@ -4951,9 +4956,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "clan",
+   "status": "designed",
+   "figma_node": "27:2219"
   },
   {
    "topic": "CLAN_GREET",
@@ -4973,9 +4978,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "clan",
+   "status": "designed",
+   "figma_node": "27:2219"
   },
   {
    "topic": "CLAN_GUIDE",
@@ -4989,8 +4994,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "CLARITY",
@@ -5029,8 +5034,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "CLEANSE MIND",
@@ -5072,9 +5077,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "system",
+   "status": "designed",
+   "figma_node": "27:2536"
   },
   {
    "topic": "CLIENT CLIENTS MUSHCLIENT MUDLET CMUD",
@@ -5092,8 +5097,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "CLIMB",
@@ -5187,8 +5192,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "CLOSEHATCH OPENHATCH HATCH",
@@ -5277,8 +5282,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "COLORCHECK",
@@ -5303,9 +5308,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "onboarding",
+   "status": "designed",
+   "figma_node": "27:2440"
   },
   {
    "topic": "COLOUR COLOR COLOURS COLORS PCOLORS",
@@ -5323,8 +5328,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "COMBAT",
@@ -5338,8 +5343,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "COMBATDROID_CONTRACT",
@@ -5353,8 +5358,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "COMBATFAQ",
@@ -5368,8 +5373,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "COMBINE",
@@ -5394,9 +5399,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "system",
+   "status": "designed",
+   "figma_node": "27:2536"
   },
   {
    "topic": "COMMUNICATOR",
@@ -5410,8 +5415,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "COMMUNITY",
@@ -5425,8 +5430,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "COMPARE",
@@ -5482,8 +5487,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "COMPRESS MCCP COMPRESSION 'MUD CLIENT COMPRESSION PROTOCOL'",
@@ -5506,9 +5511,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "system",
+   "status": "designed",
+   "figma_node": "27:2536"
   },
   {
    "topic": "COMPUTE",
@@ -5584,8 +5589,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "CONFEDERACY_BLANKTEMPLATE",
@@ -5599,8 +5604,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "CONFIG",
@@ -5645,8 +5650,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "CONSIDER",
@@ -5699,8 +5704,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "CONSTRUCTION",
@@ -5729,8 +5734,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "CONVERGE",
@@ -5796,8 +5801,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "CORELLIAN",
@@ -5811,8 +5816,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "CORPSE",
@@ -5826,8 +5831,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "COUNCILTALK",
@@ -5852,9 +5857,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "system",
+   "status": "designed",
+   "figma_node": "27:2536"
   },
   {
    "topic": "CRACKDATAPAD",
@@ -5890,8 +5895,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "CREATE DATANET_COMMAND_GUIDE",
@@ -5906,8 +5911,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "CREATE UPTIME",
@@ -5922,8 +5927,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "CREDITS",
@@ -5937,8 +5942,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "CRIME",
@@ -5952,8 +5957,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "CRIME NETWORKS",
@@ -5967,8 +5972,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "CRIMES",
@@ -6003,9 +6008,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "clan",
+   "status": "designed",
+   "figma_node": "27:2219"
   },
   {
    "topic": "CURE POISON",
@@ -6173,8 +6178,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "DAMAGE",
@@ -6188,8 +6193,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "DARKTROOPER",
@@ -6203,8 +6208,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "DASHADE  URKUPP",
@@ -6219,8 +6224,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "DATA",
@@ -6249,8 +6254,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "DATAMEM",
@@ -6461,8 +6466,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "DATASTAT",
@@ -6499,8 +6504,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "DEADEYE",
@@ -6514,8 +6519,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "DEATH DYING HOSPITAL SAFE",
@@ -6532,8 +6537,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "DEATH FIELD",
@@ -6577,9 +6582,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "shipyard",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "DEFEL WRAITH BLUR",
@@ -6595,8 +6600,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "DEFENDING PLANETS",
@@ -6610,8 +6615,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "DELETE SUICIDE",
@@ -6637,9 +6642,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "system",
+   "status": "designed",
+   "figma_node": "27:2536"
   },
   {
    "topic": "DEMOTE",
@@ -6664,9 +6669,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "clan",
+   "status": "designed",
+   "figma_node": "27:2219"
   },
   {
    "topic": "DESCARMOR",
@@ -6831,8 +6836,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "DESCSHOP",
@@ -6889,9 +6894,9 @@
    "pattern": "readout",
    "variants": [],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "combat",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "DETRAP",
@@ -6947,9 +6952,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "onboarding",
+   "status": "designed",
+   "figma_node": "27:2440"
   },
   {
    "topic": "DEVARONIAN  DEVARONIANS  DEVARON",
@@ -6965,8 +6970,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "DEVELOP DEVELOPMENT",
@@ -7009,9 +7014,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "system",
+   "status": "designed",
+   "figma_node": "27:2536"
   },
   {
    "topic": "DEVLIST",
@@ -7025,8 +7030,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "DEXTERITY DEX",
@@ -7041,8 +7046,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "DIAGNOSE",
@@ -7098,9 +7103,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "events",
+   "status": "designed",
+   "figma_node": "27:2394"
   },
   {
    "topic": "DICE DICEROLL",
@@ -7130,9 +7135,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "events",
+   "status": "designed",
+   "figma_node": "27:2394"
   },
   {
    "topic": "DIG DIGGING BURY BURYING",
@@ -7193,8 +7198,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "DIPLOMAT",
@@ -7208,8 +7213,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "DISARM",
@@ -7245,8 +7250,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "DISGUISE",
@@ -7427,8 +7432,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "DIVISION",
@@ -7577,9 +7582,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "clan",
+   "status": "designed",
+   "figma_node": "27:2219"
   },
   {
    "topic": "DOCK",
@@ -7651,9 +7656,9 @@
    "pattern": "readout",
    "variants": [],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "combat",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "DOLOR",
@@ -7667,8 +7672,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "DOMINATE",
@@ -7778,9 +7783,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "system",
+   "status": "designed",
+   "figma_node": "27:2536"
   },
   {
    "topic": "DRAETHOS",
@@ -7794,8 +7799,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "DRAETHOS THOSA",
@@ -7810,8 +7815,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "DRAIN",
@@ -7964,8 +7969,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "DRONE",
@@ -7979,8 +7984,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "DRONE 'MESSAGE DRONE'",
@@ -7995,8 +8000,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "DRONE DRONES",
@@ -8011,8 +8016,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "DROP GET GIVE PUT TAKE",
@@ -8174,9 +8179,9 @@
    "pattern": "readout",
    "variants": [],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "combat",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "DUB",
@@ -8205,9 +8210,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "system",
+   "status": "designed",
+   "figma_node": "27:2536"
   },
   {
    "topic": "DUELIST",
@@ -8221,8 +8226,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "DUG  DUGS",
@@ -8237,8 +8242,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "DUPLICATE",
@@ -8267,9 +8272,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "system",
+   "status": "designed",
+   "figma_node": "27:2536"
   },
   {
    "topic": "DURINDFIRE",
@@ -8283,8 +8288,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "DURO  DUROS",
@@ -8299,8 +8304,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "DUTY",
@@ -8513,8 +8518,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "DYNAMIC_OBJECTS",
@@ -8528,8 +8533,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "EAT DRINK",
@@ -8603,8 +8608,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "EDIBLES",
@@ -8654,9 +8659,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "pilot",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "ELECTRONICS",
@@ -8781,9 +8786,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "clan",
+   "status": "designed",
+   "figma_node": "27:2219"
   },
   {
    "topic": "EMPTY",
@@ -8863,8 +8868,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "ENDURING FACADE ENDURING_FACADE",
@@ -8879,9 +8884,9 @@
    "pattern": "readout",
    "variants": [],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "combat",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "ENDURING_FACADE",
@@ -8894,9 +8899,9 @@
    "pattern": "readout",
    "variants": [],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "combat",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "ENERGIZE",
@@ -8942,8 +8947,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "ENGINEERING ENGINEER CRAFTING",
@@ -8959,8 +8964,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "ENGINEERINGFAQ ENGINEERFAQ",
@@ -9039,9 +9044,9 @@
    "pattern": "readout",
    "variants": [],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "combat",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "ENHANCED_TRACKING",
@@ -9054,9 +9059,9 @@
    "pattern": "readout",
    "variants": [],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "system",
+   "status": "designed",
+   "figma_node": "27:2536"
   },
   {
    "topic": "ENHANCEMENT",
@@ -9118,9 +9123,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "clan",
+   "status": "designed",
+   "figma_node": "27:2219"
   },
   {
    "topic": "ENTER LEAVE",
@@ -9164,8 +9169,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "ENVIROSUIT ENVIROSUITS EVSUITS",
@@ -9181,8 +9186,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "ENVIROSUIT ENVIROSUITS EVSUITS EV",
@@ -9199,8 +9204,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "ENVIROSUIT ENVIROSUITS EVSUITS EV EV_SUITS",
@@ -9218,8 +9223,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "EQ INV EQUIP EQUIPMENT INVENTORY",
@@ -9279,9 +9284,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "pilot",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "ESCAPE_BINDING",
@@ -9317,8 +9322,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "EVADING",
@@ -9332,8 +9337,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "EVENT",
@@ -9347,8 +9352,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "EXAMINE LOOK",
@@ -9507,8 +9512,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "F",
@@ -9522,8 +9527,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "FACE",
@@ -9579,9 +9584,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "weapons",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "FALLEEN FALLEENS",
@@ -9596,8 +9601,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "FARSIGHT",
@@ -9697,8 +9702,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "FEEORIN",
@@ -9712,8 +9717,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "FELUCIAN",
@@ -9727,8 +9732,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "FILL",
@@ -9813,8 +9818,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "FIRSTAID 'FIRST AID' MEDPAC FIRST 'ADVANCED FIRST AID' 'EXPERT FIRST AID'",
@@ -9871,9 +9876,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "onboarding",
+   "status": "designed",
+   "figma_node": "27:2440"
   },
   {
    "topic": "FLASHLIGHT",
@@ -9887,8 +9892,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "FLEE",
@@ -10022,9 +10027,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "system",
+   "status": "designed",
+   "figma_node": "27:2536"
   },
   {
    "topic": "FLURRY",
@@ -10085,9 +10090,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "pilot",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "FMOTD",
@@ -10101,8 +10106,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "FOLLOW GROUP",
@@ -10433,8 +10438,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "FORCED_ENTRY",
@@ -10459,9 +10464,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "system",
+   "status": "designed",
+   "figma_node": "27:2536"
   },
   {
    "topic": "FORCEPIKE FORCEPIKES 'FORCE PIKE' 'FORCE PIKES' 'ADVANCED FORCEPIKE' 'FORCEPIKE MASTERY'",
@@ -10496,8 +10501,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "FORCE_CONCEAL",
@@ -10561,8 +10566,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "FORCE_LIGHTNING",
@@ -10603,8 +10608,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "FORCE_SUPPRESSION",
@@ -10618,8 +10623,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "FORCE_SYSTEM FORCE",
@@ -10634,8 +10639,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "FORENSICS",
@@ -10714,8 +10719,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "FORUMS",
@@ -10729,8 +10734,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "FRC",
@@ -10744,8 +10749,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "FUEL REFUEL",
@@ -10851,8 +10856,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "GAG",
@@ -10877,9 +10882,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "system",
+   "status": "designed",
+   "figma_node": "27:2536"
   },
   {
    "topic": "GAMORREAN GAMORREANS",
@@ -10894,8 +10899,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "GAND  GANDS",
@@ -10910,8 +10915,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "GATHER",
@@ -10975,8 +10980,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "GENDER",
@@ -11014,8 +11019,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "GHOST SPIRIT 'FORCE GHOST' FORCE_GHOST",
@@ -11032,8 +11037,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "GIVIN",
@@ -11047,8 +11052,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "GLANCE",
@@ -11095,8 +11100,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "GODMODE GODMODING",
@@ -11111,8 +11116,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "GOTAL",
@@ -11126,8 +11131,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "GOUGE BLIND",
@@ -11191,8 +11196,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "GRAVITYWELL",
@@ -11212,9 +11217,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "weapons",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "GREET INTRODUCE",
@@ -11263,9 +11268,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "system",
+   "status": "designed",
+   "figma_node": "27:2536"
   },
   {
    "topic": "GRENADE GRENADES",
@@ -11280,8 +11285,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "GRENADES",
@@ -11295,8 +11300,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "GREVEN",
@@ -11310,8 +11315,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "GRIP",
@@ -11339,9 +11344,9 @@
    "pattern": "readout",
    "variants": [],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "system",
+   "status": "designed",
+   "figma_node": "27:2536"
   },
   {
    "topic": "GUNGAN",
@@ -11355,8 +11360,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "HACK",
@@ -11460,9 +11465,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "onboarding",
+   "status": "designed",
+   "figma_node": "27:2440"
   },
   {
    "topic": "HAIRCOLORS",
@@ -11476,8 +11481,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "HANGAR HANGARS OPENBAY CLOSEBAY REMOTEBAY TURRET TURRETS",
@@ -11555,8 +11560,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "HARVESTER",
@@ -11570,8 +11575,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "HEADLIGHTS",
@@ -11602,9 +11607,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "engineering",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "HEALWOUND",
@@ -11660,9 +11665,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "onboarding",
+   "status": "designed",
+   "figma_node": "27:2440"
   },
   {
    "topic": "HIDE SNEAK VISIBLE",
@@ -11713,8 +11718,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "HIJACK",
@@ -11734,9 +11739,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "access",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "HISTORY BIO BACKGROUND",
@@ -11787,8 +11792,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "HITALL",
@@ -11827,8 +11832,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "HLIST",
@@ -11857,9 +11862,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "onboarding",
+   "status": "designed",
+   "figma_node": "27:2440"
   },
   {
    "topic": "HOLOCRON",
@@ -11873,8 +11878,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "HOME HOUSE BUYHOME SELLHOME PHOME APARTMENT PENTHOUSE",
@@ -11894,8 +11899,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "HOMEDESC",
@@ -11931,8 +11936,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "HP BACTA HITPOINTS HEALTH",
@@ -11949,8 +11954,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "HUMAN HUMANS",
@@ -11965,8 +11970,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "HUTT HUTTS",
@@ -11981,8 +11986,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "HYPERSPACE HYPER LIGHTSPEED",
@@ -12048,9 +12053,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "system",
+   "status": "designed",
+   "figma_node": "27:2536"
   },
   {
    "topic": "I",
@@ -12064,8 +12069,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "IAKARU",
@@ -12079,8 +12084,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "IC OOC",
@@ -12095,8 +12100,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "IKTOTCHI",
@@ -12110,8 +12115,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "IMBUE",
@@ -12136,9 +12141,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "system",
+   "status": "designed",
+   "figma_node": "27:2536"
   },
   {
    "topic": "IMMCHAT MORTCHAT",
@@ -12180,8 +12185,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "IMMFIX",
@@ -12195,8 +12200,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "IMPERIAL_RACES 'IMPERIAL RACES' IMPERIALRACES IMPERIAL_RACE",
@@ -12213,8 +12218,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "INCREASEDRESISTANCE",
@@ -12228,8 +12233,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "INDUCT OUTCAST",
@@ -12266,9 +12271,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "clan",
+   "status": "designed",
+   "figma_node": "27:2219"
   },
   {
    "topic": "INDUCTLOG",
@@ -12305,9 +12310,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "clan",
+   "status": "designed",
+   "figma_node": "27:2219"
   },
   {
    "topic": "INFO",
@@ -12369,9 +12374,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "events",
+   "status": "designed",
+   "figma_node": "27:2394"
   },
   {
    "topic": "INFORMATION",
@@ -12385,8 +12390,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "INFRAVISION",
@@ -12483,9 +12488,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "clan",
+   "status": "designed",
+   "figma_node": "27:2219"
   },
   {
    "topic": "INSTALL_CAMERA CAMERA_SWEEP MONITOR_CAMERA CAMERAS CAMERA MONITOR",
@@ -12542,9 +12547,9 @@
    "pattern": "readout",
    "variants": [],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "combat",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "INTEGRATED OPTICS",
@@ -12558,9 +12563,9 @@
    "pattern": "readout",
    "variants": [],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "combat",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "INTELLIGENCE INT",
@@ -12575,8 +12580,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "INTERCOM",
@@ -12601,9 +12606,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "comms",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "INTEREST",
@@ -12617,8 +12622,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "INT_LIMIT",
@@ -12632,8 +12637,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "ITHORIAN  ITHORIANS  ITHOR",
@@ -12649,8 +12654,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "JAIL",
@@ -12675,9 +12680,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "planet",
+   "status": "designed",
+   "figma_node": "27:2356"
   },
   {
    "topic": "JAIL_GUIDELINES",
@@ -12691,8 +12696,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "JAM",
@@ -12728,9 +12733,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "weapons",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "JAWA JAWAS",
@@ -12745,8 +12750,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "JETPACK MASTERY",
@@ -12760,9 +12765,9 @@
    "pattern": "readout",
    "variants": [],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "combat",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "KALEESH",
@@ -12776,8 +12781,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "KAMINOAN",
@@ -12791,8 +12796,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "KEL_DOR 'KEL DOR' 'KEL DORIAN' 'KEL DORIANS'",
@@ -12809,8 +12814,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "KHOMMITE KHOM",
@@ -12825,8 +12830,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "KICK",
@@ -12864,8 +12869,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "KIFFAR KIFFU",
@@ -12880,8 +12885,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "KILL MURDER",
@@ -12961,8 +12966,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "LAND",
@@ -13034,8 +13039,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "LANGUAGES LANGUAGE LEARN LANG",
@@ -13096,8 +13101,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "LASAT",
@@ -13111,8 +13116,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "LAUNCH",
@@ -13166,8 +13171,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "LAWFUL_EVIL",
@@ -13181,8 +13186,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "LAWFUL_GOOD",
@@ -13196,8 +13201,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "LCLASSCHANGE",
@@ -13222,9 +13227,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "onboarding",
+   "status": "designed",
+   "figma_node": "27:2440"
   },
   {
    "topic": "LEADERSHIP",
@@ -13238,8 +13243,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "LEADPLANET",
@@ -13264,9 +13269,9 @@
     }
    ],
    "notes": [],
-   "station": "trade",
-   "status": "planned",
-   "figma_node": null
+   "station": "planet",
+   "status": "designed",
+   "figma_node": "27:2356"
   },
   {
    "topic": "LEAVESHIP",
@@ -13302,8 +13307,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "LEGENDARY_SHIPS",
@@ -13317,8 +13322,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "LETHARGY",
@@ -13382,8 +13387,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "LEVITATE",
@@ -13481,9 +13486,9 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "system",
    "status": "inactive",
-   "figma_node": null,
+   "figma_node": "27:2536",
    "note": "Help: these commands are no longer in use on this mud."
   },
   {
@@ -13498,8 +13503,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "LIGHTSABER",
@@ -13513,8 +13518,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "LIGHTSABERS 'ADVANCED LIGHTSABER' 'LIGHTSABER MASTERY'",
@@ -13567,8 +13572,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "LOADSHIP",
@@ -13628,9 +13633,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "nav",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "LOCATIONS WEARLOCS WEARFLAGS WEARLOC",
@@ -13647,8 +13652,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "LOCKCUFFS LOCK_CUFFS 'LOCK CUFFS'",
@@ -13664,8 +13669,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "LOCKDATAPAD UNLOCKDATAPAD",
@@ -13807,9 +13812,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "nav",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "LOG LOGS",
@@ -13824,8 +13829,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "LOOKUP",
@@ -13850,9 +13855,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "system",
+   "status": "designed",
+   "figma_node": "27:2536"
   },
   {
    "topic": "LORELLIAN LORELLIANS",
@@ -13867,8 +13872,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "LORRD  LORRDIAN  LORRDIANS",
@@ -13884,8 +13889,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "LUCK LCK",
@@ -13900,8 +13905,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "LUNGE",
@@ -14115,9 +14120,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "onboarding",
+   "status": "designed",
+   "figma_node": "27:2440"
   },
   {
    "topic": "MAINTAINING PLANETS",
@@ -14131,8 +14136,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "MAKEARMOR ARMOR LOCATIONS MATERIALS",
@@ -14149,8 +14154,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "MAKEBINDERS MAKEBINDER",
@@ -14878,8 +14883,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "MANDALORIAN  MANDALORIANS  TAUNG",
@@ -14895,8 +14900,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "MANIFEST",
@@ -14932,8 +14937,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "MAP MAPPER",
@@ -14948,8 +14953,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "MASK",
@@ -14989,9 +14994,9 @@
    "pattern": "readout",
    "variants": [],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "system",
+   "status": "designed",
+   "figma_node": "27:2536"
   },
   {
    "topic": "MASTER_COMMUNICATOR 'MASTER COMMUNICATOR'",
@@ -15006,8 +15011,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "MATCHVECTOR",
@@ -15032,9 +15037,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "pilot",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "MAXCHARGE CHARGE",
@@ -15049,8 +15054,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "MEDICAL",
@@ -15079,8 +15084,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "MEDITATE",
@@ -15171,9 +15176,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "system",
+   "status": "designed",
+   "figma_node": "27:2536"
   },
   {
    "topic": "MENTALSTATE",
@@ -15187,8 +15192,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "MERC FUREY KHAN HATCHET",
@@ -15205,8 +15210,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "MERCENARY MERCENARIES",
@@ -15221,8 +15226,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "MIC MICROPHONE",
@@ -15237,8 +15242,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "MILITARY PRESENCE",
@@ -15252,8 +15257,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "MINDTALK",
@@ -15324,9 +15329,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "system",
+   "status": "designed",
+   "figma_node": "27:2536"
   },
   {
    "topic": "MINERALS",
@@ -15355,8 +15360,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "MIRALUKA",
@@ -15370,8 +15375,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "MIRIALAN",
@@ -15385,8 +15390,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "MOBILE REFUEL",
@@ -15429,9 +15434,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "engineering",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "MOBPROG MOBPROGRAMS OBJPROG ROOMPROG MUDPROG",
@@ -15449,8 +15454,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "MONEY GOLD CREDIT",
@@ -15503,8 +15508,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "MORALE",
@@ -15518,8 +15523,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "MOTD",
@@ -15533,8 +15538,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "MOUNT DISMOUNT",
@@ -15583,8 +15588,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "MSDP",
@@ -15598,8 +15603,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "MSDPVARS GMCP",
@@ -15614,8 +15619,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "MUGGING",
@@ -15629,8 +15634,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "MULTIPLAY MULTIPLAYER MULTIPLAYING MULTI",
@@ -15647,8 +15652,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "MULTIPLE MULTIPLES 'MULTIPLE ITEMS'",
@@ -15664,8 +15669,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "MULTIPLE_ACCOUNTS",
@@ -15679,8 +15684,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "MUUN  MUUNS",
@@ -15695,8 +15700,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "M_ADVHERO_",
@@ -15710,8 +15715,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "M_BALZHUR_",
@@ -15725,8 +15730,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "M_GODLVL10_",
@@ -15740,8 +15745,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "M_GODLVL1_",
@@ -15755,8 +15760,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "M_GODLVL2_",
@@ -15770,8 +15775,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "M_GODLVL3_",
@@ -15785,8 +15790,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "M_GODLVL4_",
@@ -15800,8 +15805,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "M_GODLVL5_",
@@ -15815,8 +15820,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "M_GODLVL6_",
@@ -15830,8 +15835,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "M_GODLVL7_",
@@ -15845,8 +15850,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "M_GODLVL8_",
@@ -15860,8 +15865,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "M_GODLVL9_",
@@ -15875,8 +15880,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "NABOO",
@@ -15890,8 +15895,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "NAME NAMES",
@@ -15906,8 +15911,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "NAMES",
@@ -15921,8 +15926,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "NARCOTICS",
@@ -15952,8 +15957,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "NAVCOMMANDS",
@@ -15982,8 +15987,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "NAVIGATOR",
@@ -15997,8 +16002,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "NAVSTAT NAVSTATUS NAVCHART",
@@ -16076,9 +16081,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "nav",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "NEIMOIDIAN  NEIMOIDIANS",
@@ -16093,8 +16098,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "NETWORKHACK",
@@ -16135,8 +16140,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "NEUTRAL_BLANKTEMPLATE",
@@ -16150,8 +16155,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "NEUTRAL_EVIL",
@@ -16165,8 +16170,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "NEUTRAL_GOOD",
@@ -16180,8 +16185,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "NEW NEWBIE",
@@ -16196,8 +16201,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "NEWBIECHAT",
@@ -16245,9 +16250,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "onboarding",
+   "status": "designed",
+   "figma_node": "27:2440"
   },
   {
    "topic": "NEWNAME",
@@ -16272,9 +16277,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "onboarding",
+   "status": "designed",
+   "figma_node": "27:2440"
   },
   {
    "topic": "NEWS",
@@ -16299,9 +16304,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "events",
+   "status": "designed",
+   "figma_node": "27:2394"
   },
   {
    "topic": "NEWS_10",
@@ -16315,8 +16320,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "NIKTO",
@@ -16330,8 +16335,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "NMOTD",
@@ -16345,8 +16350,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "NOCOLORONOOC",
@@ -16360,8 +16365,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "NOGHRI  NOGRHIS",
@@ -16376,8 +16381,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "NOKILL",
@@ -16391,8 +16396,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "NORTH SOUTH EAST WEST UP DOWN",
@@ -16691,9 +16696,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "events",
+   "status": "designed",
+   "figma_node": "27:2394"
   },
   {
    "topic": "NOWITHDRAW",
@@ -16729,8 +16734,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "OBSCURE",
@@ -16766,8 +16771,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "OLD_MORGUKAI_WAR_DROID",
@@ -16781,8 +16786,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "OLD_TROOPS SQUAD TROOP TROOPS TROOPERS",
@@ -16863,8 +16868,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "ONDERON",
@@ -16878,8 +16883,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "OPEN CLOSE LOCK UNLOCK PICK",
@@ -16998,8 +17003,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "ORDER",
@@ -17048,8 +17053,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "ORION",
@@ -17063,8 +17068,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "OSAY",
@@ -17130,9 +17135,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "system",
+   "status": "designed",
+   "figma_node": "27:2536"
   },
   {
    "topic": "OSET_FLAGS2 OSET_FLAG2 OSETFLAGS2 OSETFLAG2 OFLAGS2 OFLAG2",
@@ -17151,8 +17156,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "OVERTHROW",
@@ -17172,9 +17177,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "clan",
+   "status": "designed",
+   "figma_node": "27:2219"
   },
   {
    "topic": "PACKAGE",
@@ -17227,9 +17232,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "events",
+   "status": "designed",
+   "figma_node": "27:2394"
   },
   {
    "topic": "PAGER",
@@ -17249,9 +17254,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "events",
+   "status": "designed",
+   "figma_node": "27:2394"
   },
   {
    "topic": "PARRY",
@@ -17265,8 +17270,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "PASS DOOR",
@@ -17317,9 +17322,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "onboarding",
+   "status": "designed",
+   "figma_node": "27:2440"
   },
   {
    "topic": "PAU'AN  PAUAN",
@@ -17334,8 +17339,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "PAU'AN PAUAN ANCIENTS",
@@ -17351,8 +17356,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "PAZAAK",
@@ -17366,8 +17371,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "PC NPC",
@@ -17382,8 +17387,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "PCOOKIES",
@@ -17397,8 +17402,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "PEEK",
@@ -17411,9 +17416,9 @@
    "pattern": "readout",
    "variants": [],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "system",
+   "status": "designed",
+   "figma_node": "27:2536"
   },
   {
    "topic": "PERCEPTION",
@@ -17445,8 +17450,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "PICK_SHIP_LOCK 'PICK SHIP LOCK'",
@@ -17472,9 +17477,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "access",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "PILOT",
@@ -17510,8 +17515,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "PILOTINGFAQ TRAVEL PILOTFAQ",
@@ -17527,8 +17532,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "PING_SHIP 'PING SHIP' PING PINGSHIP",
@@ -17545,8 +17550,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "PIRATEFAQ",
@@ -17560,8 +17565,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "PIRATEFAQ2",
@@ -17575,8 +17580,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "PIRATES",
@@ -17590,8 +17595,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "PIRATESHIP",
@@ -17622,9 +17627,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "shipyard",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "PK PERMING PERM PERMED",
@@ -17641,8 +17646,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "PLANET BUILDING",
@@ -17656,8 +17661,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "PLANET SYSTEM GUIDES",
@@ -17671,8 +17676,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "PLANETS PLANET",
@@ -17709,9 +17714,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "planet",
+   "status": "designed",
+   "figma_node": "27:2356"
   },
   {
    "topic": "PLAYEROWNEDCAPITALSHIPS",
@@ -17725,8 +17730,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "POINTS",
@@ -17740,8 +17745,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "POISON WEAPON",
@@ -17788,9 +17793,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "system",
+   "status": "designed",
+   "figma_node": "27:2536"
   },
   {
    "topic": "PRACTICE PRAC",
@@ -17842,8 +17847,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "PRESENCE",
@@ -17874,8 +17879,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "PROMOTE",
@@ -17906,9 +17911,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "clan",
+   "status": "designed",
+   "figma_node": "27:2219"
   },
   {
    "topic": "PROMPT FPROMPT",
@@ -17995,8 +18000,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "PROPOSEDESC",
@@ -18053,9 +18058,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "onboarding",
+   "status": "designed",
+   "figma_node": "27:2440"
   },
   {
    "topic": "PROTECT_ACCOUNT",
@@ -18075,9 +18080,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "system",
+   "status": "designed",
+   "figma_node": "27:2536"
   },
   {
    "topic": "PROTOCOL_DROID 'PROTOCOL DROID'",
@@ -18092,8 +18097,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "PROXIMITY PROX",
@@ -18171,9 +18176,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "planet",
+   "status": "designed",
+   "figma_node": "27:2356"
   },
   {
    "topic": "PSHIELDS",
@@ -18198,9 +18203,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "planet",
+   "status": "designed",
+   "figma_node": "27:2356"
   },
   {
    "topic": "PSTAT",
@@ -18220,9 +18225,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "planet",
+   "status": "designed",
+   "figma_node": "27:2356"
   },
   {
    "topic": "PTALK",
@@ -18247,9 +18252,9 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "system",
    "status": "inactive",
-   "figma_node": null,
+   "figma_node": "27:2536",
    "note": "Help: this command is no longer in use."
   },
   {
@@ -18279,9 +18284,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "weapons",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "PTURRETS PTURRET",
@@ -18311,9 +18316,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "weapons",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "PUBLIC OPINION",
@@ -18327,8 +18332,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "PULL PRESS PUSH LEVERS PULLCHAINS SWITCHES BUTTONS",
@@ -18397,8 +18402,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "QUARREN QARREN",
@@ -18413,8 +18418,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "QUERMIAN  QUERMIANS",
@@ -18429,8 +18434,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "QUEST QUESTS TIERS",
@@ -18446,8 +18451,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "QUEST_TIERS",
@@ -18461,8 +18466,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "QUICK_HEALER 'QUICK HEALER'",
@@ -18477,8 +18482,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "QUIT HOTEL",
@@ -18493,8 +18498,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "QUIT HOTEL LOGOUT",
@@ -18510,8 +18515,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "QUOTA",
@@ -18525,8 +18530,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "RACE RACES FREERACE PRICE DEPOSIT",
@@ -18544,8 +18549,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "RADAR",
@@ -18608,8 +18613,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "REALNAME",
@@ -18623,8 +18628,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "REBELLION REBEL ALLIANCE REBELS",
@@ -18641,8 +18646,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "REFLEXES",
@@ -18656,8 +18661,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "REFRESH",
@@ -18671,8 +18676,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "REFUEL",
@@ -18727,9 +18732,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "clan",
+   "status": "designed",
+   "figma_node": "27:2219"
   },
   {
    "topic": "RELEASE",
@@ -18817,9 +18822,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "shipyard",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "REMODULATE",
@@ -18848,9 +18853,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "weapons",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "REMODULATE COPROCESSORS",
@@ -18880,9 +18885,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "weapons",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "RENAMEDROID",
@@ -19110,9 +19115,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "engineering",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "REPAIRHULL",
@@ -19137,9 +19142,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "engineering",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "REPAIRSHIP SHIP_MAINTENANCE SHIPMAINTENANCE 'SHIP MAINTENANCE'",
@@ -19248,9 +19253,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "events",
+   "status": "designed",
+   "figma_node": "27:2394"
   },
   {
    "topic": "REPUBLIC_BIOTEMPLATE",
@@ -19264,8 +19269,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "REPUBLIC_BLANKTEMPLATE",
@@ -19279,8 +19284,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "REPULSE",
@@ -19396,9 +19401,9 @@
     "Remove - remove a person from your resident list",
     "Clear - Clear your resident list"
    ],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "planet",
+   "status": "designed",
+   "figma_node": "27:2356"
   },
   {
    "topic": "RESIGN",
@@ -19423,9 +19428,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "clan",
+   "status": "designed",
+   "figma_node": "27:2219"
   },
   {
    "topic": "REST SLEEP STAND WAKE",
@@ -19482,8 +19487,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "RESTRING",
@@ -19543,8 +19548,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "RETREAT",
@@ -19645,9 +19650,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "system",
+   "status": "designed",
+   "figma_node": "27:2536"
   },
   {
    "topic": "RMOTE",
@@ -19661,8 +19666,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "RODIAN RODIANS",
@@ -19677,8 +19682,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "ROJAN",
@@ -19692,8 +19697,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "ROLEPLAY RP",
@@ -19708,8 +19713,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "ROLL",
@@ -19729,9 +19734,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "system",
+   "status": "designed",
+   "figma_node": "27:2536"
   },
   {
    "topic": "ROSTER",
@@ -19751,9 +19756,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "clan",
+   "status": "designed",
+   "figma_node": "27:2219"
   },
   {
    "topic": "RPC",
@@ -19767,8 +19772,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "RPCAPP",
@@ -19782,8 +19787,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "RPCDEFENSE",
@@ -19797,8 +19802,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "RPCFAQ",
@@ -19812,8 +19817,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "RPCTRIAL",
@@ -19890,9 +19895,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "events",
+   "status": "designed",
+   "figma_node": "27:2394"
   },
   {
    "topic": "RPCTRIAL_EXAMPLE",
@@ -19906,8 +19911,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "RULES RULE",
@@ -19922,8 +19927,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "RULES1",
@@ -19937,8 +19942,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "RULES2",
@@ -19952,8 +19957,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "RYN",
@@ -19967,8 +19972,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "SABOTAGE",
@@ -20009,8 +20014,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "SALESMAN",
@@ -20024,8 +20029,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "SALVATION",
@@ -20061,8 +20066,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "SAVE",
@@ -20183,8 +20188,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "SCIENCES",
@@ -20197,9 +20202,9 @@
    "pattern": "readout",
    "variants": [],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "system",
+   "status": "designed",
+   "figma_node": "27:2536"
   },
   {
    "topic": "SCIENTIFIC_MIND 'SCIENTIFIC MIND'",
@@ -20214,8 +20219,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "SCORE",
@@ -20270,8 +20275,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "SCREENREADER",
@@ -20291,9 +20296,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "onboarding",
+   "status": "designed",
+   "figma_node": "27:2440"
   },
   {
    "topic": "SEARCH",
@@ -20340,9 +20345,9 @@
    "pattern": "readout",
    "variants": [],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "combat",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "SECURE_TURBOLIFT",
@@ -20441,8 +20446,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "SENSE_ATTUNEMENT 'SENSE ATTUNEMENT'",
@@ -20495,9 +20500,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "onboarding",
+   "status": "designed",
+   "figma_node": "27:2440"
   },
   {
    "topic": "SETBLASTER",
@@ -20565,9 +20570,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "engineering",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "SETDIVISION SETDIV",
@@ -20597,9 +20602,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "clan",
+   "status": "designed",
+   "figma_node": "27:2219"
   },
   {
    "topic": "SETDRAW",
@@ -20658,8 +20663,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "SETHOME",
@@ -20679,9 +20684,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "system",
+   "status": "designed",
+   "figma_node": "27:2536"
   },
   {
    "topic": "SETLEADER",
@@ -20706,9 +20711,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "clan",
+   "status": "designed",
+   "figma_node": "27:2219"
   },
   {
    "topic": "SETLOCK",
@@ -20806,9 +20811,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "clan",
+   "status": "designed",
+   "figma_node": "27:2219"
   },
   {
    "topic": "SHARP_EYE 'SHARP EYE'",
@@ -20838,8 +20843,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "SHIPCHARGE",
@@ -20853,8 +20858,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "SHIPCODE SHIPCODES 'SHIP CODES'",
@@ -20870,8 +20875,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "SHIPDEVS",
@@ -20885,8 +20890,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "SHIPDODGE",
@@ -20899,9 +20904,9 @@
    "pattern": "readout",
    "variants": [],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "weapons",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "SHIPSIZE SHIPSIZES SHIPCLASS",
@@ -20917,8 +20922,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "SHIPSTATS",
@@ -20932,8 +20937,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "SHIPTALK",
@@ -20975,8 +20980,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "SHIP_SYSTEMS 'SHIP SYSTEMS' STATUS",
@@ -21036,9 +21041,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "system",
+   "status": "designed",
+   "figma_node": "27:2536"
   },
   {
    "topic": "SHOVE DRAG",
@@ -21152,9 +21157,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "clan",
+   "status": "designed",
+   "figma_node": "27:2219"
   },
   {
    "topic": "SHOWDIVISION",
@@ -21174,9 +21179,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "clan",
+   "status": "designed",
+   "figma_node": "27:2219"
   },
   {
    "topic": "SHOWPLANET",
@@ -21223,9 +21228,9 @@
     }
    ],
    "notes": [],
-   "station": "trade",
-   "status": "planned",
-   "figma_node": null
+   "station": "planet",
+   "status": "designed",
+   "figma_node": "27:2356"
   },
   {
    "topic": "SHOWRACE",
@@ -21256,9 +21261,9 @@
     }
    ],
    "notes": [],
-   "station": "trade",
-   "status": "planned",
-   "figma_node": null
+   "station": "onboarding",
+   "status": "designed",
+   "figma_node": "27:2440"
   },
   {
    "topic": "SHOWSKINCOLOR",
@@ -21283,9 +21288,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "onboarding",
+   "status": "designed",
+   "figma_node": "27:2440"
   },
   {
    "topic": "SHOWSOCIAL",
@@ -21310,9 +21315,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "onboarding",
+   "status": "designed",
+   "figma_node": "27:2440"
   },
   {
    "topic": "SILENT_SNEAK 'SILENT SNEAK'",
@@ -21327,8 +21332,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "SIT",
@@ -21366,8 +21371,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "SKILLS SKILL",
@@ -21382,8 +21387,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "SLAVERY",
@@ -21397,8 +21402,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "SLEEP",
@@ -21462,9 +21467,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "system",
+   "status": "designed",
+   "figma_node": "27:2536"
   },
   {
    "topic": "SLICER SLICING",
@@ -21479,8 +21484,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "SLIP",
@@ -21525,8 +21530,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "SLIST FLIST",
@@ -21645,8 +21650,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "SMAUG THORIC",
@@ -21661,8 +21666,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "SMUGGLING SMUGGLER SMUGGLE",
@@ -21678,8 +21683,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "SNIPE",
@@ -21727,8 +21732,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "SPACECRAFT",
@@ -21741,9 +21746,9 @@
    "pattern": "readout",
    "variants": [],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "shipyard",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "SPACE_COMBAT_1_2_3 'SPACE COMBAT 1' 'SPACE COMBAT 2' 'SPACE COMBAT 3' 'SPACE COMBAT'",
@@ -21760,9 +21765,9 @@
    "pattern": "readout",
    "variants": [],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "weapons",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "SPEAK",
@@ -21905,8 +21910,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "SPLIT",
@@ -21947,8 +21952,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "SPRINT",
@@ -21984,8 +21989,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "SQUADRON",
@@ -22078,8 +22083,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "STARSYSTEMS",
@@ -22116,8 +22121,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "STATUS",
@@ -22164,8 +22169,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "STEAL",
@@ -22215,8 +22220,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "STOP",
@@ -22254,8 +22259,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "STRENGTH STR",
@@ -22270,8 +22275,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "STRUCTURES",
@@ -22285,8 +22290,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "STRUCTURE_BUILDING",
@@ -22300,8 +22305,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "STRUGGLE",
@@ -22352,9 +22357,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "system",
+   "status": "designed",
+   "figma_node": "27:2536"
   },
   {
    "topic": "SUBCLASS SUB-CLASS GUARDIAN SENTINEL CONSULAR SAGE JUGGERNAUT ASSASSIN SORCERER",
@@ -22387,7 +22392,7 @@
     }
    ],
    "notes": [],
-   "station": "force",
+   "station": "onboarding",
    "status": "designed",
    "figma_node": "27:1529"
   },
@@ -22436,9 +22441,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "system",
+   "status": "designed",
+   "figma_node": "27:2536"
   },
   {
    "topic": "SULLUSTAN SULLUST BOMEWRIGHT",
@@ -22454,8 +22459,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "SURVEY",
@@ -22524,9 +22529,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "system",
+   "status": "designed",
+   "figma_node": "27:2536"
   },
   {
    "topic": "SYSTEMTALK",
@@ -22551,9 +22556,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "comms",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "T'SURR  TSURR",
@@ -22568,8 +22573,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "TAIL",
@@ -22616,8 +22621,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "TALZ",
@@ -22631,8 +22636,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "TAMP",
@@ -22657,9 +22662,9 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "system",
    "status": "inactive",
-   "figma_node": null,
+   "figma_node": "27:2536",
    "note": "Help: these commands are no longer in use on this mud."
   },
   {
@@ -22733,8 +22738,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "TAXI",
@@ -22844,9 +22849,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "clan",
+   "status": "designed",
+   "figma_node": "27:2219"
   },
   {
    "topic": "TELEPATHY",
@@ -23011,8 +23016,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "TERMINOLOGY",
@@ -23026,8 +23031,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "TEXTCOLOR",
@@ -23047,9 +23052,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "onboarding",
+   "status": "designed",
+   "figma_node": "27:2440"
   },
   {
    "topic": "THE SABER FLEET",
@@ -23063,8 +23068,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "THEORIZE",
@@ -23084,9 +23089,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "system",
+   "status": "designed",
+   "figma_node": "27:2536"
   },
   {
    "topic": "THIEVES_EYE 'THIEVES EYE'",
@@ -23209,9 +23214,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "combat",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "TICK",
@@ -23225,8 +23230,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "TIME",
@@ -23246,9 +23251,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "onboarding",
+   "status": "designed",
+   "figma_node": "27:2440"
   },
   {
    "topic": "TIMEZONE",
@@ -23279,9 +23284,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "onboarding",
+   "status": "designed",
+   "figma_node": "27:2440"
   },
   {
    "topic": "TITLE PUBLICTITLE",
@@ -23340,8 +23345,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "TOGRUTA",
@@ -23355,8 +23360,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "TONE",
@@ -23403,8 +23408,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "TOP10",
@@ -23418,8 +23423,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "TOTP",
@@ -23433,8 +23438,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "TOUGHNESS",
@@ -23448,8 +23453,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "TOYDARIAN  TOYDARIANS",
@@ -23464,8 +23469,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "TRACK",
@@ -23601,9 +23606,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "clan",
+   "status": "designed",
+   "figma_node": "27:2219"
   },
   {
    "topic": "TRADEDROID",
@@ -23750,9 +23755,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "system",
+   "status": "designed",
+   "figma_node": "27:2536"
   },
   {
    "topic": "TRANDOSHAN TRANDOSHA DOSHA",
@@ -23768,8 +23773,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "TRANSFERFUEL",
@@ -23812,8 +23817,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "TRANSPONDER",
@@ -23872,9 +23877,9 @@
    "pattern": "readout",
    "variants": [],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "system",
+   "status": "designed",
+   "figma_node": "27:2536"
   },
   {
    "topic": "TRANSPORT_SPECIALIST 'TRANSPORT SPECIALIST'",
@@ -23889,8 +23894,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "TRIGGER",
@@ -23904,8 +23909,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "TRUE_EXAMINE",
@@ -23930,9 +23935,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "system",
+   "status": "designed",
+   "figma_node": "27:2536"
   },
   {
    "topic": "TRUE_NEUTRAL",
@@ -23946,8 +23951,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "TSR D&&D AD&&D",
@@ -23963,8 +23968,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "TUCK PALM",
@@ -24089,9 +24094,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "engineering",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "TURBOLIFT",
@@ -24123,8 +24128,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "UBESE",
@@ -24138,8 +24143,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "UFG PLANETGAME WARINFO",
@@ -24155,8 +24160,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "UGNAUGHT",
@@ -24170,8 +24175,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "UMBARAN",
@@ -24185,8 +24190,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "UNARMED 'UNARMED COMBAT' 'ADVANCED UNARMED' 'UNARMED MASTERY' UNARMED_COMBAT",
@@ -24203,9 +24208,9 @@
    "pattern": "readout",
    "variants": [],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "combat",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "UNBIND",
@@ -24426,9 +24431,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "engineering",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "UPGRADEDROID",
@@ -24538,9 +24543,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "engineering",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "UPKEEP",
@@ -24617,8 +24622,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "VALOR",
@@ -24632,8 +24637,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "VARIABLES",
@@ -24647,8 +24652,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "VECTOR COURSE TRAJECTORY",
@@ -25106,8 +25111,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "VIBRO-BLADES VIBROBLADES VIBROBLADE 'ADVANCED VIBROBLADE' 'VIBROBLADE MASTERY' VIBRO",
@@ -25125,9 +25130,9 @@
    "pattern": "readout",
    "variants": [],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "combat",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "VIEWRPC",
@@ -25164,9 +25169,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "events",
+   "status": "designed",
+   "figma_node": "27:2394"
   },
   {
    "topic": "VISION",
@@ -25231,8 +25236,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "WALLDO",
@@ -25246,8 +25251,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "WANTED BLACKLIST PARDON IMMUNITY GRANTIMMUNITY REMOVEIMMUNITY",
@@ -25326,9 +25331,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "clan",
+   "status": "designed",
+   "figma_node": "27:2219"
   },
   {
    "topic": "WAR",
@@ -25342,8 +25347,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "WARRIOR",
@@ -25357,8 +25362,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "WATCH",
@@ -25405,9 +25410,9 @@
    "pattern": "readout",
    "variants": [],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "weapons",
+   "status": "designed",
+   "figma_node": "27:2704"
   },
   {
    "topic": "WEAR HOLD WIELD LOCATIONS WEARLOCS WEARFLAGS WEARLOC",
@@ -25427,8 +25432,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "WEEQUAY",
@@ -25442,8 +25447,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "WHILL",
@@ -25457,8 +25462,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "WHIPHID",
@@ -25472,8 +25477,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "WHISPER",
@@ -25518,8 +25523,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "WIMPY",
@@ -25567,8 +25572,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "WITHDRAW",
@@ -25613,8 +25618,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "WOOKIEE WOOKIEES",
@@ -25629,8 +25634,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "WOUND WOUNDS",
@@ -25645,8 +25650,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "WROONIAN  WROONA",
@@ -25661,8 +25666,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "XTERM 256COLOR 16COLOR ACCESSIBLE DONTREMAP16",
@@ -25697,9 +25702,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "onboarding",
+   "status": "designed",
+   "figma_node": "27:2440"
   },
   {
    "topic": "YELL",
@@ -25743,8 +25748,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "YODA JOKE",
@@ -25759,8 +25764,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "ZABRAK  ZABRAKS  IRIDONIANS",
@@ -25776,8 +25781,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "ZELTRON  ZELTRONS",
@@ -25792,8 +25797,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "_DIEMSG_",
@@ -25807,8 +25812,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   },
   {
    "topic": "_UNDEADVICTMESSAGE_",
@@ -25822,8 +25827,8 @@
    "variants": [],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "11:271"
   }
  ]
 }

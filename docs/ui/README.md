@@ -99,3 +99,7 @@ Section "FIG-04 · Ficha, equipamento, combate, Força e medicina" on the screen
 ## FIG-05 · professions, economy and datapad
 
 Section "FIG-05 · Comércio, oficina, slicer, droides e datapad". Stations `trade`, `workshop`, `slicer`, `droids` and `datapad`, one key per command (help syntax). Credits and droid rows are examples of the game's own `money`/`bank` and `droidstat` output; the full datapad device stays in the FIG-03 section and these keys open it. LEADPLANET, SHOWPLANET and SHOWRACE move to FIG-06.
+
+## FIG-06 · clans, planets, events, onboarding and system
+
+Section "FIG-06 · Clã, planetas, eventos, boas-vindas e sistema". Stations `clan`, `planet`, `events`, `onboarding` and `system` (the catch-all, so every command has a panel). "Complementos" lists help topics routed to the FIG-02 stations and to COMBATE after those screens were drawn. The catalog test now requires a station for every non-reference topic. Race and class pages stay reference topics in the Holocron; character creation runs in the game's own prompts.
