@@ -5,7 +5,9 @@ from svgkit import Svg, card, PAL
 OUT = os.path.join(os.path.dirname(__file__), "out")
 os.makedirs(OUT, exist_ok=True)
 NODES = os.path.join(os.path.dirname(__file__), "..", "..", "..", "docs", "ui", "figma-nodes.json")
-DESIGNED = {t for n in json.load(open(NODES, encoding="utf-8"))["nodes"] for t in n["topics"]}
+COMPLEMENTS_NODE = "27:2704"
+# Topics drawn on earlier screens; the Complementos card's own entry is left out so it can be regenerated.
+DESIGNED = {t for n in json.load(open(NODES, encoding="utf-8"))["nodes"] if n["id"] != COMPLEMENTS_NODE for t in n["topics"]}
 
 
 def save(name, s):

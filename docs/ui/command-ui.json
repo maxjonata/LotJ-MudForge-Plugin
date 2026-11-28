@@ -90,7 +90,7 @@
    "notes": [],
    "station": "system",
    "status": "designed",
-   "figma_node": "27:2536"
+   "figma_node": "27:3175"
   },
   {
    "topic": "\"SMALL_SPACECRAFT\" \"MEDIUM_SPACECRAFT\" \"CORVETTE_SPACECRAFT\" \"LARGE_SPACECRAFT\" \"HEAVY_SPACECRAFT\"",
@@ -304,7 +304,7 @@
    "notes": [],
    "station": "system",
    "status": "designed",
-   "figma_node": "27:2536"
+   "figma_node": "27:3175"
   },
   {
    "topic": "'LIGHTSABER THROW' LIGHTSABER_THROW",
@@ -1586,9 +1586,9 @@
     }
    ],
    "notes": [],
-   "station": "planet",
+   "station": "system",
    "status": "designed",
-   "figma_node": "27:2356"
+   "figma_node": "27:3175"
   },
   {
    "topic": "ARENA",
@@ -1666,7 +1666,7 @@
    "notes": [],
    "station": "system",
    "status": "designed",
-   "figma_node": "27:2536"
+   "figma_node": "27:3175"
   },
   {
    "topic": "ARKANIAN  ARKANIA",
@@ -2938,7 +2938,7 @@
    "notes": [],
    "station": "system",
    "status": "designed",
-   "figma_node": "27:2536"
+   "figma_node": "27:3175"
   },
   {
    "topic": "BOUNTY CLANBOUNTY",
@@ -3621,7 +3621,7 @@
    "notes": [],
    "station": "system",
    "status": "designed",
-   "figma_node": "27:2536"
+   "figma_node": "27:3175"
   },
   {
    "topic": "C",
@@ -4010,7 +4010,7 @@
    "notes": [],
    "station": "system",
    "status": "designed",
-   "figma_node": "27:2536"
+   "figma_node": "27:3175"
   },
   {
    "topic": "CEREAN  CEREANS",
@@ -5079,7 +5079,7 @@
    "notes": [],
    "station": "system",
    "status": "designed",
-   "figma_node": "27:2536"
+   "figma_node": "27:3175"
   },
   {
    "topic": "CLIENT CLIENTS MUSHCLIENT MUDLET CMUD",
@@ -5401,7 +5401,7 @@
    "notes": [],
    "station": "system",
    "status": "designed",
-   "figma_node": "27:2536"
+   "figma_node": "27:3175"
   },
   {
    "topic": "COMMUNICATOR",
@@ -5513,7 +5513,7 @@
    "notes": [],
    "station": "system",
    "status": "designed",
-   "figma_node": "27:2536"
+   "figma_node": "27:3175"
   },
   {
    "topic": "COMPUTE",
@@ -5859,7 +5859,7 @@
    "notes": [],
    "station": "system",
    "status": "designed",
-   "figma_node": "27:2536"
+   "figma_node": "27:3175"
   },
   {
    "topic": "CRACKDATAPAD",
@@ -6644,7 +6644,7 @@
    "notes": [],
    "station": "system",
    "status": "designed",
-   "figma_node": "27:2536"
+   "figma_node": "27:3175"
   },
   {
    "topic": "DEMOTE",
@@ -7016,7 +7016,7 @@
    "notes": [],
    "station": "system",
    "status": "designed",
-   "figma_node": "27:2536"
+   "figma_node": "27:3175"
   },
   {
    "topic": "DEVLIST",
@@ -7785,7 +7785,7 @@
    "notes": [],
    "station": "system",
    "status": "designed",
-   "figma_node": "27:2536"
+   "figma_node": "27:3175"
   },
   {
    "topic": "DRAETHOS",
@@ -8212,7 +8212,7 @@
    "notes": [],
    "station": "system",
    "status": "designed",
-   "figma_node": "27:2536"
+   "figma_node": "27:3175"
   },
   {
    "topic": "DUELIST",
@@ -8274,7 +8274,7 @@
    "notes": [],
    "station": "system",
    "status": "designed",
-   "figma_node": "27:2536"
+   "figma_node": "27:3175"
   },
   {
    "topic": "DURINDFIRE",
@@ -9061,7 +9061,7 @@
    "notes": [],
    "station": "system",
    "status": "designed",
-   "figma_node": "27:2536"
+   "figma_node": "27:3175"
   },
   {
    "topic": "ENHANCEMENT",
@@ -10029,7 +10029,7 @@
    "notes": [],
    "station": "system",
    "status": "designed",
-   "figma_node": "27:2536"
+   "figma_node": "27:3175"
   },
   {
    "topic": "FLURRY",
@@ -10466,7 +10466,7 @@
    "notes": [],
    "station": "system",
    "status": "designed",
-   "figma_node": "27:2536"
+   "figma_node": "27:3175"
   },
   {
    "topic": "FORCEPIKE FORCEPIKES 'FORCE PIKE' 'FORCE PIKES' 'ADVANCED FORCEPIKE' 'FORCEPIKE MASTERY'",
@@ -10884,7 +10884,7 @@
    "notes": [],
    "station": "system",
    "status": "designed",
-   "figma_node": "27:2536"
+   "figma_node": "27:3175"
   },
   {
    "topic": "GAMORREAN GAMORREANS",
@@ -11270,7 +11270,7 @@
    "notes": [],
    "station": "system",
    "status": "designed",
-   "figma_node": "27:2536"
+   "figma_node": "27:3175"
   },
   {
    "topic": "GRENADE GRENADES",
@@ -11346,7 +11346,7 @@
    "notes": [],
    "station": "system",
    "status": "designed",
-   "figma_node": "27:2536"
+   "figma_node": "27:3175"
   },
   {
    "topic": "GUNGAN",
@@ -12055,7 +12055,7 @@
    "notes": [],
    "station": "system",
    "status": "designed",
-   "figma_node": "27:2536"
+   "figma_node": "27:3175"
   },
   {
    "topic": "I",
@@ -12143,7 +12143,7 @@
    "notes": [],
    "station": "system",
    "status": "designed",
-   "figma_node": "27:2536"
+   "figma_node": "27:3175"
   },
   {
    "topic": "IMMCHAT MORTCHAT",
@@ -12682,7 +12682,7 @@
    "notes": [],
    "station": "planet",
    "status": "designed",
-   "figma_node": "27:2356"
+   "figma_node": "27:3140"
   },
   {
    "topic": "JAIL_GUIDELINES",
@@ -13271,7 +13271,7 @@
    "notes": [],
    "station": "planet",
    "status": "designed",
-   "figma_node": "27:2356"
+   "figma_node": "27:3140"
   },
   {
    "topic": "LEAVESHIP",
@@ -13488,7 +13488,7 @@
    "notes": [],
    "station": "system",
    "status": "inactive",
-   "figma_node": "27:2536",
+   "figma_node": "27:3175",
    "note": "Help: these commands are no longer in use on this mud."
   },
   {
@@ -13857,7 +13857,7 @@
    "notes": [],
    "station": "system",
    "status": "designed",
-   "figma_node": "27:2536"
+   "figma_node": "27:3175"
   },
   {
    "topic": "LORELLIAN LORELLIANS",
@@ -14996,7 +14996,7 @@
    "notes": [],
    "station": "system",
    "status": "designed",
-   "figma_node": "27:2536"
+   "figma_node": "27:3175"
   },
   {
    "topic": "MASTER_COMMUNICATOR 'MASTER COMMUNICATOR'",
@@ -15178,7 +15178,7 @@
    "notes": [],
    "station": "system",
    "status": "designed",
-   "figma_node": "27:2536"
+   "figma_node": "27:3175"
   },
   {
    "topic": "MENTALSTATE",
@@ -15331,7 +15331,7 @@
    "notes": [],
    "station": "system",
    "status": "designed",
-   "figma_node": "27:2536"
+   "figma_node": "27:3175"
   },
   {
    "topic": "MINERALS",
@@ -17137,7 +17137,7 @@
    "notes": [],
    "station": "system",
    "status": "designed",
-   "figma_node": "27:2536"
+   "figma_node": "27:3175"
   },
   {
    "topic": "OSET_FLAGS2 OSET_FLAG2 OSETFLAGS2 OSETFLAG2 OFLAGS2 OFLAG2",
@@ -17418,7 +17418,7 @@
    "notes": [],
    "station": "system",
    "status": "designed",
-   "figma_node": "27:2536"
+   "figma_node": "27:3175"
   },
   {
    "topic": "PERCEPTION",
@@ -17716,7 +17716,7 @@
    "notes": [],
    "station": "planet",
    "status": "designed",
-   "figma_node": "27:2356"
+   "figma_node": "27:3140"
   },
   {
    "topic": "PLAYEROWNEDCAPITALSHIPS",
@@ -17795,7 +17795,7 @@
    "notes": [],
    "station": "system",
    "status": "designed",
-   "figma_node": "27:2536"
+   "figma_node": "27:3175"
   },
   {
    "topic": "PRACTICE PRAC",
@@ -18082,7 +18082,7 @@
    "notes": [],
    "station": "system",
    "status": "designed",
-   "figma_node": "27:2536"
+   "figma_node": "27:3175"
   },
   {
    "topic": "PROTOCOL_DROID 'PROTOCOL DROID'",
@@ -18178,7 +18178,7 @@
    "notes": [],
    "station": "planet",
    "status": "designed",
-   "figma_node": "27:2356"
+   "figma_node": "27:3140"
   },
   {
    "topic": "PSHIELDS",
@@ -18205,7 +18205,7 @@
    "notes": [],
    "station": "planet",
    "status": "designed",
-   "figma_node": "27:2356"
+   "figma_node": "27:3140"
   },
   {
    "topic": "PSTAT",
@@ -18227,7 +18227,7 @@
    "notes": [],
    "station": "planet",
    "status": "designed",
-   "figma_node": "27:2356"
+   "figma_node": "27:3140"
   },
   {
    "topic": "PTALK",
@@ -18254,7 +18254,7 @@
    "notes": [],
    "station": "system",
    "status": "inactive",
-   "figma_node": "27:2536",
+   "figma_node": "27:3175",
    "note": "Help: this command is no longer in use."
   },
   {
@@ -19403,7 +19403,7 @@
    ],
    "station": "planet",
    "status": "designed",
-   "figma_node": "27:2356"
+   "figma_node": "27:3140"
   },
   {
    "topic": "RESIGN",
@@ -19652,7 +19652,7 @@
    "notes": [],
    "station": "system",
    "status": "designed",
-   "figma_node": "27:2536"
+   "figma_node": "27:3175"
   },
   {
    "topic": "RMOTE",
@@ -19736,7 +19736,7 @@
    "notes": [],
    "station": "system",
    "status": "designed",
-   "figma_node": "27:2536"
+   "figma_node": "27:3175"
   },
   {
    "topic": "ROSTER",
@@ -20204,7 +20204,7 @@
    "notes": [],
    "station": "system",
    "status": "designed",
-   "figma_node": "27:2536"
+   "figma_node": "27:3175"
   },
   {
    "topic": "SCIENTIFIC_MIND 'SCIENTIFIC MIND'",
@@ -20686,7 +20686,7 @@
    "notes": [],
    "station": "system",
    "status": "designed",
-   "figma_node": "27:2536"
+   "figma_node": "27:3175"
   },
   {
    "topic": "SETLEADER",
@@ -21043,7 +21043,7 @@
    "notes": [],
    "station": "system",
    "status": "designed",
-   "figma_node": "27:2536"
+   "figma_node": "27:3175"
   },
   {
    "topic": "SHOVE DRAG",
@@ -21230,7 +21230,7 @@
    "notes": [],
    "station": "planet",
    "status": "designed",
-   "figma_node": "27:2356"
+   "figma_node": "27:3140"
   },
   {
    "topic": "SHOWRACE",
@@ -21469,7 +21469,7 @@
    "notes": [],
    "station": "system",
    "status": "designed",
-   "figma_node": "27:2536"
+   "figma_node": "27:3175"
   },
   {
    "topic": "SLICER SLICING",
@@ -22359,7 +22359,7 @@
    "notes": [],
    "station": "system",
    "status": "designed",
-   "figma_node": "27:2536"
+   "figma_node": "27:3175"
   },
   {
    "topic": "SUBCLASS SUB-CLASS GUARDIAN SENTINEL CONSULAR SAGE JUGGERNAUT ASSASSIN SORCERER",
@@ -22443,7 +22443,7 @@
    "notes": [],
    "station": "system",
    "status": "designed",
-   "figma_node": "27:2536"
+   "figma_node": "27:3175"
   },
   {
    "topic": "SULLUSTAN SULLUST BOMEWRIGHT",
@@ -22531,7 +22531,7 @@
    "notes": [],
    "station": "system",
    "status": "designed",
-   "figma_node": "27:2536"
+   "figma_node": "27:3175"
   },
   {
    "topic": "SYSTEMTALK",
@@ -22664,7 +22664,7 @@
    "notes": [],
    "station": "system",
    "status": "inactive",
-   "figma_node": "27:2536",
+   "figma_node": "27:3175",
    "note": "Help: these commands are no longer in use on this mud."
   },
   {
@@ -23091,7 +23091,7 @@
    "notes": [],
    "station": "system",
    "status": "designed",
-   "figma_node": "27:2536"
+   "figma_node": "27:3175"
   },
   {
    "topic": "THIEVES_EYE 'THIEVES EYE'",
@@ -23757,7 +23757,7 @@
    "notes": [],
    "station": "system",
    "status": "designed",
-   "figma_node": "27:2536"
+   "figma_node": "27:3175"
   },
   {
    "topic": "TRANDOSHAN TRANDOSHA DOSHA",
@@ -23879,7 +23879,7 @@
    "notes": [],
    "station": "system",
    "status": "designed",
-   "figma_node": "27:2536"
+   "figma_node": "27:3175"
   },
   {
    "topic": "TRANSPORT_SPECIALIST 'TRANSPORT SPECIALIST'",
@@ -23937,7 +23937,7 @@
    "notes": [],
    "station": "system",
    "status": "designed",
-   "figma_node": "27:2536"
+   "figma_node": "27:3175"
   },
   {
    "topic": "TRUE_NEUTRAL",

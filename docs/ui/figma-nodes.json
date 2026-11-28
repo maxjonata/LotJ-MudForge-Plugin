@@ -1425,11 +1425,10 @@
    ]
   },
   {
-   "id": "27:2356",
+   "id": "27:3140",
    "name": "Planetas",
    "kind": "screen",
    "topics": [
-    "AREAS COMMANDS SOCIALS",
     "JAIL",
     "LEADPLANET",
     "PLANETS PLANET",
@@ -1492,12 +1491,13 @@
    ]
   },
   {
-   "id": "27:2536",
+   "id": "27:3175",
    "name": "Sistema e utilidades",
    "kind": "screen",
    "topics": [
     "!",
     "'LFR' 'LOOKING_FOR_ROLEPLAY'",
+    "AREAS COMMANDS SOCIALS",
     "ARENA",
     "BOTTING BOT",
     "BUZZ INVITE",

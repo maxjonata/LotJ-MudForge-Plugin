@@ -150,6 +150,8 @@ def label_and_hint(entry):
 
 def key_color(entry, station):
     p = entry["pattern"]
+    if entry.get("status") == "inactive":
+        return "off"
     if p == "toggle":
         return "blue"
     if (station == "combat" or (isinstance(station, (tuple, list)) and entry.get("station") == "combat")) and p == "target":
