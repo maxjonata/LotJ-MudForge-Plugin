@@ -1,4 +1,22 @@
 {
+ "'FEEL ARMOR' ARMOR_SPELL 'FORCE ARMOR'": {
+  "station": "force"
+ },
+ "'FORCE LIGHTNING' FORCE_LIGHTNING": {
+  "station": "force"
+ },
+ "'KNOW ESSENCE' KNOW_ESSENCE": {
+  "station": "force"
+ },
+ "'LIGHTSABER THROW' LIGHTSABER_THROW": {
+  "station": "force"
+ },
+ "'REMOVE MASKING' REMOVE_MASKING": {
+  "station": "force"
+ },
+ "ACCEPT": {
+  "station": "combat"
+ },
  "ACONFIG": {
   "station": "pilot"
  },
@@ -7,6 +25,48 @@
  },
  "ADDPILOT REMPILOT": {
   "station": "access"
+ },
+ "AFFECTED 'AFFECTED BY'": {
+  "station": "sheet"
+ },
+ "AFFLICTION": {
+  "station": "force"
+ },
+ "AFK": {
+  "station": "sheet"
+ },
+ "AID": {
+  "station": "medical"
+ },
+ "AIM": {
+  "station": "combat"
+ },
+ "ALIGNMENT ALIGN": {
+  "station": "force"
+ },
+ "AMBUSH": {
+  "station": "combat"
+ },
+ "AMMO AMMUNITION BATTERY": {
+  "station": "gear"
+ },
+ "APPRENTICE APPRENTICESTAT": {
+  "station": "force"
+ },
+ "APPRENTICESTAT": {
+  "station": "force"
+ },
+ "APPROACH": {
+  "station": "combat"
+ },
+ "ARM": {
+  "station": "combat"
+ },
+ "ARMORDESC": {
+  "station": "gear"
+ },
+ "ARMORSPELLTWO": {
+  "station": "force"
  },
  "AUTOLAUNCH": {
   "station": "pilot"
@@ -20,14 +80,47 @@
  "AUTOTRACK": {
   "station": "pilot"
  },
+ "AWAKEN FORCE": {
+  "station": "force"
+ },
+ "AWARENESS": {
+  "station": "force"
+ },
+ "BACKSTAB CIRCLE": {
+  "station": "combat"
+ },
+ "BASH": {
+  "station": "combat"
+ },
+ "BATTLE MEDITATION": {
+  "station": "force"
+ },
  "BATTLEGROUP": {
   "station": "fleet"
  },
  "BEEP": {
   "station": "rp"
  },
+ "BERSERK": {
+  "station": "combat"
+ },
+ "BIND HANDCUFFS": {
+  "station": "combat"
+ },
+ "BLACKJACK": {
+  "station": "force"
+ },
+ "BLOCK": {
+  "station": "combat"
+ },
+ "BLOODBATH": {
+  "station": "force"
+ },
  "BOARD": {
   "station": "access"
+ },
+ "BREACH": {
+  "station": "force"
  },
  "BROADCAST": {
   "station": "rp"
@@ -35,8 +128,29 @@
  "BUYSHIP SELLSHIP": {
   "station": "shipyard"
  },
+ "CALL": {
+  "station": "combat"
+ },
+ "CALM": {
+  "station": "force"
+ },
+ "CAMOUFLAGE": {
+  "station": "combat"
+ },
+ "CAPTURE": {
+  "station": "combat"
+ },
  "CARGO LISTCARGO BUYCARGO SELLCARGO JETTISON": {
   "station": "engineering"
+ },
+ "CARNAGE": {
+  "station": "force"
+ },
+ "CARRY": {
+  "station": "combat"
+ },
+ "CAST FEEL": {
+  "station": "force"
  },
  "CGTALK": {
   "station": "rp"
@@ -47,32 +161,137 @@
  "CHANNEL CHANNELS": {
   "station": "rp"
  },
+ "CHARSHEET CHARACTER SHEET": {
+  "station": "sheet"
+ },
+ "CHOKE": {
+  "station": "force"
+ },
  "CLANBUYSHIP": {
   "station": "shipyard"
  },
  "CLANTALK": {
   "station": "rp"
  },
+ "CLARITY": {
+  "station": "force"
+ },
+ "CLEANSE MIND": {
+  "station": "force"
+ },
+ "CLIMB": {
+  "station": "combat"
+ },
  "CLOAK CLOAKING": {
   "station": "weapons"
+ },
+ "CLONES CLONE CLONING": {
+  "station": "medical"
  },
  "CLOSEHATCH OPENHATCH HATCH": {
   "station": "access"
  },
+ "COMPARE": {
+  "station": "gear"
+ },
+ "CONCEAL": {
+  "station": "combat"
+ },
+ "CONFIG": {
+  "station": "sheet"
+ },
  "CONSIDER": {
   "station": "room"
+ },
+ "CONVERGE": {
+  "station": "force"
  },
  "COORDINATES CALC CALCULATE NAVCOMPUTER": {
   "station": "nav"
  },
+ "CURE POISON": {
+  "station": "force"
+ },
+ "CURE_BLINDNESS": {
+  "station": "force"
+ },
  "CURRENTCOM": {
   "station": "rp"
+ },
+ "CYBERNETICS CYBER CYBERNETIC": {
+  "station": "medical"
+ },
+ "CYBERNETIC_EXPERT 'CYBERNETIC EXPERT'": {
+  "station": "medical"
+ },
+ "DEATH FIELD": {
+  "station": "force"
+ },
+ "DESCARMOR": {
+  "station": "gear"
+ },
+ "DESCITEM": {
+  "station": "gear"
+ },
+ "DESCITEM ITEMDESC": {
+  "station": "gear"
+ },
+ "DESCRIPTION DESC": {
+  "station": "sheet"
+ },
+ "DIAGNOSE": {
+  "station": "medical"
+ },
+ "DISARM": {
+  "station": "combat"
+ },
+ "DISGUISE": {
+  "station": "combat"
+ },
+ "DISPEL FORCE": {
+  "station": "force"
+ },
+ "DISPEL SPIRIT": {
+  "station": "force"
  },
  "DOCK": {
   "station": "engineering"
  },
+ "DOCTOR": {
+  "station": "medical"
+ },
+ "DOMINATE": {
+  "station": "combat"
+ },
+ "DOORBASH": {
+  "station": "combat"
+ },
+ "DRAIN": {
+  "station": "force"
+ },
+ "DRAW HOLSTER UNHOLSTER": {
+  "station": "gear"
+ },
+ "DRAW UNHOLSTER": {
+  "station": "gear"
+ },
  "DROP GET GIVE PUT TAKE": {
   "station": "room"
+ },
+ "DUTY": {
+  "station": "combat"
+ },
+ "DUTY SQUAD TROOP TROOPS TROOPERS": {
+  "station": "combat"
+ },
+ "EAT DRINK": {
+  "station": "medical"
+ },
+ "EDIBLES": {
+  "station": "medical"
+ },
+ "EDUCATION": {
+  "station": "sheet"
  },
  "EMERGENCY_REFUEL": {
   "station": "engineering"
@@ -80,8 +299,20 @@
  "EMOTE , POSE SOCIAL": {
   "station": "rp"
  },
+ "EMPTY": {
+  "station": "force"
+ },
+ "ENHANCEWEAPON": {
+  "station": "gear"
+ },
  "ENTER LEAVE": {
   "station": "room"
+ },
+ "EQ INV EQUIP EQUIPMENT INVENTORY": {
+  "station": "gear"
+ },
+ "ESCAPE_BINDING": {
+  "station": "combat"
  },
  "EXAMINE LOOK": {
   "station": "room"
@@ -92,26 +323,128 @@
  "FACE": {
   "station": "pilot"
  },
+ "FARSIGHT": {
+  "station": "force"
+ },
+ "FARSPEAK": {
+  "station": "force"
+ },
+ "FEAR": {
+  "station": "force"
+ },
+ "FILL": {
+  "station": "gear"
+ },
  "FIRE": {
   "station": "weapons"
+ },
+ "FIRSTAID 'FIRST AID' MEDPAC FIRST 'ADVANCED FIRST AID' 'EXPERT FIRST AID'": {
+  "station": "medical"
+ },
+ "FLEE": {
+  "station": "combat"
  },
  "FLEETRADAR": {
   "station": "fleet"
  },
+ "FLIST": {
+  "station": "force"
+ },
+ "FLURRY": {
+  "station": "combat"
+ },
  "FOLLOW GROUP": {
   "station": "room"
+ },
+ "FORCE CONCEAL": {
+  "station": "force"
+ },
+ "FORCE CRUSH": {
+  "station": "force"
+ },
+ "FORCE GRAB": {
+  "station": "force"
+ },
+ "FORCE HEAL": {
+  "station": "force"
+ },
+ "FORCE HEALING": {
+  "station": "force"
+ },
+ "FORCE JUMP": {
+  "station": "force"
+ },
+ "FORCE PUSH": {
+  "station": "force"
+ },
+ "FORCE REVIVE": {
+  "station": "force"
+ },
+ "FORCE SPEED": {
+  "station": "force"
+ },
+ "FORCE STORM": {
+  "station": "force"
+ },
+ "FORCE WAVE": {
+  "station": "force"
+ },
+ "FORCEPIKE FORCEPIKES 'FORCE PIKE' 'FORCE PIKES' 'ADVANCED FORCEPIKE' 'FORCEPIKE MASTERY'": {
+  "station": "force"
+ },
+ "FORCE_CONCEAL": {
+  "station": "force"
+ },
+ "FORCE_ENTRY WARRANT": {
+  "station": "force"
+ },
+ "FORCE_LIGHTNING": {
+  "station": "force"
+ },
+ "FORESIGHT SENSES": {
+  "station": "force"
+ },
+ "FORM SABERFORM LIGHTSABER_FORMS SABER_FORMS \"LIGHTSABER FORMS\" \"SABER FORMS\"": {
+  "station": "force"
  },
  "FUEL REFUEL": {
   "station": "engineering"
  },
+ "FURY": {
+  "station": "force"
+ },
+ "GENDER": {
+  "station": "sheet"
+ },
  "GLANCE": {
   "station": "room"
+ },
+ "GOUGE BLIND": {
+  "station": "combat"
+ },
+ "GRAB": {
+  "station": "combat"
+ },
+ "GRIP": {
+  "station": "force"
  },
  "HAIL": {
   "station": "comms"
  },
  "HANGAR HANGARS OPENBAY CLOSEBAY REMOTEBAY TURRET TURRETS": {
   "station": "engineering"
+ },
+ "HEALWOUND": {
+  "station": "medical"
+ },
+ "HIDE SNEAK VISIBLE": {
+  "station": "combat"
+ },
+ "HISTORY BIO BACKGROUND": {
+  "station": "sheet"
+ },
+ "HITALL": {
+  "station": "combat"
  },
  "HYPERSPACE HYPER LIGHTSPEED": {
   "station": "nav"
@@ -121,6 +454,21 @@
  },
  "INFO": {
   "station": "nav"
+ },
+ "INFRAVISION": {
+  "station": "force"
+ },
+ "INJECT": {
+  "station": "medical"
+ },
+ "INJURYS": {
+  "station": "medical"
+ },
+ "KICK": {
+  "station": "combat"
+ },
+ "KILL MURDER": {
+  "station": "combat"
  },
  "KNOCK": {
   "station": "room"
@@ -137,6 +485,15 @@
  "LEAVESHIP": {
   "station": "access"
  },
+ "LETHARGY": {
+  "station": "force"
+ },
+ "LEVEL LEVELS": {
+  "station": "sheet"
+ },
+ "LEVITATE": {
+  "station": "force"
+ },
  "LIFT": {
   "station": "room"
  },
@@ -144,11 +501,41 @@
   "status": "inactive",
   "note": "Help: these commands are no longer in use on this mud."
  },
+ "LIGHTSABERS 'ADVANCED LIGHTSABER' 'LIGHTSABER MASTERY'": {
+  "station": "force"
+ },
+ "LIMBER": {
+  "station": "combat"
+ },
  "LOADSHIP": {
   "station": "engineering"
  },
+ "LUNGE": {
+  "station": "combat"
+ },
+ "MANIFEST": {
+  "station": "force"
+ },
+ "MASK": {
+  "station": "force"
+ },
+ "MEDICAL": {
+  "station": "medical"
+ },
+ "MEDITATE": {
+  "station": "force"
+ },
+ "MINDTALK": {
+  "station": "force"
+ },
  "MOBILE REFUEL": {
   "station": "engineering"
+ },
+ "MOUNT DISMOUNT": {
+  "station": "combat"
+ },
+ "NARCOTICS": {
+  "station": "medical"
  },
  "NAVCOMMANDS": {
   "station": "fleet"
@@ -165,14 +552,41 @@
  "NORTHEAST NORTHWEST SOUTHEAST SOUTHWEST": {
   "station": "room"
  },
+ "OBSCURE": {
+  "station": "force"
+ },
+ "OLD_TROOPS SQUAD TROOP TROOPS TROOPERS": {
+  "station": "combat"
+ },
  "OPEN CLOSE LOCK UNLOCK PICK": {
   "station": "room"
+ },
+ "ORDER": {
+  "station": "combat"
  },
  "OSAY": {
   "station": "rp"
  },
+ "PASS DOOR": {
+  "station": "force"
+ },
+ "PERCEPTION": {
+  "station": "force"
+ },
  "PILOT": {
   "station": "access"
+ },
+ "POISON WEAPON": {
+  "station": "gear"
+ },
+ "PRACTICE PRAC": {
+  "station": "sheet"
+ },
+ "PRESENCE": {
+  "station": "force"
+ },
+ "PROMPT FPROMPT": {
+  "station": "sheet"
  },
  "PROXIMITY PROX": {
   "station": "nav"
@@ -193,17 +607,50 @@
  "REFUEL": {
   "station": "engineering"
  },
+ "RELEASE": {
+  "station": "combat"
+ },
  "RELOAD": {
   "station": "weapons"
  },
  "RENAMESHIP": {
   "station": "shipyard"
  },
+ "REPAIRARMOR": {
+  "station": "gear"
+ },
  "REPAIRSHIP SHIP_MAINTENANCE SHIPMAINTENANCE 'SHIP MAINTENANCE'": {
   "station": "engineering"
  },
+ "REPAIRWEAPON": {
+  "station": "gear"
+ },
+ "REPULSE": {
+  "station": "force"
+ },
+ "RESCUE": {
+  "station": "combat"
+ },
+ "RESEARCH LIBRARY": {
+  "station": "sheet"
+ },
  "REST SLEEP STAND WAKE": {
   "station": "room"
+ },
+ "RETREAT": {
+  "station": "combat"
+ },
+ "REVEAL": {
+  "station": "force"
+ },
+ "REVIVE": {
+  "station": "medical"
+ },
+ "SALVATION": {
+  "station": "force"
+ },
+ "SAVE": {
+  "station": "sheet"
  },
  "SAY": {
   "station": "rp"
@@ -214,11 +661,26 @@
  "SCAN": {
   "station": "room"
  },
+ "SCORE": {
+  "station": "sheet"
+ },
  "SEARCH": {
   "station": "room"
  },
  "SELFDESTRUCT": {
   "station": "engineering"
+ },
+ "SENSE_ATTUNEMENT 'SENSE ATTUNEMENT'": {
+  "station": "force"
+ },
+ "SETBLASTER": {
+  "station": "gear"
+ },
+ "SETDRAW": {
+  "station": "gear"
+ },
+ "SHARP_EYE 'SHARP EYE'": {
+  "station": "combat"
  },
  "SHIPTALK": {
   "station": "rp"
@@ -226,14 +688,35 @@
  "SHIP_SYSTEMS 'SHIP SYSTEMS' STATUS": {
   "station": "nav"
  },
+ "SHOVE DRAG": {
+  "station": "combat"
+ },
  "SIT": {
   "station": "room"
+ },
+ "SLEEP": {
+  "station": "force"
+ },
+ "SLIP": {
+  "station": "combat"
+ },
+ "SLIST FLIST": {
+  "station": "force"
+ },
+ "SLOWDRAW": {
+  "station": "combat"
+ },
+ "SNIPE": {
+  "station": "combat"
  },
  "SPEAK": {
   "station": "rp"
  },
  "SPEED VELOCITY ACCELERATE": {
   "station": "pilot"
+ },
+ "SPRINT": {
+  "station": "combat"
  },
  "SQUADRON": {
   "station": "fleet"
@@ -243,6 +726,21 @@
  },
  "STATUS": {
   "station": "nav"
+ },
+ "STOP": {
+  "station": "combat"
+ },
+ "STRUGGLE": {
+  "station": "combat"
+ },
+ "SUBCLASS SUB-CLASS GUARDIAN SENTINEL CONSULAR SAGE JUGGERNAUT ASSASSIN SORCERER": {
+  "station": "force"
+ },
+ "SUBDUE": {
+  "station": "combat"
+ },
+ "TAIL": {
+  "station": "combat"
  },
  "TAMP": {
   "status": "inactive",
@@ -254,17 +752,32 @@
  "TAXI": {
   "station": "room"
  },
+ "TEACH": {
+  "station": "sheet"
+ },
+ "TELEPATHY": {
+  "station": "force"
+ },
  "TELL REPLY": {
   "station": "rp"
  },
  "TELL REPLY DM DIRECTMESSAGE": {
   "station": "rp"
  },
+ "THIEVES_EYE 'THIEVES EYE'": {
+  "station": "combat"
+ },
  "THINK": {
   "station": "rp"
  },
+ "TITLE PUBLICTITLE": {
+  "station": "sheet"
+ },
  "TONE": {
   "station": "rp"
+ },
+ "TRACK": {
+  "station": "combat"
  },
  "TRACTORBEAM 'TRACTOR BEAMS' TRACTOR": {
   "station": "weapons"
@@ -278,23 +791,53 @@
  "TRANSPONDER": {
   "station": "nav"
  },
+ "TUCK PALM": {
+  "station": "combat"
+ },
  "TUNE": {
   "station": "rp"
  },
  "TURBOLIFT": {
   "station": "room"
  },
+ "UNBIND": {
+  "station": "combat"
+ },
  "UNDOCK": {
   "station": "engineering"
+ },
+ "UNFAMILIAR": {
+  "station": "force"
  },
  "UNLOADSHIP": {
   "station": "engineering"
  },
+ "USE ACTIVATE": {
+  "station": "gear"
+ },
  "VECTOR COURSE TRAJECTORY": {
   "station": "pilot"
  },
+ "VENGEANCE": {
+  "station": "force"
+ },
+ "VENTRILOQUATE": {
+  "station": "force"
+ },
+ "VISION": {
+  "station": "force"
+ },
+ "VITALITY": {
+  "station": "force"
+ },
+ "WATCH": {
+  "station": "combat"
+ },
  "WHISPER": {
   "station": "rp"
+ },
+ "WIMPY": {
+  "station": "sheet"
  },
  "YELL": {
   "station": "rp"

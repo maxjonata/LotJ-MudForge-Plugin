@@ -85,3 +85,13 @@ Shared pieces are Figma components; screens use instances, never redrawn copies.
 - **Holo map**: area name, explored %, deck selector, you, a dotted trail of your last 3 steps fading from your room to nothing, explored/seen rooms, open/locked exits, turbolift, faded other deck, translucent LEGEND button with the legend as a hover tooltip, places list, controls.
 - **Datapad**: a physical device window (casing, screen, lit hardware keys, BIO LOCK and RX lights) with FILES (slots; view, edit with to/from/subject, send, show, copy, download, eject, delete), INBOX (receive), DISKS (load), SECURITY (setbiometrics) and STATUS (datastat); docks with [_].
 - **Legends** are never a fixed panel: always a translucent LEGEND button with the legend in a hover tooltip.
+
+## FIG-04 · character and combat
+
+Section "FIG-04 · Ficha, equipamento, combate, Força e medicina" on the screens page. Every command of the stations `sheet`, `gear`, `combat`, `force` and `medical` has a key; the label and hint come from the help's own syntax lines (`scripts/ui` catalog), so nothing is invented.
+
+- Vitals bars read GMCP `Char.Vitals` (hp, move, mana = Force); the enemy strip reads `Char.Enemy`.
+- Red keys are aggressive acts on a target and ask once, like TARGET on ships; white keys open the target picker; ▸ opens a form.
+- Equipment and injury rows come from the game's own output (`equipment`, `injurys`).
+- Gap: death, hospital and clone flows are not drawn because the local help index has no prose for DEATH and CLONES.
+- Cards from FIG-04 on are generated as SVG with the depth (gradient caps, glow and shadows) built in.

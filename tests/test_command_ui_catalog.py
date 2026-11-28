@@ -180,6 +180,12 @@ class CommittedCatalogTests(unittest.TestCase):
         for topic in ["SAY", "SAYTO", "EMOTE , POSE SOCIAL", "TELL REPLY", "WHISPER", "CLANTALK", "TUNE"]:
             self.assertEqual(panels.get(topic), "rp", topic)
 
+    def test_character_and_combat_commands_have_a_panel(self):
+        panels = {e["topic"]: e["station"] for e in self.catalog["entries"]}
+        for topic, panel in [("SCORE", "sheet"), ("KILL MURDER", "combat"), ("FLEE", "combat"), ("MEDITATE", "force"),
+                             ("HEALWOUND", "medical"), ("CLONES CLONE CLONING", "medical"), ("AMMO AMMUNITION BATTERY", "gear")]:
+            self.assertEqual(panels.get(topic), panel, topic)
+
     def test_committed_catalog_is_regenerated(self):
         overrides = json.loads((ROOT / "docs/ui/overrides.json").read_text(encoding="utf-8"))
         rebuilt = bc.build(self.reference["topics"], overrides, bc.figma_links(self.nodes), bc.pattern_frames(self.nodes))
