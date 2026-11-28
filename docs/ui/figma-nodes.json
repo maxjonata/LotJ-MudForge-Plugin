@@ -1602,6 +1602,30 @@
     "VIBRO-BLADES VIBROBLADES VIBROBLADE 'ADVANCED VIBROBLADE' 'VIBROBLADE MASTERY' VIBRO",
     "WEAPON_SYSTEMS 'WEAPON SYSTEMS'"
    ]
+  },
+  {
+   "id": "27:2842",
+   "name": "FIG-04..06 · Mobile 390",
+   "kind": "section",
+   "topics": []
+  },
+  {
+   "id": "27:2843",
+   "name": "Mobile · Combate",
+   "kind": "screen",
+   "topics": []
+  },
+  {
+   "id": "27:2949",
+   "name": "Mobile · Oficina",
+   "kind": "screen",
+   "topics": []
+  },
+  {
+   "id": "27:3045",
+   "name": "Mobile · Clã",
+   "kind": "screen",
+   "topics": []
   }
  ]
 }
