@@ -105,7 +105,7 @@ end
 do -- scaffolding handlers for widgets that do not exist yet do nothing
   local host = fake_host.new()
   local env = host.loadPlugin()
-  for _, name in ipairs({ "handleCombatHUDClick", "handleShipHUDClick", "handleDatapadClick",
+  for _, name in ipairs({ "handleCombatHUDClick", "handleShipHUDClick",
                           "handleRadarClick", "loadSavedState" }) do
     assert(env[name]({}) == nil, name .. " must be a no-op")
   end

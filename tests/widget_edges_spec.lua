@@ -4,7 +4,7 @@ local fake_host = dofile("tests/support/fake_host.lua")
 do -- placeholder widgets: clicks run their (empty) handler and return focus
   local host = fake_host.new()
   host.loadPlugin()
-  for _, id in ipairs({ "lotj-ship-hud", "lotj-datapad", "lotj-space-radar" }) do
+  for _, id in ipairs({ "lotj-ship-hud", "lotj-space-radar" }) do
     local focus = host.count("focusPrompt")
     assert(host.events[id] and host.events[id].click, "missing click handler for " .. id)
     host.events[id].click({})
