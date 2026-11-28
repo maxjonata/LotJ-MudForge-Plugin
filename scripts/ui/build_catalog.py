@@ -64,6 +64,11 @@ STATIONS = {
     "slicer": "Slicer e segurança (FIG-05): hackear, travas, câmeras, perícia e sabotagem.",
     "droids": "Droides (FIG-05): estado, nome, venda, reparo e melhoria de droides.",
     "datapad": "Datapad (FIG-05): datamem, datastat, mail e notas.",
+    "clan": "Clã (FIG-06): membros, cargos, divisões, recompensas, crimes e mensagens.",
+    "planet": "Planetas (FIG-06): planetas, escudos, governo, residência e prisão.",
+    "events": "Eventos e comunidade (FIG-06): notícias, votações, RPC, dados e páginas.",
+    "onboarding": "Boas-vindas e conta (FIG-06): ajuda, raça, cores, tela, conta e personagem.",
+    "system": "Sistema e utilidades (FIG-06): o resto dos comandos, sem painel próprio.",
 }
 
 _TOKEN_RE = re.compile(r"<([^<>]+)>|\(([^()]+)\)|\[([^\[\]]+)\]")

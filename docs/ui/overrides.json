@@ -1,4 +1,7 @@
 {
+ "!": {
+  "station": "system"
+ },
  "'FEEL ARMOR' ARMOR_SPELL 'FORCE ARMOR'": {
   "station": "force"
  },
@@ -8,17 +11,29 @@
  "'KNOW ESSENCE' KNOW_ESSENCE": {
   "station": "force"
  },
+ "'LFR' 'LOOKING_FOR_ROLEPLAY'": {
+  "station": "system"
+ },
  "'LIGHTSABER THROW' LIGHTSABER_THROW": {
   "station": "force"
  },
  "'REMOVE MASKING' REMOVE_MASKING": {
   "station": "force"
  },
+ "ABDICATE": {
+  "station": "clan"
+ },
  "ACCEPT": {
   "station": "combat"
  },
+ "ACCOUNTS ACCOUNT": {
+  "station": "onboarding"
+ },
  "ACONFIG": {
   "station": "pilot"
+ },
+ "ACTIONDESC": {
+  "station": "onboarding"
  },
  "ADDCREW CREW": {
   "station": "access"
@@ -53,6 +68,12 @@
  "AMMO AMMUNITION BATTERY": {
   "station": "gear"
  },
+ "ANSI": {
+  "station": "onboarding"
+ },
+ "APPOINT": {
+  "station": "clan"
+ },
  "APPRENTICE APPRENTICESTAT": {
   "station": "force"
  },
@@ -61,6 +82,12 @@
  },
  "APPROACH": {
   "station": "combat"
+ },
+ "AREAS COMMANDS SOCIALS": {
+  "station": "system"
+ },
+ "ARENA": {
+  "station": "system"
  },
  "ARM": {
   "station": "combat"
@@ -125,14 +152,32 @@
  "BLASTDOOR": {
   "station": "slicer"
  },
+ "BLASTER BLASTERS 'ADVANCED BLASTER' 'BLASTER MASTERY'": {
+  "station": "combat"
+ },
  "BLOCK": {
   "station": "combat"
+ },
+ "BLOCKADE": {
+  "station": "weapons"
  },
  "BLOODBATH": {
   "station": "force"
  },
  "BOARD": {
   "station": "access"
+ },
+ "BOMBARD BOMB BOMBARDMENT": {
+  "station": "weapons"
+ },
+ "BOTTING BOT": {
+  "station": "system"
+ },
+ "BOUNTY CLANBOUNTY": {
+  "station": "clan"
+ },
+ "BOWCASTER BOWCASTERS 'ADVANCED BOWCASTER' 'BOWCASTER MASTERY'": {
+  "station": "combat"
  },
  "BREACH": {
   "station": "force"
@@ -142,6 +187,15 @@
  },
  "BROADCAST": {
   "station": "rp"
+ },
+ "BUG IDEA TYPO COMPLAIN": {
+  "station": "events"
+ },
+ "BUG IDEA TYPO SUGGESTION": {
+  "station": "events"
+ },
+ "BUILDSHIP BLUEPRINT": {
+  "station": "shipyard"
  },
  "BUILDSTRUCTURE": {
   "station": "workshop"
@@ -154,6 +208,9 @@
  },
  "BUYSTRUCTURE": {
   "station": "trade"
+ },
+ "BUZZ INVITE": {
+  "station": "system"
  },
  "CALL": {
   "station": "combat"
@@ -179,8 +236,14 @@
  "CAST FEEL": {
   "station": "force"
  },
+ "CENSOR": {
+  "station": "system"
+ },
  "CGTALK": {
   "station": "rp"
+ },
+ "CGWHO": {
+  "station": "clan"
  },
  "CHAFF": {
   "station": "weapons"
@@ -203,17 +266,53 @@
  "CLAIMBOUNTY": {
   "station": "trade"
  },
+ "CLANBOUNTY": {
+  "station": "clan"
+ },
  "CLANBUYSHIP": {
   "station": "shipyard"
  },
+ "CLANCRIMES": {
+  "station": "clan"
+ },
+ "CLANDB DATANET": {
+  "station": "clan"
+ },
+ "CLANDESCRIPTION": {
+  "station": "clan"
+ },
+ "CLANDROIDS CONTROLDROID 'DROIDS CLAN' CLANDROID": {
+  "station": "clan"
+ },
+ "CLANMESSAGE CLAN_MESSAGE": {
+  "station": "clan"
+ },
+ "CLANMOTD": {
+  "station": "clan"
+ },
+ "CLANSELLSHIP SELLCLANSHIP": {
+  "station": "clan"
+ },
  "CLANTALK": {
   "station": "rp"
+ },
+ "CLANVENDOR BUYCLANVENDOR PLACECLANVENDOR PRICECLANVENDOR DEPOSITCLANGOLD": {
+  "station": "clan"
+ },
+ "CLAN_EVENTS 'CLAN EVENTS' CLANEVENTS": {
+  "station": "clan"
+ },
+ "CLAN_GREET": {
+  "station": "clan"
  },
  "CLARITY": {
   "station": "force"
  },
  "CLEANSE MIND": {
   "station": "force"
+ },
+ "CLEAR": {
+  "station": "system"
  },
  "CLIMB": {
   "station": "combat"
@@ -230,8 +329,17 @@
  "CLOSESHOP": {
   "station": "trade"
  },
+ "COLORCHECK": {
+  "station": "onboarding"
+ },
+ "COMBINE": {
+  "station": "system"
+ },
  "COMPARE": {
   "station": "gear"
+ },
+ "COMPRESS MCCP COMPRESSION 'MUD CLIENT COMPRESSION PROTOCOL'": {
+  "station": "system"
  },
  "COMPUTE": {
   "station": "slicer"
@@ -254,8 +362,14 @@
  "COORDINATES CALC CALCULATE NAVCOMPUTER": {
   "station": "nav"
  },
+ "COUNCILTALK": {
+  "station": "system"
+ },
  "CRACKDATAPAD": {
   "station": "slicer"
+ },
+ "CRIMES": {
+  "station": "clan"
  },
  "CURE POISON": {
   "station": "force"
@@ -284,6 +398,15 @@
  "DEATH FIELD": {
   "station": "force"
  },
+ "DECORATESHIP": {
+  "station": "shipyard"
+ },
+ "DELETE SUICIDE": {
+  "station": "system"
+ },
+ "DEMOTE": {
+  "station": "clan"
+ },
  "DESCARMOR": {
   "station": "gear"
  },
@@ -305,11 +428,26 @@
  "DESTROYDROID": {
   "station": "droids"
  },
+ "DESTRUCTION": {
+  "station": "combat"
+ },
  "DETRAP": {
   "station": "slicer"
  },
+ "DEVAPP": {
+  "station": "onboarding"
+ },
+ "DEVELOP DEVELOPMENT": {
+  "station": "system"
+ },
  "DIAGNOSE": {
   "station": "medical"
+ },
+ "DICE": {
+  "station": "events"
+ },
+ "DICE DICEROLL": {
+  "station": "events"
  },
  "DIG DIGGING BURY BURYING": {
   "station": "workshop"
@@ -329,11 +467,17 @@
  "DISPEL SPIRIT": {
   "station": "force"
  },
+ "DIVISION": {
+  "station": "clan"
+ },
  "DOCK": {
   "station": "engineering"
  },
  "DOCTOR": {
   "station": "medical"
+ },
+ "DODGE": {
+  "station": "combat"
  },
  "DOMINATE": {
   "station": "combat"
@@ -343,6 +487,9 @@
  },
  "DOORBASH": {
   "station": "combat"
+ },
+ "DOORCUT": {
+  "station": "system"
  },
  "DRAIN": {
   "station": "force"
@@ -358,6 +505,15 @@
  },
  "DROP GET GIVE PUT TAKE": {
   "station": "room"
+ },
+ "DUAL DUAL_WIELD 'DUAL WIELD'": {
+  "station": "combat"
+ },
+ "DUB": {
+  "station": "system"
+ },
+ "DUPLICATE": {
+  "station": "system"
  },
  "DUTY": {
   "station": "combat"
@@ -377,6 +533,9 @@
  "EDUCATION": {
   "station": "sheet"
  },
+ "EJECT": {
+  "station": "pilot"
+ },
  "ELECTRONICS": {
   "station": "workshop"
  },
@@ -386,11 +545,20 @@
  "EMOTE , POSE SOCIAL": {
   "station": "rp"
  },
+ "EMPOWER EMPOWERMENT": {
+  "station": "clan"
+ },
  "EMPTY": {
   "station": "force"
  },
  "ENCRYPT_FILE DECRYPT_FILE": {
   "station": "slicer"
+ },
+ "ENDURING FACADE ENDURING_FACADE": {
+  "station": "combat"
+ },
+ "ENDURING_FACADE": {
+  "station": "combat"
  },
  "ENERGIZE": {
   "station": "workshop"
@@ -401,17 +569,29 @@
  "ENHANCEARMOR": {
   "station": "workshop"
  },
+ "ENHANCED DAMAGE 'ENHANCED DAMAGE'": {
+  "station": "combat"
+ },
+ "ENHANCED_TRACKING": {
+  "station": "system"
+ },
  "ENHANCEMENT": {
   "station": "workshop"
  },
  "ENHANCEWEAPON": {
   "station": "gear"
  },
+ "ENLIST": {
+  "station": "clan"
+ },
  "ENTER LEAVE": {
   "station": "room"
  },
  "EQ INV EQUIP EQUIPMENT INVENTORY": {
   "station": "gear"
+ },
+ "ESCAPE PODS 'ESCAPE PODS'": {
+  "station": "pilot"
  },
  "ESCAPE_BINDING": {
   "station": "combat"
@@ -424,6 +604,9 @@
  },
  "FACE": {
   "station": "pilot"
+ },
+ "FAKESIGNAL": {
+  "station": "weapons"
  },
  "FARSIGHT": {
   "station": "force"
@@ -443,6 +626,9 @@
  "FIRSTAID 'FIRST AID' MEDPAC FIRST 'ADVANCED FIRST AID' 'EXPERT FIRST AID'": {
   "station": "medical"
  },
+ "FIXCHAR": {
+  "station": "onboarding"
+ },
  "FLEE": {
   "station": "combat"
  },
@@ -452,8 +638,14 @@
  "FLIST": {
   "station": "force"
  },
+ "FLOAT": {
+  "station": "system"
+ },
  "FLURRY": {
   "station": "combat"
+ },
+ "FLY": {
+  "station": "pilot"
  },
  "FOLLOW GROUP": {
   "station": "room"
@@ -491,6 +683,9 @@
  "FORCE WAVE": {
   "station": "force"
  },
+ "FORCED_ENTRY": {
+  "station": "system"
+ },
  "FORCEPIKE FORCEPIKES 'FORCE PIKE' 'FORCE PIKES' 'ADVANCED FORCEPIKE' 'FORCEPIKE MASTERY'": {
   "station": "force"
  },
@@ -521,6 +716,9 @@
  "FUSION NEWS": {
   "station": "workshop"
  },
+ "GAG": {
+  "station": "system"
+ },
  "GATHER": {
   "station": "workshop"
  },
@@ -539,8 +737,17 @@
  "GRAB": {
   "station": "combat"
  },
+ "GRAVITYWELL": {
+  "station": "weapons"
+ },
+ "GREET INTRODUCE": {
+  "station": "system"
+ },
  "GRIP": {
   "station": "force"
+ },
+ "GUIDANCE": {
+  "station": "system"
  },
  "HACK": {
   "station": "slicer"
@@ -548,14 +755,26 @@
  "HAIL": {
   "station": "comms"
  },
+ "HAIR HAIRSTYLE STYLEHAIR": {
+  "station": "onboarding"
+ },
  "HANGAR HANGARS OPENBAY CLOSEBAY REMOTEBAY TURRET TURRETS": {
+  "station": "engineering"
+ },
+ "HEADLIGHTS": {
   "station": "engineering"
  },
  "HEALWOUND": {
   "station": "medical"
  },
+ "HELP": {
+  "station": "onboarding"
+ },
  "HIDE SNEAK VISIBLE": {
   "station": "combat"
+ },
+ "HIJACK": {
+  "station": "access"
  },
  "HISTORY BIO BACKGROUND": {
   "station": "sheet"
@@ -563,17 +782,35 @@
  "HITALL": {
   "station": "combat"
  },
+ "HLIST": {
+  "station": "onboarding"
+ },
  "HOMEDESC": {
   "station": "trade"
  },
  "HYPERSPACE HYPER LIGHTSPEED": {
   "station": "nav"
  },
+ "HYPOTHESIZE": {
+  "station": "system"
+ },
+ "IMBUE": {
+  "station": "system"
+ },
  "IMMCHAT MORTCHAT": {
   "station": "rp"
  },
+ "INDUCT OUTCAST": {
+  "station": "clan"
+ },
+ "INDUCTLOG": {
+  "station": "clan"
+ },
  "INFO": {
   "station": "nav"
+ },
+ "INFORM": {
+  "station": "events"
  },
  "INFRAVISION": {
   "station": "force"
@@ -584,8 +821,26 @@
  "INJURYS": {
   "station": "medical"
  },
+ "INSPIRE INSPIRECRIME": {
+  "station": "clan"
+ },
  "INSTALL_CAMERA CAMERA_SWEEP MONITOR_CAMERA CAMERAS CAMERA MONITOR": {
   "station": "slicer"
+ },
+ "INTEGRATED OPTICS": {
+  "station": "combat"
+ },
+ "INTERCOM": {
+  "station": "comms"
+ },
+ "JAIL": {
+  "station": "planet"
+ },
+ "JAM": {
+  "station": "weapons"
+ },
+ "JETPACK MASTERY": {
+  "station": "combat"
  },
  "KICK": {
   "station": "combat"
@@ -605,8 +860,11 @@
  "LAUNCH": {
   "station": "pilot"
  },
+ "LCLASSCHANGE": {
+  "station": "onboarding"
+ },
  "LEADPLANET": {
-  "station": "trade"
+  "station": "planet"
  },
  "LEAVESHIP": {
   "station": "access"
@@ -628,7 +886,8 @@
  },
  "LIGHT": {
   "status": "inactive",
-  "note": "Help: these commands are no longer in use on this mud."
+  "note": "Help: these commands are no longer in use on this mud.",
+  "station": "system"
  },
  "LIGHTSABERS 'ADVANCED LIGHTSABER' 'LIGHTSABER MASTERY'": {
   "station": "force"
@@ -639,11 +898,20 @@
  "LOADSHIP": {
   "station": "engineering"
  },
+ "LOCATESHIP": {
+  "station": "nav"
+ },
  "LOCKDATAPAD UNLOCKDATAPAD": {
   "station": "slicer"
  },
  "LOCKER LOCKERS": {
   "station": "trade"
+ },
+ "LOCKINFO": {
+  "station": "nav"
+ },
+ "LOOKUP": {
+  "station": "system"
  },
  "LUNGE": {
   "station": "combat"
@@ -656,6 +924,9 @@
  },
  "MAILBOX": {
   "station": "trade"
+ },
+ "MAINCHANGE": {
+  "station": "onboarding"
  },
  "MAKEBINDERS MAKEBINDER": {
   "station": "workshop"
@@ -738,19 +1009,34 @@
  "MASK": {
   "station": "force"
  },
+ "MASQUERADER": {
+  "station": "system"
+ },
+ "MATCHVECTOR": {
+  "station": "pilot"
+ },
  "MEDICAL": {
   "station": "medical"
  },
  "MEDITATE": {
   "station": "force"
  },
+ "MEMORYCHECK MEMORY": {
+  "station": "system"
+ },
  "MINDTALK": {
   "station": "force"
+ },
+ "MINE MINES LANDMINE": {
+  "station": "system"
  },
  "MINERALS": {
   "station": "workshop"
  },
  "MOBILE REFUEL": {
+  "station": "engineering"
+ },
+ "MOBILE_REFUEL": {
   "station": "engineering"
  },
  "MONEY GOLD CREDIT": {
@@ -768,11 +1054,23 @@
  "NAVSTAT NAVSTATUS NAVCHART": {
   "station": "nav"
  },
+ "NAVSTATUS": {
+  "station": "nav"
+ },
  "NETWORKHACK": {
   "station": "slicer"
  },
  "NEWBIECHAT": {
   "station": "rp"
+ },
+ "NEWBIE_INDEX INDEX": {
+  "station": "onboarding"
+ },
+ "NEWNAME": {
+  "station": "onboarding"
+ },
+ "NEWS": {
+  "station": "events"
  },
  "NORTH SOUTH EAST WEST UP DOWN": {
   "station": "room"
@@ -782,6 +1080,9 @@
  },
  "NOTE TERMINAL": {
   "station": "datapad"
+ },
+ "NOTEVOTE": {
+  "station": "events"
  },
  "NOWITHDRAW": {
   "station": "trade"
@@ -801,20 +1102,50 @@
  "OSAY": {
   "station": "rp"
  },
+ "OSET_FLAGS OSET_FLAGS OSETFLAGS OFLAGS OFLAG OBJ_FLAGS": {
+  "station": "system"
+ },
+ "OVERTHROW": {
+  "station": "clan"
+ },
  "PACKAGE": {
   "station": "trade"
+ },
+ "PAGE PAGELENGTH": {
+  "station": "events"
+ },
+ "PAGER": {
+  "station": "events"
  },
  "PASS DOOR": {
   "station": "force"
  },
+ "PASSWORD": {
+  "station": "onboarding"
+ },
+ "PEEK": {
+  "station": "system"
+ },
  "PERCEPTION": {
   "station": "force"
+ },
+ "PICK_SHIP_LOCK 'PICK SHIP LOCK'": {
+  "station": "access"
  },
  "PILOT": {
   "station": "access"
  },
+ "PIRATESHIP": {
+  "station": "shipyard"
+ },
+ "PLANETS PLANET": {
+  "station": "planet"
+ },
  "POISON WEAPON": {
   "station": "gear"
+ },
+ "PONDER": {
+  "station": "system"
  },
  "PRACTICE PRAC": {
   "station": "sheet"
@@ -822,15 +1153,40 @@
  "PRESENCE": {
   "station": "force"
  },
+ "PROMOTE": {
+  "station": "clan"
+ },
  "PROMPT FPROMPT": {
   "station": "sheet"
+ },
+ "PROPOSEDESC": {
+  "station": "onboarding"
+ },
+ "PROTECT_ACCOUNT": {
+  "station": "system"
  },
  "PROXIMITY PROX": {
   "station": "nav"
  },
+ "PSHIELD PSHIELDS": {
+  "station": "planet"
+ },
+ "PSHIELDS": {
+  "station": "planet"
+ },
+ "PSTAT": {
+  "station": "planet"
+ },
  "PTALK": {
   "status": "inactive",
-  "note": "Help: this command is no longer in use."
+  "note": "Help: this command is no longer in use.",
+  "station": "system"
+ },
+ "PTURRETS": {
+  "station": "weapons"
+ },
+ "PTURRETS PTURRET": {
+  "station": "weapons"
  },
  "PULL PRESS PUSH LEVERS PULLCHAINS SWITCHES BUTTONS": {
   "station": "room"
@@ -844,10 +1200,22 @@
  "REFUEL": {
   "station": "engineering"
  },
+ "REINFORCEMENTS": {
+  "station": "clan"
+ },
  "RELEASE": {
   "station": "combat"
  },
  "RELOAD": {
+  "station": "weapons"
+ },
+ "REMODEL": {
+  "station": "shipyard"
+ },
+ "REMODULATE": {
+  "station": "weapons"
+ },
+ "REMODULATE COPROCESSORS": {
   "station": "weapons"
  },
  "RENAMEDROID": {
@@ -871,6 +1239,12 @@
  "REPAIRDROID": {
   "station": "droids"
  },
+ "REPAIRHATCH": {
+  "station": "engineering"
+ },
+ "REPAIRHULL": {
+  "station": "engineering"
+ },
  "REPAIRSHIP SHIP_MAINTENANCE SHIPMAINTENANCE 'SHIP MAINTENANCE'": {
   "station": "engineering"
  },
@@ -880,6 +1254,9 @@
  "REPAIRWEAPON": {
   "station": "gear"
  },
+ "REPORT": {
+  "station": "events"
+ },
  "REPULSE": {
   "station": "force"
  },
@@ -888,6 +1265,12 @@
  },
  "RESEARCH LIBRARY": {
   "station": "sheet"
+ },
+ "RESIDENT": {
+  "station": "planet"
+ },
+ "RESIGN": {
+  "station": "clan"
  },
  "REST SLEEP STAND WAKE": {
   "station": "room"
@@ -903,6 +1286,18 @@
  },
  "REVIVE": {
   "station": "medical"
+ },
+ "RIP": {
+  "station": "system"
+ },
+ "ROLL": {
+  "station": "system"
+ },
+ "ROSTER": {
+  "station": "clan"
+ },
+ "RPCTRIAL": {
+  "station": "events"
  },
  "SABOTAGE": {
   "station": "slicer"
@@ -922,11 +1317,20 @@
  "SCAN": {
   "station": "room"
  },
+ "SCIENCES": {
+  "station": "system"
+ },
  "SCORE": {
   "station": "sheet"
  },
+ "SCREENREADER": {
+  "station": "onboarding"
+ },
  "SEARCH": {
   "station": "room"
+ },
+ "SECOND_ATTACK 'SECOND ATTACK'": {
+  "station": "combat"
  },
  "SECURE_TURBOLIFT": {
   "station": "slicer"
@@ -940,17 +1344,38 @@
  "SENSE_ATTUNEMENT 'SENSE ATTUNEMENT'": {
   "station": "force"
  },
+ "SETADJECTIVE": {
+  "station": "onboarding"
+ },
  "SETBLASTER": {
   "station": "gear"
+ },
+ "SETCODE": {
+  "station": "engineering"
+ },
+ "SETDIVISION SETDIV": {
+  "station": "clan"
  },
  "SETDRAW": {
   "station": "gear"
  },
+ "SETHOME": {
+  "station": "system"
+ },
+ "SETLEADER": {
+  "station": "clan"
+ },
  "SETLOCK": {
   "station": "slicer"
  },
+ "SETWAGES": {
+  "station": "clan"
+ },
  "SHARP_EYE 'SHARP EYE'": {
   "station": "combat"
+ },
+ "SHIPDODGE": {
+  "station": "weapons"
  },
  "SHIPTALK": {
   "station": "rp"
@@ -958,23 +1383,41 @@
  "SHIP_SYSTEMS 'SHIP SYSTEMS' STATUS": {
   "station": "nav"
  },
+ "SHORT": {
+  "station": "system"
+ },
  "SHOVE DRAG": {
   "station": "combat"
  },
  "SHOW": {
   "station": "trade"
  },
+ "SHOWCLAN": {
+  "station": "clan"
+ },
+ "SHOWDIVISION": {
+  "station": "clan"
+ },
  "SHOWPLANET": {
-  "station": "trade"
+  "station": "planet"
  },
  "SHOWRACE": {
-  "station": "trade"
+  "station": "onboarding"
+ },
+ "SHOWSKINCOLOR": {
+  "station": "onboarding"
+ },
+ "SHOWSOCIAL": {
+  "station": "onboarding"
  },
  "SIT": {
   "station": "room"
  },
  "SLEEP": {
   "station": "force"
+ },
+ "SLICE SECURE": {
+  "station": "system"
  },
  "SLIP": {
   "station": "combat"
@@ -987,6 +1430,12 @@
  },
  "SNIPE": {
   "station": "combat"
+ },
+ "SPACECRAFT": {
+  "station": "shipyard"
+ },
+ "SPACE_COMBAT_1_2_3 'SPACE COMBAT 1' 'SPACE COMBAT 2' 'SPACE COMBAT 3' 'SPACE COMBAT'": {
+  "station": "weapons"
  },
  "SPEAK": {
   "station": "rp"
@@ -1021,11 +1470,17 @@
  "STRUGGLE": {
   "station": "combat"
  },
+ "STUDY": {
+  "station": "system"
+ },
  "SUBCLASS SUB-CLASS GUARDIAN SENTINEL CONSULAR SAGE JUGGERNAUT ASSASSIN SORCERER": {
-  "station": "force"
+  "station": "onboarding"
  },
  "SUBDUE": {
   "station": "combat"
+ },
+ "SUBMIT": {
+  "station": "system"
  },
  "SURVEY": {
   "station": "workshop"
@@ -1033,12 +1488,19 @@
  "SWIPE": {
   "station": "trade"
  },
+ "SWITCHMODE": {
+  "station": "system"
+ },
+ "SYSTEMTALK": {
+  "station": "comms"
+ },
  "TAIL": {
   "station": "combat"
  },
  "TAMP": {
   "status": "inactive",
-  "note": "Help: these commands are no longer in use on this mud."
+  "note": "Help: these commands are no longer in use on this mud.",
+  "station": "system"
  },
  "TAPDATA": {
   "station": "slicer"
@@ -1052,6 +1514,9 @@
  "TEACH": {
   "station": "sheet"
  },
+ "TEAM": {
+  "station": "clan"
+ },
  "TELEPATHY": {
   "station": "force"
  },
@@ -1061,11 +1526,26 @@
  "TELL REPLY DM DIRECTMESSAGE": {
   "station": "rp"
  },
+ "TEXTCOLOR": {
+  "station": "onboarding"
+ },
+ "THEORIZE": {
+  "station": "system"
+ },
  "THIEVES_EYE 'THIEVES EYE'": {
   "station": "combat"
  },
  "THINK": {
   "station": "rp"
+ },
+ "THROW": {
+  "station": "combat"
+ },
+ "TIME": {
+  "station": "onboarding"
+ },
+ "TIMEZONE": {
+  "station": "onboarding"
  },
  "TITLE PUBLICTITLE": {
   "station": "sheet"
@@ -1079,11 +1559,17 @@
  "TRACTORBEAM 'TRACTOR BEAMS' TRACTOR": {
   "station": "weapons"
  },
+ "TRADEBOUNTY CLANTRADEBOUNTY": {
+  "station": "clan"
+ },
  "TRADEDROID": {
   "station": "droids"
  },
  "TRADESHIP": {
   "station": "shipyard"
+ },
+ "TRAFFICKING BUYCONTRABAND SELLCONTRABAND": {
+  "station": "system"
  },
  "TRANSFERFUEL": {
   "station": "engineering"
@@ -1091,14 +1577,26 @@
  "TRANSPONDER": {
   "station": "nav"
  },
+ "TRANSPORTATION": {
+  "station": "system"
+ },
+ "TRUE_EXAMINE": {
+  "station": "system"
+ },
  "TUCK PALM": {
   "station": "combat"
  },
  "TUNE": {
   "station": "rp"
  },
+ "TUNESHIP": {
+  "station": "engineering"
+ },
  "TURBOLIFT": {
   "station": "room"
+ },
+ "UNARMED 'UNARMED COMBAT' 'ADVANCED UNARMED' 'UNARMED MASTERY' UNARMED_COMBAT": {
+  "station": "combat"
  },
  "UNBIND": {
   "station": "combat"
@@ -1112,8 +1610,14 @@
  "UNLOADSHIP": {
   "station": "engineering"
  },
+ "UPGRADE UPGRADESHIP DISMANTLE STRIPSHIP": {
+  "station": "engineering"
+ },
  "UPGRADEDROID": {
   "station": "droids"
+ },
+ "UPGRADESHIP DISMANTLE STRIPSHIP BLACKMARKET": {
+  "station": "engineering"
  },
  "UPKEEP": {
   "station": "trade"
@@ -1136,14 +1640,26 @@
  "VENTRILOQUATE": {
   "station": "force"
  },
+ "VIBRO-BLADES VIBROBLADES VIBROBLADE 'ADVANCED VIBROBLADE' 'VIBROBLADE MASTERY' VIBRO": {
+  "station": "combat"
+ },
+ "VIEWRPC": {
+  "station": "events"
+ },
  "VISION": {
   "station": "force"
  },
  "VITALITY": {
   "station": "force"
  },
+ "WANTED BLACKLIST PARDON IMMUNITY GRANTIMMUNITY REMOVEIMMUNITY": {
+  "station": "clan"
+ },
  "WATCH": {
   "station": "combat"
+ },
+ "WEAPON_SYSTEMS 'WEAPON SYSTEMS'": {
+  "station": "weapons"
  },
  "WHISPER": {
   "station": "rp"
@@ -1153,6 +1669,9 @@
  },
  "WITHDRAW": {
   "station": "trade"
+ },
+ "XTERM 256COLOR 16COLOR ACCESSIBLE DONTREMAP16": {
+  "station": "onboarding"
  },
  "YELL": {
   "station": "rp"

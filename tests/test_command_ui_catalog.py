@@ -194,6 +194,13 @@ class CommittedCatalogTests(unittest.TestCase):
             self.assertTrue(match, topic)
             self.assertEqual(panels[match[0]], panel, topic)
 
+    def test_every_command_has_a_panel(self):
+        missing = [e["topic"] for e in self.catalog["entries"] if e["kind"] != "reference" and not e["station"]]
+        self.assertEqual(missing, [])
+        for e in self.catalog["entries"]:
+            if e["station"]:
+                self.assertIn(e["station"], bc.STATIONS, e["topic"])
+
     def test_committed_catalog_is_regenerated(self):
         overrides = json.loads((ROOT / "docs/ui/overrides.json").read_text(encoding="utf-8"))
         rebuilt = bc.build(self.reference["topics"], overrides, bc.figma_links(self.nodes), bc.pattern_frames(self.nodes))
