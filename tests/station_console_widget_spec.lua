@@ -64,6 +64,28 @@ do -- red keys ask once; the datapad key opens the device; the command opens a s
   print("PASS: confirm, datapad device and lotj-console <station>")
 end
 
+do -- live readouts (UI-04): GMCP gauges for the open station; disconnect clears them
+  local host = fake_host.new()
+  host.loadPlugin()
+  host.post("lotj-station-console", "ready", {})
+  assert(host.last("lotj-station-console", "live").station == "pilot" and #host.last("lotj-station-console", "live").items == 0)
+  host.gmcp("Ship.Info", { piloting = "Krayt Fang", hull = 50, maxHull = 100 })
+  local pilot = host.last("lotj-station-console", "live").items
+  assert(pilot[1].text == "Krayt Fang" and pilot[2].id == "hull" and pilot[2].pct == 50)
+  host.gmcp("Char.Vitals", { hp = 30, maxHp = 60, move = 1, maxMove = 2, mana = 0, maxMana = 0 })
+  host.gmcp("Char.Enemy", { name = "&Rwampa", percent = 80 })
+  host.gmcp("Char.Info", { name = "Mara" })
+  host.post("lotj-station-console", "open", { id = "combat" })
+  local combat = host.last("lotj-station-console", "live")
+  assert(combat.station == "combat" and #combat.items == 3 and combat.items[3].text == "wampa")
+  host.commands["lotj-console"]("sheet")
+  assert(host.last("lotj-station-console", "live").items[1].text == "Mara")
+  host.session.connected = false
+  host.env.onDisconnect(host.session.id)
+  assert(#host.last("lotj-station-console", "live").items == 0, "disconnect clears the readouts")
+  print("PASS: live readouts follow GMCP for the open station")
+end
+
 do -- offline and failed widgets
   local host = fake_host.new({ connected = false })
   host.loadPlugin()
