@@ -26,6 +26,9 @@
  "ADDPILOT REMPILOT": {
   "station": "access"
  },
+ "ADVANCED_ELECTRONICS 'ADVANCED ELECTRONICS'": {
+  "station": "workshop"
+ },
  "AFFECTED 'AFFECTED BY'": {
   "station": "sheet"
  },
@@ -89,6 +92,12 @@
  "BACKSTAB CIRCLE": {
   "station": "combat"
  },
+ "BANK": {
+  "station": "trade"
+ },
+ "BANKLOG": {
+  "station": "trade"
+ },
  "BASH": {
   "station": "combat"
  },
@@ -101,6 +110,9 @@
  "BEEP": {
   "station": "rp"
  },
+ "BEG": {
+  "station": "trade"
+ },
  "BERSERK": {
   "station": "combat"
  },
@@ -109,6 +121,9 @@
  },
  "BLACKJACK": {
   "station": "force"
+ },
+ "BLASTDOOR": {
+  "station": "slicer"
  },
  "BLOCK": {
   "station": "combat"
@@ -122,11 +137,23 @@
  "BREACH": {
   "station": "force"
  },
+ "BRIBE SMALLTALK PROPAGANDA": {
+  "station": "trade"
+ },
  "BROADCAST": {
   "station": "rp"
  },
+ "BUILDSTRUCTURE": {
+  "station": "workshop"
+ },
+ "BUY LIST SELL VALUE": {
+  "station": "trade"
+ },
  "BUYSHIP SELLSHIP": {
   "station": "shipyard"
+ },
+ "BUYSTRUCTURE": {
+  "station": "trade"
  },
  "CALL": {
   "station": "combat"
@@ -158,14 +185,23 @@
  "CHAFF": {
   "station": "weapons"
  },
+ "CHALLENGE": {
+  "station": "trade"
+ },
  "CHANNEL CHANNELS": {
   "station": "rp"
  },
  "CHARSHEET CHARACTER SHEET": {
   "station": "sheet"
  },
+ "CHEMISTRY": {
+  "station": "workshop"
+ },
  "CHOKE": {
   "station": "force"
+ },
+ "CLAIMBOUNTY": {
+  "station": "trade"
  },
  "CLANBUYSHIP": {
   "station": "shipyard"
@@ -191,8 +227,14 @@
  "CLOSEHATCH OPENHATCH HATCH": {
   "station": "access"
  },
+ "CLOSESHOP": {
+  "station": "trade"
+ },
  "COMPARE": {
   "station": "gear"
+ },
+ "COMPUTE": {
+  "station": "slicer"
  },
  "CONCEAL": {
   "station": "combat"
@@ -203,11 +245,17 @@
  "CONSIDER": {
   "station": "room"
  },
+ "CONSTRUCTION": {
+  "station": "workshop"
+ },
  "CONVERGE": {
   "station": "force"
  },
  "COORDINATES CALC CALCULATE NAVCOMPUTER": {
   "station": "nav"
+ },
+ "CRACKDATAPAD": {
+  "station": "slicer"
  },
  "CURE POISON": {
   "station": "force"
@@ -224,11 +272,23 @@
  "CYBERNETIC_EXPERT 'CYBERNETIC EXPERT'": {
   "station": "medical"
  },
+ "DATA": {
+  "station": "slicer"
+ },
+ "DATAMEM": {
+  "station": "datapad"
+ },
+ "DATASTAT": {
+  "station": "datapad"
+ },
  "DEATH FIELD": {
   "station": "force"
  },
  "DESCARMOR": {
   "station": "gear"
+ },
+ "DESCDROID": {
+  "station": "droids"
  },
  "DESCITEM": {
   "station": "gear"
@@ -239,14 +299,29 @@
  "DESCRIPTION DESC": {
   "station": "sheet"
  },
+ "DESCSHOP": {
+  "station": "trade"
+ },
+ "DESTROYDROID": {
+  "station": "droids"
+ },
+ "DETRAP": {
+  "station": "slicer"
+ },
  "DIAGNOSE": {
   "station": "medical"
+ },
+ "DIG DIGGING BURY BURYING": {
+  "station": "workshop"
  },
  "DISARM": {
   "station": "combat"
  },
  "DISGUISE": {
   "station": "combat"
+ },
+ "DISMISS": {
+  "station": "trade"
  },
  "DISPEL FORCE": {
   "station": "force"
@@ -263,6 +338,9 @@
  "DOMINATE": {
   "station": "combat"
  },
+ "DONATE": {
+  "station": "trade"
+ },
  "DOORBASH": {
   "station": "combat"
  },
@@ -275,6 +353,9 @@
  "DRAW UNHOLSTER": {
   "station": "gear"
  },
+ "DROIDSTAT": {
+  "station": "droids"
+ },
  "DROP GET GIVE PUT TAKE": {
   "station": "room"
  },
@@ -283,6 +364,9 @@
  },
  "DUTY SQUAD TROOP TROOPS TROOPERS": {
   "station": "combat"
+ },
+ "DYE": {
+  "station": "workshop"
  },
  "EAT DRINK": {
   "station": "medical"
@@ -293,6 +377,9 @@
  "EDUCATION": {
   "station": "sheet"
  },
+ "ELECTRONICS": {
+  "station": "workshop"
+ },
  "EMERGENCY_REFUEL": {
   "station": "engineering"
  },
@@ -301,6 +388,21 @@
  },
  "EMPTY": {
   "station": "force"
+ },
+ "ENCRYPT_FILE DECRYPT_FILE": {
+  "station": "slicer"
+ },
+ "ENERGIZE": {
+  "station": "workshop"
+ },
+ "ENGINEERINGFAQ ENGINEERFAQ": {
+  "station": "trade"
+ },
+ "ENHANCEARMOR": {
+  "station": "workshop"
+ },
+ "ENHANCEMENT": {
+  "station": "workshop"
  },
  "ENHANCEWEAPON": {
   "station": "gear"
@@ -396,10 +498,13 @@
   "station": "force"
  },
  "FORCE_ENTRY WARRANT": {
-  "station": "force"
+  "station": "slicer"
  },
  "FORCE_LIGHTNING": {
   "station": "force"
+ },
+ "FORENSICS": {
+  "station": "slicer"
  },
  "FORESIGHT SENSES": {
   "station": "force"
@@ -412,6 +517,15 @@
  },
  "FURY": {
   "station": "force"
+ },
+ "FUSION NEWS": {
+  "station": "workshop"
+ },
+ "GATHER": {
+  "station": "workshop"
+ },
+ "GEMCUTTING": {
+  "station": "workshop"
  },
  "GENDER": {
   "station": "sheet"
@@ -427,6 +541,9 @@
  },
  "GRIP": {
   "station": "force"
+ },
+ "HACK": {
+  "station": "slicer"
  },
  "HAIL": {
   "station": "comms"
@@ -446,6 +563,9 @@
  "HITALL": {
   "station": "combat"
  },
+ "HOMEDESC": {
+  "station": "trade"
+ },
  "HYPERSPACE HYPER LIGHTSPEED": {
   "station": "nav"
  },
@@ -463,6 +583,9 @@
  },
  "INJURYS": {
   "station": "medical"
+ },
+ "INSTALL_CAMERA CAMERA_SWEEP MONITOR_CAMERA CAMERAS CAMERA MONITOR": {
+  "station": "slicer"
  },
  "KICK": {
   "station": "combat"
@@ -482,6 +605,9 @@
  "LAUNCH": {
   "station": "pilot"
  },
+ "LEADPLANET": {
+  "station": "trade"
+ },
  "LEAVESHIP": {
   "station": "access"
  },
@@ -497,6 +623,9 @@
  "LIFT": {
   "station": "room"
  },
+ "LIFTHACK": {
+  "station": "slicer"
+ },
  "LIGHT": {
   "status": "inactive",
   "note": "Help: these commands are no longer in use on this mud."
@@ -510,8 +639,98 @@
  "LOADSHIP": {
   "station": "engineering"
  },
+ "LOCKDATAPAD UNLOCKDATAPAD": {
+  "station": "slicer"
+ },
+ "LOCKER LOCKERS": {
+  "station": "trade"
+ },
  "LUNGE": {
   "station": "combat"
+ },
+ "MACHINES": {
+  "station": "workshop"
+ },
+ "MAIL": {
+  "station": "datapad"
+ },
+ "MAILBOX": {
+  "station": "trade"
+ },
+ "MAKEBINDERS MAKEBINDER": {
+  "station": "workshop"
+ },
+ "MAKEBLADE": {
+  "station": "workshop"
+ },
+ "MAKEBLASTER PISTOLS RIFLES REPEATERS BLASTER_CLASSES": {
+  "station": "workshop"
+ },
+ "MAKEBOWCASTER": {
+  "station": "workshop"
+ },
+ "MAKECAMERA": {
+  "station": "workshop"
+ },
+ "MAKECANTEEN": {
+  "station": "workshop"
+ },
+ "MAKECIRCUIT": {
+  "station": "workshop"
+ },
+ "MAKECLOTHING": {
+  "station": "workshop"
+ },
+ "MAKECOMLINK": {
+  "station": "workshop"
+ },
+ "MAKECONTAINER": {
+  "station": "workshop"
+ },
+ "MAKECUTTER": {
+  "station": "workshop"
+ },
+ "MAKECUTTER CUTTER": {
+  "station": "workshop"
+ },
+ "MAKEDATAPAD": {
+  "station": "workshop"
+ },
+ "MAKEDRINK": {
+  "station": "workshop"
+ },
+ "MAKEDROID DROID": {
+  "station": "workshop"
+ },
+ "MAKEFLASHLIGHT": {
+  "station": "workshop"
+ },
+ "MAKEFOOD": {
+  "station": "workshop"
+ },
+ "MAKEFORCEPIKE": {
+  "station": "workshop"
+ },
+ "MAKEGOGGLES MAKEGOGGLE GOGGLES": {
+  "station": "workshop"
+ },
+ "MAKEGRENADE": {
+  "station": "workshop"
+ },
+ "MAKEHOLSTER": {
+  "station": "workshop"
+ },
+ "MAKEJEWELRY": {
+  "station": "workshop"
+ },
+ "MAKELANDMINE": {
+  "station": "workshop"
+ },
+ "MAKELIGHTSABER 'LIGHTSABER CRAFTING'": {
+  "station": "workshop"
+ },
+ "MAKEMEDPAC": {
+  "station": "workshop"
  },
  "MANIFEST": {
   "station": "force"
@@ -528,8 +747,14 @@
  "MINDTALK": {
   "station": "force"
  },
+ "MINERALS": {
+  "station": "workshop"
+ },
  "MOBILE REFUEL": {
   "station": "engineering"
+ },
+ "MONEY GOLD CREDIT": {
+  "station": "trade"
  },
  "MOUNT DISMOUNT": {
   "station": "combat"
@@ -543,6 +768,9 @@
  "NAVSTAT NAVSTATUS NAVCHART": {
   "station": "nav"
  },
+ "NETWORKHACK": {
+  "station": "slicer"
+ },
  "NEWBIECHAT": {
   "station": "rp"
  },
@@ -551,6 +779,12 @@
  },
  "NORTHEAST NORTHWEST SOUTHEAST SOUTHWEST": {
   "station": "room"
+ },
+ "NOTE TERMINAL": {
+  "station": "datapad"
+ },
+ "NOWITHDRAW": {
+  "station": "trade"
  },
  "OBSCURE": {
   "station": "force"
@@ -566,6 +800,9 @@
  },
  "OSAY": {
   "station": "rp"
+ },
+ "PACKAGE": {
+  "station": "trade"
  },
  "PASS DOOR": {
   "station": "force"
@@ -613,14 +850,32 @@
  "RELOAD": {
   "station": "weapons"
  },
+ "RENAMEDROID": {
+  "station": "droids"
+ },
  "RENAMESHIP": {
   "station": "shipyard"
+ },
+ "RENAMESTRUCTURE": {
+  "station": "trade"
+ },
+ "REPAIR": {
+  "station": "trade"
  },
  "REPAIRARMOR": {
   "station": "gear"
  },
+ "REPAIRDOOR": {
+  "station": "slicer"
+ },
+ "REPAIRDROID": {
+  "station": "droids"
+ },
  "REPAIRSHIP SHIP_MAINTENANCE SHIPMAINTENANCE 'SHIP MAINTENANCE'": {
   "station": "engineering"
+ },
+ "REPAIRSTRUCTURE": {
+  "station": "workshop"
  },
  "REPAIRWEAPON": {
   "station": "gear"
@@ -637,6 +892,9 @@
  "REST SLEEP STAND WAKE": {
   "station": "room"
  },
+ "RESTRING": {
+  "station": "workshop"
+ },
  "RETREAT": {
   "station": "combat"
  },
@@ -645,6 +903,9 @@
  },
  "REVIVE": {
   "station": "medical"
+ },
+ "SABOTAGE": {
+  "station": "slicer"
  },
  "SALVATION": {
   "station": "force"
@@ -667,6 +928,12 @@
  "SEARCH": {
   "station": "room"
  },
+ "SECURE_TURBOLIFT": {
+  "station": "slicer"
+ },
+ "SECURITY DISABLE_SECURITY": {
+  "station": "slicer"
+ },
  "SELFDESTRUCT": {
   "station": "engineering"
  },
@@ -679,6 +946,9 @@
  "SETDRAW": {
   "station": "gear"
  },
+ "SETLOCK": {
+  "station": "slicer"
+ },
  "SHARP_EYE 'SHARP EYE'": {
   "station": "combat"
  },
@@ -690,6 +960,15 @@
  },
  "SHOVE DRAG": {
   "station": "combat"
+ },
+ "SHOW": {
+  "station": "trade"
+ },
+ "SHOWPLANET": {
+  "station": "trade"
+ },
+ "SHOWRACE": {
+  "station": "trade"
  },
  "SIT": {
   "station": "room"
@@ -715,6 +994,12 @@
  "SPEED VELOCITY ACCELERATE": {
   "station": "pilot"
  },
+ "SPICE MAKESPICE TAKEDRUG TOXICITY REFINERY ADDICTION POTENCY DRUGS WITHDRAWAL 'SPICE REFINING'": {
+  "station": "workshop"
+ },
+ "SPLIT": {
+  "station": "trade"
+ },
  "SPRINT": {
   "station": "combat"
  },
@@ -726,6 +1011,9 @@
  },
  "STATUS": {
   "station": "nav"
+ },
+ "STEAL": {
+  "station": "trade"
  },
  "STOP": {
   "station": "combat"
@@ -739,12 +1027,21 @@
  "SUBDUE": {
   "station": "combat"
  },
+ "SURVEY": {
+  "station": "workshop"
+ },
+ "SWIPE": {
+  "station": "trade"
+ },
  "TAIL": {
   "station": "combat"
  },
  "TAMP": {
   "status": "inactive",
   "note": "Help: these commands are no longer in use on this mud."
+ },
+ "TAPDATA": {
+  "station": "slicer"
  },
  "TARGET": {
   "station": "weapons"
@@ -782,6 +1079,9 @@
  "TRACTORBEAM 'TRACTOR BEAMS' TRACTOR": {
   "station": "weapons"
  },
+ "TRADEDROID": {
+  "station": "droids"
+ },
  "TRADESHIP": {
   "station": "shipyard"
  },
@@ -812,11 +1112,23 @@
  "UNLOADSHIP": {
   "station": "engineering"
  },
+ "UPGRADEDROID": {
+  "station": "droids"
+ },
+ "UPKEEP": {
+  "station": "trade"
+ },
  "USE ACTIVATE": {
   "station": "gear"
  },
  "VECTOR COURSE TRAJECTORY": {
   "station": "pilot"
+ },
+ "VENDOR SHOP": {
+  "station": "trade"
+ },
+ "VENDOR SHOP SETVENDOR": {
+  "station": "trade"
  },
  "VENGEANCE": {
   "station": "force"
@@ -838,6 +1150,9 @@
  },
  "WIMPY": {
   "station": "sheet"
+ },
+ "WITHDRAW": {
+  "station": "trade"
  },
  "YELL": {
   "station": "rp"
