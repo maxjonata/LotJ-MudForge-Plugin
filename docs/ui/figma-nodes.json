@@ -822,7 +822,7 @@
   },
   {
    "id": "17:1108",
-   "name": "FIG-02 · Mobile 390",
+   "name": "FIG-02 · Mobile 390 (substituída por FIG-07 · iPhone SE)",
    "kind": "section",
    "topics": []
   },
@@ -900,7 +900,7 @@
   },
   {
    "id": "18:1613",
-   "name": "FIG-03 · Mobile 390",
+   "name": "FIG-03 · Mobile 390 (substituída por FIG-07 · iPhone SE)",
    "kind": "section",
    "topics": []
   },
@@ -1605,7 +1605,7 @@
   },
   {
    "id": "27:2842",
-   "name": "FIG-04..06 · Mobile 390",
+   "name": "FIG-04..06 · Mobile 390 (substituída por FIG-07 · iPhone SE)",
    "kind": "section",
    "topics": []
   },
@@ -1624,6 +1624,72 @@
   {
    "id": "27:3045",
    "name": "Mobile · Clã",
+   "kind": "screen",
+   "topics": []
+  },
+  {
+   "id": "31:3346",
+   "name": "FIG-07 · iPhone SE 375×667 (teclas e teclado aberto)",
+   "kind": "section",
+   "topics": []
+  },
+  {
+   "id": "32:3547",
+   "name": "SE · Radar (teclas)",
+   "kind": "screen",
+   "topics": []
+  },
+  {
+   "id": "32:4168",
+   "name": "SE · Alvo (folha)",
+   "kind": "screen",
+   "topics": []
+  },
+  {
+   "id": "32:3702",
+   "name": "SE · Fluxo CALCULATE (digitando)",
+   "kind": "screen",
+   "topics": []
+  },
+  {
+   "id": "32:3770",
+   "name": "SE · Sala (teclas)",
+   "kind": "screen",
+   "topics": []
+  },
+  {
+   "id": "32:4345",
+   "name": "SE · RP (digitando)",
+   "kind": "screen",
+   "topics": []
+  },
+  {
+   "id": "32:3945",
+   "name": "SE · Mapa",
+   "kind": "screen",
+   "topics": []
+  },
+  {
+   "id": "31:3347",
+   "name": "SE · Combate (teclas)",
+   "kind": "screen",
+   "topics": []
+  },
+  {
+   "id": "32:4236",
+   "name": "SE · Combate (digitando)",
+   "kind": "screen",
+   "topics": []
+  },
+  {
+   "id": "32:3990",
+   "name": "SE · Oficina (teclas)",
+   "kind": "screen",
+   "topics": []
+  },
+  {
+   "id": "32:4079",
+   "name": "SE · Clã (teclas)",
    "kind": "screen",
    "topics": []
   }

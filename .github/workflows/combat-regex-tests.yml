@@ -36,6 +36,9 @@ jobs:
       - name: Check every help topic has a UI destination (FIG-01)
         run: python3 tests/test_command_ui_catalog.py -v
 
+      - name: Phone screens fit the iPhone SE
+        run: python3 tests/test_mobile_se.py -v
+
       - name: Check the embedded widget font matches assets/fonts and is CC-0 (UI-02)
         run: python3 tests/test_embed_font.py -v
 
