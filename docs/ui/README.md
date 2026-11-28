@@ -46,6 +46,8 @@ CI fails if a topic has no destination, the committed catalog is stale, or a fra
 - Keys are the `Console Key` component (section "06 · Tecla iluminada"): a fully coloured square cap that looks lit, sunk in a dark well. Depth comes from the well's inner shadow and bottom lip, the cap's top-light gradient, top highlight and bottom shade, a gloss band, a coloured glow and a drop shadow. Nothing is flat.
 - Colours: Amber, Green, Red, Blue, White. States: Rest (lit), Hover (brighter, label in Basic), Pressed (cap sinks, glow shrinks), Off (unlit, command unavailable).
 - The label sits above the key in Aurebesh (font "Aurebesh AF" Canon) and turns into Basic (Share Tech Mono) on hover. A player setting turns Aurebesh off (`Script labels` false, `Basic labels` true).
+- Shared Figma styles carry this everywhere: `Depth/Key cap <colour>` and `Depth/Key lit <colour>` (fill and effect of every key), `Depth/Key unlit`, `Depth/Casing` (console bodies, phone shells, cards), `Depth/Inset screen` (screens, lists, input wells), `Depth/Key ink*` and `Depth/Key label Aurebesh`. Every screen on both pages uses them (FIG-01 components and consoles, FIG-02 stations, radar, flows and mobile, FIG-03 room, RP, map and full-screen layouts), so changing a style updates the whole file.
+- The holographic map stays flat and translucent on purpose: it is a projection, not hardware.
 - The datapad casing uses the same language: bevelled hull with a drop shadow, recessed screen bezel, glass glare over the screen, glowing status lights and Console Key hardware keys.
 
 ## Every control has a purpose
