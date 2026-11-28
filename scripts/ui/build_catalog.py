@@ -54,6 +54,11 @@ STATIONS = {
     "shipyard": "Estaleiro e propriedade: comprar, vender, transferir, renomear.",
     "room": "Sala (FIG-03): saídas, movimento, portas, turbolift, entidades e objetos.",
     "rp": "RP e comunicações (FIG-03): say, emote, tell, canais, idioma e comlink.",
+    "sheet": "Ficha (FIG-04): score, nível, afetado, descrição, título, prática, prompt e config.",
+    "gear": "Equipamento (FIG-04): armas sacadas, munição, comparar, reparar e melhorar itens.",
+    "combat": "Combate (FIG-04): atacar, fugir, manobras, furtividade, captura e tropas.",
+    "force": "Força (FIG-04): poderes, meditação, alinhamento e formas de sabre.",
+    "medical": "Medicina e morte (FIG-04): ferimentos, primeiros socorros, reviver e clones.",
 }
 
 _TOKEN_RE = re.compile(r"<([^<>]+)>|\(([^()]+)\)|\[([^\[\]]+)\]")
