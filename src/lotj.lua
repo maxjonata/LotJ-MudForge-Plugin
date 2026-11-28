@@ -68,6 +68,10 @@ function init()
   local datapadRules = loadModule("src/domain/datapad.lua")
   local datapadApplication = loadModule("src/application/datapad.lua")
   local datapadWidget = loadModule("src/widgets/lotj-datapad.lua")
+  local consoleCatalog = loadModule("src/domain/console-catalog.lua")
+  local commandForm = loadModule("src/domain/command-form.lua")
+  local consoleApplication = loadModule("src/application/station-console.lua")
+  local consoleWidget = loadModule("src/widgets/lotj-station-console.lua")
 
   -- Compute positions based on window size (60/40 split)
   local win = getWindowSize()
@@ -139,6 +143,18 @@ function init()
     end,
   })
   WIDGET_DATAPAD = datapad and datapad.id
+  -- Station consoles (UI-03): every catalog command on a key, the palette and the Holocron.
+  consoleWidget.create({
+    kit = uiKit, font = uiFont, dock = dock,
+    position = { x = datapadX + 20, y = datapadY + 20 },
+    openDatapad = datapad and function()
+      dock.remove(datapad.id)
+      datapad.show()
+    end,
+    newApp = function(publish)
+      return consoleApplication.new({ catalog = consoleCatalog, rules = commandForm, send = sendGameCommand, publish = publish })
+    end,
+  })
 
   -- Set initial active widget for canvas drawing
   setActiveWidget(WIDGET_SPACE_RADAR)
