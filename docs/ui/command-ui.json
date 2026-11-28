@@ -44,7 +44,12 @@
   "gear": "Equipamento (FIG-04): armas sacadas, munição, comparar, reparar e melhorar itens.",
   "combat": "Combate (FIG-04): atacar, fugir, manobras, furtividade, captura e tropas.",
   "force": "Força (FIG-04): poderes, meditação, alinhamento e formas de sabre.",
-  "medical": "Medicina e morte (FIG-04): ferimentos, primeiros socorros, reviver e clones."
+  "medical": "Medicina e morte (FIG-04): ferimentos, primeiros socorros, reviver e clones.",
+  "trade": "Comércio (FIG-05): créditos, banco, lojas, vendedores, imóveis e recompensas.",
+  "workshop": "Oficina (FIG-05): fabricar, coletar, minerar, construir e melhorar.",
+  "slicer": "Slicer e segurança (FIG-05): hackear, travas, câmeras, perícia e sabotagem.",
+  "droids": "Droides (FIG-05): estado, nome, venda, reparo e melhoria de droides.",
+  "datapad": "Datapad (FIG-05): datamem, datastat, mail e notas."
  },
  "counts": {
   "comms": 16,
@@ -1036,9 +1041,9 @@
    "pattern": "readout",
    "variants": [],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "workshop",
+   "status": "designed",
+   "figma_node": "27:1921"
   },
   {
    "topic": "ADVENTURE",
@@ -2115,9 +2120,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "trade",
+   "status": "designed",
+   "figma_node": "27:1797"
   },
   {
    "topic": "BANKLOG",
@@ -2224,9 +2229,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "trade",
+   "status": "designed",
+   "figma_node": "27:1797"
   },
   {
    "topic": "BARABEL",
@@ -2489,9 +2494,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "trade",
+   "status": "designed",
+   "figma_node": "27:1797"
   },
   {
    "topic": "BERSERK",
@@ -2675,9 +2680,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "slicer",
+   "status": "designed",
+   "figma_node": "27:2081"
   },
   {
    "topic": "BLASTER BLASTERS 'ADVANCED BLASTER' 'BLASTER MASTERY'",
@@ -3149,9 +3154,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "trade",
+   "status": "designed",
+   "figma_node": "27:1797"
   },
   {
    "topic": "BROADCAST",
@@ -3363,9 +3368,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "workshop",
+   "status": "designed",
+   "figma_node": "27:1921"
   },
   {
    "topic": "BUY LIST SELL VALUE",
@@ -3469,9 +3474,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "trade",
+   "status": "designed",
+   "figma_node": "27:1797"
   },
   {
    "topic": "BUYCLONE",
@@ -3550,9 +3555,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "trade",
+   "status": "designed",
+   "figma_node": "27:1797"
   },
   {
    "topic": "BUYVENDOR COLLECTGOLD NAMESHOP PLACEVENDOR PRICEVENDOR SELLVENDOR",
@@ -4148,9 +4153,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "trade",
+   "status": "designed",
+   "figma_node": "27:1797"
   },
   {
    "topic": "CHANNEL CHANNELS",
@@ -4301,9 +4306,9 @@
    "pattern": "readout",
    "variants": [],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "workshop",
+   "status": "designed",
+   "figma_node": "27:1921"
   },
   {
    "topic": "CHISS",
@@ -4404,9 +4409,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "trade",
+   "status": "designed",
+   "figma_node": "27:1797"
   },
   {
    "topic": "CLAN CLANS FACTION FACTIONS ORGANISATION ORGANISATIONS",
@@ -5255,9 +5260,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "trade",
+   "status": "designed",
+   "figma_node": "27:1797"
   },
   {
    "topic": "COATING UNDERLAY",
@@ -5536,9 +5541,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "slicer",
+   "status": "designed",
+   "figma_node": "27:2081"
   },
   {
    "topic": "CONCEAL",
@@ -5708,9 +5713,9 @@
    "pattern": "readout",
    "variants": [],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "workshop",
+   "status": "designed",
+   "figma_node": "27:1921"
   },
   {
    "topic": "CONTACT",
@@ -5869,9 +5874,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "slicer",
+   "status": "designed",
+   "figma_node": "27:2081"
   },
   {
    "topic": "CRASH",
@@ -6228,9 +6233,9 @@
    "pattern": "readout",
    "variants": [],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "slicer",
+   "status": "designed",
+   "figma_node": "27:2081"
   },
   {
    "topic": "DATACHIP",
@@ -6439,7 +6444,7 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "datapad",
    "status": "designed",
    "figma_node": "20:2784"
   },
@@ -6477,7 +6482,7 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "datapad",
    "status": "designed",
    "figma_node": "20:2784"
   },
@@ -6708,9 +6713,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "droids",
+   "status": "designed",
+   "figma_node": "27:2157"
   },
   {
    "topic": "DESCITEM",
@@ -6847,9 +6852,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "trade",
+   "status": "designed",
+   "figma_node": "27:1797"
   },
   {
    "topic": "DESTROYDROID",
@@ -6869,9 +6874,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "droids",
+   "status": "designed",
+   "figma_node": "27:2157"
   },
   {
    "topic": "DESTRUCTION",
@@ -6911,9 +6916,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "slicer",
+   "status": "designed",
+   "figma_node": "27:2081"
   },
   {
    "topic": "DEVAPP",
@@ -7172,9 +7177,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "workshop",
+   "status": "designed",
+   "figma_node": "27:1921"
   },
   {
    "topic": "DIKU",
@@ -7350,9 +7355,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "trade",
+   "status": "designed",
+   "figma_node": "27:1797"
   },
   {
    "topic": "DISPEL FORCE",
@@ -7715,9 +7720,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "trade",
+   "status": "designed",
+   "figma_node": "27:1797"
   },
   {
    "topic": "DOORBASH",
@@ -7942,9 +7947,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "droids",
+   "status": "designed",
+   "figma_node": "27:2157"
   },
   {
    "topic": "DROID_MAKING 'DROID MAKING'",
@@ -8492,9 +8497,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "workshop",
+   "status": "designed",
+   "figma_node": "27:1921"
   },
   {
    "topic": "DYNAMIC",
@@ -8664,9 +8669,9 @@
    "pattern": "readout",
    "variants": [],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "workshop",
+   "status": "designed",
+   "figma_node": "27:1921"
   },
   {
    "topic": "EMERGENCY_REFUEL",
@@ -8842,9 +8847,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "slicer",
+   "status": "designed",
+   "figma_node": "27:2081"
   },
   {
    "topic": "ENDURANCE",
@@ -8920,9 +8925,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "workshop",
+   "status": "designed",
+   "figma_node": "27:1921"
   },
   {
    "topic": "ENGINEERING ENGINEER",
@@ -8982,9 +8987,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "trade",
+   "status": "designed",
+   "figma_node": "27:1797"
   },
   {
    "topic": "ENHANCEARMOR",
@@ -9017,9 +9022,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "workshop",
+   "status": "designed",
+   "figma_node": "27:1921"
   },
   {
    "topic": "ENHANCED DAMAGE 'ENHANCED DAMAGE'",
@@ -9064,9 +9069,9 @@
    "pattern": "readout",
    "variants": [],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "workshop",
+   "status": "designed",
+   "figma_node": "27:1921"
   },
   {
    "topic": "ENHANCEWEAPON",
@@ -10540,7 +10545,7 @@
     }
    ],
    "notes": [],
-   "station": "force",
+   "station": "slicer",
    "status": "designed",
    "figma_node": "27:1529"
   },
@@ -10643,9 +10648,9 @@
    "pattern": "readout",
    "variants": [],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "slicer",
+   "status": "designed",
+   "figma_node": "27:2081"
   },
   {
    "topic": "FORESIGHT SENSES",
@@ -10830,9 +10835,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "workshop",
+   "status": "designed",
+   "figma_node": "27:1921"
   },
   {
    "topic": "G",
@@ -10926,9 +10931,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "workshop",
+   "status": "designed",
+   "figma_node": "27:1921"
   },
   {
    "topic": "GEMCUTTING",
@@ -10953,9 +10958,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "workshop",
+   "status": "designed",
+   "figma_node": "27:1921"
   },
   {
    "topic": "GEMS CRYSTALS",
@@ -11376,9 +11381,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "slicer",
+   "status": "designed",
+   "figma_node": "27:2081"
   },
   {
    "topic": "HAIL",
@@ -11910,9 +11915,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "trade",
+   "status": "designed",
+   "figma_node": "27:1797"
   },
   {
    "topic": "HOMESHIP",
@@ -12522,9 +12527,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "slicer",
+   "status": "designed",
+   "figma_node": "27:2081"
   },
   {
    "topic": "INTEGRATED OPTICS",
@@ -13259,7 +13264,7 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "trade",
    "status": "planned",
    "figma_node": null
   },
@@ -13449,9 +13454,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "slicer",
+   "status": "designed",
+   "figma_node": "27:2081"
   },
   {
    "topic": "LIGHT",
@@ -13697,9 +13702,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "slicer",
+   "status": "designed",
+   "figma_node": "27:2081"
   },
   {
    "topic": "LOCKER LOCKERS",
@@ -13780,9 +13785,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "trade",
+   "status": "designed",
+   "figma_node": "27:1797"
   },
   {
    "topic": "LOCKINFO",
@@ -13936,9 +13941,9 @@
    "pattern": "readout",
    "variants": [],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "workshop",
+   "status": "designed",
+   "figma_node": "27:1921"
   },
   {
    "topic": "MAIL",
@@ -14012,9 +14017,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "datapad",
+   "status": "designed",
+   "figma_node": "27:2194"
   },
   {
    "topic": "MAILBOX",
@@ -14083,9 +14088,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "trade",
+   "status": "designed",
+   "figma_node": "27:1797"
   },
   {
    "topic": "MAINCHANGE",
@@ -14171,9 +14176,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "workshop",
+   "status": "designed",
+   "figma_node": "27:1921"
   },
   {
    "topic": "MAKEBLADE",
@@ -14198,9 +14203,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "workshop",
+   "status": "designed",
+   "figma_node": "27:1921"
   },
   {
    "topic": "MAKEBLASTER PISTOLS RIFLES REPEATERS BLASTER_CLASSES",
@@ -14238,9 +14243,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "workshop",
+   "status": "designed",
+   "figma_node": "27:1921"
   },
   {
    "topic": "MAKEBOWCASTER",
@@ -14265,9 +14270,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "workshop",
+   "status": "designed",
+   "figma_node": "27:1921"
   },
   {
    "topic": "MAKECAMERA",
@@ -14292,9 +14297,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "workshop",
+   "status": "designed",
+   "figma_node": "27:1921"
   },
   {
    "topic": "MAKECANTEEN",
@@ -14319,9 +14324,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "workshop",
+   "status": "designed",
+   "figma_node": "27:1921"
   },
   {
    "topic": "MAKECIRCUIT",
@@ -14346,9 +14351,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "workshop",
+   "status": "designed",
+   "figma_node": "27:1921"
   },
   {
    "topic": "MAKECLOTHING",
@@ -14377,9 +14382,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "workshop",
+   "status": "designed",
+   "figma_node": "27:1921"
   },
   {
    "topic": "MAKECOMLINK",
@@ -14408,9 +14413,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "workshop",
+   "status": "designed",
+   "figma_node": "27:1921"
   },
   {
    "topic": "MAKECONTAINER",
@@ -14439,9 +14444,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "workshop",
+   "status": "designed",
+   "figma_node": "27:1921"
   },
   {
    "topic": "MAKECUTTER",
@@ -14466,9 +14471,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "workshop",
+   "status": "designed",
+   "figma_node": "27:1921"
   },
   {
    "topic": "MAKECUTTER CUTTER",
@@ -14494,9 +14499,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "workshop",
+   "status": "designed",
+   "figma_node": "27:1921"
   },
   {
    "topic": "MAKEDATAPAD",
@@ -14521,9 +14526,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "workshop",
+   "status": "designed",
+   "figma_node": "27:1921"
   },
   {
    "topic": "MAKEDRINK",
@@ -14552,9 +14557,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "workshop",
+   "status": "designed",
+   "figma_node": "27:1921"
   },
   {
    "topic": "MAKEDROID DROID",
@@ -14580,9 +14585,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "workshop",
+   "status": "designed",
+   "figma_node": "27:1921"
   },
   {
    "topic": "MAKEFLASHLIGHT",
@@ -14607,9 +14612,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "workshop",
+   "status": "designed",
+   "figma_node": "27:1921"
   },
   {
    "topic": "MAKEFOOD",
@@ -14634,9 +14639,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "workshop",
+   "status": "designed",
+   "figma_node": "27:1921"
   },
   {
    "topic": "MAKEFORCEPIKE",
@@ -14661,9 +14666,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "workshop",
+   "status": "designed",
+   "figma_node": "27:1921"
   },
   {
    "topic": "MAKEGOGGLES MAKEGOGGLE GOGGLES",
@@ -14690,9 +14695,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "workshop",
+   "status": "designed",
+   "figma_node": "27:1921"
   },
   {
    "topic": "MAKEGRENADE",
@@ -14717,9 +14722,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "workshop",
+   "status": "designed",
+   "figma_node": "27:1921"
   },
   {
    "topic": "MAKEHOLSTER",
@@ -14744,9 +14749,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "workshop",
+   "status": "designed",
+   "figma_node": "27:1921"
   },
   {
    "topic": "MAKEJEWELRY",
@@ -14775,9 +14780,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "workshop",
+   "status": "designed",
+   "figma_node": "27:1921"
   },
   {
    "topic": "MAKELANDMINE",
@@ -14802,9 +14807,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "workshop",
+   "status": "designed",
+   "figma_node": "27:1921"
   },
   {
    "topic": "MAKELIGHTSABER 'LIGHTSABER CRAFTING'",
@@ -14830,9 +14835,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "workshop",
+   "status": "designed",
+   "figma_node": "27:1921"
   },
   {
    "topic": "MAKEMEDPAC",
@@ -14857,9 +14862,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "workshop",
+   "status": "designed",
+   "figma_node": "27:1921"
   },
   {
    "topic": "MAKESOCIAL",
@@ -15334,9 +15339,9 @@
    "pattern": "readout",
    "variants": [],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "workshop",
+   "status": "designed",
+   "figma_node": "27:1921"
   },
   {
    "topic": "MINESWEEPER",
@@ -15479,9 +15484,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "trade",
+   "status": "designed",
+   "figma_node": "27:1797"
   },
   {
    "topic": "MON_CALAMARI 'MON CALAMARI' 'MON CALAMARIAN' 'MON CALAMARIANS'",
@@ -16114,9 +16119,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "slicer",
+   "status": "designed",
+   "figma_node": "27:2081"
   },
   {
    "topic": "NEUTRAL_BIOTEMPLATE",
@@ -16659,9 +16664,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "datapad",
+   "status": "designed",
+   "figma_node": "27:2194"
   },
   {
    "topic": "NOTEVOTE",
@@ -16708,9 +16713,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "trade",
+   "status": "designed",
+   "figma_node": "27:1797"
   },
   {
    "topic": "OBJECTS",
@@ -17194,9 +17199,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "trade",
+   "status": "designed",
+   "figma_node": "27:1797"
   },
   {
    "topic": "PAGE PAGELENGTH",
@@ -18902,9 +18907,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "droids",
+   "status": "designed",
+   "figma_node": "27:2157"
   },
   {
    "topic": "RENAMESHIP",
@@ -18964,9 +18969,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "trade",
+   "status": "designed",
+   "figma_node": "27:1797"
   },
   {
    "topic": "REPAIR",
@@ -18997,9 +19002,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "trade",
+   "status": "designed",
+   "figma_node": "27:1797"
   },
   {
    "topic": "REPAIRARMOR",
@@ -19051,9 +19056,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "slicer",
+   "status": "designed",
+   "figma_node": "27:2081"
   },
   {
    "topic": "REPAIRDROID",
@@ -19078,9 +19083,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "droids",
+   "status": "designed",
+   "figma_node": "27:2157"
   },
   {
    "topic": "REPAIRHATCH",
@@ -19189,9 +19194,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "workshop",
+   "status": "designed",
+   "figma_node": "27:1921"
   },
   {
    "topic": "REPAIRWEAPON",
@@ -19522,9 +19527,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "workshop",
+   "status": "designed",
+   "figma_node": "27:1921"
   },
   {
    "topic": "RESURRECT",
@@ -19988,9 +19993,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "slicer",
+   "status": "designed",
+   "figma_node": "27:2081"
   },
   {
    "topic": "SAFEZONE",
@@ -20357,9 +20362,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "slicer",
+   "status": "designed",
+   "figma_node": "27:2081"
   },
   {
    "topic": "SECURITY DISABLE_SECURITY",
@@ -20386,9 +20391,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "slicer",
+   "status": "designed",
+   "figma_node": "27:2081"
   },
   {
    "topic": "SELFDESTRUCT",
@@ -20774,9 +20779,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "slicer",
+   "status": "designed",
+   "figma_node": "27:2081"
   },
   {
    "topic": "SETWAGES",
@@ -21120,9 +21125,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "trade",
+   "status": "designed",
+   "figma_node": "27:1797"
   },
   {
    "topic": "SHOWCLAN",
@@ -21218,7 +21223,7 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "trade",
    "status": "planned",
    "figma_node": null
   },
@@ -21251,7 +21256,7 @@
     }
    ],
    "notes": [],
-   "station": null,
+   "station": "trade",
    "status": "planned",
    "figma_node": null
   },
@@ -21876,9 +21881,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "workshop",
+   "status": "designed",
+   "figma_node": "27:1921"
   },
   {
    "topic": "SPIES SPYING SPY TRAITOR TREACHERY BACKSTAB BACKSTABBING CROSSOVER SPYAPP",
@@ -21926,9 +21931,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "trade",
+   "status": "designed",
+   "figma_node": "27:1797"
   },
   {
    "topic": "SPOILERS",
@@ -22193,9 +22198,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "trade",
+   "status": "designed",
+   "figma_node": "27:1797"
   },
   {
    "topic": "STICKY_FINGERS 'STICKY FINGERS'",
@@ -22470,9 +22475,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "workshop",
+   "status": "designed",
+   "figma_node": "27:1921"
   },
   {
    "topic": "SWIPE",
@@ -22497,9 +22502,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "trade",
+   "status": "designed",
+   "figma_node": "27:1797"
   },
   {
    "topic": "SWITCHMODE",
@@ -22684,9 +22689,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "slicer",
+   "status": "designed",
+   "figma_node": "27:2081"
   },
   {
    "topic": "TARGET",
@@ -23658,9 +23663,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "droids",
+   "status": "designed",
+   "figma_node": "27:2157"
   },
   {
    "topic": "TRADESHIP",
@@ -24452,9 +24457,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "droids",
+   "status": "designed",
+   "figma_node": "27:2157"
   },
   {
    "topic": "UPGRADESHIP DISMANTLE STRIPSHIP BLACKMARKET",
@@ -24568,9 +24573,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "trade",
+   "status": "designed",
+   "figma_node": "27:1797"
   },
   {
    "topic": "USE ACTIVATE",
@@ -24864,9 +24869,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "trade",
+   "status": "designed",
+   "figma_node": "27:1797"
   },
   {
    "topic": "VENDOR SHOP SETVENDOR",
@@ -25023,9 +25028,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "trade",
+   "status": "designed",
+   "figma_node": "27:1797"
   },
   {
    "topic": "VENGEANCE",
@@ -25592,9 +25597,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "trade",
+   "status": "designed",
+   "figma_node": "27:1797"
   },
   {
    "topic": "WIZLIST",

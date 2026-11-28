@@ -59,6 +59,11 @@ STATIONS = {
     "combat": "Combate (FIG-04): atacar, fugir, manobras, furtividade, captura e tropas.",
     "force": "Força (FIG-04): poderes, meditação, alinhamento e formas de sabre.",
     "medical": "Medicina e morte (FIG-04): ferimentos, primeiros socorros, reviver e clones.",
+    "trade": "Comércio (FIG-05): créditos, banco, lojas, vendedores, imóveis e recompensas.",
+    "workshop": "Oficina (FIG-05): fabricar, coletar, minerar, construir e melhorar.",
+    "slicer": "Slicer e segurança (FIG-05): hackear, travas, câmeras, perícia e sabotagem.",
+    "droids": "Droides (FIG-05): estado, nome, venda, reparo e melhoria de droides.",
+    "datapad": "Datapad (FIG-05): datamem, datastat, mail e notas.",
 }
 
 _TOKEN_RE = re.compile(r"<([^<>]+)>|\(([^()]+)\)|\[([^\[\]]+)\]")

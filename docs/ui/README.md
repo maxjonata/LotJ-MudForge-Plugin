@@ -95,3 +95,7 @@ Section "FIG-04 · Ficha, equipamento, combate, Força e medicina" on the screen
 - Equipment and injury rows come from the game's own output (`equipment`, `injurys`).
 - Gap: death, hospital and clone flows are not drawn because the local help index has no prose for DEATH and CLONES.
 - Cards from FIG-04 on are generated as SVG with the depth (gradient caps, glow and shadows) built in.
+
+## FIG-05 · professions, economy and datapad
+
+Section "FIG-05 · Comércio, oficina, slicer, droides e datapad". Stations `trade`, `workshop`, `slicer`, `droids` and `datapad`, one key per command (help syntax). Credits and droid rows are examples of the game's own `money`/`bank` and `droidstat` output; the full datapad device stays in the FIG-03 section and these keys open it. LEADPLANET, SHOWPLANET and SHOWRACE move to FIG-06.

@@ -186,6 +186,14 @@ class CommittedCatalogTests(unittest.TestCase):
                              ("HEALWOUND", "medical"), ("CLONES CLONE CLONING", "medical"), ("AMMO AMMUNITION BATTERY", "gear")]:
             self.assertEqual(panels.get(topic), panel, topic)
 
+    def test_profession_and_economy_commands_have_a_panel(self):
+        panels = {e["topic"]: e["station"] for e in self.catalog["entries"]}
+        for topic, panel in [("BANK", "trade"), ("MAKEBLASTER", "workshop"), ("HACK", "slicer"),
+                             ("DROIDSTAT", "droids"), ("DATAMEM", "datapad")]:
+            match = [t for t in panels if t.split(" ")[0] == topic]
+            self.assertTrue(match, topic)
+            self.assertEqual(panels[match[0]], panel, topic)
+
     def test_committed_catalog_is_regenerated(self):
         overrides = json.loads((ROOT / "docs/ui/overrides.json").read_text(encoding="utf-8"))
         rebuilt = bc.build(self.reference["topics"], overrides, bc.figma_links(self.nodes), bc.pattern_frames(self.nodes))
