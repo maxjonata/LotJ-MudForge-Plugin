@@ -388,6 +388,183 @@
    "name": "Mobile · radar, alvo e decolagem",
    "kind": "screen",
    "topics": []
+  },
+  {
+   "id": "18:1230",
+   "name": "FIG-03 · Sala, entidades e turbolift",
+   "kind": "section",
+   "topics": []
+  },
+  {
+   "id": "18:1231",
+   "name": "Painel de sala",
+   "kind": "screen",
+   "topics": [
+    "CONSIDER",
+    "DROP GET GIVE PUT TAKE",
+    "ENTER LEAVE",
+    "EXAMINE LOOK",
+    "EXITS",
+    "FOLLOW GROUP",
+    "GLANCE",
+    "KNOCK",
+    "LIFT",
+    "NORTH SOUTH EAST WEST UP DOWN",
+    "NORTHEAST NORTHWEST SOUTHEAST SOUTHWEST",
+    "OPEN CLOSE LOCK UNLOCK PICK",
+    "PULL PRESS PUSH LEVERS PULLCHAINS SWITCHES BUTTONS",
+    "REST SLEEP STAND WAKE",
+    "SCAN",
+    "SEARCH",
+    "SIT",
+    "TAXI",
+    "TURBOLIFT"
+   ],
+   "station": "room"
+  },
+  {
+   "id": "18:1298",
+   "name": "Menus de contexto · pessoa, objeto, porta + turbolift",
+   "kind": "screen",
+   "topics": [],
+   "station": "room"
+  },
+  {
+   "id": "18:1387",
+   "name": "FIG-03 · RP e comunicações",
+   "kind": "section",
+   "topics": []
+  },
+  {
+   "id": "18:1388",
+   "name": "RP · colunas (substituído pela linha do tempo única)",
+   "kind": "superseded",
+   "topics": [],
+   "station": "rp"
+  },
+  {
+   "id": "18:1490",
+   "name": "FIG-03 · Mapa holográfico",
+   "kind": "section",
+   "topics": []
+  },
+  {
+   "id": "18:1491",
+   "name": "Mapa holográfico · sala e conveses",
+   "kind": "screen",
+   "topics": [],
+   "station": "room"
+  },
+  {
+   "id": "18:1613",
+   "name": "FIG-03 · Mobile 390",
+   "kind": "section",
+   "topics": []
+  },
+  {
+   "id": "18:1614",
+   "name": "Mobile · sala, RP e mapa",
+   "kind": "screen",
+   "topics": []
+  },
+  {
+   "id": "19:1715",
+   "name": "RP · linha do tempo única",
+   "kind": "screen",
+   "station": "rp",
+   "topics": [
+    "BEEP",
+    "BROADCAST",
+    "CGTALK",
+    "CHANNEL CHANNELS",
+    "CLANTALK",
+    "CURRENTCOM",
+    "EMOTE , POSE SOCIAL",
+    "IMMCHAT MORTCHAT",
+    "LANGUAGES LANGUAGE LEARN LANG",
+    "NEWBIECHAT",
+    "OSAY",
+    "SAY",
+    "SAYTO",
+    "SHIPTALK",
+    "SPEAK",
+    "TELL REPLY",
+    "TELL REPLY DM DIRECTMESSAGE",
+    "THINK",
+    "TONE",
+    "TUNE",
+    "WHISPER",
+    "YELL"
+   ]
+  },
+  {
+   "id": "19:1870",
+   "name": "FIG-03 · Tela inteira 1440",
+   "kind": "section",
+   "topics": []
+  },
+  {
+   "id": "19:1871",
+   "name": "Tela inteira · no chão",
+   "kind": "screen",
+   "topics": []
+  },
+  {
+   "id": "19:2044",
+   "name": "Tela inteira · no leme",
+   "kind": "screen",
+   "topics": []
+  },
+  {
+   "id": "20:2254",
+   "name": "Radar 3D · painel",
+   "kind": "component",
+   "topics": []
+  },
+  {
+   "id": "20:2585",
+   "name": "Radar · legenda no hover (estado)",
+   "kind": "state",
+   "topics": []
+  },
+  {
+   "id": "20:2696",
+   "name": "Mapa · legenda no hover (estado)",
+   "kind": "state",
+   "topics": []
+  },
+  {
+   "id": "20:2783",
+   "name": "FIG-03 · Datapad (aparelho completo)",
+   "kind": "section",
+   "topics": []
+  },
+  {
+   "id": "20:2784",
+   "name": "Datapad · arquivos (aparelho)",
+   "kind": "screen",
+   "topics": [
+    "DATAMEM",
+    "DATASTAT"
+   ]
+  },
+  {
+   "id": "20:2873",
+   "name": "Datapad · escrever, inbox, discos, segurança",
+   "kind": "screen",
+   "topics": []
+  },
+  {
+   "id": "22:616",
+   "name": "06 · Tecla iluminada (profundidade)",
+   "kind": "section",
+   "topics": []
+  },
+  {
+   "id": "22:471",
+   "name": "Console Key",
+   "kind": "component",
+   "topics": []
   }
  ]
 }

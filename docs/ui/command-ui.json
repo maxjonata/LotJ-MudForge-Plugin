@@ -37,7 +37,9 @@
   "comms": "Comunicação da nave: rádio e saudação.",
   "fleet": "Esquadrão e frota: squadron, battlegroup, radar de frota.",
   "engineering": "Engenharia e logística: atracar, baias, combustível, carga, reparo.",
-  "shipyard": "Estaleiro e propriedade: comprar, vender, transferir, renomear."
+  "shipyard": "Estaleiro e propriedade: comprar, vender, transferir, renomear.",
+  "room": "Sala (FIG-03): saídas, movimento, portas, turbolift, entidades e objetos.",
+  "rp": "RP e comunicações (FIG-03): say, emote, tell, canais, idioma e comlink."
  },
  "counts": {
   "comms": 16,
@@ -2455,9 +2457,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "rp",
+   "status": "designed",
+   "figma_node": "19:1715"
   },
   {
    "topic": "BEG",
@@ -3169,9 +3171,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "rp",
+   "status": "designed",
+   "figma_node": "19:1715"
   },
   {
    "topic": "BUFFER WEBBUFFER",
@@ -4049,9 +4051,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "rp",
+   "status": "designed",
+   "figma_node": "19:1715"
   },
   {
    "topic": "CGWHO",
@@ -4173,9 +4175,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "rp",
+   "status": "designed",
+   "figma_node": "19:1715"
   },
   {
    "topic": "CHAOTIC_EVIL",
@@ -4839,9 +4841,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "rp",
+   "status": "designed",
+   "figma_node": "19:1715"
   },
   {
    "topic": "CLANVENDOR BUYCLANVENDOR PLACECLANVENDOR PRICECLANVENDOR DEPOSITCLANGOLD",
@@ -5670,9 +5672,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "room",
+   "status": "designed",
+   "figma_node": "18:1231"
   },
   {
    "topic": "CONSTITUTION CON",
@@ -6084,9 +6086,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "rp",
+   "status": "designed",
+   "figma_node": "19:1715"
   },
   {
    "topic": "CYBERNETICS CYBER CYBERNETIC",
@@ -6433,8 +6435,8 @@
    ],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "20:2784"
   },
   {
    "topic": "DATAPAD DATAMEM_GUIDE",
@@ -6471,8 +6473,8 @@
    ],
    "notes": [],
    "station": null,
-   "status": "planned",
-   "figma_node": null
+   "status": "designed",
+   "figma_node": "20:2784"
   },
   {
    "topic": "DATHOMIR  DATHOMIRI",
@@ -8145,9 +8147,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "room",
+   "status": "designed",
+   "figma_node": "18:1231"
   },
   {
    "topic": "DUAL DUAL_WIELD 'DUAL WIELD'",
@@ -8720,9 +8722,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "rp",
+   "status": "designed",
+   "figma_node": "19:1715"
   },
   {
    "topic": "EMPOWER EMPOWERMENT",
@@ -9135,9 +9137,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "room",
+   "status": "designed",
+   "figma_node": "18:1231"
   },
   {
    "topic": "ENVIROSUIT ENVIROSUITS",
@@ -9456,9 +9458,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "room",
+   "status": "designed",
+   "figma_node": "18:1231"
   },
   {
    "topic": "EXITS",
@@ -9478,9 +9480,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "room",
+   "status": "designed",
+   "figma_node": "18:1231"
   },
   {
    "topic": "EXPLORE EXPLORING",
@@ -10133,9 +10135,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "room",
+   "status": "designed",
+   "figma_node": "18:1231"
   },
   {
    "topic": "FORCE CONCEAL",
@@ -11067,9 +11069,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "room",
+   "status": "designed",
+   "figma_node": "18:1231"
   },
   {
    "topic": "GNI",
@@ -12152,9 +12154,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "rp",
+   "status": "designed",
+   "figma_node": "19:1715"
   },
   {
    "topic": "IMMERSION_EXAMPLES",
@@ -12933,9 +12935,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "room",
+   "status": "designed",
+   "figma_node": "18:1231"
   },
   {
    "topic": "KUBAZ",
@@ -13068,9 +13070,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "rp",
+   "status": "designed",
+   "figma_node": "19:1715"
   },
   {
    "topic": "LANNIK",
@@ -13415,9 +13417,9 @@
    "pattern": "reference",
    "variants": [],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "room",
+   "status": "designed",
+   "figma_node": "18:1231"
   },
   {
    "topic": "LIFTHACK",
@@ -16210,9 +16212,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "rp",
+   "status": "designed",
+   "figma_node": "19:1715"
   },
   {
    "topic": "NEWBIE_INDEX INDEX",
@@ -16435,9 +16437,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "room",
+   "status": "designed",
+   "figma_node": "18:1231"
   },
   {
    "topic": "NORTHEAST NORTHWEST SOUTHEAST SOUTHWEST",
@@ -16478,9 +16480,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "room",
+   "status": "designed",
+   "figma_node": "18:1231"
   },
   {
    "topic": "NOTE TERMINAL",
@@ -16968,9 +16970,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "room",
+   "status": "designed",
+   "figma_node": "18:1231"
   },
   {
    "topic": "OPENHANGAR CLOSEHANGAR 'SHIP HANGAR'",
@@ -17077,9 +17079,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "rp",
+   "status": "designed",
+   "figma_node": "19:1715"
   },
   {
    "topic": "OSET_FLAGS OSET_FLAGS OSETFLAGS OFLAGS OFLAG OBJ_FLAGS",
@@ -18369,9 +18371,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "room",
+   "status": "designed",
+   "figma_node": "18:1231"
   },
   {
    "topic": "QUARREN",
@@ -19454,9 +19456,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "room",
+   "status": "designed",
+   "figma_node": "18:1231"
   },
   {
    "topic": "RESTORE",
@@ -20097,9 +20099,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "rp",
+   "status": "designed",
+   "figma_node": "19:1715"
   },
   {
    "topic": "SAYTO",
@@ -20128,9 +20130,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "rp",
+   "status": "designed",
+   "figma_node": "19:1715"
   },
   {
    "topic": "SCAN",
@@ -20155,9 +20157,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "room",
+   "status": "designed",
+   "figma_node": "18:1231"
   },
   {
    "topic": "SCIENCE",
@@ -20312,9 +20314,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "room",
+   "status": "designed",
+   "figma_node": "18:1231"
   },
   {
    "topic": "SECOND_ATTACK 'SECOND ATTACK'",
@@ -20946,9 +20948,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "rp",
+   "status": "designed",
+   "figma_node": "19:1715"
   },
   {
    "topic": "SHIP_BUILDING 'SHIP BUILDING'",
@@ -21336,9 +21338,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "room",
+   "status": "designed",
+   "figma_node": "18:1231"
   },
   {
    "topic": "SITH 'RED SITH' 'SITH PUREBLOOD'",
@@ -21789,9 +21791,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "rp",
+   "status": "designed",
+   "figma_node": "19:1715"
   },
   {
    "topic": "SPEED VELOCITY ACCELERATE",
@@ -22742,9 +22744,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "room",
+   "status": "designed",
+   "figma_node": "18:1231"
   },
   {
    "topic": "TEACH",
@@ -22921,9 +22923,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "rp",
+   "status": "designed",
+   "figma_node": "19:1715"
   },
   {
    "topic": "TELL REPLY DM DIRECTMESSAGE",
@@ -22981,9 +22983,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "rp",
+   "status": "designed",
+   "figma_node": "19:1715"
   },
   {
    "topic": "TEMPERATURE HOT COLD",
@@ -23121,9 +23123,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "rp",
+   "status": "designed",
+   "figma_node": "19:1715"
   },
   {
    "topic": "THROW",
@@ -23375,9 +23377,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "rp",
+   "status": "designed",
+   "figma_node": "19:1715"
   },
   {
    "topic": "TOONG",
@@ -24050,9 +24052,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "rp",
+   "status": "designed",
+   "figma_node": "19:1715"
   },
   {
    "topic": "TUNESHIP",
@@ -24092,9 +24094,9 @@
    "pattern": "reference",
    "variants": [],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "room",
+   "status": "designed",
+   "figma_node": "18:1231"
   },
   {
    "topic": "TWI'LEK TWILEK TWILEKS TWI'LEKS",
@@ -25490,9 +25492,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "rp",
+   "status": "designed",
+   "figma_node": "19:1715"
   },
   {
    "topic": "WHO",
@@ -25712,9 +25714,9 @@
     }
    ],
    "notes": [],
-   "station": null,
-   "status": "planned",
-   "figma_node": null
+   "station": "rp",
+   "status": "designed",
+   "figma_node": "19:1715"
   },
   {
    "topic": "YEVETHA YEVETHAN YEVETHANS N'ZOTH",

@@ -172,6 +172,14 @@ class CommittedCatalogTests(unittest.TestCase):
                       "UNDOCK", "HAIL", "RADIO", "BATTLEGROUP", "SQUADRON", "ACONFIG", "BUYSHIP SELLSHIP"]:
             self.assertIsNotNone(stations.get(topic), topic)
 
+    def test_room_and_rp_commands_have_a_panel(self):
+        panels = {e["topic"]: e["station"] for e in self.catalog["entries"]}
+        for topic in ["NORTH SOUTH EAST WEST UP DOWN", "EXAMINE LOOK", "OPEN CLOSE LOCK UNLOCK PICK", "TURBOLIFT",
+                      "DROP GET GIVE PUT TAKE"]:
+            self.assertEqual(panels.get(topic), "room", topic)
+        for topic in ["SAY", "SAYTO", "EMOTE , POSE SOCIAL", "TELL REPLY", "WHISPER", "CLANTALK", "TUNE"]:
+            self.assertEqual(panels.get(topic), "rp", topic)
+
     def test_committed_catalog_is_regenerated(self):
         overrides = json.loads((ROOT / "docs/ui/overrides.json").read_text(encoding="utf-8"))
         rebuilt = bc.build(self.reference["topics"], overrides, bc.figma_links(self.nodes), bc.pattern_frames(self.nodes))
