@@ -33,6 +33,10 @@ class PreviewZipTests(unittest.TestCase):
             "LOTJ Companion/src/widgets/lotj-ui-font.lua": "src/widgets/lotj-ui-font.lua",
             "LOTJ Companion/src/widgets/lotj-ui-kit.lua": "src/widgets/lotj-ui-kit.lua",
             "LOTJ Companion/src/widgets/lotj-window-dock.lua": "src/widgets/lotj-window-dock.lua",
+            "LOTJ Companion/src/domain/console-catalog.lua": "src/domain/console-catalog.lua",
+            "LOTJ Companion/src/domain/command-form.lua": "src/domain/command-form.lua",
+            "LOTJ Companion/src/application/station-console.lua": "src/application/station-console.lua",
+            "LOTJ Companion/src/widgets/lotj-station-console.lua": "src/widgets/lotj-station-console.lua",
         }
         with tempfile.TemporaryDirectory() as tmp:
             output = Path(tmp) / "preview.zip"

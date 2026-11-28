@@ -115,3 +115,16 @@ Every console panel is an HTML widget, not a Lua canvas: inputs, hover labels an
 - **Font.** Aurebesh AF Canon (AurekFonts, CC-0) is embedded as a data URI by `scripts/ui/embed_font.py`; see `assets/fonts/README.md` for fonts that must not ship.
 - **Moving and docking.** Without a title bar MudForge cannot drag the window, so the casing head is a grip: the page sums pointer deltas per frame and Lua calls `moveWidget`. [_] (DOCK) hides the window with a plain `hideWidget` and adds a lit key to `lotj-window-dock`; the key restores it. OFF hides it; `lotj-datapad` reopens it. Docked tiles ignore `moveWidget`, as MudForge documents.
 - **Datapad (DATA-01).** FILES, INBOX, DISKS, SECURITY and STATUS; each key sends one `datamem`/`datastat` syntax line from the help (`src/domain/datapad.lua`); DELETE and EJECT ask once. Game replies stay in the main window because their format is unknown without a live session. Gaps: slot contents, the BIO LOCK/RX lights and the memory gauge from the Figma frame need confirmed `datamem`/`datastat` output; the file body is typed in the game's own editor.
+
+## UI-03 · station consoles, palette and Holocron
+
+The rest of the Figma screens (FIG-02..06 console cards) are one widget, `lotj-station-console`, fed by `src/domain/console-catalog.lua`. That module is generated from `command-ui.json` by `python scripts/ui/build_consoles.py` (CI runs `--check`), with the same label, hint and colour rules as the Figma generator (`scripts/ui/figma/svgkit.py`), so a catalog change updates the Figma cards and the plugin together.
+
+- **Stations:** group tabs (NAVE, SALA, PERSONAGEM, OFÍCIOS, MUNDO, SISTEMA) and one tab per station. `lotj-console <station>` opens one directly (e.g. `lotj-console pilot`).
+- **Keys:** one per help command. A key without arguments sends at once; a key marked ▸ opens a form with one field per placeholder, a variant picker when the help lists several forms, value chips for literal choices, and the help's notes. Labels with the same name on a Figma card share one key that keeps every variant.
+- **Sending:** the help syntax becomes a template (`course {1} {2} {3}`). Empty required fields, non-whole numbers and numbers outside the help's range send nothing; `;` and control characters cannot stack commands. Red (aggressive) keys need a second press of the same command. Inactive commands are dark and send nothing.
+- **Palette:** the search field finds keys first (label, syntax, topic), then Holocron topics. A key hit opens its station and form; it is never pressed for you. A Holocron hit sends `help <topic>`.
+- **Passive skills** (readout topics) are listed as text under the keys: there is nothing to send.
+- **Datapad station:** ABRIR DATAPAD opens the UI-02 device.
+
+Gaps: live panels drawn on the Figma cards (vitals bars, enemy, injuries, credits, droid rows, radar) need their GMCP or confirmed text source wired per station; until then the console only sends commands and the replies stay in the main window. Not yet checked inside MudForge (DEV scenario `station_console`).

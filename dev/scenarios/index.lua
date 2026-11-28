@@ -11,4 +11,5 @@ return {
   "dev/scenarios/passive_input.lua",
   "dev/scenarios/fed_triggers.lua",
   "dev/scenarios/datapad.lua",
+  "dev/scenarios/station_console.lua",
 }

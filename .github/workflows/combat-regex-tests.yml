@@ -38,3 +38,6 @@ jobs:
 
       - name: Check the embedded widget font matches assets/fonts and is CC-0 (UI-02)
         run: python3 tests/test_embed_font.py -v
+
+      - name: Check the station console catalog matches docs/ui/command-ui.json (UI-03)
+        run: python3 tests/test_build_consoles.py -v
