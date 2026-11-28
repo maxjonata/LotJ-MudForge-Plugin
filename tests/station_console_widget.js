@@ -136,6 +136,31 @@ assert.equal($("results").hidden, true);
 assert.deepEqual(take(), []);
 console.log("PASS: the palette searches, opens keys and Holocron topics");
 
+// Live readouts (UI-04).
+assert.equal($("live").hidden, true);
+env.receive({ event: "live", station: "combat", items: [
+  { kind: "gauge", id: "hp", label: "VIDA", value: 30, max: 60, pct: 50, mark: 20, tone: "green", source: "GMCP Char.Vitals" },
+  { kind: "gauge", id: "enemy", label: "INIMIGO", text: "wampa", value: 80, max: 100, pct: 80, tone: "red", source: "GMCP Char.Enemy" },
+  { kind: "text", id: "ship", label: "NAVE", text: "Krayt Fang", source: "GMCP Ship.Info" },
+  { kind: "gauge", id: "move", label: "MOVIMENTO", value: 1, max: 2, pct: 50, source: "GMCP Char.Vitals" },
+] });
+const lv = $("live").children;
+assert.equal($("live").hidden, false);
+assert.equal(lv.length, 4);
+assert.equal(lv[0].title, "GMCP Char.Vitals");
+assert.ok(lv[0].classList.contains("green"));
+assert.deepEqual(lv[0].children.map(c => c.textContent), ["VIDA", "", "30/60"]);
+const bar = lv[0].children[1];
+assert.equal(bar.children[0].style.width, "50%");
+assert.equal(bar.children[1].style.left, "20%");
+assert.deepEqual(lv[1].children.map(c => c.textContent), ["INIMIGO · wampa", "", "80%"]);
+assert.deepEqual(lv[2].children.map(c => c.textContent), ["NAVE", "Krayt Fang"]);
+assert.equal(lv[3].children[1].children.length, 1, "no wimpy mark without one");
+env.receive({ event: "live", station: "trade", items: [] });
+assert.equal($("live").hidden, true);
+assert.equal($("live").children.length, 0);
+console.log("PASS: live readouts draw GMCP gauges and hide without data");
+
 // The datapad station and kit messages.
 env.receive({ event: "station", id: "datapad", title: "DATAPAD", passive: [], keys: [] });
 assert.equal($("device").hidden, false);

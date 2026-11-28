@@ -127,4 +127,28 @@ The rest of the Figma screens (FIG-02..06 console cards) are one widget, `lotj-s
 - **Passive skills** (readout topics) are listed as text under the keys: there is nothing to send.
 - **Datapad station:** ABRIR DATAPAD opens the UI-02 device.
 
-Gaps: live panels drawn on the Figma cards (vitals bars, enemy, injuries, credits, droid rows, radar) need their GMCP or confirmed text source wired per station; until then the console only sends commands and the replies stay in the main window. Not yet checked inside MudForge (DEV scenario `station_console`).
+Gaps: the live panels with a GMCP source are wired in UI-04 below; injuries, credits and droid rows still need a confirmed text source. Command replies stay in the main window. Not yet checked inside MudForge (DEV scenario `station_console`).
+
+## UI-04 · live readouts on the station consoles
+
+The station console draws a strip of gauges above the keys of the open station. Only GMCP packages the game is known to send feed it (the same fields the upstream `lotj-mudlet-ui` reads); the rules live in `src/domain/live-readout.lua` and the use case in `src/application/live-readout.lua`. Hovering a gauge names its source.
+
+| Station | Readouts | Source |
+|---|---|---|
+| PILOTO (`pilot`) | NAVE, VELOCIDADE, CASCO, ESCUDO, ENERGIA | `Ship.Info` piloting, speed/maxSpeed, hull/maxHull, shield/maxShield, energy/maxEnergy |
+| NAVEGAÇÃO (`nav`) | NAVE, POSIÇÃO, VELOCIDADE | `Ship.Info` piloting, posX/posY/posZ, speed |
+| ARMAS (`weapons`), ENGENHARIA (`engineering`) | CASCO, ESCUDO, ENERGIA (+ VELOCIDADE on engineering) | `Ship.Info` |
+| FROTA (`fleet`) | NAVE, CASCO, ESCUDO | `Ship.Info` |
+| ACESSO, RÁDIO, ESTALEIRO (`access`, `comms`, `shipyard`) | NAVE | `Ship.Info` piloting |
+| COMBATE (`combat`) | VIDA (with the wimpy mark), MOVIMENTO, FORÇA, INIMIGO · name | `Char.Vitals` hp/maxHp, wimpy, move/maxMove, mana/maxMana; `Char.Enemy` name, percent |
+| FICHA (`sheet`) | PERSONAGEM, VIDA, MOVIMENTO, FORÇA | `Char.Info` name; `Char.Vitals` |
+| FORÇA (`force`) | FORÇA, VIDA | `Char.Vitals` |
+| MEDICINA (`medical`) | VIDA, MOVIMENTO | `Char.Vitals` |
+
+- A packet that leaves fields out keeps their last value, like the status bar. Numbers sent as strings are read; anything else hides that gauge.
+- FORÇA appears only when `maxMana > 0` (Force-sensitive characters), as in the upstream info panel.
+- The enemy name loses its `&x` colour codes; a `Char.Enemy` without a name (fight over) removes the gauge. An empty `Ship.Info` (left the ship) removes the ship readouts.
+- Disconnecting clears every readout: nothing the game said before is shown as current.
+- Each GMCP package keeps one listener in `src/lotj.lua`, which feeds its old widget (status bar, cockpit) first and then the live readouts.
+
+Gaps (no confirmed source, so nothing is drawn): injuries (`injurys`), credits (`money`/`bank`), droid rows (`droidstat`), datapad slots and every other station. Their game output is plain text whose format has not been captured from a live session; each needs a recorded sample and a parser with fixtures before a panel shows it. DEV scenario: `lotjdev live_readout`. Not yet checked inside MudForge.

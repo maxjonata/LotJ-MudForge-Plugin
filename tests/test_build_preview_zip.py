@@ -37,6 +37,8 @@ class PreviewZipTests(unittest.TestCase):
             "LOTJ Companion/src/domain/command-form.lua": "src/domain/command-form.lua",
             "LOTJ Companion/src/application/station-console.lua": "src/application/station-console.lua",
             "LOTJ Companion/src/widgets/lotj-station-console.lua": "src/widgets/lotj-station-console.lua",
+            "LOTJ Companion/src/domain/live-readout.lua": "src/domain/live-readout.lua",
+            "LOTJ Companion/src/application/live-readout.lua": "src/application/live-readout.lua",
         }
         with tempfile.TemporaryDirectory() as tmp:
             output = Path(tmp) / "preview.zip"

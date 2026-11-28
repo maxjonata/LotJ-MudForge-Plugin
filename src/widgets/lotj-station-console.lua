@@ -5,6 +5,7 @@
 -- arguments open a guided form; the search field is the command palette and
 -- also finds Holocron topics, which open the game's own help. Replies stay in
 -- the main window: nothing on this console shows data the game did not send.
+-- Live readouts (UI-04) draw the GMCP gauges of the open station above its keys.
 
 -- Host port (QA-07): a plugin cannot reassign MudForge API names, so the DEV
 -- harness (dev/harness.lua) supplies recorders through LotjHost. Release: nil.
@@ -19,6 +20,7 @@ local BODY = [==[
     <div id="stations" class="tabs sub" role="tablist" aria-label="Postos"></div>
     <div class="row"><input id="find" class="field grow" placeholder="buscar comando ou tópico do help" aria-label="Buscar comando">
       <button id="device" class="soft" type="button" hidden>ABRIR DATAPAD</button></div>
+    <div id="live" class="live" aria-label="Leituras do jogo" hidden></div>
     <div id="about" class="note"></div>
     <div id="grid" class="grid" role="group" aria-label="Comandos do posto"></div>
     <div id="passive" class="note"></div>
@@ -64,6 +66,14 @@ local CSS = [==[
 .fields .field{flex:1}
 .softs{display:flex;flex-wrap:wrap;gap:4px}
 .chip{border:1px solid var(--ph-edge);background:none;color:var(--ph-dim);cursor:pointer;padding:0 5px;font-size:9px}
+.live{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:3px 10px;border-bottom:1px solid var(--ph-edge);padding-bottom:4px}
+.lv{display:flex;align-items:center;gap:5px;font-size:10px;--t:var(--ph)}
+.lv.green{--t:#8fe36a}.lv.amber{--t:#ffb13b}.lv.blue{--t:#6ec3ff}.lv.red{--t:#ff5a4a}
+.lv-name{width:92px;flex:none;color:var(--ph-dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lv-bar{position:relative;flex:1;height:6px;background:rgba(0,0,0,.5);box-shadow:inset 0 0 0 1px var(--ph-edge)}
+.lv-fill{position:absolute;left:0;top:0;bottom:0;background:var(--t);box-shadow:0 0 6px var(--t)}
+.lv-mark{position:absolute;top:-2px;bottom:-2px;width:2px;background:#ffb13b}
+.lv-val{flex:none;color:var(--t);min-width:56px;text-align:right}
 .readout{margin-top:auto;border-top:1px solid var(--ph-edge);padding-top:4px;color:var(--ph-hi)}
 .readout.warn{color:#ffb13b}
 ]==]
@@ -183,6 +193,31 @@ local SCRIPT = [==[<script>
     pending = null;
   }
 
+  // UI-04: gauges come from GMCP only; the tooltip names the source.
+  function renderLive(items) {
+    var box = $("live");
+    box.textContent = "";
+    items.forEach(function (it) {
+      var row = el("div", "lv " + (it.tone || ""));
+      row.title = it.source;
+      row.appendChild(el("span", "lv-name", it.label + (it.kind === "gauge" && it.text ? " · " + it.text : "")));
+      if (it.kind === "gauge") {
+        var bar = el("span", "lv-bar"), fill = el("span", "lv-fill");
+        fill.style.width = it.pct + "%";
+        bar.appendChild(fill);
+        if (it.mark !== undefined) {
+          var mark = el("span", "lv-mark");
+          mark.style.left = it.mark + "%";
+          bar.appendChild(mark);
+        }
+        row.appendChild(bar);
+        row.appendChild(el("span", "lv-val", it.id === "enemy" ? it.pct + "%" : it.value + "/" + it.max));
+      } else row.appendChild(el("span", "lv-val", it.text));
+      box.appendChild(row);
+    });
+    box.hidden = !items.length;
+  }
+
   function renderResults(list) {
     var results = $("results");
     results.textContent = "";
@@ -214,6 +249,7 @@ local SCRIPT = [==[<script>
     if (message.event === "stations") { stations = message.list; renderTabs(message.current); }
     else if (message.event === "station") renderStation(message);
     else if (message.event === "results") renderResults(message.list);
+    else if (message.event === "live") renderLive(message.items);
     else if (message.event === "confirm") say("PRESSIONE DE NOVO PARA ENVIAR · " + message.command, true);
     else if (message.event === "sent") { showForm(false); say("ENVIADO · " + message.command); }
     else if (message.event === "offline") say("SEM CONEXÃO · nada enviado", true);
@@ -230,12 +266,18 @@ local SCRIPT = [==[<script>
 })();
 </script>]==]
 
--- ports: kit, font, theme, dock, position, openDatapad, newApp(publish) -> station console use case
+-- ports: kit, font, theme, dock, position, openDatapad, newApp(publish) -> station console use case,
+-- newLive(publish) -> live readout use case (optional, UI-04)
 local function create(ports)
   local window
-  local app = ports.newApp(function(message)
+  local function post(message)
     if window then window.post(message) end
-  end)
+  end
+  local app = ports.newApp(post)
+  local live = ports.newLive and ports.newLive(post)
+  local function focus()
+    if live then live.focus(app.current()) end
+  end
   window = ports.kit.window({
     name = "lotj-station-console", title = "LOTJ Console", label = "CONSOLE",
     position = ports.position or { x = 40, y = 80 }, size = { width = 640, height = 500 },
@@ -245,8 +287,10 @@ local function create(ports)
       if event == "ready" then
         app.list()
         app.open(app.current())
+        focus()
       elseif event == "open" then
         app.open(data.id)
+        focus()
       elseif event == "press" then
         app.press(data.id, data.index, data.variant, data.values)
       elseif event == "search" then
@@ -265,11 +309,12 @@ local function create(ports)
   local function show(args)
     local id = tostring(args or ""):match("^%s*(.-)%s*$")
     if id ~= "" then app.open(id) end
+    focus()
     if ports.dock then ports.dock.remove(window.id) end
     window.show()
   end
   registerCommand("lotj-console", show, "Open the LOTJ station console (optional station, e.g. lotj-console pilot)")
-  return { id = window.id, show = show }
+  return { id = window.id, show = show, live = live }
 end
 
 return { create = create }
