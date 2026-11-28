@@ -31,7 +31,7 @@ local scrapperCockpit = nil
 local targetCockpit = nil
 local commsHub, chatLine
 
-local function sendNavigationScan(command)
+local function sendGameCommand(command)
   local session = getSession()
   if not session or not session.connected then return false end
   send(command)
@@ -62,6 +62,12 @@ function init()
   local targetLock = loadModule("src/domain/target-lock.lua")
   local targetApplication = loadModule("src/application/target-cockpit.lua")
   local cockpitWidget = loadModule("src/widgets/lotj-scrapper-cockpit.lua")
+  local uiFont = loadModule("src/widgets/lotj-ui-font.lua")
+  local uiKit = loadModule("src/widgets/lotj-ui-kit.lua")
+  local windowDock = loadModule("src/widgets/lotj-window-dock.lua")
+  local datapadRules = loadModule("src/domain/datapad.lua")
+  local datapadApplication = loadModule("src/application/datapad.lua")
+  local datapadWidget = loadModule("src/widgets/lotj-datapad.lua")
 
   -- Compute positions based on window size (60/40 split)
   local win = getWindowSize()
@@ -120,16 +126,19 @@ function init()
     visible  = false,
   })
 
-  -- Datapad (HTML, tabbed)
-  WIDGET_DATAPAD = createWidget({
-    type     = "html",
-    name     = "lotj-datapad",
-    title    = "📋 HOLOCRON DATAPAD",
-    position = { x = datapadX, y = datapadY },
-    size     = { width = 360, height = 420 },
-    zIndex   = 15,
-    visible  = false,
+  -- Console windows (UI-02): frameless widgets drawn by the UI kit; [_] docks them.
+  local dock = windowDock.create({
+    kit = uiKit, font = uiFont,
+    position = { x = statusBarX + 340, y = statusBarY },
   })
+  local datapad = datapadWidget.create({
+    kit = uiKit, font = uiFont, dock = dock,
+    position = { x = datapadX, y = datapadY },
+    newApp = function(publish)
+      return datapadApplication.new({ rules = datapadRules, send = sendGameCommand, publish = publish })
+    end,
+  })
+  WIDGET_DATAPAD = datapad and datapad.id
 
   -- Set initial active widget for canvas drawing
   setActiveWidget(WIDGET_SPACE_RADAR)
@@ -148,7 +157,7 @@ function init()
   if navigation then
     targetCockpit = targetApplication.new({
       targetLock = targetLock,
-      send = sendNavigationScan,
+      send = sendGameCommand,
       publish = navigation.publishTarget,
     })
     scrapperCockpit = cockpitApplication.new({
@@ -159,7 +168,7 @@ function init()
         targetCockpit.onRadar(position, contacts)
       end,
       publishSystem = navigation.publishSystem,
-      scan = sendNavigationScan,
+      scan = sendGameCommand,
       schedule = scheduleNavigationReadout,
     })
     navigation.bind(scrapperCockpit, targetCockpit)
@@ -241,12 +250,6 @@ function registerWidgetEvents()
     focusPrompt()
   end)
 
-  -- Datapad tab events
-  registerWidgetEvent(WIDGET_DATAPAD, "click", function(data)
-    handleDatapadClick(data)
-    focusPrompt()
-  end)
-
   -- Space radar click events (target selection)
   registerWidgetEvent(WIDGET_SPACE_RADAR, "click", function(data)
     handleRadarClick(data)
@@ -314,6 +317,5 @@ end
 -- Placeholder handlers
 function handleCombatHUDClick(data) end
 function handleShipHUDClick(data) end
-function handleDatapadClick(data) end
 function handleRadarClick(data) end
 function loadSavedState() end
