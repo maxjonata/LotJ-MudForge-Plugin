@@ -51,37 +51,38 @@ local function matches(haystack, terms)
   return true
 end
 
+local function keyHit(station, index, key, terms)
+  local hay = { key.label, key.hint or "" }
+  for _, variant in ipairs(key.variants) do hay[#hay + 1] = variant.syntax or variant.template end
+  for _, topic in ipairs(key.topics or {}) do hay[#hay + 1] = topic end
+  if not matches(table.concat(hay, " "):lower(), terms) then return nil end
+  return { kind = "key", station = station.id, title = station.title, index = index, label = key.label, hint = key.hint },
+    key.label:lower():sub(1, #terms[1]) == terms[1]
+end
+
+local function refHit(index, ref, terms)
+  if not matches((ref.topic .. " " .. ref.help):lower(), terms) then return nil end
+  return { kind = "reference", index = index, topic = ref.topic, help = ref.help }
+end
+
 -- Keys whose label starts with the first word come first, then other keys,
 -- then Holocron (reference) topics.
 local function search(catalog, query, limit)
   local terms = words(query)
-  limit = limit or 40
   if #terms == 0 then return {} end
-  local first, rest, refs = {}, {}, {}
+  local first, rest, out = {}, {}, {}
   for _, station in ipairs(catalog.stations or {}) do
     for index, key in ipairs(catalog.keys[station.id] or {}) do
-      local hay = { key.label, key.hint or "" }
-      for _, variant in ipairs(key.variants) do hay[#hay + 1] = variant.syntax or variant.template end
-      for _, topic in ipairs(key.topics or {}) do hay[#hay + 1] = topic end
-      if matches(table.concat(hay, " "):lower(), terms) then
-        local hit = { kind = "key", station = station.id, title = station.title, index = index,
-          label = key.label, hint = key.hint }
-        if key.label:lower():sub(1, #terms[1]) == terms[1] then first[#first + 1] = hit else rest[#rest + 1] = hit end
-      end
+      local hit, prefix = keyHit(station, index, key, terms)
+      local bucket = prefix and first or rest
+      bucket[#bucket + 1] = hit
     end
   end
-  for index, ref in ipairs(catalog.references or {}) do
-    if matches((ref.topic .. " " .. ref.help):lower(), terms) then
-      refs[#refs + 1] = { kind = "reference", index = index, topic = ref.topic, help = ref.help }
-    end
+  for _, list in ipairs({ first, rest }) do
+    for _, hit in ipairs(list) do out[#out + 1] = hit end
   end
-  local out = {}
-  for _, list in ipairs({ first, rest, refs }) do
-    for _, hit in ipairs(list) do
-      if #out >= limit then return out end
-      out[#out + 1] = hit
-    end
-  end
+  for index, ref in ipairs(catalog.references or {}) do out[#out + 1] = refHit(index, ref, terms) end
+  for index = #out, (limit or 40) + 1, -1 do out[index] = nil end
   return out
 end
 
